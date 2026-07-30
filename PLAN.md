@@ -3,7 +3,7 @@
 Build plan for the Irshad frontend rewrite (Next.js + PocketBase). Phases are ordered by dependency — each one assumes the previous is done.
 
 **Started:** 2026-07-30
-**Current phase:** Phase 0 (Phase 1 complete — schema and seed applied ahead of the app scaffold)
+**Current phase:** Phase 4 (Phases 0, 1 and 4 done; Phase 2 partly done; Phase 3 blocked on design)
 
 ---
 
@@ -11,15 +11,15 @@ Build plan for the Irshad frontend rewrite (Next.js + PocketBase). Phases are or
 
 Nothing runs until this is done.
 
-- [ ] Scaffold Next.js with TypeScript, App Router, Tailwind, ESLint
+- [x] Scaffold Next.js with TypeScript, App Router, Tailwind, ESLint
 - [x] `.env.example` (committed) and `.gitignore` covering `.env*.local` and `.mcp.json`
 - [x] `.mcp.json` — PocketBase MCP server config, pinned version
 - [x] Fill in PocketBase URL and admin credentials in `.mcp.json`, then restart Claude Code and confirm the `pocketbase` MCP server connects
-- [ ] `.env.local` with `NEXT_PUBLIC_PB_URL`, `PB_ADMIN_EMAIL`, `PB_ADMIN_PASSWORD`
-- [ ] `git init` and initial commit — this directory is **not** a git repo yet; verify `git status` does not list `.mcp.json` or `.env.local` before committing
-- [ ] Install and configure the `pocketbase` SDK; add `lib/pb/client.ts` and `lib/pb/server.ts` (per-request instance, cookie-backed auth)
-- [ ] Verify connectivity against the real PocketBase instance before building anything on top of it
-- [ ] `npm run typecheck` and `npm run lint` scripts wired up
+- [x] `.env.local` with `NEXT_PUBLIC_PB_URL`, `PB_ADMIN_EMAIL`, `PB_ADMIN_PASSWORD`
+- [x] `git init` and initial commit — pushed to `irshad-group/irshad-frontend`; `.mcp.json` and `.env.local` confirmed absent from the remote
+- [x] Install and configure the `pocketbase` SDK; add `lib/pb/client.ts` and `lib/pb/server.ts` (per-request instance, cookie-backed auth)
+- [x] Verify connectivity against the real PocketBase instance before building anything on top of it
+- [x] `npm run typecheck` and `npm run lint` scripts wired up
 
 ## Phase 1 — PocketBase schema
 
@@ -36,20 +36,23 @@ The schema is the contract for everything downstream; get it right before writin
 - [x] Export the schema to a versioned file in the repo so it is reviewable and reproducible — `pocketbase/schema.json`
 - [x] Seed a trilingual development dataset — `pocketbase/seed/`, idempotent
 - [x] Verify the rules hold against a hostile client — `pocketbase/seed/verify.mjs`, 34 assertions
-- [ ] Generate `types/pb.ts` from the live schema — blocked on Phase 0 scaffolding
-- [ ] Enforce the "exactly one polymorphic target" rule in Zod; PocketBase has no CHECK constraint for it
+- [x] Generate `types/pb.ts` from the live schema — `npm run pb:types`
+- [x] Enforce the "exactly one polymorphic target" rule in Zod (`lib/admin/schema.ts`); PocketBase has no CHECK constraint for it
 
 ## Phase 2 — i18n and layout
 
-- [ ] Configure `next-intl` with `en` / `ar` / `ku` and the `[locale]` route segment
-- [ ] Root layout sets `dir` and `lang` from the active locale
+- [x] Configure `next-intl` with `en` / `ar` / `ku` and the `[locale]` route segment
+- [x] Root layout sets `dir` and `lang` from the active locale
 - [ ] Choose and self-host a font with verified Arabic **and** Kurdish coverage
-- [ ] `localized(record, field, locale)` helper with the fallback chain (requested → English → first non-empty)
+- [x] `localized(record, field, locale)` helper with the fallback chain (requested → English → first non-empty)
 - [ ] Locale switcher that preserves the current path
 - [ ] Public shell: header, `navigation`-driven menu, footer, `settings`-driven contact details
 - [ ] Audit for physical `left`/`right` CSS and replace with logical properties
 
 ## Phase 3 — Public portal
+
+> **Blocked on the UI/UX design.** `(public)` currently holds a placeholder only.
+> Replace it wholesale when the designs land rather than growing it.
 
 - [ ] Home — slider, featured/recent procedures, FAQ preview
 - [ ] Ministries — index and detail, with the ministry's directorates
@@ -63,18 +66,18 @@ The schema is the contract for everything downstream; get it right before writin
 
 ## Phase 4 — Admin
 
-- [ ] Login page and session handling against the `users` collection
-- [ ] `middleware.ts` guard on `/admin`; layout-level role check returning 404 for non-staff
-- [ ] Shared `DataTable` — server-side pagination, sort, filter
-- [ ] Shared form primitives, including a **translation-aware field group** that shows all three languages side by side and flags missing ones
-- [ ] CRUD: procedures + procedure items (the most complex; build first)
-- [ ] CRUD: ministries, directorates, provinces, directorate branches
-- [ ] CRUD: slider, FAQ, team, partners, tags
-- [ ] Moderation queues for comments and reviews
-- [ ] Contact message inbox
-- [ ] Navigation editor with drag-and-drop reordering and parent/child nesting
-- [ ] Settings editor honoring the `no_trans` flag
-- [ ] User management — invite, role assignment, deactivate
+- [x] Login page and session handling against the `users` collection
+- [x] Route guard on `/admin` (as `src/proxy.ts` — Next 16 renamed the convention); layout-level role check returning 404 for non-staff
+- [x] Shared `DataTable` — server-side pagination, sort, filter
+- [x] Shared form primitives, including a **translation-aware field group** that shows all three languages side by side and flags missing ones
+- [x] CRUD: procedures + procedure items (the most complex; build first)
+- [x] CRUD: ministries, directorates, provinces, directorate branches
+- [x] CRUD: slider, FAQ, team, partners, tags
+- [x] Moderation queues for comments and reviews
+- [x] Contact message inbox
+- [x] Navigation editor with parent/child nesting and `sort_order` — **drag-and-drop not built**
+- [x] Settings editor honoring the `no_trans` flag
+- [x] User management — role assignment and verification; **invite/deactivate flows not built**
 
 ## Phase 5 — Content migration
 

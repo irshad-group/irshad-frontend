@@ -20,8 +20,28 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - `pocketbase/seed/` — an idempotent development dataset (19 provinces, 14 ministries, 18 directorates, 12 branches, 20 tags, 15 procedures with 66 steps, 16 downloadable forms, plus FAQ, slider, team, partners, navigation, settings and sample user activity), all trilingual, with generated logos, banners and PDF forms.
 - `pocketbase/seed/verify.mjs` — 34 assertions that exercise the API rules as an anonymous visitor, an end user and a moderator. All passing.
 
+- **The Next.js application, scaffolded** — App Router, TypeScript, Tailwind 4, next-intl for `en`/`ar`/`ku` with RTL, and the PocketBase JS SDK. Pinned to Node 22 via `.nvmrc`.
+- **Generated PocketBase types** (`src/types/pb.ts`) covering all 18 collections, produced from the schema snapshot by `npm run pb:types`. Relation fields carry the collection they point at, so a directorate id cannot be passed where a ministry id is expected.
+- **The admin dashboard** at `/{locale}/admin`. Staff can sign in and manage every collection: procedures and their ordered steps, forms, tags, ministries, directorates, provincial branches, provinces, slider, FAQ, team, partners, navigation, settings, users, and the comment, review and contact inboxes.
+- **Translation-aware editing.** Every translatable field shows English, Arabic and Kurdish side by side with empty languages flagged, and list views summarise which languages a record is still missing.
+- **Moderation queues** on the dashboard for pending comments and reviews, with counts for unread contact messages and published procedures.
+- Search, pagination and sorting on every collection list; file upload and replacement for logos, photos and documents.
+- `docs/ADMIN.md` — how the admin is put together and what is deliberately not built.
+- End-to-end tests: `npm run e2e:read` (44 checks) and `npm run e2e` (16 checks, real browser).
+
+### Changed
+
+- The route guard lives in `src/proxy.ts`. Next 16 renamed the `middleware` convention to `proxy`; `CLAUDE.md` still describes it as `middleware.ts`.
+
+### Fixed
+
+- Sign-in could not be retried after a wrong password. React 19 resets an uncontrolled form once its action resolves, which emptied the email box; the browser's `required` check then blocked the next submit without sending a request or showing an error. The same reset discarded everything typed into a record form whenever validation failed.
+
 ### Security
 
+- The public site is a placeholder, so nothing citizen-facing reads from PocketBase yet.
+- Staff sign-in refuses `user`-role accounts with the same wording as a wrong password, so the form cannot be used to discover which addresses belong to staff.
+- Non-staff receive 404 rather than 403 across the admin, keeping the surface unenumerable.
 - A signed-in user cannot escalate their own `role`: `users.updateRule` rejects any request whose body sets `role`, and `createRule` pins new signups to `user`.
 - Comments and reviews cannot be self-approved or posted under another user's identity; both are held for staff moderation before they appear publicly.
 - Archiving a procedure withdraws its steps and its downloadable forms in the same action, because those collections gate reads on the parent's state.
