@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Next.js
+.next/
+out/
+build/
+next-env.d.ts
+
+# Environment — never commit real values
+.env
+.env.local
+.env*.local
+
+# MCP server config — contains PocketBase admin credentials
+.mcp.json
+
+# Testing
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# OS / editor
+.DS_Store
+.idea/
+*.swp
+
+# Vercel
+.vercel
+
+# TypeScript
+*.tsbuildinfo
