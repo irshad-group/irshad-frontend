@@ -1,0 +1,73 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-ink-50: #f6f7f9;
+  --color-ink-100: #eceef2;
+  --color-ink-200: #d7dbe3;
+  --color-ink-300: #b3bac8;
+  --color-ink-400: #8892a6;
+  --color-ink-500: #667085;
+  --color-ink-600: #4d5566;
+  --color-ink-700: #3a4152;
+  --color-ink-800: #252b38;
+  --color-ink-900: #161a23;
+
+  --color-brand-50: #eef6f2;
+  --color-brand-100: #d3e8de;
+  --color-brand-500: #1b5e4b;
+  --color-brand-600: #164f3f;
+  --color-brand-700: #113d31;
+
+  --font-sans:
+    'Noto Sans', 'Noto Sans Arabic', 'Noto Kufi Arabic', ui-sans-serif, system-ui, sans-serif;
+}
+
+/*
+ * The three locales share one stylesheet. Everything directional must use
+ * logical properties (margin-inline, padding-inline, inset-inline) so Arabic
+ * and Kurdish mirror correctly without a second sheet.
+ */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  background-color: var(--color-ink-50);
+  color: var(--color-ink-800);
+  font-family: var(--font-sans);
+}
+
+/* Numerals stay Latin even in Arabic/Kurdish UI, matching how Iraqi government
+   forms print reference numbers and fees. */
+[dir='rtl'] table,
+[dir='rtl'] .tabular {
+  font-variant-numeric: tabular-nums;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+}
+
+/* Rich-text coming out of the `editor` fields. */
+.prose-content :is(h1, h2, h3) {
+  font-weight: 600;
+  margin-block: 0.75em 0.35em;
+}
+.prose-content p {
+  margin-block: 0.5em;
+}
+.prose-content :is(ul, ol) {
+  margin-block: 0.5em;
+  padding-inline-start: 1.5em;
+}
+.prose-content ul {
+  list-style: disc;
+}
+.prose-content ol {
+  list-style: decimal;
+}
+.prose-content a {
+  color: var(--color-brand-600);
+  text-decoration: underline;
+}

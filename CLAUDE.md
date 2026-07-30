@@ -8,15 +8,19 @@ Guidance for Claude Code when working in this repository.
 
 This repo is a **rewrite**. The original system was Laravel + MySQL; the schema lives in `irshad_db.sql` (reference only — it is not used at runtime). The backend is now **PocketBase**.
 
-> **Status: backend applied, app not yet scaffolded.** As of 2026-07-30 the PocketBase
-> schema is **live** — all 17 content collections plus the extended `users` auth
-> collection, with API rules and a trilingual development dataset. See
-> `pocketbase/README.md`, and `pocketbase/schema.json` for the versioned snapshot.
+> **Status: backend live, admin built, public site intentionally not built.**
+> As of 2026-07-30 the PocketBase schema is live (see `pocketbase/README.md`) and the
+> Next.js app is scaffolded with the **admin dashboard complete** — see
+> `docs/ADMIN.md`.
 >
-> Everything under "Architecture" below still describes the **target** Next.js structure,
-> not code that exists — `src/` has not been created. Do not assume a file exists because
-> it is named here; check first. The "Data model" section is now accurate, but the live
-> schema remains the authority.
+> The `(public)` route group holds a **placeholder only**. The citizen-facing pages are
+> waiting on the UI/UX design and must not be grown by accretion; replace the placeholder
+> wholesale when the designs land.
+>
+> Two deviations from what is written below, both forced by Next 16 / current tooling:
+> the route guard lives in **`src/proxy.ts`**, not `middleware.ts` (Next 16 renamed the
+> convention), and there is no `lib/pb/collections.ts` barrel of "typed collection
+> accessors" beyond the thin read helpers actually in that file.
 
 ## Stack
 
