@@ -7,8 +7,8 @@ Build plan for the Irshad frontend rewrite (Next.js + PocketBase). Phases are or
 
 > Note: Phase 3 is specified in `specs/001-public-portal-ui/`, which has its own
 > internal phase numbering. Its Phase 0 (design foundations), Phase 1 (site
-> shell) and Phase 2 (search and procedure detail) are complete; its Phase 3
-> (ministries, directorates and branches) is next.
+> shell), Phase 2 (search and procedure detail) and Phase 3 (institutions and
+> places) are complete; its Phase 4 (FAQ, contact, team, partners) is next.
 
 ---
 
@@ -58,12 +58,12 @@ The schema is the contract for everything downstream; get it right before writin
 
 > **No longer blocked.** There is no external brand to follow, so the design is
 > owned here: see `specs/001-public-portal-ui/` for the specification, plan and
-> the decisions behind them. The shell, home, search and procedure pages are
-> built; institutions and the support pages are what remain.
+> the decisions behind them. The shell, home, search, procedures, ministries and
+> directorates are built; the support pages are what remain.
 
 - [x] Home — search-first, featured/recent procedures, FAQ preview (slider surfaced as static cards, not a carousel)
-- [ ] Ministries — index and detail, with the ministry's directorates
-- [ ] Directorates — index and detail, with working hours, map location, and offered procedures
+- [x] Ministries — index and detail, with the ministry's directorates and a federal/KRG filter
+- [x] Directorates — index and detail, with working hours, offered procedures, branches grouped by province, and an open-in-maps link rather than an embedded map
 - [x] **Procedures — detail page.** Description, ordered items, downloadable files, tags, fee, processing time, responsible directorate. Prerendered per locale.
 - [x] Search — across procedures in all three languages at once; a plain GET form, so results are shareable and work without JavaScript. **Directorates not yet searched.**
 - [ ] FAQ, Team, Partners pages

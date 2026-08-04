@@ -216,6 +216,99 @@ try {
     await context.close();
   }
 
+  // Institutions and places.
+  for (const { locale } of LOCALES) {
+    console.log(`\n== /${locale} institutions ==`);
+    const context = await browser.newContext({ viewport: { width: 1280, height: 800 } });
+    const page = await context.newPage();
+
+    await page.goto(`${BASE}/${locale}/ministries`, { waitUntil: 'domcontentloaded' });
+    const ministryLinks = page.locator('main ul li a[href*="/ministries/"]');
+    check(`${locale}: ministries index lists bodies`, (await ministryLinks.count()) === 14);
+
+    // The KRG filter is what the seeded header menu links to.
+    await page.goto(`${BASE}/${locale}/ministries?krg=true`, { waitUntil: 'domcontentloaded' });
+    const krgCount = await page.locator('main ul li a[href*="/ministries/"]').count();
+    await page.goto(`${BASE}/${locale}/ministries?krg=false`, { waitUntil: 'domcontentloaded' });
+    const federalCount = await page.locator('main ul li a[href*="/ministries/"]').count();
+    check(
+      `${locale}: krg filter splits the list`,
+      krgCount > 0 && federalCount > 0 && krgCount + federalCount === 14,
+      `krg ${krgCount} + federal ${federalCount}`,
+    );
+
+    // A mangled filter must degrade to the full list, not to nothing.
+    await page.goto(`${BASE}/${locale}/ministries?krg=banana`, { waitUntil: 'domcontentloaded' });
+    check(
+      `${locale}: unknown filter value shows everything`,
+      (await page.locator('main ul li a[href*="/ministries/"]').count()) === 14,
+    );
+
+    await page.goto(`${BASE}/${locale}/ministries`, { waitUntil: 'domcontentloaded' });
+    await ministryLinks.first().click();
+    await page.waitForURL(/\/ministries\//);
+    check(`${locale}: ministry page has one h1`, (await page.locator('main h1').count()) === 1);
+    const directorateLinks = page.locator('main a[href*="/directorates/"]');
+    check(`${locale}: ministry lists its directorates`, (await directorateLinks.count()) > 0);
+
+    await directorateLinks.first().click();
+    await page.waitForURL(/\/directorates\//);
+    check(
+      `${locale}: directorate links back to its ministry`,
+      (await page.locator('main a[href*="/ministries/"]').count()) >= 1,
+    );
+    check(
+      `${locale}: directorate lists the procedures it handles`,
+      (await page.locator('main a[href*="/procedures/"]').count()) > 0,
+    );
+
+    // Locations are links to the visitor's own maps app, never an embed.
+    check(`${locale}: no third-party map iframe`, (await page.locator('iframe').count()) === 0);
+    const mapLinks = page.locator('main a[href*="openstreetmap.org"]');
+    check(`${locale}: locations offer an open-in-maps link`, (await mapLinks.count()) > 0);
+    check(
+      `${locale}: map links open safely in a new tab`,
+      (await mapLinks.first().getAttribute('rel'))?.includes('noopener'),
+    );
+
+    // Province filtering on the directorates index.
+    await page.goto(`${BASE}/${locale}/directorates`, { waitUntil: 'domcontentloaded' });
+    const allDirectorates = await page.locator('main ul li a[href*="/directorates/"]').count();
+    check(`${locale}: directorates index lists offices`, allDirectorates === 18);
+    const provinceLink = page.locator('nav a[href*="province="]').first();
+    await provinceLink.click();
+    await page.waitForURL(/province=/);
+    const filtered = await page.locator('main ul li a[href*="/directorates/"]').count();
+    check(
+      `${locale}: province filter narrows the list`,
+      filtered < allDirectorates,
+      `${filtered} of ${allDirectorates}`,
+    );
+    check(
+      `${locale}: province filter marks the active province`,
+      (await page.locator('nav a[aria-current="true"]').count()) >= 1,
+    );
+
+    check(
+      `${locale}: unknown ministry returns 404`,
+      (await page.goto(`${BASE}/${locale}/ministries/no-such-ministry`, { waitUntil: 'domcontentloaded' }))?.status() === 404,
+    );
+
+    await page.setViewportSize({ width: 320, height: 720 });
+    await page.goto(`${BASE}/${locale}/directorates`, { waitUntil: 'domcontentloaded' });
+    const overflow = await page.evaluate(() => ({
+      scrollWidth: document.documentElement.scrollWidth,
+      inner: window.innerWidth,
+    }));
+    check(
+      `${locale}: directorates index has no overflow at 320px`,
+      overflow.scrollWidth <= overflow.inner,
+      JSON.stringify(overflow),
+    );
+
+    await context.close();
+  }
+
   // The shell must survive with JavaScript switched off.
   console.log('\n== JavaScript disabled ==');
   const noJs = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 1280, height: 800 } });

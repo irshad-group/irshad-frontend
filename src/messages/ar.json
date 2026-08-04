@@ -119,5 +119,44 @@
     "download": "تحميل",
     "opensExternal": "يفتح في موقع آخر",
     "tags": "الوسوم"
+  },
+  "ministries": {
+    "title": "الوزارات",
+    "intro": "الجهات الحكومية التي يغطيها إرشاد، الاتحادية وحكومة إقليم كردستان.",
+    "filter": "تصفية الوزارات",
+    "all": "الكل",
+    "federal": "اتحادية",
+    "krg": "إقليم كردستان",
+    "krgBadge": "حكومة إقليم كردستان",
+    "emptyTitle": "لا توجد وزارات هنا",
+    "emptyBody": "لم يُنشر أي شيء في هذا القسم."
+  },
+  "ministry": {
+    "directorates": "المديريات",
+    "noDirectorates": "لا توجد مديريات مدرجة بعد"
+  },
+  "directorates": {
+    "title": "المديريات",
+    "intro": "الدوائر التي تنفذ الإجراءات. صفِّ حسب المحافظة لتجد الأقرب إليك.",
+    "filterByProvince": "تصفية حسب المحافظة",
+    "allProvinces": "كل المحافظات",
+    "emptyTitle": "لا توجد مديريات",
+    "emptyBody": "لم يُنشر أي شيء في هذا القسم.",
+    "emptyInProvince": "لا توجد مديرية لديها مكتب في {province} بعد.",
+    "clearFilter": "عرض كل المديريات"
+  },
+  "directorate": {
+    "procedures": "الإجراءات هنا",
+    "noProcedures": "لا توجد إجراءات مدرجة بعد",
+    "branches": "المكاتب حسب المحافظة",
+    "noBranches": "لا توجد مكاتب في المحافظات",
+    "noBranchesBody": "استخدم بيانات الاتصال بالمكتب الرئيسي.",
+    "otherBranches": "مكاتب أخرى",
+    "workingHours": "أوقات الدوام"
+  },
+  "place": {
+    "address": "العنوان",
+    "openInMaps": "فتح في الخرائط",
+    "contact": "الاتصال"
   }
 }

@@ -119,5 +119,44 @@
     "download": "Download",
     "opensExternal": "Opens elsewhere",
     "tags": "Tags"
+  },
+  "ministries": {
+    "title": "Ministries",
+    "intro": "Government bodies covered by Irshad, federal and Kurdistan Regional Government.",
+    "filter": "Filter ministries",
+    "all": "All",
+    "federal": "Federal",
+    "krg": "Kurdistan Region",
+    "krgBadge": "Kurdistan Regional Government",
+    "emptyTitle": "No ministries here",
+    "emptyBody": "Nothing has been published in this section."
+  },
+  "ministry": {
+    "directorates": "Directorates",
+    "noDirectorates": "No directorates listed yet"
+  },
+  "directorates": {
+    "title": "Directorates",
+    "intro": "The offices that deliver procedures. Filter by province to find one near you.",
+    "filterByProvince": "Filter by province",
+    "allProvinces": "All provinces",
+    "emptyTitle": "No directorates found",
+    "emptyBody": "Nothing has been published in this section.",
+    "emptyInProvince": "No directorate has an office in {province} yet.",
+    "clearFilter": "Show all directorates"
+  },
+  "directorate": {
+    "procedures": "Procedures handled here",
+    "noProcedures": "No procedures listed yet",
+    "branches": "Offices by province",
+    "noBranches": "No provincial offices listed",
+    "noBranchesBody": "Use the contact details for the main office.",
+    "otherBranches": "Other offices",
+    "workingHours": "Working hours"
+  },
+  "place": {
+    "address": "Address",
+    "openInMaps": "Open in maps",
+    "contact": "Contact"
   }
 }
