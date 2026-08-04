@@ -17,7 +17,28 @@ import type { FilesRecord } from '@/types/pb';
  */
 export function formatFee(fee: number | undefined | null, locale: string): string | null {
   if (fee === undefined || fee === null || Number.isNaN(fee) || fee <= 0) return null;
-  return new Intl.NumberFormat(`${locale}-u-nu-latn`, { maximumFractionDigits: 0 }).format(fee);
+  return new Intl.NumberFormat(numberLocale(locale), { maximumFractionDigits: 0 }).format(fee);
+}
+
+/**
+ * A BCP 47 tag `Intl` will accept, forcing Latin digits.
+ *
+ * The locale reaching this is the first path segment, which is not always one
+ * of ours: a request for `/favicon.ico` renders with `locale` set to
+ * `favicon.ico`, and `new Intl.NumberFormat('favicon.ico-u-nu-latn')` throws a
+ * RangeError that takes the whole page down. Found in the server log while
+ * debugging something else.
+ *
+ * An unusable tag falls back to English formatting rather than throwing —
+ * grouping a number is never worth losing the page over.
+ */
+function numberLocale(locale: string): string {
+  const tag = `${locale}-u-nu-latn`;
+  try {
+    return Intl.NumberFormat.supportedLocalesOf(tag).length > 0 ? tag : 'en-u-nu-latn';
+  } catch {
+    return 'en-u-nu-latn';
+  }
 }
 
 export type AttachedFile = {

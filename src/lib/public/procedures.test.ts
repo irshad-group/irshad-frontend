@@ -51,6 +51,16 @@ describe('formatFee', () => {
     expect(formatFee(1500.75, 'en')).toBe('1,501');
   });
 
+  it('survives a locale that is not a locale at all', () => {
+    // The locale is the first path segment, and it is not always one of ours:
+    // a request for /favicon.ico renders with locale "favicon.ico", which threw
+    // a RangeError out of Intl and took the whole page down.
+    expect(formatFee(100000, 'favicon.ico')).toBe('100,000');
+    expect(formatFee(100000, '')).toBe('100,000');
+    expect(formatFee(100000, 'not a tag!!')).toBe('100,000');
+    expect(formatFee(100000, 'zz-ZZ-nonsense')).toBe('100,000');
+  });
+
   it('returns null when there is no fee to show', () => {
     expect(formatFee(0, 'en')).toBeNull();
     expect(formatFee(undefined, 'en')).toBeNull();

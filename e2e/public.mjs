@@ -354,7 +354,9 @@ try {
     check(`${locale}: faq opens on click`, await questions.first().evaluate((d) => d.open));
 
     await page.goto(`${BASE}/${locale}/team`, { waitUntil: 'domcontentloaded' });
-    check(`${locale}: team lists members`, (await page.locator('main ul > li').count()) === 6);
+    // Not pinned to a count: the team is real content that staff edit, and a
+    // test that fails because someone joined is a test that gets ignored.
+    check(`${locale}: team lists members`, (await page.locator('main ul > li').count()) >= 1);
 
     await page.goto(`${BASE}/${locale}/partners`, { waitUntil: 'domcontentloaded' });
     check(`${locale}: partners listed`, (await page.locator('main ul > li').count()) === 6);
@@ -362,6 +364,24 @@ try {
     check(
       `${locale}: partner links are safe`,
       (await partnerLinks.first().getAttribute('rel'))?.includes('noopener'),
+    );
+
+    // 404: localized, inside the shell, and offering real ways out.
+    const missing = await page.goto(`${BASE}/${locale}/procedures/no-such-thing`, {
+      waitUntil: 'domcontentloaded',
+    });
+    check(`${locale}: 404 status`, missing?.status() === 404);
+    const heading = (await page.locator('main h1').innerText()).trim();
+    check(`${locale}: 404 is translated, not a raw message key`, !heading.includes('notFound.'));
+    check(
+      `${locale}: 404 keeps the site shell`,
+      (await page.locator('header').count()) === 1 && (await page.locator('footer').count()) === 1,
+    );
+    const exits = page.locator('main a');
+    check(`${locale}: 404 offers routes onward`, (await exits.count()) >= 3);
+    check(
+      `${locale}: 404 exits carry the locale`,
+      (await exits.first().getAttribute('href'))?.startsWith(`/${locale}`),
     );
 
     await page.goto(`${BASE}/${locale}/contact`, { waitUntil: 'domcontentloaded' });

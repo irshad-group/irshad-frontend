@@ -45,7 +45,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - **FAQ, team and partners pages**, and a **contact form** — the portal's only public write. It runs anonymously, because `contact` has a create-only rule for visitors and a privileged client here would bypass the very rule that limits what the public can do. Every field is re-validated on the server with Zod regardless of what the browser checked, errors are returned as codes and rendered from the message catalogue so they appear in the visitor's own language, and a failed submission never loses what was typed.
 - A honeypot field catches naive bots and reports success to them without storing anything, so they learn nothing about why they failed. It is off-screen and hidden from assistive technology, so a screen-reader user never meets it.
 - **A tag index at `/procedures/tags`**, showing each tag with how many procedures carry it. This is where the "Browse by Tag" entry in the seeded `navigation` collection already pointed — the link had been returning 404. Tags with nothing published behind them are not offered, since they would be a dead end.
-- **`e2e/public.mjs`** — 198 browser assertions across all three languages: direction, translated menus, disclosures, the skip link, the footer, no horizontal overflow at 320 px, and a pass with JavaScript disabled.
+- **Error and not-found pages**, in the visitor's own language. A 404 raised from inside the portal keeps the header, menu and footer, because the commonest 404 here is a citizen following a stale link to a withdrawn procedure and they should be able to navigate on from it. An error page never shows the underlying failure, which would be English, technical and occasionally revealing about the backend; it offers a retry and a reference code instead. `global-error` covers the case where the locale layout itself failed and the language is therefore unknown — it says the same thing in all three, each with its own `lang` and `dir`.
+- **`e2e/public.mjs`** — 213 browser assertions across all three languages: direction, translated menus, disclosures, the skip link, the footer, no horizontal overflow at 320 px, and a pass with JavaScript disabled.
 - `README.md`, and `specs/001-public-portal-ui/` — specification, implementation plan, research and data model for the citizen-facing portal, written with [Spec Kit](https://github.com/github/spec-kit) alongside a project constitution in `.specify/memory/`.
 
 ### Changed
@@ -53,6 +54,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - The route guard lives in `src/proxy.ts`. Next 16 renamed the `middleware` convention to `proxy`; `CLAUDE.md` now describes it correctly.
 
 ### Fixed
+
+- **A fee crashed the page when the URL's first segment was not a locale.** `formatFee` built an `Intl.NumberFormat` tag from it, so a request for `/favicon.ico` produced `favicon.ico-u-nu-latn` and a `RangeError` that took down every procedure card on the page. Found in the server log while debugging something unrelated. An unusable tag now falls back to English formatting — grouping a number is never worth losing the page over.
 
 - Sign-in could not be retried after a wrong password. React 19 resets an uncontrolled form once its action resolves, which emptied the email box; the browser's `required` check then blocked the next submit without sending a request or showing an error. The same reset discarded everything typed into a record form whenever validation failed.
 

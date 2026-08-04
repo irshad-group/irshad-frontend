@@ -100,7 +100,7 @@ The schema is the contract for everything downstream; get it right before writin
 
 - [ ] Accessibility pass — keyboard navigation, focus order, contrast, screen reader labels in all three languages
 - [ ] Performance — image optimization, caching and revalidation strategy for public routes, bundle audit
-- [ ] Error handling — `error.tsx` / `not-found.tsx` per route group, sensible messages when PocketBase is unreachable
+- [x] Error handling — `error.tsx` / `not-found.tsx` per route group plus `global-error.tsx`, all localized, verified in a browser
 - [ ] Loading and empty states everywhere
 - [ ] Security review — confirm API rules hold against a hostile client, verify admin credentials never reach the bundle, add rate limiting on public writes
 - [ ] Tests — schema/validation units, then end-to-end coverage of the search → procedure → download path

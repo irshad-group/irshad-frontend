@@ -199,5 +199,19 @@
     "intro": "Tags group procedures across ministries. Pick one to see everything it covers.",
     "emptyTitle": "No tags in use yet",
     "emptyBody": "Tags appear here once procedures have been tagged."
+  },
+  "notFound": {
+    "title": "This page could not be found",
+    "body": "The address may be wrong, or the page may have been withdrawn.",
+    "home": "Go to the home page",
+    "browse": "Browse procedures",
+    "search": "Search"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "body": "We could not load this page. This is usually temporary — please try again.",
+    "retry": "Try again",
+    "home": "Go to the home page",
+    "reference": "Reference:"
   }
 }
