@@ -193,5 +193,11 @@
       "invalidEmail": "Please enter a valid email address.",
       "invalid": "Please check this field."
     }
+  },
+  "tags": {
+    "title": "Browse by tag",
+    "intro": "Tags group procedures across ministries. Pick one to see everything it covers.",
+    "emptyTitle": "No tags in use yet",
+    "emptyBody": "Tags appear here once procedures have been tagged."
   }
 }

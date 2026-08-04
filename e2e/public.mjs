@@ -191,6 +191,32 @@ try {
       (await page.locator('main a[href*="/procedures"]').count()) > 0,
     );
 
+    // The tag index — the destination of the seeded "Browse by Tag" menu entry.
+    await page.goto(`${BASE}/${locale}/procedures/tags`, { waitUntil: 'domcontentloaded' });
+    const tagCards = page.locator('main ul li a[href*="tag="]');
+    check(`${locale}: tag index lists tags`, (await tagCards.count()) > 0);
+    check(
+      `${locale}: every listed tag has a count`,
+      await page.evaluate(() =>
+        [...document.querySelectorAll('main ul li a')].every((a) => /\d/.test(a.textContent ?? '')),
+      ),
+    );
+    const firstTagHref = await tagCards.first().getAttribute('href');
+    await tagCards.first().click();
+    await page.waitForURL(/tag=/);
+    check(
+      `${locale}: a tag leads to procedures carrying it`,
+      (await page.locator('main ul li a[href*="/procedures/"]').count()) > 0,
+      `from ${firstTagHref}`,
+    );
+
+    // The static segment must win over /procedures/[slug].
+    await page.goto(`${BASE}/${locale}/procedures/tags`, { waitUntil: 'domcontentloaded' });
+    check(
+      `${locale}: /procedures/tags is the index, not a 404`,
+      (await page.locator('main h1').count()) === 1,
+    );
+
     // Tag filtering is links, so each filtered view has its own URL.
     await page.goto(`${BASE}/${locale}/procedures`, { waitUntil: 'domcontentloaded' });
     const tagLink = page.locator('nav a[href*="tag="]').first();

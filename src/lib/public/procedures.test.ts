@@ -1,5 +1,38 @@
 import { describe, expect, it } from 'vitest';
-import { attachedFile, formatFee, parseListParams } from './procedures';
+import { attachedFile, countByTag, formatFee, parseListParams } from './procedures';
+
+describe('countByTag', () => {
+  it('counts nothing for an empty list', () => {
+    expect(countByTag([]).size).toBe(0);
+  });
+
+  it('counts how many procedures carry each tag', () => {
+    const counts = countByTag([
+      { tags: ['passport', 'travel'] },
+      { tags: ['passport'] },
+      { tags: ['id'] },
+    ]);
+    expect(counts.get('passport')).toBe(2);
+    expect(counts.get('travel')).toBe(1);
+    expect(counts.get('id')).toBe(1);
+  });
+
+  it('counts a tag repeated on one procedure only once', () => {
+    // The relation is a set; a duplicate is a data-entry slip, not two procedures.
+    expect(countByTag([{ tags: ['passport', 'passport'] }]).get('passport')).toBe(1);
+  });
+
+  it('ignores a procedure with no tags', () => {
+    const counts = countByTag([{ tags: [] }, { tags: undefined }, {}, { tags: ['x'] }]);
+    expect(counts.size).toBe(1);
+    expect(counts.get('x')).toBe(1);
+  });
+
+  it('omits tags that appear on nothing rather than reporting zero', () => {
+    expect(countByTag([{ tags: ['a'] }]).has('b')).toBe(false);
+    expect(countByTag([{ tags: ['a'] }]).get('b')).toBeUndefined();
+  });
+});
 
 describe('formatFee', () => {
   it('groups thousands', () => {

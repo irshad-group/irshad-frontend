@@ -55,6 +55,29 @@ function extensionOf(filename: string): string {
   return match ? match[1]!.toUpperCase() : '';
 }
 
+/**
+ * How many procedures carry each tag.
+ *
+ * Counted in memory from one read of the procedures rather than one count query
+ * per tag: there are twenty tags and a few dozen procedures, so twenty round
+ * trips to save a little arithmetic would be a poor trade.
+ *
+ * A tag listed twice on the same procedure counts once — the relation is a set,
+ * and a duplicate is a data-entry slip, not two procedures.
+ *
+ * Only tags that actually appear are keys here. A tag with no procedures is
+ * absent rather than zero, so the caller decides whether to show it.
+ */
+export function countByTag(procedures: readonly { tags?: string[] }[]): Map<string, number> {
+  const counts = new Map<string, number>();
+  for (const procedure of procedures) {
+    for (const tag of new Set(procedure.tags ?? [])) {
+      counts.set(tag, (counts.get(tag) ?? 0) + 1);
+    }
+  }
+  return counts;
+}
+
 export type ListParams = { q: string; tag: string; page: number };
 
 /**
