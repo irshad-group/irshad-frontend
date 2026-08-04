@@ -6,8 +6,9 @@ Build plan for the Irshad frontend rewrite (Next.js + PocketBase). Phases are or
 **Current phase:** Phase 3 (Phases 0, 1, 2 and 4 done)
 
 > Note: Phase 3 is specified in `specs/001-public-portal-ui/`, which has its own
-> internal phase numbering. Its Phase 0 (design foundations) and Phase 1 (site
-> shell) are complete; its Phase 2 (search and procedure detail) is next.
+> internal phase numbering. Its Phase 0 (design foundations), Phase 1 (site
+> shell) and Phase 2 (search and procedure detail) are complete; its Phase 3
+> (ministries, directorates and branches) is next.
 
 ---
 
@@ -57,14 +58,14 @@ The schema is the contract for everything downstream; get it right before writin
 
 > **No longer blocked.** There is no external brand to follow, so the design is
 > owned here: see `specs/001-public-portal-ui/` for the specification, plan and
-> the decisions behind them. The shell is built; the home page is still the
-> placeholder and should be replaced wholesale rather than grown.
+> the decisions behind them. The shell, home, search and procedure pages are
+> built; institutions and the support pages are what remain.
 
-- [ ] Home — slider, featured/recent procedures, FAQ preview
+- [x] Home — search-first, featured/recent procedures, FAQ preview (slider surfaced as static cards, not a carousel)
 - [ ] Ministries — index and detail, with the ministry's directorates
 - [ ] Directorates — index and detail, with working hours, map location, and offered procedures
-- [ ] **Procedures — detail page.** The reason the site exists: description, ordered procedure items, attached downloadable files, tags. Get this right before anything else in this phase.
-- [ ] Search — across procedures and directorates, working in all three languages
+- [x] **Procedures — detail page.** Description, ordered items, downloadable files, tags, fee, processing time, responsible directorate. Prerendered per locale.
+- [x] Search — across procedures in all three languages at once; a plain GET form, so results are shareable and work without JavaScript. **Directorates not yet searched.**
 - [ ] FAQ, Team, Partners pages
 - [ ] Contact form — writes to `contact`, with spam protection (create-only rule plus rate limiting)
 - [ ] Reviews and comments on procedures — submission plus moderated display

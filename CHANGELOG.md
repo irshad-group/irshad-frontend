@@ -34,13 +34,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - `lib/pb/queries/public.ts` — the public portal's only route to PocketBase. Reads anonymously with no cookie, so pages stay statically renderable, and returns exactly what any visitor can see.
 - Shared public primitives (`Container`, `Prose`, `EmptyState`) alongside the existing admin ones.
 - **The public site shell** — a header whose menu comes from the `navigation` collection and a footer driven by `settings`, so staff change either in the admin without a deployment. Submenus and the mobile drawer are native `<details>` disclosures rather than scripted popovers: they open by click and by keyboard, are announced correctly by screen readers, and keep working when JavaScript never arrives. A skip-to-content link is the first tab stop on every page.
-- **A unit test suite** (`vitest`) with a 100% coverage gate on lines, branches, functions and statements — 25 tests over the navigation-tree and settings resolution logic, including menu entries whose parent was deleted, moved to the other placement, or made to point at itself.
-- **`e2e/public.mjs`** — 59 browser assertions across all three languages: direction, translated menus, disclosures, the skip link, the footer, no horizontal overflow at 320 px, and a pass with JavaScript disabled.
+- **A unit test suite** (`vitest`) with a 100% coverage gate on lines, branches, functions and statements — 46 tests over the navigation tree, settings resolution, fee formatting, attachment resolution and query-parameter normalisation, including menu entries whose parent was deleted, moved to the other placement, or made to point at itself.
+- **The procedure page** — the reason the site exists. Description, numbered steps in order, downloadable forms, fee, processing time, tags, and the directorate responsible, in the visitor's language. Every published procedure is prerendered; an unpublished or archived one returns 404 rather than a partial page, and is indistinguishable from one that never existed.
+- **Search across all three languages at once**, so a term known in Arabic still finds the record while reading in Kurdish. It is a plain GET form: results have a shareable, bookmarkable, crawlable URL and work with no JavaScript.
+- **The procedures index**, filterable by tag through links rather than script, so each filtered view has its own URL. A search that matches nothing offers a route onward instead of a dead end.
+- **The home page**, replacing the placeholder: search first and large, then common and recently updated procedures, then an FAQ preview. The slider is deliberately not rendered as a rotating carousel — banners that move bury content, are awkward with a screen reader, and cost more than they return on a slow connection.
+- Fees render in Latin digits in all three languages, matching how Iraqi government forms print them, so the figure on screen matches the printed schedule.
+- **`e2e/public.mjs`** — 105 browser assertions across all three languages: direction, translated menus, disclosures, the skip link, the footer, no horizontal overflow at 320 px, and a pass with JavaScript disabled.
 - `README.md`, and `specs/001-public-portal-ui/` — specification, implementation plan, research and data model for the citizen-facing portal, written with [Spec Kit](https://github.com/github/spec-kit) alongside a project constitution in `.specify/memory/`.
 
 ### Changed
 
-- The route guard lives in `src/proxy.ts`. Next 16 renamed the `middleware` convention to `proxy`; `CLAUDE.md` still describes it as `middleware.ts`.
+- The route guard lives in `src/proxy.ts`. Next 16 renamed the `middleware` convention to `proxy`; `CLAUDE.md` now describes it correctly.
 
 ### Fixed
 

@@ -74,5 +74,50 @@
     "markSpam": "Mark as spam",
     "adminOnly": "Administrators only",
     "unsavedHint": "Changes are not saved until you press Save."
+  },
+  "home": {
+    "heading": "Know what you need before you go.",
+    "intro": "Irshad explains Iraqi government procedures step by step: what to bring, what it costs, how long it takes, and which office to visit.",
+    "featured": "Common procedures",
+    "recent": "Recently updated",
+    "faq": "Frequently asked questions",
+    "seeAll": "See all procedures",
+    "allFaq": "All questions"
+  },
+  "search": {
+    "title": "Search",
+    "label": "Search procedures",
+    "placeholder": "Passport, national ID, driving licence…",
+    "submit": "Search",
+    "prompt": "Type what you need above and press Search.",
+    "resultCount": "{count, plural, =0 {No results for “{query}”} one {# result for “{query}”} other {# results for “{query}”}}",
+    "emptyTitle": "Nothing matched that search",
+    "emptyBody": "Try a shorter or more general word, or browse all procedures.",
+    "browseAll": "Browse all procedures"
+  },
+  "procedures": {
+    "title": "Procedures",
+    "intro": "Every procedure Irshad covers, newest and most common first.",
+    "filterByTag": "Filter by tag",
+    "allTags": "All",
+    "count": "{count, plural, =0 {No procedures} one {# procedure} other {# procedures}}",
+    "emptyTitle": "No procedures here yet",
+    "emptyBody": "Nothing has been published in this section.",
+    "emptyTagged": "Nothing is tagged “{tag}” yet.",
+    "clearFilter": "Show all procedures",
+    "pagination": "Pagination"
+  },
+  "procedure": {
+    "fee": "Fee",
+    "free": "Free",
+    "processingTime": "Takes",
+    "responsibleOffice": "Handled by",
+    "about": "About this procedure",
+    "steps": "Steps to follow",
+    "forms": "Forms to download",
+    "formsHint": "Fill these in before you go to save time at the office.",
+    "download": "Download",
+    "opensExternal": "Opens elsewhere",
+    "tags": "Tags"
   }
 }

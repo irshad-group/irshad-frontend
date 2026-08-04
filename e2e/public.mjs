@@ -139,6 +139,83 @@ try {
     await context.close();
   }
 
+  // The journey the site exists for: search -> procedure -> forms.
+  for (const { locale, dir } of LOCALES) {
+    console.log(`\n== /${locale} search -> procedure ==`);
+    const context = await browser.newContext({ viewport: { width: 1280, height: 800 } });
+    const page = await context.newPage();
+
+    await page.goto(`${BASE}/${locale}`, { waitUntil: 'domcontentloaded' });
+    check(`${locale}: home shows procedure cards`, (await page.locator('main ul li a').count()) > 0);
+
+    // Search by an English term while reading in any language: matching runs
+    // across all three languages' fields, not just the active one.
+    await page.fill('input[name="q"]', 'passport');
+    await page.locator('form[role="search"] button[type="submit"]').first().click();
+    await page.waitForURL(/\/search\?/);
+    check(`${locale}: search lands on a shareable URL`, page.url().includes('q=passport'));
+
+    const results = page.locator('main ul li a[href*="/procedures/"]');
+    check(`${locale}: search returns results`, (await results.count()) > 0);
+
+    await results.first().click();
+    await page.waitForURL(/\/procedures\//);
+
+    check(`${locale}: procedure has one h1`, (await page.locator('main h1').count()) === 1);
+    const steps = page.locator('main ol > li');
+    check(`${locale}: steps render in order`, (await steps.count()) > 0);
+    check(
+      `${locale}: fee is shown in Latin digits`,
+      /[0-9]/.test(await page.locator('main dl').first().innerText()),
+    );
+    check(
+      `${locale}: responsible directorate is linked`,
+      (await page.locator('main dl a[href*="/directorates/"]').count()) === 1,
+    );
+    check(
+      `${locale}: attached forms link to PocketBase or elsewhere`,
+      (await page.locator('main a[href*="/api/files/"], main a[target="_blank"]').count()) > 0,
+    );
+    check(`${locale}: page keeps its direction`, (await page.getAttribute('html', 'dir')) === dir);
+
+    // An unpublished or missing procedure must not be distinguishable.
+    const missing = await page.goto(`${BASE}/${locale}/procedures/no-such-procedure`, {
+      waitUntil: 'domcontentloaded',
+    });
+    check(`${locale}: unknown procedure returns 404`, missing?.status() === 404);
+
+    // A search that matches nothing must offer a way onward.
+    await page.goto(`${BASE}/${locale}/search?q=zzzzqqqq`, { waitUntil: 'domcontentloaded' });
+    check(
+      `${locale}: empty search offers a route onward`,
+      (await page.locator('main a[href*="/procedures"]').count()) > 0,
+    );
+
+    // Tag filtering is links, so each filtered view has its own URL.
+    await page.goto(`${BASE}/${locale}/procedures`, { waitUntil: 'domcontentloaded' });
+    const tagLink = page.locator('nav a[href*="tag="]').first();
+    await tagLink.click();
+    await page.waitForURL(/tag=/);
+    check(`${locale}: tag filter has its own URL`, page.url().includes('tag='));
+    check(
+      `${locale}: tag filter marks the active tag`,
+      (await page.locator('nav a[aria-current="true"]').count()) >= 1,
+    );
+
+    await page.setViewportSize({ width: 320, height: 720 });
+    const overflow = await page.evaluate(() => ({
+      scrollWidth: document.documentElement.scrollWidth,
+      inner: window.innerWidth,
+    }));
+    check(
+      `${locale}: procedures list has no overflow at 320px`,
+      overflow.scrollWidth <= overflow.inner,
+      JSON.stringify(overflow),
+    );
+
+    await context.close();
+  }
+
   // The shell must survive with JavaScript switched off.
   console.log('\n== JavaScript disabled ==');
   const noJs = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 1280, height: 800 } });
@@ -154,6 +231,23 @@ try {
     'no-js: language switcher links are real anchors',
     (await page.locator('nav[aria-label] a[hreflang]').count()) === 3,
   );
+
+  // Search is a plain GET form, so it must work with no script at all.
+  await page.goto(`${BASE}/ar`, { waitUntil: 'domcontentloaded' });
+  await page.fill('input[name="q"]', 'passport');
+  await page.locator('form[role="search"] button[type="submit"]').first().press('Enter');
+  await page.waitForURL(/\/search\?/);
+  check('no-js: search submits and returns results', page.url().includes('q=passport'));
+  check(
+    'no-js: results are server-rendered',
+    (await page.locator('main a[href*="/procedures/"]').count()) > 0,
+  );
+
+  // And a procedure page must be fully readable without script.
+  await page.goto(`${BASE}/ar/procedures/renew-iraqi-passport`, { waitUntil: 'domcontentloaded' });
+  check('no-js: procedure steps render', (await page.locator('main ol > li').count()) > 0);
+  check('no-js: forms are listed', (await page.locator('main a[href*="/api/files/"]').count()) > 0);
+
   await noJs.close();
 } finally {
   await browser.close();
