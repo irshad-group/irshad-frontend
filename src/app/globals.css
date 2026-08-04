@@ -18,8 +18,16 @@
   --color-brand-600: #164f3f;
   --color-brand-700: #113d31;
 
+  /* `--font-plex` is injected by next/font in the root layout, which self-hosts
+     IBM Plex Sans Arabic — one family covering Latin, Arabic and Kurdish
+     Sorani. The fallbacks matter only for the first paint of a cold cache. */
   --font-sans:
-    'Noto Sans', 'Noto Sans Arabic', 'Noto Kufi Arabic', ui-sans-serif, system-ui, sans-serif;
+    var(--font-plex), 'Noto Sans Arabic', ui-sans-serif, system-ui, sans-serif;
+
+  /* Reading measure. Bureaucratic instructions are read under stress, so lines
+     stay short — around 65 characters in English, fewer in Arabic script. */
+  --measure-prose: 68ch;
+  --measure-narrow: 46ch;
 }
 
 /*
@@ -35,6 +43,51 @@ body {
   background-color: var(--color-ink-50);
   color: var(--color-ink-800);
   font-family: var(--font-sans);
+  line-height: 1.6;
+}
+
+/*
+ * Arabic script carries its meaning below and above the baseline — dots,
+ * hamzas, and the Kurdish diacritic-bearing letters. It needs more leading than
+ * Latin to stay legible, and it must never be letter-spaced: Arabic letters
+ * join, and spacing them apart breaks the joins.
+ */
+[dir='rtl'] body {
+  line-height: 1.85;
+  letter-spacing: normal;
+}
+
+[dir='rtl'] :is(h1, h2, h3, h4) {
+  letter-spacing: normal;
+}
+
+/*
+ * Content comes from staff and can contain a long unbroken string — a URL, a
+ * ministry's full formal name — that would otherwise push a card wider than the
+ * viewport on a 320 px phone.
+ */
+:is(h1, h2, h3, h4, p, li, td, th, dd, dt) {
+  overflow-wrap: anywhere;
+}
+
+:is(h1, h2, h3) {
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+/* Respect a reader who has asked the system to reduce motion. */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
 /* Numerals stay Latin even in Arabic/Kurdish UI, matching how Iraqi government
@@ -47,6 +100,33 @@ body {
 :focus-visible {
   outline: 2px solid var(--color-brand-500);
   outline-offset: 2px;
+}
+
+/*
+ * Skip-to-content link: the first tab stop on every page.
+ *
+ * Written out rather than composed from `sr-only` + `focus:not-sr-only`, which
+ * depends on two utilities resolving in the right order for the one affordance
+ * a keyboard-only visitor needs most. It is parked just off the top of the
+ * viewport and slides in on focus. `inset-inline-start` keeps it in the leading
+ * corner in all three languages.
+ */
+.skip-link {
+  position: absolute;
+  inset-inline-start: 0.5rem;
+  inset-block-start: -4rem;
+  z-index: 50;
+  border-radius: 0.375rem;
+  background-color: var(--color-brand-500);
+  padding: 0.5rem 1rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #fff;
+  transition: inset-block-start 150ms ease;
+}
+
+.skip-link:focus {
+  inset-block-start: 0.5rem;
 }
 
 /* Rich-text coming out of the `editor` fields. */

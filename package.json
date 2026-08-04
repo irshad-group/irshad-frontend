@@ -12,7 +12,11 @@
     "pb:seed": "node pocketbase/seed/seed.mjs",
     "pb:verify": "node pocketbase/seed/verify.mjs",
     "e2e": "node e2e/admin.mjs",
-    "e2e:read": "node e2e/admin-read.mjs"
+    "e2e:read": "node e2e/admin-read.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "e2e:public": "node e2e/public.mjs"
   },
   "dependencies": {
     "next": "^16.2.12",
@@ -27,11 +31,13 @@
     "@types/node": "^26.1.2",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",
+    "@vitest/coverage-v8": "^4.1.10",
     "eslint": "^9.39.5",
     "eslint-config-next": "^16.2.12",
     "playwright": "^1.62.1",
     "postcss": "^8.5.25",
     "tailwindcss": "^4.3.3",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "vitest": "^4.1.10"
   }
 }

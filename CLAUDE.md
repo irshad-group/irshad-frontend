@@ -94,30 +94,50 @@ src/
 │   ├── pb/
 │   │   ├── client.ts        # Browser PocketBase instance
 │   │   ├── server.ts        # Per-request server instance (reads auth cookie)
-│   │   └── collections.ts   # Typed collection accessors
+│   │   ├── collections.ts   # Typed collection accessors (admin; auth-aware)
+│   │   └── queries/public.ts # Anonymous reads for the public portal
 │   ├── auth.ts              # Session helpers, role checks
 │   └── i18n.ts              # Locale config, direction, field-suffix helper
 ├── types/pb.ts              # Generated PocketBase types
 ├── messages/                # en.json, ar.json, ku.json (UI strings only)
-└── middleware.ts            # Locale negotiation + /admin route guard
+└── proxy.ts                 # Locale negotiation + /admin route guard
 ```
+
+> Next 16 renamed the `middleware` convention to `proxy`. The file is
+> `src/proxy.ts`; the hook and matcher semantics are unchanged.
 
 ### PocketBase access
 
 Three rules keep data access predictable:
 
-1. **Never construct a `PocketBase` instance inline.** Use `lib/pb/client.ts` in Client Components and `lib/pb/server.ts` in Server Components, Route Handlers, and Server Actions.
+1. **Never construct a `PocketBase` instance inline.** Use `lib/pb/client.ts` in Client Components, `lib/pb/server.ts` in authenticated server code, and `lib/pb/queries/public.ts` on the public portal.
 2. **One instance per request on the server.** A PocketBase instance carries auth state; a module-level singleton on the server would leak one user's session into another user's request. `lib/pb/server.ts` creates a fresh instance per request and loads the auth cookie into it.
 3. **Authorization lives in PocketBase API rules, not in the UI.** Hiding an admin button is presentation. The list/view/create/update/delete rules on each collection are the actual enforcement, and they must be written assuming a hostile client.
 
 Auth state is persisted in an `httpOnly` cookie so Server Components can read it. Sync the cookie from `pb.authStore.onChange`.
 
+**The public portal never uses `pbServer()`.** It calls `cookies()`, and touching a
+dynamic API opts the whole route out of static rendering — quietly turning a
+cacheable page into a per-request render. Public pages read through
+`lib/pb/queries/public.ts`, which uses an anonymous instance with no cookie and
+no session. What comes back is exactly what any visitor can see.
+
+Because the API rules already hide unpublished, archived and disabled records
+from an anonymous client, public pages must **not** filter for `enabled` or
+`archived` themselves. An empty result means "not public" — call `notFound()`.
+This also keeps an archived record indistinguishable from a missing one.
+
 ### Public vs. admin
 
 Both live in one app, separated by route group and layout:
 
-- `(public)` — mostly static or revalidated. Content changes rarely; prefer caching with tag-based revalidation over per-request fetches.
-- `(admin)` — always dynamic. `middleware.ts` redirects unauthenticated users to the login page; the admin layout additionally checks `role` and returns 404 for non-staff, so the admin surface is not enumerable.
+- `(public)` — statically rendered where possible, with `export const revalidate = PUBLIC_REVALIDATE` (one hour). Content changes rarely and readers are many and slow-connected, so cached HTML is the largest performance lever available.
+- `(admin)` — always dynamic. `proxy.ts` redirects unauthenticated users to the login page; the admin layout additionally checks `role` and returns 404 for non-staff, so the admin surface is not enumerable.
+
+**Watch the build output.** Content routes should print `●` (SSG). A route that
+becomes `ƒ` has picked up a per-request dependency — usually `cookies()`, or
+`useSearchParams` outside a Suspense boundary — and has lost the caching the
+performance budget depends on.
 
 ## Data model
 
@@ -170,7 +190,66 @@ Use separate nullable relation fields — `procedure`, `procedure_item`, `direct
 - Set `dir` on `<html>` from the active locale in the root layout. Use CSS logical properties (`margin-inline-start`, `padding-inline-end`, `start-0`) rather than physical `left`/`right`, so one stylesheet serves both directions.
 - **Two distinct kinds of translation.** UI chrome (button labels, validation messages) lives in `messages/*.json`. Content (procedure titles, FAQ bodies) lives in the suffixed PocketBase fields. Never put content in message files.
 - Content is often only partially translated. Every content read needs a fallback chain — requested locale → English → first non-empty — and the admin forms should make it visible which languages are still missing for a record.
-- Ship a font with real Arabic and Kurdish coverage, and check that Kurdish-specific letters (ڕ ڵ ۆ ێ گ چ پ ژ) render correctly rather than falling back to a substitute face.
+- The typeface is **IBM Plex Sans Arabic**, self-hosted by `next/font` in the root layout — one family covering Latin, Arabic and Kurdish Sorani, so mixed-script lines show no seam between two faces. No visitor's browser requests anything from Google.
+- Its coverage of the Kurdish letters (ڕ ڵ ۆ ێ گ چ پ ژ ڤ ک ھ ە ی) was verified against the font's character map, and confirmed in-browser by measuring each glyph against a generic fallback. **Re-run that check before changing the typeface.** A family that "supports Arabic" can still miss these, and the browser then substitutes another face for single letters inside a word — which looks broken to a Kurdish reader and completely fine to everyone else, so review will not catch it.
+- Arabic script gets more leading than Latin (`1.85` vs `1.6`, set on `[dir='rtl'] body`) and is **never letter-spaced** — Arabic letters join, and spacing them apart breaks the joins.
+- Render staff-authored content inside `dir="auto"` so the first strong character decides direction per block. Without it, an English paragraph pasted into an Arabic record puts its punctuation on the wrong side.
+
+## Public portal design system
+
+The portal is a public information service for people completing government
+procedures, often on a cheap phone and a weak connection, frequently in a second
+language. "Modern" here means legible and quiet, not visually novel.
+
+- **One small system, not per-page composition.** Shared primitives live in `components/ui/primitives.tsx` (`Container`, `Card`, `Badge`, `Prose`, `EmptyState`, `buttonClass`) and are extended, never forked per page.
+- **Tokens** are defined in `app/globals.css` under `@theme`: an `ink-*` neutral ramp, `brand-*` built on the deep green `#1b5e4b`, and `--measure-prose` / `--measure-narrow` for reading width. Every text/background pair in use passes WCAG 2.2 AA; `ink-400` is below 4.5:1 on white and is for placeholders and disabled states only, never body text.
+- **Colour never carries meaning alone.** Published/archived, KRG/federal and translation status each need a text or shape cue too.
+- **Empty is normal, not an error.** A directorate may have no branches, a procedure no forms. Use `EmptyState` and, where one exists, offer a route onward instead of a dead end.
+- **Content can be hostile to layout.** Staff paste long unbroken strings; `overflow-wrap: anywhere` is set globally on text elements. Check any new component at 320 px.
+- Client components are leaves only. The portal must remain readable and navigable with JavaScript disabled.
+
+## Testing (non-negotiable)
+
+**When a function is finished, it is not done until tests cover it 100%.** Then
+the change is exercised end-to-end in a real browser. Only then is it committed.
+
+The order matters — each stage catches what the previous one cannot:
+
+1. **Unit tests, 100% coverage.** `vitest.config.mts` enforces lines, branches,
+   functions and statements at 100% over the logic modules it lists; the run
+   fails below that. Write the tests alongside the function, not afterwards.
+2. **End-to-end in a browser.** `npm run e2e:public` drives the real thing
+   against `npm run build && npm run start` — the production output, not the dev
+   server. Server Components, pages and layouts are covered here rather than by
+   unit tests: mount-and-assert on an RSC proves far less than loading the page.
+3. **Commit** once `typecheck`, `lint`, `test:coverage`, `build` and the e2e
+   suite are all green.
+
+Two rules that keep this honest:
+
+- **An unreachable branch is dead code, not a coverage exemption.** If a test
+  cannot reach it, delete the code — do not lower the threshold. `buildNavTree`
+  had a redundant guard exactly like this; removing it took branch coverage from
+  96% to 100% and left the function simpler.
+- **Only count what is actually tested.** The coverage `include` list names the
+  modules under unit test. Widening it to the whole of `src` would let the
+  threshold pass while real code sits uncovered. Add new logic modules to that
+  list as they are written.
+
+Every e2e assertion runs in **all three languages**. That is not ceremony: the
+320 px overflow bug in the header, and a skip link that never became visible,
+were both caught this way and neither showed up in English review alone.
+
+## Spec-driven work
+
+This repo uses [Spec Kit](https://github.com/github/spec-kit). Feature specs and
+plans live in `specs/<NNN>-<short-name>/`, and `.specify/memory/constitution.md`
+holds the principles a plan is checked against. The skills are installed under
+`.claude/skills/speckit-*` and appear as `/speckit-*` commands after a restart.
+
+The public portal is specified in `specs/001-public-portal-ui/`. Read `spec.md`
+for what is being built and `plan.md` for the phase order before adding a public
+route — the phases are sequenced so each one is independently shippable.
 
 ## Code conventions
 

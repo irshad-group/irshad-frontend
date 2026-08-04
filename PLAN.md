@@ -3,7 +3,11 @@
 Build plan for the Irshad frontend rewrite (Next.js + PocketBase). Phases are ordered by dependency — each one assumes the previous is done.
 
 **Started:** 2026-07-30
-**Current phase:** Phase 4 (Phases 0, 1 and 4 done; Phase 2 partly done; Phase 3 blocked on design)
+**Current phase:** Phase 3 (Phases 0, 1, 2 and 4 done)
+
+> Note: Phase 3 is specified in `specs/001-public-portal-ui/`, which has its own
+> internal phase numbering. Its Phase 0 (design foundations) and Phase 1 (site
+> shell) are complete; its Phase 2 (search and procedure detail) is next.
 
 ---
 
@@ -43,16 +47,18 @@ The schema is the contract for everything downstream; get it right before writin
 
 - [x] Configure `next-intl` with `en` / `ar` / `ku` and the `[locale]` route segment
 - [x] Root layout sets `dir` and `lang` from the active locale
-- [ ] Choose and self-host a font with verified Arabic **and** Kurdish coverage
+- [x] Choose and self-host a font with verified Arabic **and** Kurdish coverage — IBM Plex Sans Arabic via `next/font`; Sorani coverage verified against the font's cmap and in-browser
 - [x] `localized(record, field, locale)` helper with the fallback chain (requested → English → first non-empty)
 - [x] Locale switcher that preserves the current path — `components/public/LocaleSwitcher.tsx`, mounted in a minimal `(public)` shell
-- [ ] Public shell: header, `navigation`-driven menu, footer, `settings`-driven contact details
-- [ ] Audit for physical `left`/`right` CSS and replace with logical properties
+- [x] Public shell: header, `navigation`-driven menu, footer, `settings`-driven contact details — native `<details>` disclosures, skip link, works with JavaScript disabled
+- [x] Audit for physical `left`/`right` CSS and replace with logical properties — none found in `src`; verified in-browser that `inset-inline-start` mirrors to `right` in RTL
 
 ## Phase 3 — Public portal
 
-> **Blocked on the UI/UX design.** `(public)` currently holds a placeholder only.
-> Replace it wholesale when the designs land rather than growing it.
+> **No longer blocked.** There is no external brand to follow, so the design is
+> owned here: see `specs/001-public-portal-ui/` for the specification, plan and
+> the decisions behind them. The shell is built; the home page is still the
+> placeholder and should be replaced wholesale rather than grown.
 
 - [ ] Home — slider, featured/recent procedures, FAQ preview
 - [ ] Ministries — index and detail, with the ministry's directorates

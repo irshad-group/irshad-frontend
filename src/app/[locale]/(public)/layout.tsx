@@ -1,14 +1,23 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
-import { Link } from '@/i18n/navigation';
-import LocaleSwitcher from '@/components/public/LocaleSwitcher';
+import { listAllPublic } from '@/lib/pb/queries/public';
+import { buildNavTree } from '@/lib/public/navigation';
+import { settingsMap, settingValue } from '@/lib/public/settings';
+import SiteHeader from '@/components/public/SiteHeader';
+import SiteFooter from '@/components/public/SiteFooter';
 
 /**
- * Minimal public shell — just enough to host the language switcher.
+ * The public shell.
  *
- * The real header (navigation-driven menu, footer, settings-driven contact
- * details) is a separate piece of work waiting on the design; this is the mount
- * point it will grow into, not the finished article.
+ * The menu and footer come from the `navigation` and `settings` collections, so
+ * staff change them in the admin without a deployment. Both reads go through
+ * the anonymous public client — using `pbServer()` here would call `cookies()`
+ * and drag every page in the group out of static rendering.
  */
+// Must be a literal: Next reads segment config by static analysis at build time,
+// so an imported constant fails with "Invalid segment configuration export".
+// Keep in step with PUBLIC_REVALIDATE in lib/pb/queries/public.ts.
+export const revalidate = 3600;
+
 export default async function PublicLayout({
   children,
   params,
@@ -20,17 +29,39 @@ export default async function PublicLayout({
   setRequestLocale(locale);
   const t = await getTranslations();
 
+  const [navigation, settingsRecords] = await Promise.all([
+    listAllPublic('navigation', { sort: 'sort_order' }),
+    listAllPublic('settings'),
+  ]);
+
+  const settings = settingsMap(settingsRecords);
+  // Staff can empty `site_name`; the app's own name is the last resort.
+  const siteName = settingValue(settings, 'site_name', locale) || t('site.name');
+
   return (
     <div className="flex min-h-screen flex-col">
-      <header className="border-b border-ink-200/70 bg-white">
-        <div className="mx-auto flex max-w-5xl items-center justify-between gap-4 px-6 py-3">
-          <Link href="/" className="text-sm font-semibold text-ink-900">
-            {t('site.name')}
-          </Link>
-          <LocaleSwitcher label={t('site.language')} />
-        </div>
-      </header>
-      <div className="flex-1">{children}</div>
+      {/* First tab stop on every page: jump past the menu straight to content. */}
+      <a href="#main" className="skip-link">
+        {t('site.skipToContent')}
+      </a>
+
+      <SiteHeader
+        menu={buildNavTree(navigation, 'menu')}
+        drawer={buildNavTree(navigation, 'drawer')}
+        siteName={siteName}
+        locale={locale}
+        labels={{ menu: t('site.menu'), language: t('site.language') }}
+      />
+
+      <main id="main" className="flex-1">
+        {children}
+      </main>
+
+      <SiteFooter
+        settings={settings}
+        locale={locale}
+        labels={{ contact: t('site.contact'), follow: t('site.follow') }}
+      />
     </div>
   );
 }

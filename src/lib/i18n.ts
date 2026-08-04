@@ -3,10 +3,17 @@ import { defaultLocale, isLocale, type Locale } from '@/i18n/routing';
 
 export const contentLocales: readonly ContentLocale[] = ['en', 'ar', 'ku'];
 
-type Translatable = Record<string, unknown>;
+/**
+ * Anything carrying `_en` / `_ar` / `_ku` fields.
+ *
+ * Deliberately `object` rather than `Record<string, unknown>`: the generated
+ * record interfaces in `types/pb.ts` have no index signature, so they are not
+ * assignable to a Record and every call site would need a cast.
+ */
+type Translatable = object;
 
 function readSuffixed(record: Translatable, field: string, locale: ContentLocale): string {
-  const value = record[`${field}_${locale}`];
+  const value = (record as Record<string, unknown>)[`${field}_${locale}`];
   return typeof value === 'string' ? value.trim() : '';
 }
 
