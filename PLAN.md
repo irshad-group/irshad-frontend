@@ -45,7 +45,7 @@ The schema is the contract for everything downstream; get it right before writin
 - [x] Root layout sets `dir` and `lang` from the active locale
 - [ ] Choose and self-host a font with verified Arabic **and** Kurdish coverage
 - [x] `localized(record, field, locale)` helper with the fallback chain (requested → English → first non-empty)
-- [ ] Locale switcher that preserves the current path
+- [x] Locale switcher that preserves the current path — `components/public/LocaleSwitcher.tsx`, mounted in a minimal `(public)` shell
 - [ ] Public shell: header, `navigation`-driven menu, footer, `settings`-driven contact details
 - [ ] Audit for physical `left`/`right` CSS and replace with logical properties
 

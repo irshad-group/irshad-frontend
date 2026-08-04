@@ -28,6 +28,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Search, pagination and sorting on every collection list; file upload and replacement for logos, photos and documents.
 - `docs/ADMIN.md` — how the admin is put together and what is deliberately not built.
 - End-to-end tests: `npm run e2e:read` (44 checks) and `npm run e2e` (16 checks, real browser).
+- **Locale switcher** in the public header — English, العربية and کوردی. Switching language keeps the visitor where they are: `/en/procedures/renew-iraqi-passport` becomes `/ar/procedures/renew-iraqi-passport`, query strings and all, instead of returning them to the home page. Each link carries `lang`/`hrefLang` so a screen reader announces it in its own voice, and the links are part of the prerendered HTML, so they are crawlable and work without JavaScript.
+- A minimal public shell (`(public)/layout.tsx`) to host the switcher. The real header, navigation-driven menu and footer are still waiting on the design.
 
 ### Changed
 

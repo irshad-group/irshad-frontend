@@ -28,7 +28,8 @@
     "tagline": "Guide to Government Services",
     "underConstruction": "The public site is being designed",
     "underConstructionBody": "The citizen-facing pages are waiting on the design. The content behind them is already being managed in the admin area.",
-    "goToAdmin": "Go to the admin area"
+    "goToAdmin": "Go to the admin area",
+    "language": "Language"
   },
   "admin": {
     "title": "Irshad Admin",
