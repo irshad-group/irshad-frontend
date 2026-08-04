@@ -309,6 +309,74 @@ try {
     await context.close();
   }
 
+  // Support pages.
+  //
+  // The contact form is the portal's only write. This suite stays read-only, so
+  // it exercises the paths that store nothing: validation failures, and the
+  // honeypot (which reports success to a bot without creating a record). A real
+  // submission is verified separately against a development instance.
+  for (const { locale } of LOCALES) {
+    console.log(`\n== /${locale} support pages ==`);
+    const context = await browser.newContext({ viewport: { width: 1280, height: 800 } });
+    const page = await context.newPage();
+
+    await page.goto(`${BASE}/${locale}/faq`, { waitUntil: 'domcontentloaded' });
+    const questions = page.locator('main details');
+    check(`${locale}: faq lists questions`, (await questions.count()) === 10);
+    check(`${locale}: faq starts collapsed`, !(await questions.first().evaluate((d) => d.open)));
+    await questions.first().locator('summary').click();
+    check(`${locale}: faq opens on click`, await questions.first().evaluate((d) => d.open));
+
+    await page.goto(`${BASE}/${locale}/team`, { waitUntil: 'domcontentloaded' });
+    check(`${locale}: team lists members`, (await page.locator('main ul > li').count()) === 6);
+
+    await page.goto(`${BASE}/${locale}/partners`, { waitUntil: 'domcontentloaded' });
+    check(`${locale}: partners listed`, (await page.locator('main ul > li').count()) === 6);
+    const partnerLinks = page.locator('main a[target="_blank"]');
+    check(
+      `${locale}: partner links are safe`,
+      (await partnerLinks.first().getAttribute('rel'))?.includes('noopener'),
+    );
+
+    await page.goto(`${BASE}/${locale}/contact`, { waitUntil: 'domcontentloaded' });
+    check(`${locale}: contact form renders`, (await page.locator('form textarea').count()) === 1);
+    check(
+      `${locale}: every field has a label`,
+      await page.evaluate(() =>
+        [...document.querySelectorAll('form input:not([type=hidden]), form textarea')]
+          .filter((el) => el.closest('[aria-hidden="true"]') === null)
+          .every((el) => !!document.querySelector(`label[for="${el.id}"]`)),
+      ),
+    );
+    check(
+      `${locale}: honeypot is hidden from assistive technology`,
+      (await page.locator('form [aria-hidden="true"] input[name="website"]').count()) === 1,
+    );
+
+    // Validation failure: nothing is stored, and nothing typed is lost.
+    await page.fill('#first_name', 'Zainab');
+    await page.fill('#last_name', 'Hassan');
+    await page.fill('#email', 'not-an-email');
+    await page.fill('#message', 'too short');
+    await page.locator('form button[type="submit"]').click();
+    await page.waitForSelector('p[id$="-error"]');
+    check(
+      `${locale}: invalid submission reports field errors`,
+      (await page.locator('p[id$="-error"]').count()) >= 2,
+    );
+    check(
+      `${locale}: a failed submission keeps what was typed`,
+      (await page.inputValue('#first_name')) === 'Zainab' &&
+        (await page.inputValue('#message')) === 'too short',
+    );
+    check(
+      `${locale}: the bad field is marked invalid`,
+      (await page.locator('#email').getAttribute('aria-invalid')) === 'true',
+    );
+
+    await context.close();
+  }
+
   // The shell must survive with JavaScript switched off.
   console.log('\n== JavaScript disabled ==');
   const noJs = await browser.newContext({ javaScriptEnabled: false, viewport: { width: 1280, height: 800 } });

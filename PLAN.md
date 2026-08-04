@@ -7,8 +7,9 @@ Build plan for the Irshad frontend rewrite (Next.js + PocketBase). Phases are or
 
 > Note: Phase 3 is specified in `specs/001-public-portal-ui/`, which has its own
 > internal phase numbering. Its Phase 0 (design foundations), Phase 1 (site
-> shell), Phase 2 (search and procedure detail) and Phase 3 (institutions and
-> places) are complete; its Phase 4 (FAQ, contact, team, partners) is next.
+> shell), Phase 2 (search and procedure detail), Phase 3 (institutions and
+> places) and Phase 4 (support pages) are complete. What remains of Phase 3
+> here: comments and reviews, and the rest of SEO.
 
 ---
 
@@ -58,18 +59,19 @@ The schema is the contract for everything downstream; get it right before writin
 
 > **No longer blocked.** There is no external brand to follow, so the design is
 > owned here: see `specs/001-public-portal-ui/` for the specification, plan and
-> the decisions behind them. The shell, home, search, procedures, ministries and
-> directorates are built; the support pages are what remain.
+> the decisions behind them. Every page below is built except comments and
+> reviews, which are pending a decision on whether citizen accounts are in
+> scope at all.
 
 - [x] Home — search-first, featured/recent procedures, FAQ preview (slider surfaced as static cards, not a carousel)
 - [x] Ministries — index and detail, with the ministry's directorates and a federal/KRG filter
 - [x] Directorates — index and detail, with working hours, offered procedures, branches grouped by province, and an open-in-maps link rather than an embedded map
 - [x] **Procedures — detail page.** Description, ordered items, downloadable files, tags, fee, processing time, responsible directorate. Prerendered per locale.
 - [x] Search — across procedures in all three languages at once; a plain GET form, so results are shareable and work without JavaScript. **Directorates not yet searched.**
-- [ ] FAQ, Team, Partners pages
-- [ ] Contact form — writes to `contact`, with spam protection (create-only rule plus rate limiting)
+- [x] FAQ, Team, Partners pages
+- [x] Contact form — writes to `contact` via a Server Action, Zod-validated, with a honeypot. **Rate limiting not built** — it needs infrastructure the app does not have, so the create-only rule and the honeypot are the only protections.
 - [ ] Reviews and comments on procedures — submission plus moderated display
-- [ ] SEO — per-locale metadata, `hreflang` alternates, sitemap, structured data for procedures
+- [~] SEO — per-locale metadata and `hreflang` alternates are done on procedure, ministry and directorate pages. **Sitemap and structured data not built.**
 
 ## Phase 4 — Admin
 
