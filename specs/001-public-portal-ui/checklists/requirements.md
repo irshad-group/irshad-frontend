@@ -13,8 +13,11 @@
 
 ## Requirement Completeness
 
-- [ ] No [NEEDS CLARIFICATION] markers remain — **3 open**: citizen accounts,
-      official brand, map provider
+- [ ] No [NEEDS CLARIFICATION] markers remain — **1 open**: citizen accounts.
+      **Brand: answered** — there is none, so the design is owned in this repo.
+      **Map provider: resolved by default** — no third-party embed; an address
+      plus an open-in-maps link. Reversible in one component if the service
+      owner decides otherwise.
 - [x] Requirements are testable and unambiguous
 - [x] Success criteria are measurable
 - [x] Success criteria are technology-agnostic (no implementation detail)
@@ -36,9 +39,10 @@ The three open clarifications do **not** block Phase 0 or Phase 1: the design
 system and the site shell are unaffected by all three. They must be answered
 before the phase that depends on them —
 
-- **accounts** → before Phase 4 (would add sign-in, and change the header)
-- **brand** → before the typeface and palette are fixed in Phase 0
-- **map provider** → before Phase 3 (branch locations)
+- **accounts** → still open. It now blocks only comments and reviews; the rest
+  of the portal shipped without it.
+- **brand** → answered: none exists, the design is owned here.
+- **map provider** → implemented as the documented default (no embed).
 
-Of the three, only **brand** is genuinely urgent, because rework compounds once
-screens are built on top of a palette and a typeface.
+Nothing outstanding blocks the portal. The remaining clarification decides
+whether comments and reviews are ever built.

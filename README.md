@@ -19,7 +19,17 @@ Two applications share one Next.js codebase, separated by route group:
 | Staff admin | Done — every collection, with moderation queues |
 | i18n and routing | Done — `en`/`ar`/`ku`, RTL, locale switcher |
 | Design system foundations | Done — typeface, tokens, primitives, public query layer |
-| Public portal pages | **In progress** — see `specs/001-public-portal-ui/plan.md` |
+| Public portal pages | Done — home, search, procedures, ministries, directorates, tags, FAQ, contact, team, partners |
+| Error and not-found pages | Done — localized, four boundaries |
+| Comments and reviews | **Not built** — needs a decision on citizen accounts |
+| Sitemap, structured data | **Not built** |
+| Deployment | **Not set up** |
+
+> The portal runs entirely on **development seed data**. `irshad_db.sql` is a
+> 2022 dump whose content rows are Faker placeholders, so there is nothing to
+> migrate: real content has to be authored in the admin or exported from the
+> live legacy site. The site is complete, but it is not yet telling any citizen
+> anything true.
 
 Full history is in [CHANGELOG.md](./CHANGELOG.md); the build sequence is in
 [PLAN.md](./PLAN.md).
@@ -66,7 +76,7 @@ always the first path segment.
 | `npm run typecheck` | `tsc --noEmit` |
 | `npm run test` | Unit tests (vitest) |
 | `npm run test:coverage` | Unit tests with the 100% coverage gate |
-| `npm run e2e:public` | Public shell end-to-end, all three languages |
+| `npm run e2e:public` | Public portal end-to-end — 213 assertions, all three languages |
 | `npm run pb:types` | Regenerate `src/types/pb.ts` from the schema snapshot |
 | `npm run pb:seed` | Seed a development instance (writes data) |
 | `npm run pb:verify` | 34 API-rule assertions against a hostile client |
@@ -113,6 +123,7 @@ src/
 ├── lib/
 │   ├── pb/queries/public.ts  # Anonymous reads — the public portal's only door
 │   ├── pb/{client,server,collections}.ts
+│   ├── public/           # Portal logic, each with a 100%-covered test file
 │   └── i18n.ts           # localized() fallback helper
 ├── types/pb.ts           # Generated — never hand-edit
 ├── messages/             # UI strings only, never content
@@ -120,8 +131,20 @@ src/
 
 pocketbase/               # Schema snapshot, seed, rule verification
 specs/                    # Spec Kit feature specs and plans
+e2e/public.mjs            # 213 browser assertions across all three languages
 docs/ADMIN.md             # How the admin is put together
 ```
+
+## How work is done here
+
+Every finished function gets unit tests to **100% coverage** (lines, branches,
+functions, statements — enforced by `vitest.config.mts`), then an end-to-end
+pass in a real browser against the production build, then a commit. An
+unreachable branch is treated as dead code and deleted, not excused with a
+lower threshold. The full rule is in [CLAUDE.md](./CLAUDE.md#testing-non-negotiable).
+
+Features are specified before they are built: see `specs/` and the project
+constitution in `.specify/memory/constitution.md`.
 
 ## Things that will bite you
 

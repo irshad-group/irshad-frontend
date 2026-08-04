@@ -4,7 +4,7 @@
 
 **Created**: 2026-08-04
 
-**Status**: Draft
+**Status**: Implemented, with the deviations recorded below
 
 **Input**: User description: "Create a simple modern UI/UX for this backend"
 
@@ -285,20 +285,52 @@ message reaches the `contact` collection and the visitor sees confirmation.
 - The existing brand colour in `globals.css` (deep green `#1b5e4b`) is the
   starting palette unless a brand guide says otherwise.
 
-## Clarifications Needed
+## Clarifications
 
-- **[NEEDS CLARIFICATION: Are citizen accounts in scope for this release?]** The
-  schema supports comments and reviews from signed-in users, and the API rules
-  hold them for staff moderation. Adding sign-up, sign-in and moderated
-  submission is a substantial expansion, and a public sign-up on a government
-  service carries obligations that read-only pages do not. This spec assumes
-  **read-only, no accounts**.
-- **[NEEDS CLARIFICATION: Is there an official brand — logo, palette, typeface —
-  this must follow?]** A government portal usually inherits one. Without it, the
-  existing green and a self-hosted trilingual typeface will be chosen on design
-  grounds alone, and rework is likely if a guide surfaces later.
-- **[NEEDS CLARIFICATION: Which map provider may be used for branch locations?]**
-  Coordinates exist for offices. An embedded third-party map sends every
-  visitor's IP to that provider and adds significant page weight; a static image
-  or a plain "open in maps" link avoids both. Privacy and weight argue against an
-  embed, but the choice belongs to the service owner.
+### Still open
+
+- **[NEEDS CLARIFICATION: Are citizen accounts in scope?]** The schema supports
+  comments and reviews from signed-in users, and the admin moderation queues are
+  built. Adding sign-up, sign-in and moderated submission is a substantial
+  expansion, and a public sign-up on a government service carries obligations
+  that read-only pages do not. **The portal shipped without accounts**, so this
+  now blocks only comments and reviews — nothing else waits on it.
+
+### Resolved
+
+- **Official brand — answered: there is none.** The design is therefore owned in
+  this repository: IBM Plex Sans Arabic self-hosted, the existing deep green
+  `#1b5e4b`, a five-step type scale, and three shared layout primitives. See
+  `research.md` for the reasoning and the alternatives rejected.
+- **Map provider — resolved by default, and reversibly.** No third-party embed:
+  an address plus a link that opens the visitor's own maps application. An embed
+  is usually the heaviest thing on a page and hands every visitor's IP to that
+  provider before they have asked for a map. The service owner can still
+  overturn this; it is one component (`LocationBlock.tsx`), and a click-to-load
+  embed would be the way to do it.
+
+## Implementation status
+
+Every functional requirement is met as written except these three. They are
+recorded rather than quietly dropped, because a specification that disagrees
+with the build is worse than no specification.
+
+- **FR-003 — partly met.** Attached forms show their file *type* but not their
+  *size*. PocketBase stores only the filename on the record; the size would take
+  a HEAD request per file at build time. Deferred as not worth the cost, but the
+  requirement as written is not satisfied.
+- **FR-013 — deliberately changed.** The requirement says a location "MUST be
+  shown on a map". It is shown as an address plus a link that opens the
+  visitor's own maps application. See the resolved map clarification above: the
+  privacy and weight cost of an embed outweighed the benefit, and the service
+  owner can still overturn it.
+- **FR-009 — deliberately changed.** The home page surfaces slider content as
+  static cards rather than a rotating carousel. Moving banners bury content, are
+  awkward with a screen reader, and cost more than they return on a slow
+  connection.
+
+Success criteria **SC-002** (task completion with real participants),
+**SC-003** (LCP/CLS on throttled 3G), **SC-004** (automated WCAG pass) and
+**SC-007** (fallback proven against a deliberately untranslated record) have
+**not been measured**. The structural groundwork for each is in place and
+covered by the browser suite; the numbers themselves are unverified.

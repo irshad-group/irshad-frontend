@@ -77,25 +77,39 @@ Copy `.env.example` to `.env.local` and fill it in.
 ```
 src/
 ├── app/
+│   ├── not-found.tsx        # Outside any locale — offers all three
+│   ├── global-error.tsx     # Locale layout itself failed; language unknowable
 │   └── [locale]/
+│       ├── error.tsx        # Failed render, no shell available
+│       ├── not-found.tsx    # Unmatched URL, no shell available
 │       ├── (public)/        # Citizen-facing routes
-│       │   ├── page.tsx                     # Home: slider, featured procedures, FAQ
-│       │   ├── ministries/[slug]/
-│       │   ├── directorates/[slug]/
-│       │   ├── procedures/[slug]/           # Procedure + its items, files, reviews
+│       │   ├── layout.tsx                   # Shell: navigation menu + settings footer
+│       │   ├── error.tsx, not-found.tsx     # Same views, inside the shell
+│       │   ├── page.tsx                     # Home: search, featured/recent, FAQ preview
+│       │   ├── procedures/                  # index, [slug], tags/
+│       │   ├── ministries/                  # index (federal/KRG filter), [slug]
+│       │   ├── directorates/                # index (province filter), [slug]
 │       │   ├── search/
-│       │   ├── faq/, team/, partners/, contact/
+│       │   └── faq/, team/, partners/, contact/  (contact has actions.ts)
 │       └── (admin)/admin/   # Authenticated CMS — one route per collection
 ├── components/
-│   ├── ui/                  # Primitives (Button, Dialog, Table, ...)
-│   ├── public/              # Public-only composites
+│   ├── ui/primitives.tsx    # Shared: Container, Card, Badge, Prose, EmptyState, buttonClass
+│   ├── public/              # SiteHeader, SiteFooter, LocaleSwitcher, SearchBox,
+│   │                        # ProcedureCard, FileList, LocationBlock, ContactForm,
+│   │                        # NotFoundView
 │   └── admin/               # Admin-only composites (DataTable, entity forms)
 ├── lib/
 │   ├── pb/
 │   │   ├── client.ts        # Browser PocketBase instance
 │   │   ├── server.ts        # Per-request server instance (reads auth cookie)
 │   │   ├── collections.ts   # Typed collection accessors (admin; auth-aware)
-│   │   └── queries/public.ts # Anonymous reads for the public portal
+│   │   └── queries/public.ts # Anonymous reads — the portal's only door to PocketBase
+│   ├── public/              # Portal logic, each with a 100%-covered *.test.ts:
+│   │   ├── navigation.ts    #   buildNavTree — placement, ordering, cycles
+│   │   ├── settings.ts      #   settingsMap / settingValue — honours no_trans
+│   │   ├── procedures.ts    #   formatFee, attachedFile, parseListParams, countByTag
+│   │   ├── places.ts        #   mapsLink, groupBranchesByProvince
+│   │   └── contact.ts       #   contactSchema, validateContact, looksAutomated
 │   ├── auth.ts              # Session helpers, role checks
 │   └── i18n.ts              # Locale config, direction, field-suffix helper
 ├── types/pb.ts              # Generated PocketBase types
@@ -138,6 +152,31 @@ Both live in one app, separated by route group and layout:
 becomes `ƒ` has picked up a per-request dependency — usually `cookies()`, or
 `useSearchParams` outside a Suspense boundary — and has lost the caching the
 performance budget depends on.
+
+Listing pages that read `searchParams` — `/search`, `/procedures`,
+`/ministries`, `/directorates` — are dynamic on purpose: an unbounded query has
+nothing meaningful to prerender. Home, every detail page and the tag index stay
+static.
+
+`export const revalidate` **must be a literal**. Next reads segment config by
+static analysis at build time and fails the build on an imported constant, so
+`PUBLIC_REVALIDATE` documents the value and each route repeats the number.
+
+### Error and not-found boundaries
+
+There are four, because they are reached in different states, and two of them
+cannot show the site shell:
+
+| File | Reached when | Shell |
+|---|---|---|
+| `(public)/not-found.tsx` | a portal page called `notFound()` | yes |
+| `[locale]/not-found.tsx` | URL matched no route, so `(public)` is not in the tree | no |
+| `(public)/error.tsx`, `[locale]/error.tsx` | a render threw — usually PocketBase unreachable | yes / no |
+| `global-error.tsx` | the locale layout itself failed, so the locale is unknowable | no — writes its own `<html>` |
+
+An error page never shows the underlying message: it is English, technical, and
+occasionally revealing about the backend. `global-error.tsx` cannot know the
+language, so it says the same thing in all three rather than guessing.
 
 ## Data model
 

@@ -86,38 +86,40 @@ specs/001-public-portal-ui/
 
 ```text
 src/
-├── app/[locale]/(public)/
-│   ├── layout.tsx                    # EXISTS — grows into the real shell
-│   ├── page.tsx                      # REPLACE — placeholder becomes home
-│   ├── search/page.tsx
-│   ├── procedures/
-│   │   ├── page.tsx                  # index, filterable by tag
-│   │   └── [slug]/page.tsx           # THE page the site exists for
-│   ├── ministries/{page,[slug]/page}.tsx
-│   ├── directorates/{page,[slug]/page}.tsx
-│   ├── faq/page.tsx
-│   ├── contact/{page,actions.ts}
-│   ├── team/page.tsx
-│   └── partners/page.tsx
+├── app/
+│   ├── not-found.tsx, global-error.tsx      # outside any locale
+│   └── [locale]/
+│       ├── error.tsx, not-found.tsx         # no shell available
+│       └── (public)/
+│           ├── layout.tsx                   # shell: navigation menu + settings footer
+│           ├── error.tsx, not-found.tsx     # same views, inside the shell
+│           ├── page.tsx                     # home
+│           ├── search/page.tsx
+│           ├── procedures/{page,[slug]/page,tags/page}.tsx
+│           ├── ministries/{page,[slug]/page}.tsx
+│           ├── directorates/{page,[slug]/page}.tsx
+│           ├── faq/page.tsx
+│           ├── contact/{page.tsx,actions.ts}
+│           ├── team/page.tsx
+│           └── partners/page.tsx
 ├── components/public/
-│   ├── LocaleSwitcher.tsx            # EXISTS
-│   ├── SiteHeader.tsx                # navigation-driven menu
-│   ├── SiteFooter.tsx                # settings-driven contact details
-│   ├── SearchBox.tsx
-│   ├── ProcedureCard.tsx
-│   ├── ProcedureSteps.tsx
-│   ├── FileList.tsx
-│   ├── FaqAccordion.tsx              # client island
-│   ├── ProvinceFilter.tsx            # client island
-│   ├── ContactForm.tsx               # client island
-│   ├── BranchLocation.tsx
-│   └── EmptyState.tsx
-├── components/ui/primitives.tsx      # EXISTS — extend, do not fork
-├── lib/pb/queries/public.ts          # every public read, one module
-└── messages/{en,ar,ku}.json          # EXISTS — extend
+│   ├── SiteHeader.tsx, SiteFooter.tsx, LocaleSwitcher.tsx
+│   ├── SearchBox.tsx, ProcedureCard.tsx, FileList.tsx
+│   ├── LocationBlock.tsx, ContactForm.tsx, NotFoundView.tsx
+├── components/ui/primitives.tsx             # extended, not forked
+├── lib/pb/queries/public.ts                 # every public read, one module
+├── lib/public/{navigation,settings,procedures,places,contact}.ts
+└── messages/{en,ar,ku}.json
 
-e2e/public.mjs                        # journeys, mirroring e2e/admin.mjs
+e2e/public.mjs                               # 213 assertions, mirroring e2e/admin.mjs
 ```
+
+> Built structure, not the original sketch. Three planned components were not
+> needed: FAQ and the mobile drawer use native `<details>` rather than a
+> scripted `FaqAccordion`, the province filter is links rather than a client
+> island (`ProvinceFilter`), and `EmptyState` belongs with the shared
+> primitives. `ProcedureSteps` stayed inline in the procedure page, which is its
+> only caller.
 
 **Structure Decision**: The existing single-application layout is kept. The
 public portal lives entirely under the `(public)` route group, sharing
@@ -130,7 +132,7 @@ layout and `LocaleSwitcher` already exist and are extended rather than replaced.
 
 Each phase is independently shippable and maps to a spec priority.
 
-### Phase 0 — Research and foundations
+### Phase 0 — Research and foundations — **DONE**
 
 Resolve the open questions and put the design system in place. No routes yet.
 
@@ -144,7 +146,7 @@ Resolve the open questions and put the design system in place. No routes yet.
 **Exit:** a rendered type-and-colour specimen in all three languages, reviewed at
 320 px and 1280 px.
 
-### Phase 1 — The site shell (unblocks everything)
+### Phase 1 — The site shell — **DONE**
 
 - `SiteHeader` driven by `navigation`, `SiteFooter` driven by `settings`.
 - Skip-to-content link, focus styles, landmark structure.
@@ -153,7 +155,7 @@ Resolve the open questions and put the design system in place. No routes yet.
 
 **Exit:** every future page inherits a correct, accessible, bidirectional frame.
 
-### Phase 2 — P1: search and procedure detail
+### Phase 2 — P1: search and procedure detail — **DONE**
 
 - `procedures/[slug]` — description, ordered steps, forms, fee, processing time,
   tags, responsible directorate.
@@ -163,7 +165,7 @@ Resolve the open questions and put the design system in place. No routes yet.
 **Exit:** a citizen can find a procedure and read how to complete it. **This is
 the minimum shippable public service.**
 
-### Phase 3 — P2: institutions and places
+### Phase 3 — P2: institutions and places — **DONE**
 
 - Ministries and directorates, index and detail.
 - Branches grouped and filtered by province; working hours and contact details.
@@ -171,20 +173,44 @@ the minimum shippable public service.**
 
 **Exit:** a citizen knows which office to attend and when it is open.
 
-### Phase 4 — P3/P4: support pages
+### Phase 4 — P3/P4: support pages — **DONE**
 
 - FAQ accordion, contact form with Server Action and Zod validation, team,
   partners.
 
 **Exit:** the portal is feature-complete against the spec.
 
-### Phase 5 — Verification
+### Phase 5 — Verification — **PARTLY DONE**
 
-- `e2e/public.mjs`: the P1 journey in all three languages.
-- axe pass per route; keyboard-only pass; JavaScript-disabled pass.
-- Lighthouse against the SC-003 budget on throttled 3G.
-- Deliberately untranslated record to prove the fallback (SC-007), and an
-  anonymous probe of archived records (SC-008).
+- [x] `e2e/public.mjs`: the P1 journey in all three languages — 213 assertions.
+- [x] JavaScript-disabled pass: menus, search, procedure pages, disclosures.
+- [x] Anonymous probe of archived and missing records (SC-008) — 404, and the
+      two cases are indistinguishable.
+- [x] No horizontal overflow at 320px, in both directions, on every listing.
+- [ ] **axe pass per route** — not run. The suite checks structure (labels,
+      landmarks, `aria-current`, focus order) but no automated WCAG rule engine
+      has been run against it.
+- [ ] **Keyboard-only pass with real assistive technology** — the skip link and
+      tab order are tested programmatically; nobody has driven it with a screen
+      reader.
+- [ ] **Lighthouse against the SC-003 budget on throttled 3G** — not measured.
+      Static rendering is in place, but LCP and CLS are unverified numbers.
+- [ ] **Deliberately untranslated record to prove the fallback (SC-007)** — the
+      `localized()` chain is unit-tested, but no record has been emptied in one
+      language to prove it end to end.
+
+### Not built, and why
+
+- **Comments and reviews** — the schema and moderation queues exist, but they
+  need signed-in citizens and the accounts question is unanswered. Recorded as
+  the first clarification in `spec.md`.
+- **Sitemap and structured data** — per-locale metadata and `hreflang` are done
+  on every detail page; discovery beyond that is not.
+- **Rate limiting on the contact form** — needs infrastructure the app does not
+  have. The create-only rule and the honeypot are the only protections.
+- **IP and user agent on contact messages** — PocketBase strips hidden fields
+  from an untrusted create, verified against the live instance. Populating them
+  would need a privileged client on a public endpoint.
 
 ## Complexity Tracking
 
