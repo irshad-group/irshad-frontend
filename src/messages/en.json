@@ -28,7 +28,12 @@
     "tagline": "Guide to Government Services",
     "underConstruction": "The public site is being designed",
     "underConstructionBody": "The citizen-facing pages are waiting on the design. The content behind them is already being managed in the admin area.",
-    "goToAdmin": "Go to the admin area"
+    "goToAdmin": "Go to the admin area",
+    "language": "Language",
+    "skipToContent": "Skip to content",
+    "menu": "Menu",
+    "contact": "Contact",
+    "follow": "Follow us"
   },
   "admin": {
     "title": "Irshad Admin",
@@ -69,5 +74,144 @@
     "markSpam": "Mark as spam",
     "adminOnly": "Administrators only",
     "unsavedHint": "Changes are not saved until you press Save."
+  },
+  "home": {
+    "heading": "Know what you need before you go.",
+    "intro": "Irshad explains Iraqi government procedures step by step: what to bring, what it costs, how long it takes, and which office to visit.",
+    "featured": "Common procedures",
+    "recent": "Recently updated",
+    "faq": "Frequently asked questions",
+    "seeAll": "See all procedures",
+    "allFaq": "All questions"
+  },
+  "search": {
+    "title": "Search",
+    "label": "Search procedures",
+    "placeholder": "Passport, national ID, driving licence…",
+    "submit": "Search",
+    "prompt": "Type what you need above and press Search.",
+    "resultCount": "{count, plural, =0 {No results for “{query}”} one {# result for “{query}”} other {# results for “{query}”}}",
+    "emptyTitle": "Nothing matched that search",
+    "emptyBody": "Try a shorter or more general word, or browse all procedures.",
+    "browseAll": "Browse all procedures"
+  },
+  "procedures": {
+    "title": "Procedures",
+    "intro": "Every procedure Irshad covers, newest and most common first.",
+    "filterByTag": "Filter by tag",
+    "allTags": "All",
+    "count": "{count, plural, =0 {No procedures} one {# procedure} other {# procedures}}",
+    "emptyTitle": "No procedures here yet",
+    "emptyBody": "Nothing has been published in this section.",
+    "emptyTagged": "Nothing is tagged “{tag}” yet.",
+    "clearFilter": "Show all procedures",
+    "pagination": "Pagination"
+  },
+  "procedure": {
+    "fee": "Fee",
+    "free": "Free",
+    "processingTime": "Takes",
+    "responsibleOffice": "Handled by",
+    "about": "About this procedure",
+    "steps": "Steps to follow",
+    "forms": "Forms to download",
+    "formsHint": "Fill these in before you go to save time at the office.",
+    "download": "Download",
+    "opensExternal": "Opens elsewhere",
+    "tags": "Tags"
+  },
+  "ministries": {
+    "title": "Ministries",
+    "intro": "Government bodies covered by Irshad, federal and Kurdistan Regional Government.",
+    "filter": "Filter ministries",
+    "all": "All",
+    "federal": "Federal",
+    "krg": "Kurdistan Region",
+    "krgBadge": "Kurdistan Regional Government",
+    "emptyTitle": "No ministries here",
+    "emptyBody": "Nothing has been published in this section."
+  },
+  "ministry": {
+    "directorates": "Directorates",
+    "noDirectorates": "No directorates listed yet"
+  },
+  "directorates": {
+    "title": "Directorates",
+    "intro": "The offices that deliver procedures. Filter by province to find one near you.",
+    "filterByProvince": "Filter by province",
+    "allProvinces": "All provinces",
+    "emptyTitle": "No directorates found",
+    "emptyBody": "Nothing has been published in this section.",
+    "emptyInProvince": "No directorate has an office in {province} yet.",
+    "clearFilter": "Show all directorates"
+  },
+  "directorate": {
+    "procedures": "Procedures handled here",
+    "noProcedures": "No procedures listed yet",
+    "branches": "Offices by province",
+    "noBranches": "No provincial offices listed",
+    "noBranchesBody": "Use the contact details for the main office.",
+    "otherBranches": "Other offices",
+    "workingHours": "Working hours"
+  },
+  "place": {
+    "address": "Address",
+    "openInMaps": "Open in maps",
+    "contact": "Contact"
+  },
+  "faq": {
+    "title": "Frequently asked questions",
+    "intro": "Answers to the questions that are not about any one procedure.",
+    "emptyTitle": "No questions published yet"
+  },
+  "team": {
+    "title": "Our team",
+    "intro": "The people behind Irshad.",
+    "emptyTitle": "No team members published yet"
+  },
+  "partners": {
+    "title": "Partners",
+    "intro": "The institutions Irshad works with.",
+    "emptyTitle": "No partners published yet"
+  },
+  "contact": {
+    "title": "Contact us",
+    "intro": "Cannot find what you need? Send us a message and we will get back to you.",
+    "firstName": "First name",
+    "lastName": "Last name",
+    "email": "Email address",
+    "phone": "Phone number",
+    "message": "Your message",
+    "submit": "Send message",
+    "sending": "Sending…",
+    "sent": "Thank you — your message has been received. We will reply to the email address you gave.",
+    "failed": "Your message could not be sent. Please try again, or use the contact details on this page.",
+    "otherWays": "Other ways to reach us",
+    "errors": {
+      "tooShort": "This is required, and must be a little longer.",
+      "tooLong": "This is too long.",
+      "invalidEmail": "Please enter a valid email address.",
+      "invalid": "Please check this field."
+    }
+  },
+  "tags": {
+    "title": "Browse by tag",
+    "intro": "Tags group procedures across ministries. Pick one to see everything it covers.",
+    "emptyTitle": "No tags in use yet",
+    "emptyBody": "Tags appear here once procedures have been tagged."
+  },
+  "notFound": {
+    "title": "This page could not be found",
+    "body": "The address may be wrong, or the page may have been withdrawn.",
+    "home": "Go to the home page",
+    "browse": "Browse procedures",
+    "search": "Search"
+  },
+  "error": {
+    "title": "Something went wrong",
+    "body": "We could not load this page. This is usually temporary — please try again.",
+    "retry": "Try again",
+    "home": "Go to the home page",
+    "reference": "Reference:"
   }
 }

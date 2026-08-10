@@ -111,3 +111,75 @@ export function Alert({ tone, children }: { tone: 'error' | 'success'; children:
 
 export const inputClass =
   'block w-full rounded-md border-0 bg-white px-3 py-2 text-sm text-ink-900 ring-1 ring-ink-200 placeholder:text-ink-400 focus:ring-2 focus:ring-brand-500';
+
+/* -------------------------------------------------------------------------- *
+ * Public portal primitives
+ *
+ * Shared by every citizen-facing page so the portal reads as one system rather
+ * than a set of separately composed screens. All spacing here is logical, so
+ * the same classes mirror correctly in Arabic and Kurdish.
+ * -------------------------------------------------------------------------- */
+
+/** Standard page width. `narrow` is for continuous reading, `wide` for grids. */
+export function Container({
+  children,
+  width = 'default',
+  className,
+}: {
+  children: ReactNode;
+  width?: 'narrow' | 'default' | 'wide';
+  className?: string;
+}) {
+  const widths = {
+    narrow: 'max-w-2xl',
+    default: 'max-w-5xl',
+    wide: 'max-w-7xl',
+  } as const;
+  return (
+    <div className={cn('mx-auto w-full px-4 sm:px-6', widths[width], className)}>{children}</div>
+  );
+}
+
+/**
+ * Rich text out of the `editor` fields.
+ *
+ * `dir="auto"` lets the first strong character decide direction per block, which
+ * matters when staff paste an English paragraph into an Arabic record — without
+ * it the punctuation ends up on the wrong side.
+ */
+export function Prose({ html, className }: { html: string; className?: string }) {
+  return (
+    <div
+      dir="auto"
+      className={cn('prose-content max-w-[var(--measure-prose)] text-ink-700', className)}
+      dangerouslySetInnerHTML={{ __html: html }}
+    />
+  );
+}
+
+/**
+ * An empty list is normal here, not an error — a directorate may have no
+ * branches yet, a procedure no forms. Say so plainly and, where there is one,
+ * offer a way onward rather than leaving a dead end.
+ */
+export function EmptyState({
+  title,
+  description,
+  action,
+}: {
+  title: string;
+  description?: string;
+  action?: ReactNode;
+}) {
+  return (
+    <div className="rounded-lg bg-white px-6 py-10 text-center ring-1 ring-ink-200/70">
+      <p className="text-sm font-medium text-ink-900">{title}</p>
+      {description ? (
+        <p className="mx-auto mt-1 max-w-[var(--measure-narrow)] text-sm text-ink-500">
+          {description}
+        </p>
+      ) : null}
+      {action ? <div className="mt-4">{action}</div> : null}
+    </div>
+  );
+}
