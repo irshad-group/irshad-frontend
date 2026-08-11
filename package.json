@@ -19,6 +19,9 @@
     "e2e:public": "node e2e/public.mjs"
   },
   "dependencies": {
+    "@mapbox/mapbox-gl-rtl-text": "^0.4.0",
+    "framer-motion": "^13.1.0",
+    "maplibre-gl": "^6.3.0",
     "next": "^16.2.12",
     "next-intl": "^4.13.4",
     "pocketbase": "^0.27.0",
