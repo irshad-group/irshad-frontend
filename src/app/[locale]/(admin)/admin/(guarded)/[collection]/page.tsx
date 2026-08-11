@@ -1,7 +1,7 @@
 import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import DataTable from '@/components/admin/DataTable';
-import { Pagination, SearchBox } from '@/components/admin/ListControls';
+import { Pagination, RelationFilter, SearchBox } from '@/components/admin/ListControls';
 import { Card, PageHeader, buttonClass } from '@/components/ui/primitives';
 import { Link } from '@/i18n/navigation';
 import { getCollectionDef } from '@/lib/admin/registry';
@@ -23,10 +23,10 @@ export default async function CollectionListPage({
   searchParams,
 }: {
   params: Promise<{ locale: string; collection: string }>;
-  searchParams: Promise<{ q?: string; page?: string }>;
+  searchParams: Promise<{ q?: string; page?: string; f?: string }>;
 }) {
   const { locale, collection } = await params;
-  const { q = '', page: pageParam } = await searchParams;
+  const { q = '', page: pageParam, f = '' } = await searchParams;
   setRequestLocale(locale);
 
   const def = getCollectionDef(collection);
@@ -40,12 +40,36 @@ export default async function CollectionListPage({
   const t = await getTranslations('common');
   const tAdmin = await getTranslations('admin');
 
+  // The relation filter value arrives from the URL; only a well-formed record
+  // id is ever placed into the PocketBase filter.
+  const relationValue = /^[a-z0-9]{15}$/i.test(f) ? f : '';
+  const filters = [
+    searchFilter(def.searchFields, q),
+    def.listFilter && relationValue ? `${def.listFilter.name} = "${relationValue}"` : undefined,
+  ].filter(Boolean);
+
+  const filterOptions = def.listFilter
+    ? (
+        await listRecords(def.listFilter.collection, {
+          page: 1,
+          perPage: 200,
+          sort: def.listFilter.labelField,
+          fields: `id,${def.listFilter.labelField}`,
+        })
+      ).items.map((item) => ({
+        id: item.id,
+        label: String(
+          (item as unknown as Record<string, unknown>)[def.listFilter!.labelField] ?? item.id,
+        ),
+      }))
+    : [];
+
   const page = Math.max(1, Number(pageParam) || 1);
   const result = await listRecords(def.name, {
     page,
     perPage: PER_PAGE,
     sort: def.defaultSort,
-    filter: searchFilter(def.searchFields, q),
+    filter: filters.length ? filters.map((part) => `(${part})`).join(' && ') : undefined,
     expand: def.expand,
   });
 
@@ -66,10 +90,19 @@ export default async function CollectionListPage({
       />
 
       <div className="mb-4 flex flex-wrap items-center justify-between gap-3">
-        <SearchBox
-          placeholder={tAdmin('searchPlaceholder', { label: def.labelPlural.toLowerCase() })}
-          label={t('search')}
-        />
+        <div className="flex flex-wrap items-center gap-2">
+          <SearchBox
+            placeholder={tAdmin('searchPlaceholder', { label: def.labelPlural.toLowerCase() })}
+            label={t('search')}
+          />
+          {def.listFilter ? (
+            <RelationFilter
+              label={def.listFilter.label}
+              allLabel={`${def.listFilter.label}: all`}
+              options={filterOptions}
+            />
+          ) : null}
+        </div>
         <span className="text-sm text-ink-500">{t('results', { count: result.totalItems })}</span>
       </div>
 

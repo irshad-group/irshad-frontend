@@ -197,20 +197,21 @@ Field names below are the **target PocketBase** names. The legacy MySQL names ar
 |---|---|---|
 | `users` | `users` | PocketBase **auth** collection. Keep `full_name`, `job_title`, `avatar`. Legacy `profile_id` (0/1/2) becomes `role`: `user` \| `moderator` \| `admin`. Password/token/salt/OAuth columns are all handled by PocketBase — drop them. |
 | `ministries` | `ministries` | `krg` (bool) flags Kurdistan Regional Government bodies. `logo` file, `gps_lat`/`gps_lon` as numbers. |
-| `directorates` | `directorates` | Relation → `ministries`. Has `working_hours_{en,ar,ku}`. |
+| `directorates` | `directorates` | Relation → `ministries`. `working_hours` is a JSON field — `[{day:'SUN',from:'08:00',to:'14:00',note?}]`, one entry per day, `null` times meaning closed; day codes are translated by the frontend (`lib/public/hours.ts`). `photos` (multi-file) shows the building for wayfinding. |
 | `provinces` | *(missing)* | **The dump references `province_id` but contains no `provinces` table.** This collection must be created and populated from scratch. |
-| `directorate_branches` | `directorates_prov` | Provincial branches. Relations → `provinces` (and `directorates`, which the legacy table lacked — confirm the intended link). |
+| `directorate_branches` | `directorates_prov` | Provincial branches. Relations → `provinces` (and `directorates`, which the legacy table lacked — confirm the intended link). `photos` (multi-file) shows the building for wayfinding. |
 | `procedures` | `proc` | Core entity. Relation → `directorates`, `enabled` bool, `shortname` → `slug` (unique, used in URLs), rich-text descriptions, `publish_date`. |
 | `procedure_items` | `proc_items` | Steps within a procedure. Relation → `procedures`. |
 | `tags` | `proc_tags` | Normalize: one `tags` collection, plus a multi-relation `tags` field on `procedures`, instead of repeating `tag_val` strings per procedure. |
 | `files` | `files` | Downloadable forms/documents attached to procedures and procedure items. |
 | `comments` | `comments` | User comments. |
 | `reviews` | `reviews` | `review` (1–5 rating) + `review_msg`. |
-| `faq` | `faq` | Ordered, translatable Q&A. |
+| `faq` | `faq` | Ordered, translatable Q&A. Optional relation → `procedures` for questions about one specific procedure. |
 | `slider` | `slider` | Home hero slides: image, link, `sort_order`, `enabled`. |
 | `team` | `team` | Staff profiles: portrait, job title, bio, `location`. |
 | `partners` | `partners` | Logo, link, `location`. |
 | `contact` | `contact` | Inbound contact-form messages. Create-only for the public; readable by staff. |
+| `procedure_submissions` | *(new)* | Citizen-suggested procedures from the account wizard. Create-only for signed-in users (`user` pinned to the requester, `status` pinned to `submitted` by the rule); staff review in the admin and create the real `procedures` record by hand. Steps/documents stored as JSON string arrays. Users may pick existing ministries/directorates only, and can withdraw while still `submitted`. |
 | `navigation` | `menu` + `drawer` | The two legacy tables have effectively the same shape. Merge into one collection with a `placement` field (`menu` \| `drawer`), self-relation `parent`, and `sort_order`. |
 | `settings` | `settings` | Key/value site settings. `no_trans` marks values that are not translated (phone, email). |
 
