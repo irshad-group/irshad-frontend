@@ -8,6 +8,7 @@ import { localized } from '@/lib/i18n';
 import { fileUrl, findPublicBySlug, listAllPublic, publicSlugs } from '@/lib/pb/queries/public';
 import { Container, EmptyState, Badge } from '@/components/ui/primitives';
 import LocationBlock from '@/components/public/LocationBlock';
+import WorkingHours from '@/components/public/WorkingHours';
 
 export const revalidate = 3600;
 
@@ -95,11 +96,11 @@ export default async function MinistryPage({
                     <span className="font-medium text-ink-900">
                       {localized(directorate, 'title', locale)}
                     </span>
-                    {localized(directorate, 'working_hours', locale) ? (
-                      <span className="mt-0.5 block text-sm text-ink-500">
-                        {localized(directorate, 'working_hours', locale)}
-                      </span>
-                    ) : null}
+                    <WorkingHours
+                      value={directorate.working_hours}
+                      variant="inline"
+                      className="mt-0.5 block text-sm text-ink-500"
+                    />
                   </Link>
                 </li>
               ))}

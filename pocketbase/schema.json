@@ -528,6 +528,27 @@
         "presentable": false,
         "system": false,
         "type": "autodate"
+      },
+      {
+        "hidden": false,
+        "id": "file142008537",
+        "maxSelect": 10,
+        "maxSize": 5242880,
+        "mimeTypes": [
+          "image/jpeg",
+          "image/png",
+          "image/webp"
+        ],
+        "name": "photos",
+        "presentable": false,
+        "protected": false,
+        "required": false,
+        "system": false,
+        "thumbs": [
+          "100x100",
+          "800x0"
+        ],
+        "type": "file"
       }
     ],
     "indexes": [
@@ -535,7 +556,7 @@
       "CREATE INDEX `idx_branches_province` ON `directorate_branches` (`province`)"
     ],
     "created": "2026-07-30 15:45:24.634Z",
-    "updated": "2026-07-30 15:45:24.634Z",
+    "updated": "2026-08-10 18:57:05.862Z",
     "system": false
   },
   {
@@ -719,48 +740,6 @@
         "type": "number"
       },
       {
-        "autogeneratePattern": "",
-        "hidden": false,
-        "id": "text432534470",
-        "max": 300,
-        "min": 0,
-        "name": "working_hours_en",
-        "pattern": "",
-        "presentable": false,
-        "primaryKey": false,
-        "required": false,
-        "system": false,
-        "type": "text"
-      },
-      {
-        "autogeneratePattern": "",
-        "hidden": false,
-        "id": "text1772776077",
-        "max": 300,
-        "min": 0,
-        "name": "working_hours_ar",
-        "pattern": "",
-        "presentable": false,
-        "primaryKey": false,
-        "required": false,
-        "system": false,
-        "type": "text"
-      },
-      {
-        "autogeneratePattern": "",
-        "hidden": false,
-        "id": "text220272548",
-        "max": 300,
-        "min": 0,
-        "name": "working_hours_ku",
-        "pattern": "",
-        "presentable": false,
-        "primaryKey": false,
-        "required": false,
-        "system": false,
-        "type": "text"
-      },
-      {
         "exceptDomains": null,
         "hidden": false,
         "id": "url1198480871",
@@ -836,6 +815,37 @@
         "presentable": false,
         "system": false,
         "type": "autodate"
+      },
+      {
+        "hidden": false,
+        "id": "file142008537",
+        "maxSelect": 10,
+        "maxSize": 5242880,
+        "mimeTypes": [
+          "image/jpeg",
+          "image/png",
+          "image/webp"
+        ],
+        "name": "photos",
+        "presentable": false,
+        "protected": false,
+        "required": false,
+        "system": false,
+        "thumbs": [
+          "100x100",
+          "800x0"
+        ],
+        "type": "file"
+      },
+      {
+        "hidden": false,
+        "id": "json3610041405",
+        "maxSize": 0,
+        "name": "working_hours",
+        "presentable": false,
+        "required": false,
+        "system": false,
+        "type": "json"
       }
     ],
     "indexes": [
@@ -843,7 +853,7 @@
       "CREATE INDEX `idx_directorates_ministry` ON `directorates` (`ministry`, `archived`)"
     ],
     "created": "2026-07-30 15:45:24.630Z",
-    "updated": "2026-07-30 15:45:24.630Z",
+    "updated": "2026-08-10 19:33:12.483Z",
     "system": false
   },
   {
@@ -985,13 +995,26 @@
         "presentable": false,
         "system": false,
         "type": "autodate"
+      },
+      {
+        "cascadeDelete": false,
+        "collectionId": "irshd_procedurs",
+        "hidden": false,
+        "id": "relation2621226015",
+        "maxSelect": 1,
+        "minSelect": 0,
+        "name": "procedure",
+        "presentable": false,
+        "required": false,
+        "system": false,
+        "type": "relation"
       }
     ],
     "indexes": [
       "CREATE INDEX `idx_faq_sort` ON `faq` (`enabled`, `sort_order`)"
     ],
     "created": "2026-07-30 15:44:16.108Z",
-    "updated": "2026-07-30 15:44:16.108Z",
+    "updated": "2026-08-10 18:58:48.758Z",
     "system": false
   },
   {
@@ -1925,6 +1948,213 @@
     ],
     "created": "2026-07-30 15:45:24.652Z",
     "updated": "2026-07-30 15:45:24.652Z",
+    "system": false
+  },
+  {
+    "id": "irshd_submissio",
+    "listRule": "user = @request.auth.id || @request.auth.role = \"admin\" || @request.auth.role = \"moderator\"",
+    "viewRule": "user = @request.auth.id || @request.auth.role = \"admin\" || @request.auth.role = \"moderator\"",
+    "createRule": "@request.auth.id != \"\" && @request.body.user = @request.auth.id && @request.body.status = \"submitted\" && @request.body.review_note:isset = false",
+    "updateRule": "@request.auth.role = \"admin\" || @request.auth.role = \"moderator\"",
+    "deleteRule": "(user = @request.auth.id && status = \"submitted\") || @request.auth.role = \"admin\"",
+    "name": "procedure_submissions",
+    "type": "base",
+    "fields": [
+      {
+        "autogeneratePattern": "[a-z0-9]{15}",
+        "hidden": false,
+        "id": "text3208210256",
+        "max": 15,
+        "min": 15,
+        "name": "id",
+        "pattern": "^[a-z0-9]+$",
+        "presentable": false,
+        "primaryKey": true,
+        "required": true,
+        "system": true,
+        "type": "text"
+      },
+      {
+        "cascadeDelete": true,
+        "collectionId": "_pb_users_auth_",
+        "hidden": false,
+        "id": "relation2375276105",
+        "maxSelect": 1,
+        "minSelect": 0,
+        "name": "user",
+        "presentable": false,
+        "required": true,
+        "system": false,
+        "type": "relation"
+      },
+      {
+        "autogeneratePattern": "",
+        "hidden": false,
+        "id": "text724990059",
+        "max": 200,
+        "min": 0,
+        "name": "title",
+        "pattern": "",
+        "presentable": false,
+        "primaryKey": false,
+        "required": true,
+        "system": false,
+        "type": "text"
+      },
+      {
+        "autogeneratePattern": "",
+        "hidden": false,
+        "id": "text3458754147",
+        "max": 500,
+        "min": 0,
+        "name": "summary",
+        "pattern": "",
+        "presentable": false,
+        "primaryKey": false,
+        "required": false,
+        "system": false,
+        "type": "text"
+      },
+      {
+        "cascadeDelete": false,
+        "collectionId": "irshd_ministris",
+        "hidden": false,
+        "id": "relation2291926321",
+        "maxSelect": 1,
+        "minSelect": 0,
+        "name": "ministry",
+        "presentable": false,
+        "required": false,
+        "system": false,
+        "type": "relation"
+      },
+      {
+        "cascadeDelete": false,
+        "collectionId": "irshd_directrts",
+        "hidden": false,
+        "id": "relation788604790",
+        "maxSelect": 1,
+        "minSelect": 0,
+        "name": "directorate",
+        "presentable": false,
+        "required": false,
+        "system": false,
+        "type": "relation"
+      },
+      {
+        "hidden": false,
+        "id": "json874646130",
+        "maxSize": 0,
+        "name": "steps",
+        "presentable": false,
+        "required": false,
+        "system": false,
+        "type": "json"
+      },
+      {
+        "hidden": false,
+        "id": "json2729472648",
+        "maxSize": 0,
+        "name": "documents",
+        "presentable": false,
+        "required": false,
+        "system": false,
+        "type": "json"
+      },
+      {
+        "hidden": false,
+        "id": "number3564290776",
+        "max": null,
+        "min": 0,
+        "name": "fee_iqd",
+        "onlyInt": true,
+        "presentable": false,
+        "required": false,
+        "system": false,
+        "type": "number"
+      },
+      {
+        "autogeneratePattern": "",
+        "hidden": false,
+        "id": "text2891794504",
+        "max": 120,
+        "min": 0,
+        "name": "processing_time",
+        "pattern": "",
+        "presentable": false,
+        "primaryKey": false,
+        "required": false,
+        "system": false,
+        "type": "text"
+      },
+      {
+        "autogeneratePattern": "",
+        "hidden": false,
+        "id": "text18589324",
+        "max": 1000,
+        "min": 0,
+        "name": "notes",
+        "pattern": "",
+        "presentable": false,
+        "primaryKey": false,
+        "required": false,
+        "system": false,
+        "type": "text"
+      },
+      {
+        "hidden": false,
+        "id": "select2063623452",
+        "maxSelect": 1,
+        "name": "status",
+        "presentable": false,
+        "required": true,
+        "system": false,
+        "type": "select",
+        "values": [
+          "submitted",
+          "in_review",
+          "approved",
+          "rejected"
+        ]
+      },
+      {
+        "autogeneratePattern": "",
+        "hidden": false,
+        "id": "text755611404",
+        "max": 1000,
+        "min": 0,
+        "name": "review_note",
+        "pattern": "",
+        "presentable": false,
+        "primaryKey": false,
+        "required": false,
+        "system": false,
+        "type": "text"
+      },
+      {
+        "hidden": false,
+        "id": "autodate2990389176",
+        "name": "created",
+        "onCreate": true,
+        "onUpdate": false,
+        "presentable": false,
+        "system": false,
+        "type": "autodate"
+      },
+      {
+        "hidden": false,
+        "id": "autodate3332085495",
+        "name": "updated",
+        "onCreate": true,
+        "onUpdate": true,
+        "presentable": false,
+        "system": false,
+        "type": "autodate"
+      }
+    ],
+    "indexes": [],
+    "created": "2026-08-10 22:49:30.648Z",
+    "updated": "2026-08-10 22:49:30.648Z",
     "system": false
   },
   {
@@ -3414,7 +3644,7 @@
       "CREATE INDEX `idx_users_role` ON `users` (`role`)"
     ],
     "created": "2026-07-30 15:09:26.964Z",
-    "updated": "2026-07-30 15:43:16.810Z",
+    "updated": "2026-08-10 22:49:29.687Z",
     "system": false,
     "authRule": "",
     "manageRule": null,
@@ -3447,9 +3677,9 @@
       "rule": ""
     },
     "otp": {
-      "enabled": false,
-      "duration": 180,
-      "length": 8,
+      "enabled": true,
+      "duration": 300,
+      "length": 6,
       "emailTemplate": {
         "subject": "OTP for {APP_NAME}",
         "body": "<p>Hello,</p>\n<p>Your one-time password is: <strong>{OTP}</strong></p>\n<p><i>If you didn't ask for the one-time password, you can ignore this email.</i></p>\n<p>\n  Thanks,<br/>\n  {APP_NAME} team\n</p>"

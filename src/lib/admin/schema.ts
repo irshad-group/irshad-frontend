@@ -39,6 +39,21 @@ function scalarSchema(field: FieldDef, required: boolean): z.ZodTypeAny {
       const e = z.enum(values);
       return required ? e : z.preprocess(emptyToUndefined, e.optional());
     }
+    case 'json': {
+      // Arrives as textarea text; stored as the parsed value so PocketBase
+      // holds real JSON, not a string containing JSON.
+      const j = z.string().transform((s, ctx) => {
+        const trimmed = s.trim();
+        if (!trimmed) return null;
+        try {
+          return JSON.parse(trimmed) as unknown;
+        } catch {
+          ctx.addIssue({ code: 'custom', message: 'Enter valid JSON.' });
+          return z.NEVER;
+        }
+      });
+      return z.preprocess((v) => (typeof v === 'string' ? v : ''), j);
+    }
     case 'relation': {
       if (field.relation?.multiple) return z.array(z.string()).default([]);
       const s = z.string();

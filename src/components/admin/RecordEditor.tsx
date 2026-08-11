@@ -47,11 +47,22 @@ export default async function RecordEditor({
   for (const field of def.fields) {
     if (field.kind === 'file') {
       const current = record?.[field.name];
-      fileValues[field.name] = typeof current === 'string' ? current : '';
+      fileValues[field.name] = Array.isArray(current)
+        ? current.join(', ')
+        : typeof current === 'string'
+          ? current
+          : '';
       continue;
     }
     for (const stored of storedFieldNames(field)) {
-      values[stored] = record?.[stored] ?? (field.relation?.multiple ? [] : '');
+      const current = record?.[stored];
+      // JSON fields hold a parsed value; the textarea needs it back as text.
+      values[stored] =
+        field.kind === 'json'
+          ? current == null
+            ? ''
+            : JSON.stringify(current, null, 2)
+          : (current ?? (field.relation?.multiple ? [] : ''));
     }
   }
 

@@ -8,6 +8,7 @@ import { groupBranchesByProvince, type BranchWithProvince } from '@/lib/public/p
 import { findPublicBySlug, listAllPublic, publicSlugs } from '@/lib/pb/queries/public';
 import { Container, EmptyState } from '@/components/ui/primitives';
 import LocationBlock from '@/components/public/LocationBlock';
+import WorkingHours from '@/components/public/WorkingHours';
 import type { DirectoratesRecord, MinistriesRecord } from '@/types/pb';
 
 export const revalidate = 3600;
@@ -69,7 +70,6 @@ export default async function DirectoratePage({
 
   const { directorate, branches, procedures } = data;
   const ministry = directorate.expand?.ministry;
-  const hours = localized(directorate, 'working_hours', locale);
   const groups = groupBranchesByProvince(branches);
 
   return (
@@ -171,12 +171,10 @@ export default async function DirectoratePage({
         </div>
 
         <aside className="space-y-6">
-          {hours ? (
-            <div>
-              <h3 className="text-sm font-semibold text-ink-900">{t('directorate.workingHours')}</h3>
-              <p className="mt-1 text-sm text-ink-600">{hours}</p>
-            </div>
-          ) : null}
+          <WorkingHours
+            value={directorate.working_hours}
+            heading={t('directorate.workingHours')}
+          />
 
           <LocationBlock
             address={localized(directorate, 'address', locale)}
