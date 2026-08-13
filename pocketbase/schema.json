@@ -2443,6 +2443,28 @@
         "type": "bool"
       },
       {
+        "cascadeDelete": false,
+        "collectionId": "irshd_team00001",
+        "hidden": false,
+        "id": "relation3182418120",
+        "maxSelect": 1,
+        "minSelect": 0,
+        "name": "author",
+        "presentable": false,
+        "required": false,
+        "system": false,
+        "type": "relation"
+      },
+      {
+        "hidden": false,
+        "id": "bool852031315",
+        "name": "show_author",
+        "presentable": false,
+        "required": false,
+        "system": false,
+        "type": "bool"
+      },
+      {
         "hidden": false,
         "id": "autodate2990389176",
         "name": "created",
