@@ -166,7 +166,10 @@
     "resultCount": "{count, plural, =0 {No results for “{query}”} one {# result for “{query}”} other {# results for “{query}”}}",
     "emptyTitle": "Nothing matched that search",
     "emptyBody": "Try a shorter or more general word, or browse all procedures.",
-    "browseAll": "Browse all procedures"
+    "browseAll": "Browse all procedures",
+    "suggestionsLabel": "Procedure suggestions",
+    "noSuggestions": "No matching procedures. Press Search to look further.",
+    "suggestionCount": "{count, plural, =0 {No suggestions} one {# suggestion} other {# suggestions}}"
   },
   "procedures": {
     "title": "Procedures",

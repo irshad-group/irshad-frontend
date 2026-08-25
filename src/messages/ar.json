@@ -166,7 +166,10 @@
     "resultCount": "{count, plural, =0 {لا نتائج لـ «{query}»} one {نتيجة واحدة لـ «{query}»} two {نتيجتان لـ «{query}»} few {# نتائج لـ «{query}»} many {# نتيجة لـ «{query}»} other {# نتيجة لـ «{query}»}}",
     "emptyTitle": "لا توجد نتائج مطابقة",
     "emptyBody": "جرب كلمة أقصر أو أعم، أو تصفح كل الإجراءات.",
-    "browseAll": "تصفح كل الإجراءات"
+    "browseAll": "تصفح كل الإجراءات",
+    "suggestionsLabel": "اقتراحات الإجراءات",
+    "noSuggestions": "لا إجراءات مطابقة. اضغط بحث للمتابعة.",
+    "suggestionCount": "{count, plural, =0 {لا اقتراحات} one {اقتراح واحد} two {اقتراحان} few {# اقتراحات} many {# اقتراحا} other {# اقتراح}}"
   },
   "procedures": {
     "title": "الإجراءات",

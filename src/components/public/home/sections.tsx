@@ -4,6 +4,7 @@ import { Container, cn } from '@/components/ui/primitives';
 import { Icon, tagIcon, type IconName } from './icons';
 import IraqMap, { type MapDot } from './IraqMap';
 import InteractiveMap, { type CityMarker } from './InteractiveMap';
+import HeroSearch from './HeroSearch';
 import { Reveal } from './motion';
 
 /**
@@ -18,9 +19,8 @@ import { Reveal } from './motion';
 
 /* ── hero ─────────────────────────────────────────────────────────────── */
 
-export async function Hero({ locale }: { locale: string }) {
+export async function Hero() {
   const t = await getTranslations('home');
-  const ts = await getTranslations('search');
 
   const chips = [t('chip1'), t('chip2'), t('chip3'), t('chip4')];
   const steps = [1, 2, 3].map((n) => ({
@@ -42,38 +42,10 @@ export async function Hero({ locale }: { locale: string }) {
           </h1>
           <p className="mt-4 max-w-xl text-lg text-ink-600">{t('heroSub')}</p>
 
-          <form action={`/${locale}/search`} role="search" className="mt-7 max-w-3xl">
-            <div className="flex items-stretch border-2 border-ink-950 bg-white">
-              <span className="flex items-center ps-4 text-ink-400">
-                <Icon name="search" className="size-5" strokeWidth={2} />
-              </span>
-              <label htmlFor="q" className="sr-only">
-                {ts('label')}
-              </label>
-              {/*
-                size={1} is load-bearing. An input defaults to size=20, which gives it an
-                intrinsic width of roughly 300px. `min-w-0` lets it shrink once flex layout
-                runs, but the intrinsic width still counts towards the min-content of every
-                ancestor — including the hero's auto-sized grid track, which then refused to
-                go below ~437px and pushed the whole page into horizontal scroll at 320px.
-                flex-1 grows it back to fill the row.
-              */}
-              <input
-                id="q"
-                type="search"
-                name="q"
-                size={1}
-                placeholder={t('searchPlaceholder')}
-                className="min-w-0 flex-1 bg-transparent px-3 py-4 text-base text-ink-950 outline-none placeholder:text-ink-400"
-              />
-              <button
-                type="submit"
-                className="bg-ink-950 px-6 text-sm font-bold text-white hover:bg-brand-500"
-              >
-                {ts('submit')}
-              </button>
-            </div>
-          </form>
+          {/* The one interactive leaf on this page. It renders the same plain
+              GET form when JavaScript never arrives, and adds live suggestions
+              once it does — see HeroSearch. */}
+          <HeroSearch placeholder={t('searchPlaceholder')} />
 
           <div className="mt-4 flex flex-wrap items-center gap-2">
             <span className="text-sm font-bold text-ink-500">{t('tryThese')}</span>

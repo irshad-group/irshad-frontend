@@ -166,7 +166,10 @@
     "resultCount": "{count, plural, =0 {هیچ ئەنجامێک بۆ «{query}»} one {# ئەنجام بۆ «{query}»} other {# ئەنجام بۆ «{query}»}}",
     "emptyTitle": "هیچ ئەنجامێکی گونجاو نییە",
     "emptyBody": "وشەیەکی کورتتر یان گشتیتر تاقی بکەرەوە، یان هەموو ڕێکارەکان ببینە.",
-    "browseAll": "هەموو ڕێکارەکان ببینە"
+    "browseAll": "هەموو ڕێکارەکان ببینە",
+    "suggestionsLabel": "پێشنیاری ڕێکارەکان",
+    "noSuggestions": "هیچ ڕێکارێکی هاوتا نییە. گەڕان دابگرە بۆ زیاتر.",
+    "suggestionCount": "{count, plural, =0 {هیچ پێشنیارێک نییە} one {# پێشنیار} other {# پێشنیار}}"
   },
   "procedures": {
     "title": "ڕێکارەکان",
