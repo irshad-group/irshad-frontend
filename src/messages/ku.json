@@ -236,7 +236,9 @@
   "place": {
     "address": "ناونیشان",
     "openInMaps": "کردنەوە لە نەخشەدا",
-    "contact": "پەیوەندی"
+    "contact": "پەیوەندی",
+    "buildingPhoto": "وێنەی باڵەخانەی {name}",
+    "closePhoto": "داخستنی وێنە"
   },
   "faq": {
     "title": "پرسیارە باوەکان",

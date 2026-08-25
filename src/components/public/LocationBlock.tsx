@@ -24,12 +24,14 @@ export default function LocationBlock({
   lon,
   labels,
   withMap = false,
+  dir = 'ltr',
 }: {
   address: string;
   lat?: number;
   lon?: number;
   labels: { heading: string; openInMaps: string };
   withMap?: boolean;
+  dir?: 'ltr' | 'rtl';
 }) {
   const link = mapsLink(lat, lon);
   if (!address && !link) return null;
@@ -39,7 +41,7 @@ export default function LocationBlock({
       <h3 className="text-sm font-semibold text-ink-900">{labels.heading}</h3>
       {address ? <p className="mt-1 text-sm text-ink-600">{address}</p> : null}
       {link && withMap && typeof lat === 'number' && typeof lon === 'number' ? (
-        <LocationMap lat={lat} lon={lon} href={link} label={labels.openInMaps} />
+        <LocationMap lat={lat} lon={lon} href={link} label={labels.openInMaps} dir={dir} />
       ) : link ? (
         <a
           href={link}
