@@ -7,6 +7,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { norm, stripTashkeel } from './match.mjs';
+import { largePhoto } from './photo-url.mjs';
 
 const HERE = path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1'));
 const rd = (f) => JSON.parse(fs.readFileSync(path.join(HERE, f), 'utf8'));
@@ -44,6 +45,7 @@ function urMatch(titleAr, krg) {
 }
 
 const clean = (s) => (s ? stripTashkeel(s).replace(/\s+/g, ' ').trim() : null);
+
 // Maps returns "89XJ+2GR وزارة الصحة, Al Adham Street، بغداد" — the plus code is noise.
 const cleanAddr = (s) => clean(s)?.replace(/^[0-9A-Z]{4,7}\+[0-9A-Z]{2,4}\s*/, '') || null;
 
@@ -86,7 +88,7 @@ const ministries = mins.map((m, i) => {
     gps_lat: m.gps_lat ?? null,
     gps_lon: m.gps_lon ?? null,
     logo_url: ur?.picture ? UR_BASE + ur.picture : (m.krg ? KRG_EMBLEM : null),
-    photo_url: m.photo || null,
+    photo_url: largePhoto(m.photo),
     place_id: m.maps_url?.match(/place_id:(.+)$/)?.[1] || null,
     maps_url: m.maps_url || null,
     sort_order: (i + 1) * 10,
@@ -127,7 +129,7 @@ const directorates = dirs.map((d, i) => {
     address_ar: cleanAddr(d.address_ar),
     gps_lat: d.gps_lat ?? null,
     gps_lon: d.gps_lon ?? null,
-    photo_url: d.photo || null,
+    photo_url: largePhoto(d.photo),
     working_hours: toWorkingHours(d.hours),
     place_id: d.maps_url?.match(/place_id:(.+)$/)?.[1] || null,
     maps_url: d.maps_url || null,
@@ -210,7 +212,7 @@ function parentFor(fam) {
     address_ar: src?.address_ar ?? null,
     gps_lat: trustLocation ? src.gps_lat : null,
     gps_lon: trustLocation ? src.gps_lon : null,
-    photo_url: trustLocation ? src.photo_url : null,
+    photo_url: trustLocation ? largePhoto(src.photo_url) : null,
     working_hours: trustLocation ? src.working_hours : null,
     place_id: trustLocation ? src.place_id : null,
     maps_url: trustLocation ? src.maps_url : null,
@@ -242,7 +244,7 @@ function parentFor(fam) {
         && (fam.ministry.startsWith('krg-') ? NORTH(d.gps_lat) : BAGHDAD(d.gps_lat, d.gps_lon))) {
       rec.gps_lat = d.gps_lat; rec.gps_lon = d.gps_lon;
       rec.place_id = d.place_id; rec.maps_url = d.maps_url;
-      rec.photo_url = rec.photo_url || d.photo_url;
+      rec.photo_url = rec.photo_url || largePhoto(d.photo_url);
       rec._source += ` + located from ${d.slug}`;
     }
     directorates.splice(i, 1);
@@ -273,7 +275,7 @@ for (const b of branches) {
     website: b.website || null,
     email: null,
     working_hours: toWorkingHours(b.hours),
-    photo_url: b.photo || null,
+    photo_url: largePhoto(b.photo),
     place_id: b.maps_url?.match(/place_id:(.+)$/)?.[1] || null,
     maps_url: b.maps_url || null,
     sort_order: 0,

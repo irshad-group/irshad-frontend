@@ -236,7 +236,9 @@
   "place": {
     "address": "Address",
     "openInMaps": "Open in maps",
-    "contact": "Contact"
+    "contact": "Contact",
+    "buildingPhoto": "Photo of the {name} building",
+    "closePhoto": "Close the photo"
   },
   "faq": {
     "title": "Frequently asked questions",

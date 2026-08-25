@@ -3,6 +3,7 @@ import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { locales } from '@/i18n/routing';
+import { directionOf } from '@/i18n/routing';
 import { localized } from '@/lib/i18n';
 import { groupBranchesByProvince, type BranchWithProvince } from '@/lib/public/places';
 import { fileUrl, findPublicBySlug, listAllPublic, publicSlugs } from '@/lib/pb/queries/public';
@@ -203,6 +204,7 @@ export default async function DirectoratePage({
             lat={directorate.gps_lat}
             lon={directorate.gps_lon}
             withMap
+            dir={directionOf(locale)}
             labels={{ heading: t('place.address'), openInMaps: t('place.openInMaps') }}
           />
 

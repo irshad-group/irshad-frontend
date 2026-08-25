@@ -13,6 +13,7 @@ import path from 'node:path';
 import { load, nameOverlap, parseOpeningHours } from './osm.mjs';
 import { search, pool } from './gmaps.mjs';
 import { scorePlace, tokens, norm } from './match.mjs';
+import { largePhoto } from './photo-url.mjs';
 
 const HERE = path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1'));
 const IN = process.argv[2] || path.join(HERE, 'iraq-government-directory.json');
@@ -129,7 +130,7 @@ await pool(still, 6, async ({ r }) => {
   r.gps_lon = top.lon;
   r.phone = r.phone || top.phone || null;
   r.address_ar = r.address_ar || cleanAddr(top.address);
-  r.photo_url = r.photo_url || top.photo || null;
+  r.photo_url = r.photo_url || largePhoto(top.photo);
   r.place_id = r.place_id || top.ftid || null;
   r.maps_url = r.maps_url || top.maps_url || null;
   if (!r.website && top.website) r.website = top.website;

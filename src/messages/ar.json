@@ -236,7 +236,9 @@
   "place": {
     "address": "العنوان",
     "openInMaps": "فتح في الخرائط",
-    "contact": "الاتصال"
+    "contact": "الاتصال",
+    "buildingPhoto": "صورة مبنى {name}",
+    "closePhoto": "اغلاق الصورة"
   },
   "faq": {
     "title": "الأسئلة الشائعة",

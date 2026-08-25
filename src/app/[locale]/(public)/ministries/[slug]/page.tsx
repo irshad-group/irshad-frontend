@@ -4,9 +4,11 @@ import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { locales } from '@/i18n/routing';
+import { directionOf } from '@/i18n/routing';
 import { localized } from '@/lib/i18n';
 import { fileUrl, findPublicBySlug, listAllPublic, publicSlugs } from '@/lib/pb/queries/public';
 import { Container, EmptyState, Badge } from '@/components/ui/primitives';
+import Lightbox from '@/components/public/Lightbox';
 import LocationBlock from '@/components/public/LocationBlock';
 import WorkingHours from '@/components/public/WorkingHours';
 
@@ -70,25 +72,29 @@ export default async function MinistryPage({
     officesByDirectorate.set(branch.directorate, entry);
   }
 
-  const logo = fileUrl(ministry, ministry.logo, { thumb: '120x120' });
+  const logo = fileUrl(ministry, ministry.logo, { thumb: '240x240' });
   const address = localized(ministry, 'address', locale);
+  const name = localized(ministry, 'title', locale);
+  // The building, which every ministry has and none of them was showing. A
+  // reader who has to go there benefits from recognising it more than from a
+  // second look at the crest.
+  const buildingThumb = fileUrl(ministry, ministry.photos?.[0], { thumb: '1200x0' });
+  const buildingFull = fileUrl(ministry, ministry.photos?.[0]);
 
   return (
     <Container className="py-10">
-      <header className="flex items-start gap-4">
+      <header className="flex items-start gap-5">
         {logo ? (
           <Image
             src={logo}
             alt=""
-            width={64}
-            height={64}
-            className="size-16 shrink-0 rounded object-contain"
+            width={96}
+            height={96}
+            className="size-20 shrink-0 border border-ink-200 bg-white object-contain p-1.5 sm:size-24"
           />
         ) : null}
-        <div className="min-w-0">
-          <h1 className="text-3xl font-semibold text-ink-900">
-            {localized(ministry, 'title', locale)}
-          </h1>
+        <div className="min-w-0 pt-1">
+          <h1 className="text-3xl font-semibold text-ink-900 sm:text-4xl">{name}</h1>
           {ministry.krg ? (
             <span className="mt-2 inline-block">
               <Badge tone="neutral">{t('ministries.krgBadge')}</Badge>
@@ -96,6 +102,23 @@ export default async function MinistryPage({
           ) : null}
         </div>
       </header>
+
+      {buildingThumb && buildingFull ? (
+        <Lightbox
+          src={buildingThumb}
+          full={buildingFull}
+          alt={t('place.buildingPhoto', { name })}
+          closeLabel={t('place.closePhoto')}
+          className="group mt-6 block aspect-[16/7] overflow-hidden border border-ink-200 bg-ink-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500"
+        >
+          {/* eslint-disable-next-line @next/next/no-img-element -- Record photo of unknown dimensions. */}
+          <img
+            src={buildingThumb}
+            alt={t('place.buildingPhoto', { name })}
+            className="size-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+          />
+        </Lightbox>
+      ) : null}
 
       <div className="mt-8 grid gap-8 lg:grid-cols-3">
         <section className="lg:col-span-2">
@@ -143,6 +166,8 @@ export default async function MinistryPage({
             address={address}
             lat={ministry.gps_lat}
             lon={ministry.gps_lon}
+            withMap
+            dir={directionOf(locale)}
             labels={{ heading: t('place.address'), openInMaps: t('place.openInMaps') }}
           />
 
