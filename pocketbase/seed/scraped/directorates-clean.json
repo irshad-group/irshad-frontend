@@ -170,36 +170,6 @@
   {
     "ministry_slug": "ministry-of-defence",
     "krg": false,
-    "name": "المديرية العامة للموازنة والبرامج توزّع مكافأة الجرحى للوجبة (80) عبر بطاقة (الماستر كارد)",
-    "url": "https://mod.mil.iq/?article=10305"
-  },
-  {
-    "ministry_slug": "ministry-of-defence",
-    "krg": false,
-    "name": "معاون رئيس أركان الجيش للتدريب يتفقد مديرية صنف المشاة",
-    "url": "https://mod.mil.iq/?article=10289"
-  },
-  {
-    "ministry_slug": "ministry-of-defence",
-    "krg": false,
-    "name": "مديرية الإعلام والتوجيه المعنوي تستقبل المفتش العسكري ولجان التفتيش",
-    "url": "https://mod.mil.iq/?article=10148"
-  },
-  {
-    "ministry_slug": "ministry-of-defence",
-    "krg": false,
-    "name": "مديرية الاستخبارات العسكرية تطيح بأربعة من تجار ومروجي المخدرات في ميسان",
-    "url": "https://mod.mil.iq/?article=10255"
-  },
-  {
-    "ministry_slug": "ministry-of-defence",
-    "krg": false,
-    "name": "معاون رئيس أركان الجيش للتدريب يشارك ضباط ومراتب الدائرة فعالية الرياضة الصباحية",
-    "url": "https://mod.mil.iq/?article=10247"
-  },
-  {
-    "ministry_slug": "ministry-of-defence",
-    "krg": false,
     "name": "مديرية المساحة العسكرية",
     "url": null
   },
@@ -207,54 +177,6 @@
     "ministry_slug": "ministry-of-defence",
     "krg": false,
     "name": "دائرة الإدعاء العام العسكري",
-    "url": null
-  },
-  {
-    "ministry_slug": "ministry-of-defence",
-    "krg": false,
-    "name": "مديرية الاستخبارات العسكرية التفاصيل",
-    "url": null
-  },
-  {
-    "ministry_slug": "ministry-of-defence",
-    "krg": false,
-    "name": "مديرية المساحة العسكرية التفاصيل",
-    "url": null
-  },
-  {
-    "ministry_slug": "ministry-of-defence",
-    "krg": false,
-    "name": "دائرة الإدعاء العام العسكري التفاصيل",
-    "url": null
-  },
-  {
-    "ministry_slug": "ministry-of-defence",
-    "krg": false,
-    "name": "مديرية الحوانيت العسكرية التفاصيل",
-    "url": null
-  },
-  {
-    "ministry_slug": "ministry-of-defence",
-    "krg": false,
-    "name": "دائرة التقاعد العسكري التفاصيل",
-    "url": null
-  },
-  {
-    "ministry_slug": "ministry-of-defence",
-    "krg": false,
-    "name": "المديرية العامة لشؤون المحاربين التفاصيل",
-    "url": null
-  },
-  {
-    "ministry_slug": "ministry-of-defence",
-    "krg": false,
-    "name": "إصدارات مديرية الإعلام والتوجيه المعنوي جريدة خيمة العراق",
-    "url": null
-  },
-  {
-    "ministry_slug": "ministry-of-defence",
-    "krg": false,
-    "name": "نشاطات وأخبار مديريات وزارة الدفاع مديرية الاستخبارات العسكرية",
     "url": null
   },
   {
@@ -340,18 +262,6 @@
     "krg": false,
     "name": "دائرة حقوق الإنسان",
     "url": "https://moj.gov.iq/#"
-  },
-  {
-    "ministry_slug": "ministry-of-justice",
-    "krg": false,
-    "name": "نشاطات دائرة الأصلاح",
-    "url": "https://moj.gov.iq/reform/"
-  },
-  {
-    "ministry_slug": "ministry-of-justice",
-    "krg": false,
-    "name": "نشاطات دائرة أصلاح الأحداث",
-    "url": "https://moj.gov.iq/juvenile/"
   },
   {
     "ministry_slug": "ministry-of-justice",
@@ -458,7 +368,7 @@
   {
     "ministry_slug": "ministry-of-oil",
     "krg": false,
-    "name": "دوائر مركز الوزارة التفاصيل",
+    "name": "دوائر مركز الوزارة",
     "url": null
   },
   {
@@ -800,12 +710,6 @@
   {
     "ministry_slug": "ministry-of-communications",
     "krg": false,
-    "name": "وزارة الاتصالات تبحث مع هيئة النزاهة الاتحادية إجراءات برنامج الشفافية وحماية المال العام",
-    "url": "https://moc.gov.iq/?article=1324"
-  },
-  {
-    "ministry_slug": "ministry-of-communications",
-    "krg": false,
     "name": "خدماتنــا الشركة العامة للأتصالات والمعلوماتية",
     "url": null
   },
@@ -848,12 +752,6 @@
   {
     "ministry_slug": "ministry-of-trade",
     "krg": false,
-    "name": "نشاطات دائرة العلاقات الاقتصادية الخارجية",
-    "url": "https://mot.gov.iq/?page=7444"
-  },
-  {
-    "ministry_slug": "ministry-of-trade",
-    "krg": false,
     "name": "دليل استرشادي لموظفي دائرة العلاقات الاقتصادية الخارجية",
     "url": "https://mot.gov.iq/?page=271"
   },
@@ -890,20 +788,8 @@
   {
     "ministry_slug": "ministry-of-trade",
     "krg": false,
-    "name": "نشاطات الدائرة القانونية",
-    "url": "https://mot.gov.iq/?page=277"
-  },
-  {
-    "ministry_slug": "ministry-of-trade",
-    "krg": false,
     "name": "دائرة الرقابة التجارية والمالية",
     "url": "https://mot.gov.iq/?page=157"
-  },
-  {
-    "ministry_slug": "ministry-of-trade",
-    "krg": false,
-    "name": "نشاطات دائرة الرقابة التجارية والمالية",
-    "url": "https://mot.gov.iq/?page=278"
   },
   {
     "ministry_slug": "ministry-of-trade",
@@ -998,7 +884,7 @@
   {
     "ministry_slug": "ministry-of-trade",
     "krg": false,
-    "name": "هيئة النزاهة التفاصيل",
+    "name": "هيئة النزاهة",
     "url": null
   },
   {
@@ -1264,24 +1150,6 @@
     "krg": false,
     "name": "المديرية العامة للتنمية الصناعية",
     "url": "https://gdid.industry.gov.iq/"
-  },
-  {
-    "ministry_slug": "ministry-of-industry-and-minerals",
-    "krg": false,
-    "name": "شركة الفارس العامة تجهز مديرية ماء ميسان بمجمع متكامل لتصفية وتنقية المياه",
-    "url": "https://industry.gov.iq/?article=3822"
-  },
-  {
-    "ministry_slug": "ministry-of-industry-and-minerals",
-    "krg": false,
-    "name": "الشركة العامة للحديد والصلب تشغّل مصنع النورة بطاقة 200 طن يومياً",
-    "url": "https://industry.gov.iq/?article=3808"
-  },
-  {
-    "ministry_slug": "ministry-of-industry-and-minerals",
-    "krg": false,
-    "name": "الشركة العامة للتصميم وتنفيذ المشاريع تنجز (80%) من مشروع بناية فرع غاز النجف",
-    "url": "https://industry.gov.iq/?article=3805"
   },
   {
     "ministry_slug": "ministry-of-industry-and-minerals",

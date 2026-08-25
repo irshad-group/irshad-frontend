@@ -1,13 +1,25 @@
 // Turn the raw link harvest into a de-duplicated list of real bodies.
 import fs from 'node:fs';
 import path from 'node:path';
-import { norm } from './match.mjs';
+import { norm, stripTashkeel } from './match.mjs';
 
 const HERE = path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1'));
 const disc = JSON.parse(fs.readFileSync(path.join(HERE, 'directorates-discovered.json'), 'utf8'));
 
 // A news headline mentions a body but is not one. Drop anything that reads like prose.
-const PROSE = /(يلتقي|يزور|يترأس|يبحث|يستقبل|أعلن|اعلن|تعلن|يعلن|بمناسبة|خلال|ضمن|بحضور|نتائج|تهنئة|بيان|زيارة|اجتماع|افتتاح|توقيع|ورشة|ندوة|مؤتمر|احتفال|\.\.\.|…|\?|؟|!)/;
+// A headline mentions a body but is not one. The verb list is the tell: a directorate
+// name is a noun phrase, so any finite verb means this is news copy scraped off the
+// ministry's front page. Missing a few let "مديرية الاستخبارات العسكرية تطيح بأربعة من
+// تجار المخدرات" into the directory as though it were an office.
+const PROSE = new RegExp([
+  'يلتقي', 'يزور', 'يترأس', 'يبحث', 'يستقبل', 'تستقبل', 'أعلن', 'اعلن', 'تعلن', 'يعلن',
+  'تجهز', 'يجهز', 'تشغل', 'يشغل', 'تنجز', 'ينجز', 'توزع', 'يوزع', 'يتفقد', 'تتفقد',
+  'يشارك', 'تشارك', 'تطيح', 'يطيح', 'تناقش', 'يناقش', 'تبحث', 'ترعى', 'يرعى',
+  'تنفذ', 'ينفذ', 'تباشر', 'يباشر', 'تواصل', 'يواصل', 'تحتفل', 'يحتفل', 'تقيم', 'يقيم',
+  'بمناسبة', 'خلال', 'ضمن', 'بحضور', 'نتائج', 'تهنئة', 'بيان', 'زيارة', 'اجتماع',
+  'افتتاح', 'توقيع', 'ورشة', 'ندوة', 'مؤتمر', 'احتفال', 'إصدارات', 'اصدارات',
+  'نشاطات', 'أخبار', 'اخبار',
+].join('|') + '|\\.\\.\\.|…|\\?|؟|!');
 const TOO_LONG = 90;
 const HEADING = /^(دوائر الوزارة|الدوائر|المديريات|الهيئات|الشركات|departments?|directorates?)$/i;
 
@@ -24,9 +36,14 @@ for (const m of disc) {
   const keep = [];
   const seen = new Set();
   for (const b of m.bodies || []) {
-    const name = b.name.replace(/\s+/g, ' ').trim();
+    // Ministry sites append their "details" link text to the body's name, so the same
+    // directorate arrives twice — once bare, once suffixed. Strip it before the dedupe
+    // below, or both survive as separate offices.
+    const name = b.name.replace(/\s+/g, ' ').trim().replace(/\s*(التفاصيل|المزيد|اقرأ المزيد)$/, '').trim();
     if (name.length > TOO_LONG || name.length < 8) continue;
-    if (PROSE.test(name)) continue;
+    // Test the verb list against undiacritised text: these pages write "توزّع" and
+    // "تشغّل" with a shadda, and a bare "توزع" in the pattern misses both.
+    if (PROSE.test(stripTashkeel(name))) continue;
     if (HEADING.test(name)) continue;
     const k = norm(name);
     if (!k || seen.has(k)) continue;

@@ -4,31 +4,14 @@ import fs from 'node:fs';
 import path from 'node:path';
 import { search, pool } from './gmaps.mjs';
 import { scorePlace, norm } from './match.mjs';
+import { inBox } from './province-box.mjs';
 
 const HERE = path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1'));
 const cfg = JSON.parse(fs.readFileSync(path.join(HERE, 'branch-families.json'), 'utf8'));
 
-// Rough province bounding boxes, used to throw out results Maps placed in the wrong governorate.
-const BOX = {
-  'IQ-BG': [32.9, 33.7, 43.9, 44.9], 'IQ-BA': [29.9, 31.3, 46.9, 48.6],
-  'IQ-NI': [35.2, 37.4, 41.2, 43.9], 'IQ-AR': [35.4, 37.4, 43.2, 45.4],
-  'IQ-SU': [34.7, 36.4, 44.7, 46.3], 'IQ-DA': [36.4, 37.4, 42.2, 44.4],
-  'IQ-HA': [34.9, 35.6, 45.5, 46.3], 'IQ-KI': [34.7, 36.0, 43.4, 45.2],
-  'IQ-AN': [32.0, 34.5, 38.7, 44.0], 'IQ-BB': [32.0, 33.1, 43.9, 45.2],
-  'IQ-KA': [31.7, 32.9, 43.0, 44.5], 'IQ-NA': [29.0, 32.4, 42.0, 45.0],
-  'IQ-DI': [33.2, 35.2, 44.4, 46.0], 'IQ-DQ': [30.4, 31.9, 45.4, 47.0],
-  'IQ-MA': [31.0, 32.6, 46.3, 47.9], 'IQ-MU': [29.0, 31.9, 44.2, 46.2],
-  'IQ-QA': [31.4, 32.4, 44.4, 45.8], 'IQ-WA': [32.0, 33.4, 44.9, 46.5],
-  'IQ-SD': [33.7, 35.6, 42.9, 45.0],
-};
-const inBox = (code, lat, lon) => {
-  const b = BOX[code];
-  return b ? lat >= b[0] && lat <= b[1] && lon >= b[2] && lon <= b[3] : true;
-};
-
-// A family is only searched where the body it names can actually exist. A KRG
-// directorate has no office in Basra, and querying for one returns a federal office
-// with a similar name — noise dressed as coverage.
+// A family is only searched where the body it names can actually exist. A Kurdistan
+// Region directorate has no office in Basra, and querying for one returns a federal
+// office with a similar name — noise dressed as coverage.
 const KRG_PROVINCES = new Set(['IQ-AR', 'IQ-SU', 'IQ-DA', 'IQ-HA']);
 const inScope = (fam, prov) => (fam.scope === 'krg' ? KRG_PROVINCES.has(prov.code) : true);
 

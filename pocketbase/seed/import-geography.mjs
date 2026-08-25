@@ -17,6 +17,7 @@
  */
 
 import fs from 'node:fs';
+import { branchKey } from './branch-key.mjs';
 
 const argv = process.argv.slice(2);
 const arg = (n, d) => { const i = argv.indexOf(n); return i >= 0 ? argv[i + 1] : d; };
@@ -214,10 +215,6 @@ console.log(`directorates: ${ds.directorates.length} processed`);
 // ------------------------------------------------------------------ branches
 const brFields = await fieldsOf('directorate_branches');
 const existingBranches = await listAll('directorate_branches');
-// Branches have no unique slug in the schema. Prefer the Google place id: it is
-// stable per office and survives a renamed or re-scraped title. Fall back to
-// directorate + title for rows that have no place id.
-const branchKey = (b) => (b.place_id ? `place:${b.place_id}` : `${b.directorate}::${b.title_ar}`);
 const brIndex = new Map();
 for (const b of existingBranches) brIndex.set(branchKey(b), b);
 
@@ -225,7 +222,7 @@ for (const b of ds.branches) {
   const directorate = dirIdBySlug.get(b.directorate_slug);
   const province = provByCode.get(b.province_code)?.id;
   if (!directorate || !province) { stats.skipped++; continue; }
-  const key = branchKey({ ...b, directorate });
+  const key = branchKey({ ...b, directorate, province });
   const id = await upsert('directorate_branches', key, {
     directorate, province,
     title_ar: b.title_ar, title_en: b.title_en || b.title_ar, title_ku: b.title_ku,
