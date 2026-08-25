@@ -109,13 +109,19 @@ export default async function MinistryPage({
           full={buildingFull}
           alt={t('place.buildingPhoto', { name })}
           closeLabel={t('place.closePhoto')}
-          className="group mt-6 block aspect-[16/7] overflow-hidden border border-ink-200 bg-ink-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500"
+          className="group relative mt-6 block aspect-[16/7] overflow-hidden border border-ink-200 bg-ink-100 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-brand-500"
         >
-          {/* eslint-disable-next-line @next/next/no-img-element -- Record photo of unknown dimensions. */}
-          <img
+          {/* Through the optimiser: PocketBase returns the banner as a 350 kB
+              JPEG, which was a third of everything this page fetched. Served as
+              WebP at the width actually rendered it is a fraction of that.
+              `fill` because a record photo has no dimensions we know here. */}
+          <Image
             src={buildingThumb}
             alt={t('place.buildingPhoto', { name })}
-            className="size-full object-cover transition-transform duration-300 group-hover:scale-[1.02]"
+            fill
+            sizes="(max-width: 1024px) 100vw, 900px"
+            priority
+            className="object-cover transition-transform duration-300 group-hover:scale-[1.02]"
           />
         </Lightbox>
       ) : null}

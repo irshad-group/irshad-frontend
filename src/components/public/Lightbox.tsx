@@ -1,6 +1,6 @@
 'use client';
 
-import { useCallback, useRef } from 'react';
+import { useCallback, useRef, useState } from 'react';
 
 /**
  * A photo that opens full size over the page when clicked, with a close button
@@ -15,6 +15,14 @@ import { useCallback, useRef } from 'react';
  * that are easy to get wrong for free: Escape closes it, focus is trapped
  * inside while it is open and returns to the thumbnail afterwards, and the rest
  * of the page is inert to a screen reader.
+ *
+ * The full-size photo is not requested until the dialog is opened. A closed
+ * `<dialog>` still loads the images inside it, so every visitor to a ministry
+ * page was downloading a 350 kB photograph to look at a banner — on the pages
+ * measured, more than a third of everything the page fetched. Until then the
+ * dialog points at the banner image the page has already loaded, so opening
+ * shows the photo instantly and the full-resolution one replaces it when it
+ * arrives, rather than opening onto an empty frame.
  */
 export default function Lightbox({
   src,
@@ -34,6 +42,10 @@ export default function Lightbox({
   children?: React.ReactNode;
 }) {
   const dialogRef = useRef<HTMLDialogElement | null>(null);
+  const anchorRef = useRef<HTMLAnchorElement | null>(null);
+  // What the dialog is currently showing. Null until it has been opened once,
+  // so a closed dialog costs no request at all.
+  const [shown, setShown] = useState<string | null>(null);
 
   // No "have we hydrated yet" flag is needed: before hydration there is no
   // click handler, so the anchor behaves like an anchor and opens the photo.
@@ -42,6 +54,7 @@ export default function Lightbox({
   return (
     <>
       <a
+        ref={anchorRef}
         href={full}
         target="_blank"
         rel="noopener noreferrer"
@@ -51,6 +64,12 @@ export default function Lightbox({
           // Leave the modified clicks alone — they mean "open this elsewhere".
           if (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) return;
           event.preventDefault();
+          // Open on whatever the browser already has for the banner, so the
+          // photo is there the instant it is asked for. Reading `currentSrc`
+          // rather than `src` picks the exact variant the optimiser served for
+          // this screen, which is the one in cache.
+          const rendered = anchorRef.current?.querySelector('img')?.currentSrc;
+          setShown(rendered || full);
           dialogRef.current.showModal();
         }}
       >
@@ -80,8 +99,19 @@ export default function Lightbox({
               <path d="M6 6l12 12M18 6L6 18" strokeLinecap="round" />
             </svg>
           </button>
-          {/* eslint-disable-next-line @next/next/no-img-element -- Full-size record photo; Next cannot know its dimensions. */}
-          <img src={full} alt={alt} className="block max-h-[92dvh] max-w-[95vw] object-contain" />
+          {shown ? (
+            // eslint-disable-next-line @next/next/no-img-element -- Full-size record photo; Next cannot know its dimensions.
+            <img
+              src={shown}
+              alt={alt}
+              // Once the cached banner is on screen, fetch the real thing and
+              // let it replace it. The browser keeps painting the old image
+              // until the new one has decoded, so the swap is not visible as a
+              // flash of nothing.
+              onLoad={() => { if (shown !== full) setShown(full); }}
+              className="block max-h-[92dvh] max-w-[95vw] object-contain"
+            />
+          ) : null}
         </div>
       </dialog>
     </>

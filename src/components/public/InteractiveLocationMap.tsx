@@ -1,7 +1,8 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import 'maplibre-gl/dist/maplibre-gl.css';
+import { useInView } from './useInView';
 
 /**
  * Upgrades the server-rendered tile picture behind it into a real map you can
@@ -15,6 +16,11 @@ import 'maplibre-gl/dist/maplibre-gl.css';
  *
  * Scroll zooming needs a modifier key (two fingers on a touchscreen), matching
  * the home page: a map halfway down a long page must not swallow the scroll.
+ *
+ * Nothing is fetched until the map is near the viewport. It sits in a sidebar
+ * that a phone reaches only after the whole address and contact panel, and the
+ * library plus its tiles are the heaviest thing on the page — loading them
+ * up front spent that bandwidth competing with the text the reader came for.
  */
 export default function InteractiveLocationMap({
   lat,
@@ -27,10 +33,11 @@ export default function InteractiveLocationMap({
   zoom?: number;
   dir: 'ltr' | 'rtl';
 }) {
-  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [containerRef, inView] = useInView<HTMLDivElement>();
   const [ready, setReady] = useState(false);
 
   useEffect(() => {
+    if (!inView) return;
     let cancelled = false;
     let map: import('maplibre-gl').Map | undefined;
 
@@ -80,7 +87,7 @@ export default function InteractiveLocationMap({
       cancelled = true;
       map?.remove();
     };
-  }, [lat, lon, zoom, dir]);
+  }, [containerRef, inView, lat, lon, zoom, dir]);
 
   return (
     <div

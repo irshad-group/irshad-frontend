@@ -29,9 +29,15 @@ export default function proxy(request: NextRequest) {
     // role — the admin layout does that server-side against PocketBase, and the
     // API rules enforce it regardless of what any UI allows.
     if (!request.cookies.get(AUTH_COOKIE)?.value) {
-      const locale = request.nextUrl.pathname.split('/').filter(Boolean)[0] ?? routing.defaultLocale;
+      // Only the first segment when it really is a locale. A bare `/admin`
+      // otherwise took "admin" for one and redirected to `/admin/admin/login`,
+      // which matches no route.
+      const first = request.nextUrl.pathname.split('/').filter(Boolean)[0] ?? '';
+      const locale = (routing.locales as readonly string[]).includes(first)
+        ? first
+        : routing.defaultLocale;
       const loginUrl = new URL(`/${locale}/admin/login`, request.url);
-      loginUrl.searchParams.set('next', request.nextUrl.pathname);
+      loginUrl.searchParams.set('next', `/${locale}/${route}`);
       return NextResponse.redirect(loginUrl);
     }
   }

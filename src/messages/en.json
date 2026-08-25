@@ -235,7 +235,7 @@
   },
   "place": {
     "address": "Address",
-    "openInMaps": "Open in maps",
+    "openInMaps": "Open in Waze",
     "contact": "Contact",
     "buildingPhoto": "Photo of the {name} building",
     "closePhoto": "Close the photo"

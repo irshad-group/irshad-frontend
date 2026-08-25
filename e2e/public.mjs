@@ -471,10 +471,10 @@ try {
       (await page.locator('main a[href*="/procedures/"]').count()) > 0,
     );
 
-    // Locations are links to the visitor's own maps app, never an embed.
+    // Locations hand off to the visitor's own maps app, never an embed.
     check(`${locale}: no third-party map iframe`, (await page.locator('iframe').count()) === 0);
-    const mapLinks = page.locator('main a[href*="openstreetmap.org"]');
-    check(`${locale}: locations offer an open-in-maps link`, (await mapLinks.count()) > 0);
+    const mapLinks = page.locator('main a[href*="waze.com/ul"]');
+    check(`${locale}: locations offer a navigate-in-Waze link`, (await mapLinks.count()) > 0);
     check(
       `${locale}: map links open safely in a new tab`,
       (await mapLinks.first().getAttribute('rel'))?.includes('noopener'),

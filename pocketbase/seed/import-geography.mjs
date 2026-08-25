@@ -18,6 +18,7 @@
 
 import fs from 'node:fs';
 import { branchKey } from './branch-key.mjs';
+import { rasterizeLogo } from './raster-logo.mjs';
 
 const argv = process.argv.slice(2);
 const arg = (n, d) => { const i = argv.indexOf(n); return i >= 0 ? argv[i + 1] : d; };
@@ -180,10 +181,13 @@ async function attach(col, id, field, url) {
       try { res = await fetch(url); } catch { await sleep(400 * 2 ** i); }
     }
     if (!res?.ok) return;
-    const buf = Buffer.from(await res.arrayBuffer());
+    let buf = Buffer.from(await res.arrayBuffer());
     if (buf.length < 500) return;                       // placeholder / error image
-    const type = res.headers.get('content-type') || 'image/jpeg';
-    const ext = type.includes('png') ? 'png' : type.includes('webp') ? 'webp' : type.includes('svg') ? 'svg' : 'jpg';
+    let type = res.headers.get('content-type') || 'image/jpeg';
+    let ext = type.includes('png') ? 'png' : type.includes('webp') ? 'webp' : type.includes('svg') ? 'svg' : 'jpg';
+    // Vector logos cannot be resized by anything downstream — see raster-logo.mjs.
+    const raster = await rasterizeLogo(buf, type);
+    if (raster) ({ buffer: buf, type, ext } = raster);
     const fd = new FormData();
     fd.append(field, new Blob([buf], { type }), `${field}.${ext}`);
     await api(`/api/collections/${col}/records/${id}`, { method: 'PATCH', headers: H, body: fd });
