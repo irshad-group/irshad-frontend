@@ -209,7 +209,9 @@
   },
   "ministry": {
     "directorates": "المديريات",
-    "noDirectorates": "لا توجد مديريات مدرجة بعد"
+    "noDirectorates": "لا توجد مديريات مدرجة بعد",
+    "offices": "{count, plural, zero {} one {مكتب واحد} two {مكتبان} few {# مكاتب} many {# مكتبا} other {# مكتب}} في {governorates, plural, one {محافظة واحدة} two {محافظتين} few {# محافظات} many {# محافظة} other {# محافظة}}",
+    "officesNone": "المكتب الرئيسي فقط"
   },
   "directorates": {
     "title": "المديريات",

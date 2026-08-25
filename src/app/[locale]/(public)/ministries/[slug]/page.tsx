@@ -51,6 +51,25 @@ export default async function MinistryPage({
     sort: 'sort_order',
   });
 
+  // A citizen arriving at a ministry wants to know whether it has an office near
+  // them. Listing directorate names alone answered a question nobody asked: the
+  // Ministry of Education runs offices in eighteen governorates and this page showed
+  // no sign of one. Count them here so each directorate says how far it reaches.
+  const branches = directorates.length
+    ? await listAllPublic('directorate_branches', {
+      filter: directorates.map((d) => `directorate = ${JSON.stringify(d.id)}`).join(' || '),
+      fields: 'id,directorate,province',
+    })
+    : [];
+  const officesByDirectorate = new Map<string, { count: number; governorates: Set<string> }>();
+  for (const branch of branches) {
+    const entry = officesByDirectorate.get(branch.directorate)
+      ?? { count: 0, governorates: new Set<string>() };
+    entry.count += 1;
+    if (branch.province) entry.governorates.add(branch.province);
+    officesByDirectorate.set(branch.directorate, entry);
+  }
+
   const logo = fileUrl(ministry, ministry.logo, { thumb: '120x120' });
   const address = localized(ministry, 'address', locale);
 
@@ -96,6 +115,17 @@ export default async function MinistryPage({
                     <span className="font-medium text-ink-900">
                       {localized(directorate, 'title', locale)}
                     </span>
+                    {(() => {
+                      const offices = officesByDirectorate.get(directorate.id);
+                      return offices ? (
+                        <span className="mt-0.5 block text-sm font-medium text-brand-600">
+                          {t('ministry.offices', {
+                            count: offices.count,
+                            governorates: offices.governorates.size,
+                          })}
+                        </span>
+                      ) : null;
+                    })()}
                     <WorkingHours
                       value={directorate.working_hours}
                       variant="inline"

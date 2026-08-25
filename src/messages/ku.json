@@ -209,7 +209,9 @@
   },
   "ministry": {
     "directorates": "بەڕێوەبەرایەتییەکان",
-    "noDirectorates": "هێشتا هیچ بەڕێوەبەرایەتییەک نەخراوەتە ڕوو"
+    "noDirectorates": "هێشتا هیچ بەڕێوەبەرایەتییەک نەخراوەتە ڕوو",
+    "offices": "{count, plural, one {# نووسینگە} other {# نووسینگە}} لە {governorates, plural, one {# پارێزگا} other {# پارێزگا}}",
+    "officesNone": "تەنها نووسینگەی سەرەکی"
   },
   "directorates": {
     "title": "بەڕێوەبەرایەتییەکان",

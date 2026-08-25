@@ -26,15 +26,24 @@ const inBox = (code, lat, lon) => {
   return b ? lat >= b[0] && lat <= b[1] && lon >= b[2] && lon <= b[3] : true;
 };
 
+// A family is only searched where the body it names can actually exist. A KRG
+// directorate has no office in Basra, and querying for one returns a federal office
+// with a similar name — noise dressed as coverage.
+const KRG_PROVINCES = new Set(['IQ-AR', 'IQ-SU', 'IQ-DA', 'IQ-HA']);
+const inScope = (fam, prov) => (fam.scope === 'krg' ? KRG_PROVINCES.has(prov.code) : true);
+
 const jobs = [];
-for (const fam of cfg.families) for (const prov of cfg.provinces) jobs.push({ fam, prov });
+for (const fam of cfg.families) {
+  for (const prov of cfg.provinces) if (inScope(fam, prov)) jobs.push({ fam, prov });
+}
+console.log(`${cfg.families.length} families over ${cfg.provinces.length} governorates -> ${jobs.length} queries`);
 
 let done = 0;
 const nested = await pool(jobs, 6, async ({ fam, prov }) => {
   const q = fam.query.replace('{P}', prov.ar);
   const hits = await search(q, { lang: 'ar' });
   const kept = hits
-    .map((p) => ({ p, s: scorePlace(p, { must: fam.must, krg: prov.krg }) }))
+    .map((p) => ({ p, s: scorePlace(p, { must: fam.must, krg: fam.scope === 'krg' || prov.krg }) }))
     .filter((r) => r.s > 0 && r.p.lat != null && inBox(prov.code, r.p.lat, r.p.lon))
     .sort((a, b) => b.s - a.s)
     .slice(0, 4);   // a province can genuinely run several offices of one kind

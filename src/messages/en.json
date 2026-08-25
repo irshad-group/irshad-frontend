@@ -209,7 +209,9 @@
   },
   "ministry": {
     "directorates": "Directorates",
-    "noDirectorates": "No directorates listed yet"
+    "noDirectorates": "No directorates listed yet",
+    "offices": "{count, plural, one {# office} other {# offices}} in {governorates, plural, one {# governorate} other {# governorates}}",
+    "officesNone": "Main office only"
   },
   "directorates": {
     "title": "Directorates",
