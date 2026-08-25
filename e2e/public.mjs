@@ -230,7 +230,11 @@ try {
     check(`${locale}: typing offers suggestions`, (await options.count()) > 0);
 
     await searchBox.fill(nativeTerm);
-    await page.waitForTimeout(700);
+    // Wait for the highlight rather than for a fixed 700ms. The suggestions come from
+    // PocketBase over the network, so a fixed sleep passes on a quiet machine and fails
+    // on a busy one — this assertion failed once in three runs before the change.
+    await listbox.locator('mark').first()
+      .waitFor({ state: 'visible', timeout: 5000 }).catch(() => {});
     check(
       `${locale}: the suggestion highlights what was typed`,
       (await listbox.locator('mark').count()) > 0,
