@@ -598,6 +598,39 @@ try {
     (await page.locator('nav[aria-label] a[hreflang]').count()) === 3,
   );
 
+  // Cache headers. A deploy has to be visible on the next page load, and no
+  // amount of tuning for that may make an authenticated page cacheable.
+  //
+  // Both halves are here because the obvious fix breaks the second one: a
+  // `headers()` rule matching `/:path*` replaces Cache-Control on every HTML
+  // response, stripping `s-maxage` from the prerendered pages and turning the
+  // `private, no-cache, no-store` on /account and /admin into `public`.
+  const cacheControlFor = async (path) => {
+    const response = await page.request.get(`${BASE}${path}`, {
+      headers: { Accept: 'text/html' },
+      maxRedirects: 0,
+    });
+    return response.headers()['cache-control'] ?? '';
+  };
+
+  const prerendered = await cacheControlFor('/en');
+  check(
+    'cache: a prerendered page is still shared-cacheable for an hour',
+    prerendered.includes('s-maxage=3600'),
+    prerendered,
+  );
+  check(
+    'cache: a prerendered page has no stale-while-revalidate window',
+    !prerendered.includes('stale-while-revalidate'),
+    prerendered,
+  );
+
+  for (const path of ['/en/account', '/en/account/login', '/en/search?q=passport']) {
+    const header = await cacheControlFor(path);
+    check(`cache: ${path} is never stored`, header.includes('no-store'), header);
+    check(`cache: ${path} is not public`, !header.includes('public'), header);
+  }
+
   // Search is a plain GET form, so it must work with no script at all.
   await page.goto(`${BASE}/ar`, { waitUntil: 'domcontentloaded' });
   await page.fill('input[name="q"]', 'passport');
