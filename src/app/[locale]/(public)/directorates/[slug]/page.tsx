@@ -5,7 +5,7 @@ import { Link } from '@/i18n/navigation';
 import { locales } from '@/i18n/routing';
 import { localized } from '@/lib/i18n';
 import { groupBranchesByProvince, type BranchWithProvince } from '@/lib/public/places';
-import { findPublicBySlug, listAllPublic, publicSlugs } from '@/lib/pb/queries/public';
+import { fileUrl, findPublicBySlug, listAllPublic, publicSlugs } from '@/lib/pb/queries/public';
 import { Container, EmptyState } from '@/components/ui/primitives';
 import LocationBlock from '@/components/public/LocationBlock';
 import WorkingHours from '@/components/public/WorkingHours';
@@ -158,6 +158,28 @@ export default async function DirectoratePage({
                                   {branch.phone}
                                 </a>
                               </p>
+                            ) : null}
+                            <WorkingHours
+                              value={branch.working_hours}
+                              variant="inline"
+                              className="block text-sm text-ink-500"
+                            />
+                            {/* The building, for someone who has never been to this
+                                office. That is what the field is for, and it had been
+                                collected for 571 offices without ever being shown. */}
+                            {(branch.photos ?? []).length > 0 ? (
+                              <div className="flex gap-1.5">
+                                {(branch.photos ?? []).slice(0, 2).map((photo) => (
+                                  // eslint-disable-next-line @next/next/no-img-element -- PocketBase thumb, fixed small size.
+                                  <img
+                                    key={photo}
+                                    src={fileUrl(branch, photo, { thumb: '320x0' }) ?? undefined}
+                                    alt=""
+                                    loading="lazy"
+                                    className="h-20 w-28 shrink-0 border border-ink-200 object-cover"
+                                  />
+                                ))}
+                              </div>
                             ) : null}
                           </div>
                         </li>
