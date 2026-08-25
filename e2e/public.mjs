@@ -168,9 +168,15 @@ try {
       `${locale}: fee is shown in Latin digits`,
       /[0-9]/.test(await page.locator('main dl').first().innerText()),
     );
+    // The responsible office moved out of the stats strip and into its own
+    // sidebar card when the procedure page was redesigned, so look for it in
+    // the aside. Still exactly one link: two would mean the card rendered
+    // twice, none would mean the relation failed to expand.
+    const office = page.locator('main aside a[href*="/directorates/"]');
+    check(`${locale}: responsible directorate is linked`, (await office.count()) === 1);
     check(
-      `${locale}: responsible directorate is linked`,
-      (await page.locator('main dl a[href*="/directorates/"]').count()) === 1,
+      `${locale}: the directorate link keeps the active locale`,
+      (await office.first().getAttribute('href'))?.startsWith(`/${locale}/directorates/`),
     );
     check(
       `${locale}: attached forms link to PocketBase or elsewhere`,
