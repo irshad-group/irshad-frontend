@@ -58,15 +58,39 @@ const KEEP_SLUGS = {
   'الشركة العامة لتجارة المواد الغذائية': 'general-company-for-foodstuff-trading',
 };
 
-async function api(path, init = {}) {
-  const res = await fetch(`${BASE}${path}`, {
-    ...init,
-    headers: {
-      ...(init.body instanceof FormData ? {} : { 'Content-Type': 'application/json' }),
-      ...(init.headers || {}),
-    },
-  });
+const sleep = (ms) => new Promise((r) => { setTimeout(r, ms); });
+
+/**
+ * One request, retried through the failures that are the connection's fault
+ * rather than the request's.
+ *
+ * This import is ~2,200 records and, with --files, several hundred megabytes of
+ * photographs. Over a long run the far side will eventually close a socket
+ * mid-upload; without this the whole import died there, hundreds of records in,
+ * having already done most of the work. A dropped connection or a 5xx is worth
+ * retrying. A 4xx is not — that is the payload being wrong, and repeating it
+ * just asks the same bad question more slowly.
+ */
+async function api(path, init = {}, attempt = 0) {
+  let res;
+  try {
+    res = await fetch(`${BASE}${path}`, {
+      ...init,
+      headers: {
+        ...(init.body instanceof FormData ? {} : { 'Content-Type': 'application/json' }),
+        ...(init.headers || {}),
+      },
+    });
+  } catch (err) {
+    if (attempt >= 4) throw new Error(`${init.method || 'GET'} ${path} -> ${err}`);
+    await sleep(500 * 2 ** attempt);
+    return api(path, init, attempt + 1);
+  }
   const text = await res.text();
+  if (res.status >= 500 && attempt < 4) {
+    await sleep(500 * 2 ** attempt);
+    return api(path, init, attempt + 1);
+  }
   if (!res.ok) throw new Error(`${init.method || 'GET'} ${path} -> ${res.status} ${text.slice(0, 400)}`);
   return text ? JSON.parse(text) : null;
 }
@@ -151,8 +175,11 @@ async function upsert(col, lookupKey, body, existingIndex, allowed) {
 async function attach(col, id, field, url) {
   if (!WITH_FILES || !url || DRY) return;
   try {
-    const res = await fetch(url);
-    if (!res.ok) return;
+    let res;
+    for (let i = 0; i < 3 && !res; i++) {
+      try { res = await fetch(url); } catch { await sleep(400 * 2 ** i); }
+    }
+    if (!res?.ok) return;
     const buf = Buffer.from(await res.arrayBuffer());
     if (buf.length < 500) return;                       // placeholder / error image
     const type = res.headers.get('content-type') || 'image/jpeg';
