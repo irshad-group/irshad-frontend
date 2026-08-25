@@ -277,6 +277,40 @@ try {
     const results = page.locator('main ul li a[href*="/procedures/"]');
     check(`${locale}: search returns results`, (await results.count()) > 0);
 
+    // The results page carries the same suggestions as the hero, on top of the
+    // same plain GET form. Two things matter here that do not on the home page:
+    // the box is seeded with the query so it can be refined rather than
+    // retyped, and the list stays shut on arrival — a dropdown covering the
+    // results the reader just asked for would be worse than no dropdown.
+    const resultsBox = page.locator('input[name="q"]').first();
+    check(
+      `${locale}: the results box is seeded with the query`,
+      (await resultsBox.inputValue()) === 'passport',
+    );
+    check(
+      `${locale}: suggestions stay shut on arrival`,
+      (await page.locator('[role="listbox"]').count()) === 0,
+    );
+
+    await resultsBox.click();
+    await resultsBox.fill(nativeTerm);
+    const resultsList = page.locator('[role="listbox"]');
+    await resultsList.waitFor({ state: 'visible', timeout: 5000 }).catch(() => {});
+    check(
+      `${locale}: the results box suggests as you type`,
+      (await resultsList.locator('[role="option"]').count()) > 0,
+    );
+    check(
+      `${locale}: results-page suggestions align with their own box`,
+      await page.evaluate(() => {
+        const list = document.querySelector('[role="listbox"]')?.getBoundingClientRect();
+        const form = document.querySelector('form[role="search"]')?.getBoundingClientRect();
+        return !!list && !!form && Math.abs(list.left - form.left) < 2 && Math.abs(list.right - form.right) < 2;
+      }),
+    );
+    await resultsBox.press('Escape');
+    await resultsBox.fill('passport');
+
     await results.first().click();
     await page.waitForURL(/\/procedures\//);
 
