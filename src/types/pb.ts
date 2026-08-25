@@ -54,6 +54,10 @@ export interface DirectorateBranchesRecord extends BaseRecord {
   sort_order?: number;
   archived?: boolean;
   photos?: string[];
+  website?: string;
+  email?: string;
+  working_hours?: unknown;
+  place_id?: string;
 }
 
 /** `directorates` */
@@ -76,6 +80,7 @@ export interface DirectoratesRecord extends BaseRecord {
   archived?: boolean;
   photos?: string[];
   working_hours?: unknown;
+  place_id?: string;
 }
 
 /** `faq` */
@@ -121,6 +126,9 @@ export interface MinistriesRecord extends BaseRecord {
   email?: string;
   sort_order?: number;
   archived?: boolean;
+  photos?: string[];
+  working_hours?: unknown;
+  place_id?: string;
 }
 
 /** `navigation` */
@@ -201,6 +209,8 @@ export interface ProceduresRecord extends BaseRecord {
   publish_date?: string;
   sort_order?: number;
   archived?: boolean;
+  author?: RecordId<'team'>;
+  show_author?: boolean;
 }
 
 /** `provinces` */

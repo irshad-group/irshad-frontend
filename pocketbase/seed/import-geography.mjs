@@ -98,9 +98,18 @@ const drop = (obj, allowed) => Object.fromEntries(
 
 const stats = { created: 0, updated: 0, skipped: 0, files: 0 };
 
-async function upsert(col, key, keyVal, body, existingIndex, allowed) {
+/**
+ * PATCH the record `existingIndex` holds under `lookupKey`, or POST a new one.
+ *
+ * `lookupKey` is deliberately a separate argument from the payload: branches have no
+ * unique slug, so they are keyed on a composite (place id, or directorate + title)
+ * that is not itself a field. Deriving the key from a payload field instead meant the
+ * branch lookup never matched its own index and re-running the import created a
+ * second copy of all 687 rows.
+ */
+async function upsert(col, lookupKey, body, existingIndex, allowed) {
   const payload = drop(body, allowed);
-  const found = existingIndex.get(keyVal);
+  const found = existingIndex.get(lookupKey);
   if (found) {
     if (DRY) { stats.updated++; return found.id; }
     await api(`/api/collections/${col}/records/${found.id}`, {
@@ -109,11 +118,11 @@ async function upsert(col, key, keyVal, body, existingIndex, allowed) {
     stats.updated++;
     return found.id;
   }
-  if (DRY) { stats.created++; return `dry-${keyVal}`; }
+  if (DRY) { stats.created++; return `dry-${lookupKey}`; }
   const rec = await api(`/api/collections/${col}/records`, {
-    method: 'POST', headers: H, body: JSON.stringify({ ...payload, [key]: keyVal }),
+    method: 'POST', headers: H, body: JSON.stringify(payload),
   });
-  existingIndex.set(keyVal, rec);
+  existingIndex.set(lookupKey, rec);
   stats.created++;
   return rec.id;
 }
@@ -145,8 +154,8 @@ const minIndex = new Map((await listAll('ministries')).map((m) => [m.slug, m]));
 const minIdBySlug = new Map();
 
 for (const m of ds.ministries) {
-  const id = await upsert('ministries', 'slug', m.slug, {
-    title_ar: m.title_ar, title_en: m.title_en, title_ku: m.title_ku,
+  const id = await upsert('ministries', m.slug, {
+    slug: m.slug, title_ar: m.title_ar, title_en: m.title_en, title_ku: m.title_ku,
     krg: m.krg, website: m.website, phone: m.phone, email: m.email,
     address_ar: m.address_ar, address_en: m.address_en, address_ku: m.address_ku,
     gps_lat: m.gps_lat, gps_lon: m.gps_lon,
@@ -170,8 +179,8 @@ for (const d of ds.directorates) {
     if (!ministry) { stats.skipped++; console.warn(`  skip directorate (no ministry ${d.ministry_slug}): ${d.title_ar}`); continue; }
   }
   const slug = KEEP_SLUGS[d.title_ar] || d.slug;
-  const id = await upsert('directorates', 'slug', slug, {
-    ministry, title_ar: d.title_ar, title_en: d.title_en || d.title_ar, title_ku: d.title_ku,
+  const id = await upsert('directorates', slug, {
+    slug, ministry, title_ar: d.title_ar, title_en: d.title_en || d.title_ar, title_ku: d.title_ku,
     website: d.website, phone: d.phone, email: d.email, address_ar: d.address_ar,
     gps_lat: d.gps_lat, gps_lon: d.gps_lon,
     working_hours: d.working_hours, place_id: d.place_id,
@@ -185,15 +194,19 @@ console.log(`directorates: ${ds.directorates.length} processed`);
 // ------------------------------------------------------------------ branches
 const brFields = await fieldsOf('directorate_branches');
 const existingBranches = await listAll('directorate_branches');
-// Branches have no unique slug in the schema, so key on directorate + title.
-const brIndex = new Map(existingBranches.map((b) => [`${b.directorate}::${b.title_ar}`, b]));
+// Branches have no unique slug in the schema. Prefer the Google place id: it is
+// stable per office and survives a renamed or re-scraped title. Fall back to
+// directorate + title for rows that have no place id.
+const branchKey = (b) => (b.place_id ? `place:${b.place_id}` : `${b.directorate}::${b.title_ar}`);
+const brIndex = new Map();
+for (const b of existingBranches) brIndex.set(branchKey(b), b);
 
 for (const b of ds.branches) {
   const directorate = dirIdBySlug.get(b.directorate_slug);
   const province = provByCode.get(b.province_code)?.id;
   if (!directorate || !province) { stats.skipped++; continue; }
-  const key = `${directorate}::${b.title_ar}`;
-  const id = await upsert('directorate_branches', 'title_ar', b.title_ar, {
+  const key = branchKey({ ...b, directorate });
+  const id = await upsert('directorate_branches', key, {
     directorate, province,
     title_ar: b.title_ar, title_en: b.title_en || b.title_ar, title_ku: b.title_ku,
     address_ar: b.address_ar, gps_lat: b.gps_lat, gps_lon: b.gps_lon,
@@ -201,8 +214,6 @@ for (const b of ds.branches) {
     working_hours: b.working_hours, place_id: b.place_id,
     sort_order: b.sort_order, archived: false,
   }, brIndex, brFields);
-  // upsert() keyed on title_ar; re-key the index entry so a re-run finds it.
-  if (!DRY) brIndex.set(key, { id });
   await attach('directorate_branches', id, 'photos', b.photo_url);
 }
 console.log(`branches: ${ds.branches.length} processed`);

@@ -549,6 +549,52 @@
           "800x0"
         ],
         "type": "file"
+      },
+      {
+        "exceptDomains": [],
+        "hidden": false,
+        "id": "url1198480871",
+        "name": "website",
+        "onlyDomains": [],
+        "presentable": false,
+        "required": false,
+        "system": false,
+        "type": "url"
+      },
+      {
+        "exceptDomains": [],
+        "hidden": false,
+        "id": "email3885137012",
+        "name": "email",
+        "onlyDomains": [],
+        "presentable": false,
+        "required": false,
+        "system": false,
+        "type": "email"
+      },
+      {
+        "hidden": false,
+        "id": "json3610041405",
+        "maxSize": 8192,
+        "name": "working_hours",
+        "presentable": false,
+        "required": false,
+        "system": false,
+        "type": "json"
+      },
+      {
+        "autogeneratePattern": "",
+        "hidden": false,
+        "id": "text229024281",
+        "max": 64,
+        "min": 0,
+        "name": "place_id",
+        "pattern": "",
+        "presentable": false,
+        "primaryKey": false,
+        "required": false,
+        "system": false,
+        "type": "text"
       }
     ],
     "indexes": [
@@ -556,7 +602,7 @@
       "CREATE INDEX `idx_branches_province` ON `directorate_branches` (`province`)"
     ],
     "created": "2026-07-30 15:45:24.634Z",
-    "updated": "2026-08-10 18:57:05.862Z",
+    "updated": "2026-08-25 12:03:10.045Z",
     "system": false
   },
   {
@@ -846,6 +892,20 @@
         "required": false,
         "system": false,
         "type": "json"
+      },
+      {
+        "autogeneratePattern": "",
+        "hidden": false,
+        "id": "text229024281",
+        "max": 64,
+        "min": 0,
+        "name": "place_id",
+        "pattern": "",
+        "presentable": false,
+        "primaryKey": false,
+        "required": false,
+        "system": false,
+        "type": "text"
       }
     ],
     "indexes": [
@@ -853,7 +913,7 @@
       "CREATE INDEX `idx_directorates_ministry` ON `directorates` (`ministry`, `archived`)"
     ],
     "created": "2026-07-30 15:45:24.630Z",
-    "updated": "2026-08-10 19:33:12.483Z",
+    "updated": "2026-08-25 12:03:09.816Z",
     "system": false
   },
   {
@@ -1436,6 +1496,48 @@
         "presentable": false,
         "system": false,
         "type": "autodate"
+      },
+      {
+        "hidden": false,
+        "id": "file142008537",
+        "maxSelect": 10,
+        "maxSize": 5242880,
+        "mimeTypes": [
+          "image/jpeg",
+          "image/png",
+          "image/webp"
+        ],
+        "name": "photos",
+        "presentable": false,
+        "protected": false,
+        "required": false,
+        "system": false,
+        "thumbs": null,
+        "type": "file"
+      },
+      {
+        "hidden": false,
+        "id": "json3610041405",
+        "maxSize": 8192,
+        "name": "working_hours",
+        "presentable": false,
+        "required": false,
+        "system": false,
+        "type": "json"
+      },
+      {
+        "autogeneratePattern": "",
+        "hidden": false,
+        "id": "text229024281",
+        "max": 64,
+        "min": 0,
+        "name": "place_id",
+        "pattern": "",
+        "presentable": false,
+        "primaryKey": false,
+        "required": false,
+        "system": false,
+        "type": "text"
       }
     ],
     "indexes": [
@@ -1443,7 +1545,7 @@
       "CREATE INDEX `idx_ministries_archived` ON `ministries` (`archived`)"
     ],
     "created": "2026-07-30 15:44:16.102Z",
-    "updated": "2026-07-30 15:44:16.102Z",
+    "updated": "2026-08-25 12:03:08.552Z",
     "system": false
   },
   {
@@ -2443,6 +2545,26 @@
         "type": "bool"
       },
       {
+        "hidden": false,
+        "id": "autodate2990389176",
+        "name": "created",
+        "onCreate": true,
+        "onUpdate": false,
+        "presentable": false,
+        "system": false,
+        "type": "autodate"
+      },
+      {
+        "hidden": false,
+        "id": "autodate3332085495",
+        "name": "updated",
+        "onCreate": true,
+        "onUpdate": true,
+        "presentable": false,
+        "system": false,
+        "type": "autodate"
+      },
+      {
         "cascadeDelete": false,
         "collectionId": "irshd_team00001",
         "hidden": false,
@@ -2463,26 +2585,6 @@
         "required": false,
         "system": false,
         "type": "bool"
-      },
-      {
-        "hidden": false,
-        "id": "autodate2990389176",
-        "name": "created",
-        "onCreate": true,
-        "onUpdate": false,
-        "presentable": false,
-        "system": false,
-        "type": "autodate"
-      },
-      {
-        "hidden": false,
-        "id": "autodate3332085495",
-        "name": "updated",
-        "onCreate": true,
-        "onUpdate": true,
-        "presentable": false,
-        "system": false,
-        "type": "autodate"
       }
     ],
     "indexes": [
@@ -2491,7 +2593,7 @@
       "CREATE INDEX `idx_procedures_featured` ON `procedures` (`featured`, `enabled`, `archived`)"
     ],
     "created": "2026-07-30 15:45:24.639Z",
-    "updated": "2026-07-30 15:45:24.639Z",
+    "updated": "2026-08-13 07:02:11.531Z",
     "system": false
   },
   {
