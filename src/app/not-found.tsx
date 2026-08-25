@@ -23,7 +23,7 @@ export default function RootNotFound() {
             <p className="text-ink-700">{entry.text}</p>
             <a
               href={`/${entry.locale}`}
-              className="mt-1 inline-block text-sm text-brand-700 underline"
+              className="mt-1 inline-flex min-h-6 items-center text-sm text-brand-700 underline"
             >
               {entry.label}
             </a>

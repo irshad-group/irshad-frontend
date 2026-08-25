@@ -46,7 +46,13 @@ export default function SiteHeader({
       <div className="bg-ink-950 text-white/70">
         <Container width="wide" className="flex items-center justify-between gap-3 py-1.5 text-xs">
           <p className="min-w-0 truncate">{labels.disclaimer}</p>
-          <Link href="/faq" className="shrink-0 font-semibold text-white/80 hover:text-white">
+          {/* `min-h-6` is the WCAG 2.2 AA target floor (24px). The negative
+              inline margin keeps the widened hit area from shifting the strip's
+              own layout. */}
+          <Link
+            href="/faq"
+            className="-mx-1 inline-flex min-h-6 shrink-0 items-center px-1 font-semibold text-white/80 hover:text-white"
+          >
             {labels.help}
           </Link>
         </Container>
@@ -134,7 +140,7 @@ export default function SiteHeader({
               lands on their profile. */}
           <Link
             href="/account/login"
-            className="hidden px-2 text-sm font-semibold text-ink-600 transition-colors hover:text-ink-950 md:block"
+            className="hidden min-h-9 items-center px-2 text-sm font-semibold text-ink-600 transition-colors hover:text-ink-950 md:inline-flex"
           >
             {labels.signIn}
           </Link>
@@ -149,7 +155,8 @@ export default function SiteHeader({
             href="/account"
             aria-label={labels.account}
             title={labels.account}
-            className="flex size-8 items-center justify-center border border-ink-200 text-ink-600 transition-colors hover:border-brand-500 hover:text-brand-500"
+            // 44px on touch, 36px once there is a mouse pointer driving it.
+            className="flex size-11 items-center justify-center border border-ink-200 text-ink-600 transition-colors hover:border-brand-500 hover:text-brand-500 md:size-9"
           >
             <Icon name="user" className="size-4" strokeWidth={2} />
           </Link>
@@ -157,7 +164,7 @@ export default function SiteHeader({
 
           {/* Mobile: the `drawer` placement, behind a disclosure. */}
           <details className="md:hidden">
-            <summary className="cursor-pointer list-none rounded-md px-2.5 py-1.5 text-sm text-ink-700 ring-1 ring-ink-200 marker:content-none">
+            <summary className="flex min-h-11 cursor-pointer list-none items-center rounded-md px-3 text-sm text-ink-700 ring-1 ring-ink-200 marker:content-none">
               {labels.menu}
             </summary>
             <nav

@@ -76,7 +76,7 @@ export default async function DirectoratePage({
     <Container className="py-10">
       <header>
         {ministry ? (
-          <Link href={`/ministries/${ministry.slug}`} className="text-sm text-brand-700 underline">
+          <Link href={`/ministries/${ministry.slug}`} className="inline-flex min-h-6 items-center text-sm text-brand-700 underline">
             {localized(ministry, 'title', locale)}
           </Link>
         ) : null}

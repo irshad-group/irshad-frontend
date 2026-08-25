@@ -151,6 +151,27 @@ try {
       JSON.stringify(brand),
     );
 
+    // Every control a thumb can reach clears the WCAG 2.2 AA target floor of
+    // 24x24 (2.5.8). `checkVisibility` is what makes this reliable: a closed
+    // <details> still reports a layout rect for its contents, so the drawer's
+    // own links would otherwise be measured while hidden.
+    const smallTargets = await page.evaluate(() => {
+      const out = [];
+      for (const el of document.querySelectorAll('header a[href], header button, header summary')) {
+        if (!el.checkVisibility({ checkOpacity: true, checkVisibilityCSS: true })) continue;
+        const r = el.getBoundingClientRect();
+        if (r.width < 24 || r.height < 24) {
+          out.push({ text: (el.textContent || el.getAttribute('aria-label') || '').trim().slice(0, 20), w: Math.round(r.width), h: Math.round(r.height) });
+        }
+      }
+      return out;
+    });
+    check(
+      `${locale}: every header control clears 24x24 at 320px`,
+      smallTargets.length === 0,
+      JSON.stringify(smallTargets),
+    );
+
     const drawer = page.locator('header details').last();
     check(`${locale}: drawer is reachable on mobile`, await drawer.isVisible());
     await drawer.locator('summary').click();

@@ -72,7 +72,15 @@ export default function InteractiveMap({
         const element = document.createElement('a');
         element.href = marker.href;
         element.setAttribute('aria-label', `${marker.label} (${marker.count})`);
-        element.className = 'group block cursor-pointer';
+        // The unlabelled markers draw a 12px dot, which was also the whole tap
+        // target — unusable with a thumb and well under the 24px WCAG 2.2 AA
+        // floor. maplibre centres the element on the coordinate, so padding it
+        // out to 44px moves nothing on screen and costs no pixels: the dot
+        // still draws at 12px, it just sits in the middle of a target you can
+        // actually hit. The labelled pills are already comfortably bigger.
+        element.className = marker.big
+          ? 'group block cursor-pointer'
+          : 'group flex size-11 cursor-pointer items-center justify-center';
         element.innerHTML = marker.big
           ? `<span class="flex items-center gap-1.5 border border-ink-950/20 bg-white px-2 py-1 text-xs font-bold text-ink-950 shadow-[0_2px_8px_rgba(11,16,48,0.18)] transition-colors group-hover:border-brand-500 group-hover:text-brand-500"><span class="inline-block size-2 shrink-0 rounded-full bg-brand-500"></span>${escapeHtml(marker.label)}<span class="font-semibold text-ink-500">${marker.count}</span></span>`
           : `<span class="block size-3 rounded-full border-2 border-white bg-brand-500 shadow-[0_1px_4px_rgba(11,16,48,0.3)] transition-transform group-hover:scale-125" title="${escapeHtml(marker.label)}"></span>`;

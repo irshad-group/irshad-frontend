@@ -123,7 +123,7 @@ export default async function ProcedurePage({
       <article>
         <header className="max-w-3xl">
           {firstTag ? (
-            <p className="mb-2 flex items-center gap-2 text-[11px] font-extrabold tracking-[0.12em] uppercase text-brand-500">
+            <p className="mb-2 flex items-center gap-2 text-xs font-extrabold tracking-[0.12em] uppercase text-brand-500">
               <Icon name={tagIcon(firstTag.slug)} className="size-4" />
               {localized(firstTag, 'name', locale)}
             </p>
@@ -237,7 +237,7 @@ export default async function ProcedurePage({
                 <div className="p-4">
                   <Link
                     href={`/directorates/${directorate.slug}`}
-                    className="text-[15px] font-extrabold text-ink-950 hover:text-brand-500"
+                    className="inline-block min-h-6 py-0.5 text-[15px] font-extrabold text-ink-950 hover:text-brand-500"
                   >
                     {localized(directorate, 'title', locale)}
                   </Link>
