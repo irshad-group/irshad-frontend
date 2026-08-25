@@ -132,8 +132,15 @@ export default function ContactForm({ labels }: { labels: Labels }) {
       </Field>
 
       {/* Honeypot: off-screen rather than display:none, and explicitly hidden
-          from assistive technology, so a screen-reader user never meets it. */}
-      <div aria-hidden="true" className="absolute -left-[9999px]">
+          from assistive technology, so a screen-reader user never meets it.
+
+          The offset must be logical, not `-left-`. Scrollable overflow only
+          ever extends towards the end edge, so a physical `left: -9999px` is
+          harmless in English and catastrophic in Arabic and Kurdish, where
+          left *is* the end: the contact page grew a 10,000px horizontal
+          scroll. `-start-` always points at the start edge, which is never
+          scrollable, so it is inert in all three languages. */}
+      <div aria-hidden="true" className="absolute -start-[9999px]">
         <label htmlFor="website">Website</label>
         <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
       </div>
