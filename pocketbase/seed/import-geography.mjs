@@ -92,8 +92,28 @@ async function fieldsOf(col) {
   return new Set(c.fields.map((f) => f.name));
 }
 
+/**
+ * Fields the dataset owns outright. For these, a null in the dataset means "no value",
+ * not "leave whatever is there" — so they are sent as null and PocketBase clears them.
+ *
+ * Without this the importer could only ever add. A record that picked up a wrong
+ * coordinate on an earlier run kept it forever, because the corrected dataset carried
+ * null and null was silently dropped. That left a trade directorate sitting on a
+ * Kuwaiti address, with a +965 phone, after the scrape had already disowned it.
+ *
+ * `title_ar` and `title_en` are excluded: the schema requires them, so they are always
+ * written with a value and never cleared.
+ */
+const SCRAPE_OWNED = new Set([
+  'phone', 'email', 'address_ar', 'gps_lat', 'gps_lon', 'place_id', 'working_hours',
+]);
+
 const drop = (obj, allowed) => Object.fromEntries(
-  Object.entries(obj).filter(([k, v]) => allowed.has(k) && v !== null && v !== undefined),
+  Object.entries(obj).filter(([k, v]) => {
+    if (!allowed.has(k)) return false;
+    if (v !== null && v !== undefined) return true;
+    return SCRAPE_OWNED.has(k);          // keep the null so the field is cleared
+  }).map(([k, v]) => [k, v === undefined ? null : v]),
 );
 
 const stats = { created: 0, updated: 0, skipped: 0, files: 0 };

@@ -154,19 +154,52 @@ function translit(ar) {
 // already attached to it attached.
 const famByKey = Object.fromEntries(fams.families.map((f) => [f.key, f]));
 
-/** Best scraped directorate for a family, used to fill the canonical parent's details. */
-function scrapedFor(fam) {
+/**
+ * Best scraped directorate to fill a family's canonical parent from.
+ *
+ * The hint alone is not enough. "دائرة صحة" matches every provincial health
+ * directorate, so hint-matching handed the national parent the coordinates of
+ * "دائرة صحة ديالى", and the foodstuff company a building in Basra. A national
+ * body's details have to come from a row that is plausibly that body:
+ *   - its title matches the canonical parent title, not merely the hint, and
+ *   - it sits where the headquarters sits — Baghdad for a federal family.
+ */
+const BAGHDAD = (la, lo) => la > 32.9 && la < 33.6 && lo > 44.0 && lo < 44.8;
+const NORTH = (la) => la > 34.8;
+
+function candidatesFor(fam) {
   const hint = norm(fam.directorate_hint);
-  const cands = directorates.filter((d) => d.ministry_slug === fam.ministry && norm(d.title_ar).includes(hint));
-  if (!cands.length) return null;
-  return cands.sort((a, b) => (b.gps_lat ? 1 : 0) - (a.gps_lat ? 1 : 0)
-    || (b.phone ? 1 : 0) - (a.phone ? 1 : 0))[0];
+  const want = norm(fam.parent_title_ar);
+  const krg = fam.ministry.startsWith('krg-');
+  return directorates
+    .filter((d) => d.ministry_slug === fam.ministry)
+    .map((d) => {
+      const t = norm(d.title_ar);
+      const exact = t === want;
+      if (!exact && !t.includes(hint)) return null;
+      // A located candidate must be located *plausibly* to be usable.
+      const located = d.gps_lat != null
+        && (krg ? NORTH(d.gps_lat) : BAGHDAD(d.gps_lat, d.gps_lon));
+      return { d, exact, located };
+    })
+    .filter(Boolean);
+}
+
+function scrapedFor(fam) {
+  const c = candidatesFor(fam);
+  if (!c.length) return null;
+  // An exact-title, plausibly-located row first; then exact title; then nothing.
+  // A hint-only match is allowed to name the parent but never to place it.
+  return c.sort((a, b) => (b.exact - a.exact) || (b.located - a.located)
+    || ((b.d.phone ? 1 : 0) - (a.d.phone ? 1 : 0)))[0];
 }
 
 const parents = new Map();
 function parentFor(fam) {
   if (parents.has(fam.key)) return parents.get(fam.key);
-  const src = scrapedFor(fam);
+  const pick = scrapedFor(fam);
+  const src = pick?.d ?? null;
+  const trustLocation = !!pick?.located;
   const rec = {
     slug: fam.parent_slug,
     ministry_slug: fam.ministry,
@@ -175,24 +208,44 @@ function parentFor(fam) {
     website: src?.website ?? null,
     phone: src?.phone ?? null,
     address_ar: src?.address_ar ?? null,
-    gps_lat: src?.gps_lat ?? null,
-    gps_lon: src?.gps_lon ?? null,
-    photo_url: src?.photo_url ?? null,
-    working_hours: src?.working_hours ?? null,
-    place_id: src?.place_id ?? null,
-    maps_url: src?.maps_url ?? null,
+    gps_lat: trustLocation ? src.gps_lat : null,
+    gps_lon: trustLocation ? src.gps_lon : null,
+    photo_url: trustLocation ? src.photo_url : null,
+    working_hours: trustLocation ? src.working_hours : null,
+    place_id: trustLocation ? src.place_id : null,
+    maps_url: trustLocation ? src.maps_url : null,
     sort_order: 5,
     archived: false,
-    _verified: !!src?.gps_lat,
+    _verified: trustLocation,
     _confidence: src?._confidence ?? 0,
-    _source: src ? `canonical-parent (details from ${src.slug})` : 'canonical-parent',
+    _source: src
+      ? `canonical-parent (${trustLocation ? 'details' : 'name only'} from ${src.slug})`
+      : 'canonical-parent',
     _maps_name: src?._maps_name ?? null,
     _is_branch_parent: true,
   };
-  // The scraped row it was built from would otherwise be a duplicate of it.
-  if (src) {
-    const i = directorates.indexOf(src);
-    if (i >= 0) directorates.splice(i, 1);
+  // Absorb every row carrying the parent's own title. Removing only the one row the
+  // details came from left the others behind, and the importer's KEEP_SLUGS maps by
+  // title — so two rows resolved to one live slug and the second write silently
+  // merged into the first, leaving one record with a phone from one building and
+  // coordinates from another.
+  const want = norm(rec.title_ar);
+  for (let i = directorates.length - 1; i >= 0; i--) {
+    const d = directorates[i];
+    if (d === rec || d.ministry_slug !== fam.ministry) continue;
+    if (norm(d.title_ar) !== want && d !== src) continue;
+    if (d !== src && norm(d.title_ar) !== want) continue;
+    // Keep anything the parent itself lacks.
+    if (!rec.phone && d.phone) rec.phone = d.phone;
+    if (!rec.website && d.website) rec.website = d.website;
+    if (!rec.gps_lat && d.gps_lat != null
+        && (fam.ministry.startsWith('krg-') ? NORTH(d.gps_lat) : BAGHDAD(d.gps_lat, d.gps_lon))) {
+      rec.gps_lat = d.gps_lat; rec.gps_lon = d.gps_lon;
+      rec.place_id = d.place_id; rec.maps_url = d.maps_url;
+      rec.photo_url = rec.photo_url || d.photo_url;
+      rec._source += ` + located from ${d.slug}`;
+    }
+    directorates.splice(i, 1);
   }
   directorates.push(rec);
   parents.set(fam.key, rec);
@@ -242,6 +295,31 @@ const gisRows = gis.map((g) => ({
   photo_urls: (g.images || []).map((im) => UR_BASE + im.link),
   _source: 'ur.gov.iq/api/public/gis',
 }));
+
+// The importer remaps some slugs by Arabic title (KEEP_SLUGS) so it can update the
+// development seed's rows in place. That remap can collapse two distinct dataset
+// slugs onto one live record, where the second write merges into the first instead
+// of replacing it. Catch it here rather than discovering it in the database.
+const KEEP_TITLES = new Set([
+  'المديرية العامة للجنسية', 'مديرية شؤون الجوازات العامة', 'مديرية المرور العامة',
+  'مديرية الإقامة العامة', 'مديرية الاقامة العامة', 'دائرة الصحة العامة',
+  'المديرية العامة لتربية بغداد الرصافة', 'دائرة الدراسات والتخطيط والمتابعة',
+  'دائرة البعثات والعلاقات الثقافية', 'الهيئة العامة للضرائب', 'الهيئة العامة للكمارك',
+  'هيئة التقاعد الوطنية', 'دائرة التسجيل العقاري', 'دائرة الكاتب العدل',
+  'هيئة الحماية الاجتماعية', 'دائرة تسجيل الشركات', 'الشركة العامة لتجارة المواد الغذائية',
+]);
+const targets = new Map();
+for (const d of directorates) {
+  const key = KEEP_TITLES.has(d.title_ar) ? `title:${d.title_ar}` : `slug:${d.slug}`;
+  if (!targets.has(key)) targets.set(key, []);
+  targets.get(key).push(d.slug);
+}
+const collisions = [...targets].filter(([, v]) => v.length > 1);
+if (collisions.length) {
+  console.error('ERROR: these dataset rows would write to the same live record:');
+  for (const [k, v] of collisions) console.error(`  ${k} <- ${v.join(', ')}`);
+  process.exit(1);
+}
 
 const dataset = {
   generated: new Date().toISOString().slice(0, 10),

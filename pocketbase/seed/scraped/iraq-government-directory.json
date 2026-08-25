@@ -9,7 +9,7 @@
   },
   "counts": {
     "ministries": 42,
-    "directorates": 362,
+    "directorates": 358,
     "branches": 687,
     "gis_locations": 15
   },
@@ -3220,35 +3220,6 @@
       "_maps_name": "دائرة رعاية القاصرين/الرصافة"
     },
     {
-      "slug": "alhyya-alaama-lldrayb",
-      "ministry_slug": "ministry-of-finance",
-      "title_ar": "الهيئة العامة للضرائب",
-      "title_en": "General Commission of Taxes",
-      "title_ku": null,
-      "website": "https://mof.gov.iq/General-Tax-Authority.aspx",
-      "_website_source": "ministry-site",
-      "phone": "+964 750 133 2006",
-      "address_ar": "الهيئة العامة للضرائب .، بغداد، بغداد محافظة",
-      "gps_lat": 33.3358704,
-      "gps_lon": 44.403926399999996,
-      "photo_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlN9uilMZUv4LU2SPqdlns-r7_BncHtSnKQlsL9_It8R3-HDEJtSikb9aWnjV7P48fTvXuhpoBDzGFcPWW2Nz2ORIZDNaZ8zeTRoLHvN_EDUAChtvTglkWOHY4dAydMgGf8Yz0=w114-h86-k-no",
-      "working_hours": null,
-      "place_id": "0x15578203ab42d94f:0xcfbc778afdb15bc4",
-      "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15578203ab42d94f:0xcfbc778afdb15bc4",
-      "sort_order": 640,
-      "archived": false,
-      "_verified": true,
-      "_confidence": 1,
-      "_source": "ministry-site",
-      "_maps_name": "الهيئة العامة للضرائب .",
-      "_osm": {
-        "id": "node/13706775601",
-        "distance_m": 111,
-        "name_similarity": 0
-      },
-      "_title_en_source": "place-match"
-    },
-    {
       "slug": "alhyya-alaama-llmnatq-alhra",
       "ministry_slug": "ministry-of-finance",
       "title_ar": "الهيئة العامة للمناطق الحرة",
@@ -5074,34 +5045,6 @@
       "_title_en_source": "place-match"
     },
     {
-      "slug": "alshrka-alaama-llbryd-waltwfyr",
-      "ministry_slug": "ministry-of-communications",
-      "title_ar": "الشركة العامة للبريد والتوفير",
-      "title_en": null,
-      "title_ku": null,
-      "website": "https://post.iq/",
-      "_website_source": "ministry-site",
-      "phone": null,
-      "address_ar": "الشركة العامة للبريد والتوفير, Allawi Tunnel، بغداد، بغداد محافظة",
-      "gps_lat": 33.3235288,
-      "gps_lon": 44.381160699999995,
-      "photo_url": null,
-      "working_hours": null,
-      "place_id": "0x15577fdd2150f531:0x46feee68e00e0558",
-      "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15577fdd2150f531:0x46feee68e00e0558",
-      "sort_order": 1330,
-      "archived": false,
-      "_verified": false,
-      "_confidence": 0.33,
-      "_source": "ministry-site",
-      "_maps_name": "Iraq telecom and post company ITPC الشركة العامه للاتصالات والبريد",
-      "_located_by": {
-        "source": "google-maps (retry)",
-        "matched_name": "الشركة العامة للبريد والتوفير",
-        "confidence": 1
-      }
-    },
-    {
       "slug": "wzara-alatsalat-tbhth-ma-hyya-alnzaha-alathadya-ijraat-brnam",
       "ministry_slug": "ministry-of-communications",
       "title_ar": "وزارة الاتصالات تبحث مع هيئة النزاهة الاتحادية إجراءات برنامج الشفافية وحماية المال العام",
@@ -5529,20 +5472,20 @@
       "title_ku": null,
       "website": "https://mot.gov.iq/?page=278",
       "_website_source": "ministry-site",
-      "phone": "+965 2248 0000",
-      "address_ar": "إدارة الرقابة التجارية وحماية المستهلك - وزارة التجارة والصناعة، شارع عبدالعزيز أحمد التويجري، الكويت",
-      "gps_lat": 29.291192199999998,
-      "gps_lon": 47.9916488,
-      "photo_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlHRGBgLjG15CG1nLm8GPhdiWei45kmznQO-hfqjTfBPMiPon35LwqihstomS-RnCH7a-p6fcF0IEUlmMJpkV9JYUkj6p4aAlauAj_-PCUFQz26wz_NbryT2DUguswDSVYUbivk8g=w86-h152-k-no",
+      "phone": null,
+      "address_ar": null,
+      "gps_lat": null,
+      "gps_lon": null,
+      "photo_url": null,
       "working_hours": null,
-      "place_id": "0x3fcf9bf005393e3b:0x3268b57dbe37c71d",
-      "maps_url": "https://www.google.com/maps/place/?q=place_id:0x3fcf9bf005393e3b:0x3268b57dbe37c71d",
+      "place_id": null,
+      "maps_url": null,
       "sort_order": 1510,
       "archived": false,
-      "_verified": true,
-      "_confidence": 0.5,
+      "_verified": false,
+      "_confidence": 0.25,
       "_source": "ministry-site",
-      "_maps_name": "إدارة الرقابة التجارية وحماية المستهلك - وزارة التجارة والصناعة"
+      "_maps_name": "ديوان الرقابة المالية الاتحادي"
     },
     {
       "slug": "anshta-wanjazat-dayra-tsjyl-alshrkat",
@@ -5766,72 +5709,6 @@
         "id": "node/4725737194",
         "distance_m": 60,
         "name_similarity": 0.4
-      },
-      "_title_en_source": "place-match"
-    },
-    {
-      "slug": "alshrka-alaama-ltjara-almwad-alghdhayya",
-      "ministry_slug": "ministry-of-trade",
-      "title_ar": "الشركة العامة لتجارة المواد الغذائية",
-      "title_en": "General Company for Foodstuff Trading",
-      "title_ku": null,
-      "website": "http://iraqsfsc.gov.iq/",
-      "_website_source": "ministry-site",
-      "phone": null,
-      "address_ar": "الشركة العامة لتجارة المواد الغذائية، بغداد، بغداد محافظة",
-      "gps_lat": 33.321459499999996,
-      "gps_lon": 44.3678818,
-      "photo_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk59PehlzMXkRHJ_V2OGO16zujHB1SkF_AoZWwP_ut-nfPa0gDzQ46Uq2qYucf3mqcFXkk5bQ_KpwmkGngGT2Qx3IQvlvS91CyoJbRCxYXMo50c19_HmyyihqasPm2OS1b1ardF5Q=w129-h86-k-no",
-      "working_hours": [
-        {
-          "day": "SUN",
-          "from": "08:00",
-          "to": "15:00"
-        },
-        {
-          "day": "MON",
-          "from": "08:00",
-          "to": "15:00"
-        },
-        {
-          "day": "TUE",
-          "from": "08:00",
-          "to": "15:00"
-        },
-        {
-          "day": "WED",
-          "from": "08:00",
-          "to": "15:00"
-        },
-        {
-          "day": "THU",
-          "from": "08:00",
-          "to": "15:00"
-        },
-        {
-          "day": "FRI",
-          "from": null,
-          "to": null
-        },
-        {
-          "day": "SAT",
-          "from": null,
-          "to": null
-        }
-      ],
-      "place_id": "0x15577ff88859d557:0xaf52ca7c94ed4082",
-      "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15577ff88859d557:0xaf52ca7c94ed4082",
-      "sort_order": 1600,
-      "archived": false,
-      "_verified": true,
-      "_confidence": 1,
-      "_source": "ministry-site",
-      "_maps_name": "الشركة العامة لتجارة المواد الغذائية",
-      "_osm": {
-        "id": "node/4718272391",
-        "distance_m": 134,
-        "name_similarity": 1,
-        "opening_hours_raw": "Su-Th 08:00-15:00"
       },
       "_title_en_source": "place-match"
     },
@@ -6116,19 +5993,19 @@
       "website": null,
       "_website_source": null,
       "phone": null,
-      "address_ar": null,
-      "gps_lat": null,
-      "gps_lon": null,
-      "photo_url": null,
+      "address_ar": "دائرة الرقابة التجارية والمالية، كربلاء، كربلاء محافظة، 56001",
+      "gps_lat": 32.575499199999996,
+      "gps_lon": 44.0386111,
+      "photo_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmUxmPf93H_rcFzEggA9wL6TsWzh5FLSHZKl7Yv_iNi8qfHzrbgqVq2dx6YTGtTS9RshIqlB5WH_7UAku6-Y5qazFSAUoCSiDn5WT7DtwONRT3d1MyjuYZ3nHA96kgIfCBrrz8=w86-h114-k-no",
       "working_hours": null,
-      "place_id": null,
-      "maps_url": null,
+      "place_id": "0x15596b5116ebc647:0xd4ee69abd112d39f",
+      "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15596b5116ebc647:0xd4ee69abd112d39f",
       "sort_order": 1720,
       "archived": false,
-      "_verified": false,
-      "_confidence": 0.4,
+      "_verified": true,
+      "_confidence": 0.6,
       "_source": "ministry-site",
-      "_maps_name": "إدارة الرقابة التجارية وحماية المستهلك - وزارة التجارة والصناعة"
+      "_maps_name": "دائرة الرقابة التجارية والمالية"
     },
     {
       "slug": "dayra-tsjyl-alshrkat-alhykl-altnzymy",
@@ -6413,6 +6290,35 @@
       "_title_en_source": "place-match"
     },
     {
+      "slug": "dayra-sha-dyala",
+      "ministry_slug": "ministry-of-health",
+      "title_ar": "دائرة صحة ديالى",
+      "title_en": "Diyala Health Department",
+      "title_ku": null,
+      "website": "https://dyala.moh.gov.iq/",
+      "_website_source": "ministry-site",
+      "phone": null,
+      "address_ar": "دائرة صحة ديالى، بعقوبة، ديالى محافظة",
+      "gps_lat": 33.746582,
+      "gps_lon": 44.623387,
+      "photo_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlhH8Kp-6QvtLcuKRlIrR0nWSbtJ6WMQf8_VUbVBmdB4J1Y2cvj4zcEcINLVbUyp5Q8Eo-velzIkogOJ7Whk_Tu4tTnGR02X3L_kjuLU0Y9LOACQaGXv_a2qVREwwCiPB4TRNU=w129-h86-k-no",
+      "working_hours": null,
+      "place_id": "0x15564ca0ffffffff:0x79e61f8cf348998f",
+      "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15564ca0ffffffff:0x79e61f8cf348998f",
+      "sort_order": 1810,
+      "archived": false,
+      "_verified": true,
+      "_confidence": 1,
+      "_source": "ministry-site",
+      "_maps_name": "دائرة صحة ديالى",
+      "_osm": {
+        "id": "node/11822371246",
+        "distance_m": 120,
+        "name_similarity": 0.67
+      },
+      "_title_en_source": "place-match"
+    },
+    {
       "slug": "mrkz-alwzara-dayra-alsha-alaama",
       "ministry_slug": "ministry-of-health",
       "title_ar": "مركز الوزارة/ دائرة الصحة العامة",
@@ -6646,72 +6552,6 @@
         "name_similarity": 0,
         "opening_hours_raw": "Su-Th 08:00-14:00"
       }
-    },
-    {
-      "slug": "dayra-alsha-alaama",
-      "ministry_slug": "ministry-of-health",
-      "title_ar": "دائرة الصحة العامة",
-      "title_en": "Iraqi Ministry of Health",
-      "title_ku": null,
-      "website": "http://www.phd.iq/",
-      "_website_source": "ministry-site",
-      "phone": null,
-      "address_ar": "وزارة الصحة العراقية, Al Adham Street، بغداد، بغداد محافظة",
-      "gps_lat": 33.3476248,
-      "gps_lon": 44.381278099999996,
-      "photo_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn13YWpF0sd9TdYtTTAkK3CEOJwdxjK-bqTFoBlNzX_iHhnivavDM37vFgIJomQnd8ekYYDSWJZ0vLnAtPccbjO5V3IhtS5UF9AFzXk-nIlNZDXFB1p1-gXA0XnKQTJudNFhOH8=w114-h86-k-no",
-      "working_hours": [
-        {
-          "day": "SUN",
-          "from": "08:00",
-          "to": "14:00"
-        },
-        {
-          "day": "MON",
-          "from": "08:00",
-          "to": "14:00"
-        },
-        {
-          "day": "TUE",
-          "from": "08:00",
-          "to": "14:00"
-        },
-        {
-          "day": "WED",
-          "from": "08:00",
-          "to": "14:00"
-        },
-        {
-          "day": "THU",
-          "from": "08:00",
-          "to": "14:00"
-        },
-        {
-          "day": "FRI",
-          "from": null,
-          "to": null
-        },
-        {
-          "day": "SAT",
-          "from": null,
-          "to": null
-        }
-      ],
-      "place_id": "0x155778b7ce0cbb41:0x1de41f9f11a5bada",
-      "maps_url": "https://www.google.com/maps/place/?q=place_id:0x155778b7ce0cbb41:0x1de41f9f11a5bada",
-      "sort_order": 1880,
-      "archived": false,
-      "_verified": true,
-      "_confidence": 1,
-      "_source": "ministry-site",
-      "_maps_name": "وزارة الصحة العراقية",
-      "_osm": {
-        "id": "way/926018430",
-        "distance_m": 51,
-        "name_similarity": 0.33,
-        "opening_hours_raw": "Su-Th 08:00-14:00"
-      },
-      "_title_en_source": "place-match"
     },
     {
       "slug": "alshrka-alaama-ltswyq-aladwya-walmstlzmat-altbya",
@@ -9514,29 +9354,6 @@
       "_maps_name": "وزارة الشباب والرياضة /دائرة شؤون الاقاليم والمحافظات"
     },
     {
-      "slug": "alhyya-alaama-llathar-waltrath",
-      "ministry_slug": "ministry-of-culture-tourism-and-antiquities",
-      "title_ar": "الهيئة العامة للاثار والتراث",
-      "title_en": null,
-      "title_ku": null,
-      "website": null,
-      "_website_source": null,
-      "phone": null,
-      "address_ar": "الهيئة العامة للأثار والتراث / دائرة الصيانة والحفاظ على الأثار، 253 المتنبي، بغداد، بغداد محافظة",
-      "gps_lat": 33.3399609,
-      "gps_lon": 44.3876839,
-      "photo_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkDl5uEmeWnqto63nawnYghevNFM7LYTR13HJwvwmd0rvf2fxxgs3tmyl22Yf02qxfOtlaCnnQghIROradvQQdiES2rS7cHfIyv4FzAtECoDQM4DfGYvB1BQPrzpq_hdeXiyz8kww=w152-h86-k-no",
-      "working_hours": null,
-      "place_id": "0x1557795dc8bd80ad:0xa306212a04b65d41",
-      "maps_url": "https://www.google.com/maps/place/?q=place_id:0x1557795dc8bd80ad:0xa306212a04b65d41",
-      "sort_order": 2970,
-      "archived": false,
-      "_verified": true,
-      "_confidence": 1,
-      "_source": "seed",
-      "_maps_name": "الهيئة العامة للأثار والتراث / دائرة الصيانة والحفاظ على الأثار"
-    },
-    {
       "slug": "hyya-alsyaha",
       "ministry_slug": "ministry-of-culture-tourism-and-antiquities",
       "title_ar": "هيئة السياحة",
@@ -11469,17 +11286,17 @@
       "slug": "general-directorate-of-civil-defence",
       "ministry_slug": "ministry-of-interior",
       "title_ar": "المديرية العامة للدفاع المدني",
-      "title_en": null,
+      "title_en": "Civil Defense Directorate",
       "title_ku": null,
-      "website": null,
+      "website": "https://www.facebook.com/civil.defence.115/",
       "phone": null,
-      "address_ar": "الادارة العامة للدفاع المدني، الزهراء، الكويت",
-      "gps_lat": 29.266647,
-      "gps_lon": 48.0043842,
-      "photo_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkGQ0_GIGJub46QlGfQkljtS0wql0457jryEsEToOyvQIGACS2Ls1TiHQphikADhjYhGDnj5Sp8mG41MX-xFJqSb06NwVjfq0qlCdALD86osLIhvMisQW4tM2LhTKri2o2F907c=w86-h114-k-no",
+      "address_ar": "مديرية الدفاع المدني، مديرية الدفاع المدني - المامون، بغداد، بغداد محافظة",
+      "gps_lat": 33.3031311,
+      "gps_lon": 44.3564541,
+      "photo_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnUN47C4aI6RQxpgajGqp00oX3PoGfkE4ZhZKa4Zh8VDZuGcPSDSECoroUH1fpUJySidcNVXjVQentnrAA6r4Uov1RWYYk4axKJTdp5kDgd4yhjzRwF6EgAzsXutSm_IaPUoqTboz4D7KN0=w114-h86-k-no",
       "working_hours": null,
-      "place_id": "0x3fcf9eca714e8f6f:0x76ab017837692ee1",
-      "maps_url": "https://www.google.com/maps/place/?q=place_id:0x3fcf9eca714e8f6f:0x76ab017837692ee1",
+      "place_id": "0x15577e4e9b5010ab:0x822342ec09bdc008",
+      "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15577e4e9b5010ab:0x822342ec09bdc008",
       "sort_order": 5,
       "archived": false,
       "_verified": false,
@@ -11489,38 +11306,39 @@
       "_is_branch_parent": true,
       "_located_by": {
         "source": "google-maps (retry)",
-        "matched_name": "الادارة العامة للدفاع المدني",
-        "confidence": 1
-      }
+        "matched_name": "مديرية الدفاع المدني",
+        "confidence": 0.5
+      },
+      "_title_en_source": "place-match"
     },
     {
       "slug": "general-commission-for-taxes",
       "ministry_slug": "ministry-of-finance",
       "title_ar": "الهيئة العامة للضرائب",
-      "title_en": null,
+      "title_en": "General Commission of Taxes",
       "title_ku": null,
-      "website": null,
-      "phone": null,
-      "address_ar": null,
-      "gps_lat": 33.2774036,
-      "gps_lon": 44.3340644,
-      "photo_url": null,
+      "website": "https://mof.gov.iq/General-Tax-Authority.aspx",
+      "phone": "+964 750 133 2006",
+      "address_ar": "الهيئة العامة للضرائب .، بغداد، بغداد محافظة",
+      "gps_lat": 33.3358704,
+      "gps_lon": 44.403926399999996,
+      "photo_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlN9uilMZUv4LU2SPqdlns-r7_BncHtSnKQlsL9_It8R3-HDEJtSikb9aWnjV7P48fTvXuhpoBDzGFcPWW2Nz2ORIZDNaZ8zeTRoLHvN_EDUAChtvTglkWOHY4dAydMgGf8Yz0=w114-h86-k-no",
       "working_hours": null,
-      "place_id": null,
-      "maps_url": null,
+      "place_id": "0x15578203ab42d94f:0xcfbc778afdb15bc4",
+      "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15578203ab42d94f:0xcfbc778afdb15bc4",
       "sort_order": 5,
       "archived": false,
-      "_verified": false,
-      "_confidence": 0,
-      "_source": "canonical-parent",
-      "_maps_name": null,
+      "_verified": true,
+      "_confidence": 1,
+      "_source": "canonical-parent (details from alhyya-alaama-lldrayb)",
+      "_maps_name": "الهيئة العامة للضرائب .",
       "_is_branch_parent": true,
-      "_located_by": {
-        "source": "openstreetmap",
-        "matched_name": "الهيئة العامه للضرائب",
-        "similarity": 1,
-        "id": "node/9159825018"
-      }
+      "_osm": {
+        "id": "node/13706775601",
+        "distance_m": 111,
+        "name_similarity": 0
+      },
+      "_title_en_source": "place-match"
     },
     {
       "slug": "general-commission-of-customs",
@@ -11541,7 +11359,7 @@
       "archived": false,
       "_verified": false,
       "_confidence": 0,
-      "_source": "canonical-parent (details from hyya-alkmark-alaama)",
+      "_source": "canonical-parent (name only from hyya-alkmark-alaama)",
       "_maps_name": null,
       "_is_branch_parent": true,
       "_located_by": {
@@ -11611,19 +11429,25 @@
       "website": "https://moj.gov.iq/registration/",
       "phone": null,
       "address_ar": "وزارة العدل - مديرية التسجيل العقاري العامة - ملاحظية التسجيل العقاري في الكفل، كفل، بابل محافظة",
-      "gps_lat": 32.223244199999996,
-      "gps_lon": 44.365394599999995,
-      "photo_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm8mfHri2JUhtRZsCvasKxLVp2Ok7ZOY_ABPSoFiNMpX0DC2_jiQy_AZBDWejFrScAQYX2cxRSIJk2elL-aJloR2sTy3wM9Tr-SI2Ssu31LceW1fcb5wf69rT2oePXvwK58Hceep7NwYlfw=w121-h86-k-no",
+      "gps_lat": 33.2705,
+      "gps_lon": 44.3481,
+      "photo_url": null,
       "working_hours": null,
-      "place_id": "0x155929007881712f:0x57f5fddd512f33a2",
-      "maps_url": "https://www.google.com/maps/place/?q=place_id:0x155929007881712f:0x57f5fddd512f33a2",
+      "place_id": null,
+      "maps_url": null,
       "sort_order": 5,
       "archived": false,
-      "_verified": true,
+      "_verified": false,
       "_confidence": 1,
-      "_source": "canonical-parent (details from dayra-altsjyl-alaqary)",
+      "_source": "canonical-parent (name only from dayra-altsjyl-alaqary)",
       "_maps_name": "وزارة العدل - مديرية التسجيل العقاري العامة - ملاحظية التسجيل العقاري في الكفل",
-      "_is_branch_parent": true
+      "_is_branch_parent": true,
+      "_located_by": {
+        "source": "openstreetmap",
+        "matched_name": "دائرة التسجيل العقاري",
+        "similarity": 1,
+        "id": "node/4790324624"
+      }
     },
     {
       "slug": "notary-public-department",
@@ -11658,29 +11482,67 @@
       "slug": "directorate-of-public-health",
       "ministry_slug": "ministry-of-health",
       "title_ar": "دائرة الصحة العامة",
-      "title_en": null,
+      "title_en": "Iraqi Ministry of Health",
       "title_ku": null,
-      "website": "https://dyala.moh.gov.iq/",
+      "website": "http://www.phd.iq/",
       "phone": null,
-      "address_ar": "دائرة صحة ديالى، بعقوبة، ديالى محافظة",
-      "gps_lat": 33.746582,
-      "gps_lon": 44.623387,
-      "photo_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlhH8Kp-6QvtLcuKRlIrR0nWSbtJ6WMQf8_VUbVBmdB4J1Y2cvj4zcEcINLVbUyp5Q8Eo-velzIkogOJ7Whk_Tu4tTnGR02X3L_kjuLU0Y9LOACQaGXv_a2qVREwwCiPB4TRNU=w129-h86-k-no",
-      "working_hours": null,
-      "place_id": "0x15564ca0ffffffff:0x79e61f8cf348998f",
-      "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15564ca0ffffffff:0x79e61f8cf348998f",
+      "address_ar": "وزارة الصحة العراقية, Al Adham Street، بغداد، بغداد محافظة",
+      "gps_lat": 33.3476248,
+      "gps_lon": 44.381278099999996,
+      "photo_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn13YWpF0sd9TdYtTTAkK3CEOJwdxjK-bqTFoBlNzX_iHhnivavDM37vFgIJomQnd8ekYYDSWJZ0vLnAtPccbjO5V3IhtS5UF9AFzXk-nIlNZDXFB1p1-gXA0XnKQTJudNFhOH8=w114-h86-k-no",
+      "working_hours": [
+        {
+          "day": "SUN",
+          "from": "08:00",
+          "to": "14:00"
+        },
+        {
+          "day": "MON",
+          "from": "08:00",
+          "to": "14:00"
+        },
+        {
+          "day": "TUE",
+          "from": "08:00",
+          "to": "14:00"
+        },
+        {
+          "day": "WED",
+          "from": "08:00",
+          "to": "14:00"
+        },
+        {
+          "day": "THU",
+          "from": "08:00",
+          "to": "14:00"
+        },
+        {
+          "day": "FRI",
+          "from": null,
+          "to": null
+        },
+        {
+          "day": "SAT",
+          "from": null,
+          "to": null
+        }
+      ],
+      "place_id": "0x155778b7ce0cbb41:0x1de41f9f11a5bada",
+      "maps_url": "https://www.google.com/maps/place/?q=place_id:0x155778b7ce0cbb41:0x1de41f9f11a5bada",
       "sort_order": 5,
       "archived": false,
       "_verified": true,
       "_confidence": 1,
-      "_source": "canonical-parent (details from dayra-sha-dyala)",
-      "_maps_name": "دائرة صحة ديالى",
+      "_source": "canonical-parent (details from dayra-alsha-alaama)",
+      "_maps_name": "وزارة الصحة العراقية",
       "_is_branch_parent": true,
       "_osm": {
-        "id": "node/6690520785",
-        "distance_m": 61,
-        "name_similarity": 0.33
-      }
+        "id": "way/926018430",
+        "distance_m": 51,
+        "name_similarity": 0.33,
+        "opening_hours_raw": "Su-Th 08:00-14:00"
+      },
+      "_title_en_source": "place-match"
     },
     {
       "slug": "general-directorate-of-education",
@@ -11772,30 +11634,67 @@
       "slug": "general-company-for-foodstuff-trading",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "الشركة العامة لتجارة المواد الغذائية",
-      "title_en": null,
+      "title_en": "General Company for Foodstuff Trading",
       "title_ku": null,
-      "website": null,
+      "website": "http://iraqsfsc.gov.iq/",
       "phone": null,
-      "address_ar": null,
-      "gps_lat": 30.5290791,
-      "gps_lon": 47.7511069,
-      "photo_url": null,
-      "working_hours": null,
-      "place_id": null,
-      "maps_url": null,
+      "address_ar": "الشركة العامة لتجارة المواد الغذائية، بغداد، بغداد محافظة",
+      "gps_lat": 33.321459499999996,
+      "gps_lon": 44.3678818,
+      "photo_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk59PehlzMXkRHJ_V2OGO16zujHB1SkF_AoZWwP_ut-nfPa0gDzQ46Uq2qYucf3mqcFXkk5bQ_KpwmkGngGT2Qx3IQvlvS91CyoJbRCxYXMo50c19_HmyyihqasPm2OS1b1ardF5Q=w129-h86-k-no",
+      "working_hours": [
+        {
+          "day": "SUN",
+          "from": "08:00",
+          "to": "15:00"
+        },
+        {
+          "day": "MON",
+          "from": "08:00",
+          "to": "15:00"
+        },
+        {
+          "day": "TUE",
+          "from": "08:00",
+          "to": "15:00"
+        },
+        {
+          "day": "WED",
+          "from": "08:00",
+          "to": "15:00"
+        },
+        {
+          "day": "THU",
+          "from": "08:00",
+          "to": "15:00"
+        },
+        {
+          "day": "FRI",
+          "from": null,
+          "to": null
+        },
+        {
+          "day": "SAT",
+          "from": null,
+          "to": null
+        }
+      ],
+      "place_id": "0x15577ff88859d557:0xaf52ca7c94ed4082",
+      "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15577ff88859d557:0xaf52ca7c94ed4082",
       "sort_order": 5,
       "archived": false,
-      "_verified": false,
-      "_confidence": 0,
-      "_source": "canonical-parent",
-      "_maps_name": null,
+      "_verified": true,
+      "_confidence": 1,
+      "_source": "canonical-parent (details from alshrka-alaama-ltjara-almwad-alghdhayya)",
+      "_maps_name": "الشركة العامة لتجارة المواد الغذائية",
       "_is_branch_parent": true,
-      "_located_by": {
-        "source": "openstreetmap",
-        "matched_name": "الشركة العامة لتجارة المواد الغذائية",
-        "similarity": 1,
-        "id": "node/3492908606"
-      }
+      "_osm": {
+        "id": "node/4718272391",
+        "distance_m": 134,
+        "name_similarity": 1,
+        "opening_hours_raw": "Su-Th 08:00-15:00"
+      },
+      "_title_en_source": "place-match"
     },
     {
       "slug": "companies-registration-department",
@@ -12025,7 +11924,7 @@
       "title_ar": "الشركة العامة للبريد والتوفير",
       "title_en": null,
       "title_ku": null,
-      "website": null,
+      "website": "https://post.iq/",
       "phone": null,
       "address_ar": "الشركة العامة للبريد والتوفير, Allawi Tunnel، بغداد، بغداد محافظة",
       "gps_lat": 33.3235288,
@@ -12037,9 +11936,9 @@
       "sort_order": 5,
       "archived": false,
       "_verified": false,
-      "_confidence": 0,
-      "_source": "canonical-parent",
-      "_maps_name": null,
+      "_confidence": 0.33,
+      "_source": "canonical-parent (name only from alshrka-alaama-llbryd-waltwfyr)",
+      "_maps_name": "Iraq telecom and post company ITPC الشركة العامه للاتصالات والبريد",
       "_is_branch_parent": true,
       "_located_by": {
         "source": "google-maps (retry)",
@@ -12064,16 +11963,11 @@
       "maps_url": "https://www.google.com/maps/place/?q=place_id:0x1557795dc8bd80ad:0xa306212a04b65d41",
       "sort_order": 5,
       "archived": false,
-      "_verified": false,
-      "_confidence": 0,
-      "_source": "canonical-parent",
-      "_maps_name": null,
-      "_is_branch_parent": true,
-      "_located_by": {
-        "source": "google-maps (retry)",
-        "matched_name": "الهيئة العامة للأثار والتراث / دائرة الصيانة والحفاظ على الأثار",
-        "confidence": 1
-      }
+      "_verified": true,
+      "_confidence": 1,
+      "_source": "canonical-parent (details from alhyya-alaama-llathar-waltrath)",
+      "_maps_name": "الهيئة العامة للأثار والتراث / دائرة الصيانة والحفاظ على الأثار",
+      "_is_branch_parent": true
     }
   ],
   "branches": [

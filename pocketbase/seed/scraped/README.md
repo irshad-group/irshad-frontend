@@ -43,6 +43,17 @@ Name matching across Arabic, Kurdish and English needs more than a string compar
 - **Stop words** (`وزارة`, `دائرة`, `العامة`, `بغداد`, `ministry`, `general`, …) are
   removed before scoring, so a match has to agree on the *distinctive* part of the
   name and not just on the word "directorate".
+- **A country gate.** Iraq's neighbours use the same institution names in the same
+  language, so a perfect name match can land abroad: "المديرية العامة للدفاع المدني"
+  matched **Kuwait's** civil defence directorate at confidence 1.0. A bounding box does
+  not catch it — Iraq's box overlaps Kuwait's northern tip — so the match is rejected on
+  the country Maps puts in the address.
+- **A national body is not a provincial one.** A branch family's parent used to inherit
+  its details from any scraped row containing the family hint, and "دائرة صحة" matches
+  every provincial health directorate — so the national parent was placed on Diyala's
+  office, and the foodstuff company on a building in Basra. A parent now only takes a
+  location from a row whose title matches the parent's and that sits where the
+  headquarters sits.
 - **A hard geographic gate**: a Kurdistan Region body below latitude 34.8 is rejected
   outright. Without it, a strong name match on "وزارة النقل" handed the KRG transport
   ministry the federal one's building in Baghdad.
@@ -145,6 +156,20 @@ browser, search anything, and copy the `pb=` parameter off the `search?tbm=map` 
 
 Responses are cached in `cache-gmaps/` and `cache-http/` (gitignored) — delete those to
 force a genuinely fresh scrape.
+
+## The dataset is the only source of truth in the backend
+
+`purge-non-dataset.mjs` deletes every ministry, directorate and branch this file does
+not contain, so nothing invented survives beside the scraped record. It refuses to
+delete a row anything still points at — nothing cascades here, and an orphaned
+procedure would silently lose its office.
+
+The importer treats a `null` in this file as "no value", not "leave what is there",
+for the fields the scrape owns (`phone`, `email`, `address_ar`, `gps_lat`, `gps_lon`,
+`place_id`, `working_hours`). Without that it could only ever add: a record that
+picked up a wrong coordinate on an earlier run kept it forever, because the corrected
+file carried `null` and `null` was dropped. That is how a trade directorate sat on a
+Kuwaiti address with a +965 phone after the scrape had already disowned it.
 
 ## Two checks worth understanding
 
