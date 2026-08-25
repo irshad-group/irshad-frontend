@@ -1,0 +1,1029 @@
+[
+  {
+    "slug": "ministry-of-interior",
+    "krg": false,
+    "title_ar": "وزارة الداخلية",
+    "title_en": "Ministry of Interior",
+    "title_ku": "وەزارەتی ناوخۆ",
+    "website": "https://moi.gov.iq/",
+    "gps_lat": 33.3338247,
+    "gps_lon": 44.42958,
+    "phone": null,
+    "address_ar": "8CMH+GRG وزارة الداخلية العراقية، Unnamed Road، بغداد، بغداد محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWk8bmYtq5o015R5a3g1RlEmUUE-r7ZYz8A7ue9qhaKITFywfY7mtUnrnaUzNeJd_yPf-7n1JcNn_UrYHR601AgaTSISbiFrv31Sm7NVUG7eC_ichj9A6oBXy627eaohAbWgmRho8p8Bz1U=w152-h86-k-no",
+    "maps_name": "وزارة الداخلية العراقية",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15578361d6de7457:0x427bcbb022630b96",
+    "maps_rating": 4.3,
+    "maps_categories": [
+      "مكتب حكومي"
+    ],
+    "pool_size": 7,
+    "candidates": [
+      "15|وزارة الداخلية العراقية|33.3338247,44.42958",
+      "14|المديريه العامه لوزارة الداخليه فرع السماوة|31.5254886,45.2009335",
+      "12|وزارة الداخلية العراقية|33.2382966,44.3375225",
+      "12|وزارة الداخلية|33.315241,44.366067099999995"
+    ]
+  },
+  {
+    "slug": "ministry-of-defence",
+    "krg": false,
+    "title_ar": "وزارة الدفاع",
+    "title_en": "Ministry of Defence",
+    "title_ku": "وەزارەتی بەرگری",
+    "website": "https://mod.mil.iq/",
+    "gps_lat": 33.344899,
+    "gps_lon": 44.3820774,
+    "phone": "+964 780 940 2568",
+    "address_ar": "89WM+F68 وزارة الدفاع العراقية, جسر، بغداد، بغداد محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWncsuuXOLj22NaUUB1oCn-JxPGX5qsWTO4oy2FOJ0dFvd9pkHfPM7HOWcHoukTkZSHCkrD5Wl9fFV114KtrGCpQtYLJjCiZqV_m3emLY4cw9gJBVU5ONwOQf30yy3ti6AxEdAzEXg=w154-h86-k-no",
+    "maps_name": "وزارة الدفاع العراقية",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x155778b679d991c1:0x3f44b79b98a0aec4",
+    "maps_rating": 4.3,
+    "maps_categories": [
+      "المجلس العسكري"
+    ],
+    "pool_size": 5,
+    "candidates": [
+      "13|وزارة الدفاع العراقية|33.344899,44.3820774",
+      "12|وزارة الدفاع|31.830608199999997,47.064111399999994",
+      "12|, وزارة الدفاع دائرة الموازنة والبرامج|33.223191,43.679291",
+      "11|اذاعة وزارة الدفاع العراقية|33.3171945,44.403524399999995"
+    ]
+  },
+  {
+    "slug": "ministry-of-foreign-affairs",
+    "krg": false,
+    "title_ar": "وزارة الخارجية",
+    "title_en": "Ministry of Foreign Affairs",
+    "title_ku": "وەزارەتی دەرەوە",
+    "website": "https://mofa.gov.iq/",
+    "gps_lat": 33.320068899999995,
+    "gps_lon": 44.38945,
+    "phone": null,
+    "address_ar": "وزارة الخارجية العراقية، 89CQ+4J9 بغداد alsalhiya، بغداد محافظة، 00964",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmggD4Kwr2lJ-suSMhgj-lMWg-0egCaoPaE68ET3OGkIDKrhJwNzIj3LGNXo4_wwd2zfJeuYUXd5JTdw92_zCTvw-tRV-TvMO1XjFYNQWT2ckOBh0QLCylnItKXQiLCxg2AG6gs=w129-h86-k-no",
+    "maps_name": "وزارة الخارجية العراقية",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15577f42cff894d3:0xb0fd1d29b846c284",
+    "maps_rating": 3.7,
+    "maps_categories": [
+      "مكتب حكومي"
+    ],
+    "pool_size": 9,
+    "candidates": [
+      "13|وزارة الخارجية العراقية|33.320068899999995,44.38945",
+      "13|وزارة الخارجية العراقية / مكتب البصرة|30.5081825,47.833972499999994",
+      "13|وزارة الخارجية - مكتب تصديقات النجف الاشرف|32.002670699999996,44.3570178",
+      "13|وزارة الخارجية /الدائرة القنصلية/التصديقات|33.3205077,44.3879709"
+    ]
+  },
+  {
+    "slug": "ministry-of-justice",
+    "krg": false,
+    "title_ar": "وزارة العدل",
+    "title_en": "Ministry of Justice",
+    "title_ku": "وەزارەتی داد",
+    "website": "https://moj.gov.iq/",
+    "gps_lat": 33.3305364,
+    "gps_lon": 44.3925911,
+    "phone": null,
+    "address_ar": "89JV+628 وزارة العدل، شارع حيفا، بغداد،،, Baghdad",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmyLc0HZVxDnuqZg0tfDgBlUHMrLkk4iYkZUnOXt4dR9SANIq7jW2XEBgKsBEI6eBMwDHoshfb0NxCMADsHkpULEM5_0z8ZmhjcGph9VmzM8fqgipIn86hmYuPa16MzDRZvUjC8asK_cQU=w152-h86-k-no",
+    "maps_name": "وزارة العدل",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15577fed4b9ed961:0xafb845afdc7554e1",
+    "maps_rating": 3.8,
+    "maps_categories": [
+      "مكتب حكومة اتحادية"
+    ],
+    "pool_size": 5,
+    "candidates": [
+      "13|وزارة العدل|33.3305364,44.3925911",
+      "13|وزارة العدل - مديرية التسجيل العقاري العامة - ملاحظية التسجيل العقاري في الكفل|32.223244199999996,44.365394599999995",
+      "12|وزارة العدل - دائرة التنفيذ|33.2558173,44.3709193",
+      "11|وزارة العدل المجمع الاصلاحي|31.921402999999998,44.793208"
+    ]
+  },
+  {
+    "slug": "ministry-of-finance",
+    "krg": false,
+    "title_ar": "وزارة المالية",
+    "title_en": "Ministry of Finance",
+    "title_ku": "وەزارەتی دارایی",
+    "website": "https://mof.gov.iq/",
+    "gps_lat": 33.356072499999996,
+    "gps_lon": 44.3959932,
+    "phone": null,
+    "address_ar": "وزارة المالية العراقية، وزارة المالية, Al Maghrib St، بغداد، بغداد محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkwdFKaaUiHHflSiKPCYkW2FCZNHIU6oDd8_wtnflV2JLHfkfRa0hNupv8JPZMBeyKU4QzAK3zQa2NT7ZJ-zAdlgEQVm7GVjGXbKfLREL_7uAKVSNlVuSYrt5wUvjBj6K02NAnfXw=w114-h86-k-no",
+    "maps_name": "وزارة المالية العراقية",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x1557789e9c025847:0xc2c508f5fb6ea594",
+    "maps_rating": 3.6,
+    "maps_categories": [
+      "مكتب حكومي"
+    ],
+    "pool_size": 3,
+    "candidates": [
+      "15|وزارة المالية العراقية|33.356072499999996,44.3959932",
+      "9|ديوان الرقابة المالية الاتحادي|33.3348841,44.3854506",
+      "9|ديوان الرقابة المالية|33.3231981,44.387693299999995"
+    ]
+  },
+  {
+    "slug": "ministry-of-education",
+    "krg": false,
+    "title_ar": "وزارة التربية",
+    "title_en": "Ministry of Education",
+    "title_ku": "وەزارەتی پەروەردە",
+    "website": "https://moedu.gov.iq/",
+    "gps_lat": 33.328196999999996,
+    "gps_lon": 44.4190501,
+    "phone": "+964 1 816 7465",
+    "address_ar": "8CH9+7JF وزارة التربية العراقية، بغداد، بغداد محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm00wlDmPkQ4r_jlVGSLiTwxucuTaWUJToPyrmykh1S2J692iVBUQftLKSzNphLWG1jlS_Rch6ntZyhXUB9p1I28HRkPrfwO9dJcUFrgey-QqCqIh2NqN3Z8HpViifKL4L3PNA=w152-h86-k-no",
+    "maps_name": "وزارة التربية العراقية",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15578327d7f5d9cf:0xa3a4e278f5745c82",
+    "maps_rating": 3.2,
+    "maps_categories": [
+      "وزارة التربية والتعليم",
+      "مكتب الشركات"
+    ],
+    "pool_size": 14,
+    "candidates": [
+      "15|وزارة التربية العراقية|33.328196999999996,44.4190501",
+      "15|دائرة المهندس المقيم في المثنى / وزارة التربية|31.3105549,45.2726532",
+      "13|وزارة التربية العراقية ( الدجيل )|33.834309,44.253185099999996",
+      "13|وزارة التربية|33.2385711,44.316203699999996"
+    ]
+  },
+  {
+    "slug": "ministry-of-higher-education",
+    "krg": false,
+    "title_ar": "وزارة التعليم العالي والبحث العلمي",
+    "title_en": "Ministry of Higher Education and Scientific Research",
+    "title_ku": "وەزارەتی خوێندنی باڵا و توێژینەوەی زانستی",
+    "website": "https://mohesr.gov.iq/",
+    "gps_lat": 33.3276877,
+    "gps_lon": 44.4191016,
+    "phone": "+964 770 811 7410",
+    "address_ar": "8CH9+3JH وزارة التعليم العالي والبحث العلمي، بغداد، بغداد محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmHpRmlYGXnxpZWZRL4cxBH7JgWVwsGtVuLwHaEOA1QuXPKwunRCXaOeBdtsRS4aWg6CuoRjLItMYrkHx9rErdWyg-vau1WIJ9PH1vlhrR3AnCSoUVqD4OAK6DyFPGhcQ7Q5WT7fQ=w152-h86-k-no",
+    "maps_name": "وزارة التعليم العالي والبحث العلمي",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15578372ae534fd7:0x97182e72691e801b",
+    "maps_rating": 3.6,
+    "maps_categories": [
+      "مكتب حكومي"
+    ],
+    "pool_size": 11,
+    "candidates": [
+      "18|وزارة التعليم العالي والبحث العلمي|33.3276877,44.4191016",
+      "18|وزارة التعليم العالي والبحث العلمي /هيئة البحث العلمي|33.2777428,44.3880699",
+      "16|وزارة التعليم العالي /هيئة البحث العلمي ..محطة ابحاث اللطيفية|32.9980826,44.4134384",
+      "16|صندوق وزارة التعليم العالي|33.3175501,44.4316027"
+    ]
+  },
+  {
+    "slug": "ministry-of-oil",
+    "krg": false,
+    "title_ar": "وزارة النفط",
+    "title_en": "Ministry of Oil",
+    "title_ku": "وەزارەتی نەوت",
+    "website": "https://oil.gov.iq/",
+    "gps_lat": 33.340868,
+    "gps_lon": 44.4330001,
+    "phone": "+964 782 557 0640",
+    "address_ar": "8CRM+86R وزارة النفط العراقية، شارع فلسطين، بغداد، بغداد محافظة، 00964",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm3zbdiF_c1_GtApbwnrK21-irQaowilFc7GeS6j8XMHiyfVqUDsmF37RWSxKayfVqXIY9xJk2t96mdbDpIQOtZXpT7aWGNZKB1N-bmIQs5UxLxuj1j_ucTgYzea9PT-3KWyq2-Dw=w116-h86-k-no",
+    "maps_name": "وزارة النفط العراقية",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x1557824c3c794fff:0x6c149cbbd4bb75a9",
+    "maps_rating": 4,
+    "maps_categories": [
+      "مكتب حكومة اتحادية"
+    ],
+    "pool_size": 1,
+    "candidates": [
+      "17|وزارة النفط العراقية|33.340868,44.4330001"
+    ]
+  },
+  {
+    "slug": "ministry-of-labour-and-social-affairs",
+    "krg": false,
+    "title_ar": "وزارة العمل والشؤون الاجتماعية",
+    "title_en": "Ministry of Labour and Social Affairs",
+    "title_ku": "وەزارەتی کار و کاروباری کۆمەڵایەتی",
+    "website": "https://molsa.gov.iq/",
+    "gps_lat": 33.373263699999995,
+    "gps_lon": 44.3981807,
+    "phone": "+964 770 512 2236",
+    "address_ar": "99FX+873 وزارة العمل والشؤون الاجتماعية، بغداد، بغداد محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkQClWiUQGZb51PncJiuOlh3qgybd7CQOsKkacwApCG7h41h_DzHZvYeQlbO1vV5-5ZtkBIaE4cTPXHZPZbs-rE838hsW_HhCIVfsetcjm9F2DS_kMurhjeSXCBxQJTAFSski6unPNuhAFQ=w114-h86-k-no",
+    "maps_name": "وزارة العمل والشؤون الاجتماعية",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x1557787eb7d5e499:0xa611d04e7c3c201",
+    "maps_rating": 3.6,
+    "maps_categories": [
+      "مكتب حكومة الولاية",
+      "وزارة الأشغال العامة"
+    ],
+    "pool_size": 12,
+    "candidates": [
+      "17|وزارة العمل والشؤون الاجتماعية|33.373263699999995,44.3981807",
+      "14|وزارة العمل والشؤون الاجتماعية|36.2117596,44.028832099999995",
+      "13|وزارة العمل والشؤون الاجتماعية، ذي قار|31.023115299999997,46.2497739",
+      "12|مجمع وزارة العمل والشؤون الاجتماعية|32.518050599999995,45.8251826"
+    ]
+  },
+  {
+    "slug": "ministry-of-electricity",
+    "krg": false,
+    "title_ar": "وزارة الكهرباء",
+    "title_en": "Ministry of Electricity",
+    "title_ku": "وەزارەتی کارەبا",
+    "website": "https://moelc.gov.iq/",
+    "gps_lat": 33.3202996,
+    "gps_lon": 44.3688869,
+    "phone": null,
+    "address_ar": "89C9+4H6 مقر وزارة الكهرباء والطاقة المتجددة العراقية، بغداد، بغداد محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm10q7HnD4pvC2YiiYEqgEAUOHOHTHg3NJgeebdsjXRJC5mkzrXGPIKCzwisphhD7XwLMkVeMZMCDM7tVkUDSiWdFKyXI6D1WESAGy-2Dph9DyqIzgUtW8wLzfy7lLECAjhosMo9A=w137-h86-k-no",
+    "maps_name": "مقر وزارة الكهرباء والطاقة المتجددة العراقية",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15577f1afb63734b:0x81c17265d2358b8b",
+    "maps_rating": 3.2,
+    "maps_categories": [
+      "مكتب حكومي"
+    ],
+    "pool_size": 10,
+    "candidates": [
+      "13|مقر وزارة الكهرباء والطاقة المتجددة العراقية|33.3202996,44.3688869",
+      "12|وزارة الكهرباء (الشركه العامه لنقل الطاقه)|33.4223608,44.383877399999996",
+      "11|وزارة الكهرباء|36.1983472,44.0253758",
+      "11|وزارة الكهرباء مركز صيانة وجباية العسكري|31.303379999999997,45.260329299999995"
+    ]
+  },
+  {
+    "slug": "ministry-of-migration-and-displaced",
+    "krg": false,
+    "title_ar": "وزارة الهجرة والمهجرين",
+    "title_en": "Ministry of Migration and Displaced",
+    "title_ku": "وەزارەتی کۆچ و کۆچبەران",
+    "website": "https://momd.gov.iq/",
+    "gps_lat": 33.3194786,
+    "gps_lon": 44.400185799999996,
+    "phone": "+964 750 731 3488",
+    "address_ar": "8C92+Q3V وزارة الهجرة والمهجرين، بغداد، بغداد محافظة، 10011",
+    "photo": null,
+    "maps_name": "وزارة الهجرة والمهجرين",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x155781e26e9bfe55:0x47e217564ab6795f",
+    "maps_rating": 4.1,
+    "maps_categories": [
+      "مكتب حكومي"
+    ],
+    "pool_size": 20,
+    "candidates": [
+      "16|وزارة الهجرة والمهجرين|33.3194786,44.400185799999996",
+      "13|وزارة الهجرة و المهجرين العراقية فرع بابل|32.4499396,44.4151514",
+      "11|وزارة الهجرة والمهجرين/ فرع بغداد/ الرصافة|33.370256999999995,44.411823",
+      "11|وزارة الهجرة والمهجرين /مكتب البصرة|30.5160414,47.8455509"
+    ]
+  },
+  {
+    "slug": "ministry-of-water-resources",
+    "krg": false,
+    "title_ar": "وزارة الموارد المائية",
+    "title_en": "Ministry of Water Resources",
+    "title_ku": "وەزارەتی سەرچاوەکانی ئاو",
+    "website": "https://mowr.gov.iq/",
+    "gps_lat": 33.3412363,
+    "gps_lon": 44.4384041,
+    "phone": "+964 1 772 0240",
+    "address_ar": "8CRQ+F9R وزارة الموارد المائية العراقية، بغداد، بغداد محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWniMPP6q3XW_YLxVN3eQ_yVpWENz7oI1_MwffnjVyBgZbnDvH7LwPHgyfP4Wefoi4p1oOg2trL6n0DKWdRU6KD0iF0WGwPVqOODZAlj6cP0YIeGMUb_n5NxI1lq4AjK7l6Y5XvgIarVApfJ=w114-h86-k-no",
+    "maps_name": "وزارة الموارد المائية العراقية",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x155783b2a3d9d675:0x505c5a03d89d1f13",
+    "maps_rating": 4.1,
+    "maps_categories": [
+      "منشأة حكومية"
+    ],
+    "pool_size": 1,
+    "candidates": [
+      "18|وزارة الموارد المائية العراقية|33.3412363,44.4384041"
+    ]
+  },
+  {
+    "slug": "ministry-of-construction-housing-municipalities-and-public-works",
+    "krg": false,
+    "title_ar": "وزارة الاعمار والاسكان والبلديات والاشغال العامة",
+    "title_en": "Ministry of Construction, Housing, Municipalities and Public Works",
+    "title_ku": "وەزارەتی ئاوەدانکردنەوە و نیشتەجێکردن و شارەوانی و کارە گشتییەکان",
+    "website": "https://moch.gov.iq/",
+    "gps_lat": 33.3249255,
+    "gps_lon": 44.3866431,
+    "phone": "+964 1 537 3029",
+    "address_ar": "89FP+XMC وزارة الاعمار والإسكان والبلديات والأشغال العامة، مجسر العلاوي، بغداد، بغداد محافظة، 10011",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmejVsbB1frmG8FAXQqRU6UMWgMpdxXPb1k6VTpad7rJHnmt6l3Ksbkxjf7F1yEAeVRFCshNXazkNF2mI8dKIwHKiKXKtHpOiMrXItG0xvq6DIO7SpTlZCPDPVE80uBabPEgZ1hug=w86-h97-k-no",
+    "maps_name": "وزارة الاعمار والإسكان والبلديات والأشغال العامة",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15577f44694aba83:0xafd4f24ba069874",
+    "maps_rating": 4,
+    "maps_categories": [
+      "مكتب حكومي",
+      "منشأة حكومية"
+    ],
+    "pool_size": 2,
+    "candidates": [
+      "20|وزارة الاعمار والإسكان والبلديات والأشغال العامة|33.3249255,44.3866431"
+    ]
+  },
+  {
+    "slug": "ministry-of-communications",
+    "krg": false,
+    "title_ar": "وزارة الاتصالات",
+    "title_en": "Ministry of Communications",
+    "title_ku": "وەزارەتی گەیاندن",
+    "website": "https://moc.gov.iq/",
+    "gps_lat": 33.303530099999996,
+    "gps_lon": 44.3537551,
+    "phone": null,
+    "address_ar": "8933+CG6 وزارة الاتصالات العراقية، بغداد، بغداد محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnfbLrYb_6quumrzpG1l7eEru1vGxmD10CI4IVHl8TdGcM-oLGaESXdQvuKsulC5GPW9UnILTOsM164GOHGoQH7oJsJMAM3pY8wkgXK65q_LwkVizN9_12-s4gLBUBXJ1rz420Q1VR91MdY=w86-h114-k-no",
+    "maps_name": "وزارة الاتصالات العراقية",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15577f36ba5bd09b:0x55238d0d610dd34",
+    "maps_rating": 4.2,
+    "maps_categories": [
+      "مكتب حكومي"
+    ],
+    "pool_size": 4,
+    "candidates": [
+      "15|وزارة الاتصالات العراقية|33.303530099999996,44.3537551"
+    ]
+  },
+  {
+    "slug": "ministry-of-youth-and-sports",
+    "krg": false,
+    "title_ar": "وزارة الشباب والرياضة",
+    "title_en": "Ministry of Youth and Sports",
+    "title_ku": "وەزارەتی لاوان و وەرزش",
+    "website": "http://www.moys.gov.iq/",
+    "gps_lat": 33.3343894,
+    "gps_lon": 44.4469808,
+    "phone": null,
+    "address_ar": "8CMW+QQ5 وزارة الشباب والرياضة، بغداد، بغداد محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnU95uSCyPxsl2_tmXh9fDchNjyyXHemxwDtF8FaLny5vFxqq_srRKFQsZs4cJKHlUJJAF0CzaBLzJP7O7kjNu0hla24fMmvehLFOTtWSvvT0pgBsxSQlF4qHi64orj4UU_RmXk=w152-h86-k-no",
+    "maps_name": "وزارة الشباب والرياضة",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x155783ba72259059:0x3a3252c86abdffdd",
+    "maps_rating": 3.9,
+    "maps_categories": [
+      "مجمع رياضي",
+      "مكتب حكومي"
+    ],
+    "pool_size": 2,
+    "candidates": [
+      "15|وزارة الشباب والرياضة|33.3343894,44.4469808"
+    ]
+  },
+  {
+    "slug": "ministry-of-culture-tourism-and-antiquities",
+    "krg": false,
+    "title_ar": "وزارة الثقافة والسياحة والاثار",
+    "title_en": "Ministry of Culture, Tourism and Antiquities",
+    "title_ku": "وەزارەتی ڕۆشنبیری و گەشتوگوزار و شوێنەوارەکان",
+    "website": "https://mocul.gov.iq/",
+    "gps_lat": 33.3337278,
+    "gps_lon": 44.385563399999995,
+    "phone": null,
+    "address_ar": "89MP+F6W وزارة الثقافة العراقية، شارع حيفا، بغداد، بغداد محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmNk7aXUC3PnxbYk7IjC90VI10uqOpXWMP-wcJoUX1aUU-X5kQ78LeiFATfDJRNZS6h8sgdmb1JQznOn9ocbC__fjDCzdlEqZCaSfhOKUKPU89vKNK4M1B7QFe5qLgEg005X0Vb=w114-h86-k-no",
+    "maps_name": "وزارة الثقافة العراقية",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15577f4c039a3431:0x3378a5e07c21aaef",
+    "maps_rating": 3.9,
+    "maps_categories": [
+      "مبنى المحافظة"
+    ],
+    "pool_size": 2,
+    "candidates": [
+      "11|وزارة الثقافة العراقية|33.3337278,44.385563399999995"
+    ]
+  },
+  {
+    "slug": "ministry-of-trade",
+    "krg": false,
+    "title_ar": "وزارة التجارة",
+    "title_en": "Ministry of Trade",
+    "title_ku": "وەزارەتی بازرگانی",
+    "website": "https://mot.gov.iq/",
+    "gps_lat": 33.3222091,
+    "gps_lon": 44.3670883,
+    "phone": "+964 771 404 5179",
+    "address_ar": "89C8+VRP وزارة التجارة العراقية، بغداد، بغداد محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWl2_-RFDlHFI-6MfQUZHy5P2q-6GAnuMdb88-hCc-z5OU0NT61q14hR3VR-u_hgdbuv1kk0k4uVp6KMGf4m6lmuRcJF3nZNVY0I41G_fIBdX0MKV5QEDcRsXODtt09jUSa2Rutu=w114-h86-k-no",
+    "maps_name": "وزارة التجارة العراقية",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15577f1b74f31ab5:0x4cc5ae2bec790fcd",
+    "maps_rating": 3.4,
+    "maps_categories": [
+      "مكتب حكومي"
+    ],
+    "pool_size": 18,
+    "candidates": [
+      "17|وزارة التجارة العراقية|33.3222091,44.3670883",
+      "15|دائرة تسجيل الشركات - وزارة التجارة|33.3102435,44.361937999999995",
+      "15|وزارة التجارة / دائرة التخطيط والمتابعة|33.2985833,44.4434524",
+      "13|وزارة التجارة|33.3329042,44.404047299999995"
+    ]
+  },
+  {
+    "slug": "ministry-of-health",
+    "krg": false,
+    "title_ar": "وزارة الصحة",
+    "title_en": "Ministry of Health",
+    "title_ku": "وەزارەتی تەندروستی",
+    "website": "https://moh.gov.iq/",
+    "gps_lat": 33.3476248,
+    "gps_lon": 44.381278099999996,
+    "phone": null,
+    "address_ar": "89XJ+2GR وزارة الصحة العراقية, Al Adham Street، بغداد، بغداد محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn13YWpF0sd9TdYtTTAkK3CEOJwdxjK-bqTFoBlNzX_iHhnivavDM37vFgIJomQnd8ekYYDSWJZ0vLnAtPccbjO5V3IhtS5UF9AFzXk-nIlNZDXFB1p1-gXA0XnKQTJudNFhOH8=w114-h86-k-no",
+    "maps_name": "وزارة الصحة العراقية",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x155778b7ce0cbb41:0x1de41f9f11a5bada",
+    "maps_rating": 3.4,
+    "maps_categories": [
+      "مكتب حكومي"
+    ],
+    "pool_size": 1,
+    "candidates": [
+      "15|وزارة الصحة العراقية|33.3476248,44.381278099999996"
+    ]
+  },
+  {
+    "slug": "ministry-of-transport",
+    "krg": false,
+    "title_ar": "وزارة النقل",
+    "title_en": "Ministry of Transport",
+    "title_ku": "وەزارەتی گواستنەوە",
+    "website": "https://motrans.gov.iq/",
+    "gps_lat": 33.3475727,
+    "gps_lon": 44.443790299999996,
+    "phone": null,
+    "address_ar": "8CXV+2GF وزارة النقل العراقية، بغداد، بغداد محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkCirYypJNwbU-Pmnzj-rC79CRRUYy-_tRPa8PyLnDoM54zGr8RkzaEkxLgdHVAt1dSu4BpcvLqPffzyv2x3MVl_SopaRMn-Pzj8b2hAG5BQAvlkgyVM1NIESuBOsJcVzRJjaFuew=w137-h86-k-no",
+    "maps_name": "وزارة النقل العراقية",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x155783a9ce501d41:0x783a1dd4d0fec3c6",
+    "maps_rating": 3.7,
+    "maps_categories": [
+      "مكتب حكومة اتحادية"
+    ],
+    "pool_size": 1,
+    "candidates": [
+      "15|وزارة النقل العراقية|33.3475727,44.443790299999996"
+    ]
+  },
+  {
+    "slug": "ministry-of-planning",
+    "krg": false,
+    "title_ar": "وزارة التخطيط",
+    "title_en": "Ministry of Planning",
+    "title_ku": "وەزارەتی پلاندانان",
+    "website": "https://mop.gov.iq/",
+    "gps_lat": 33.281810799999995,
+    "gps_lon": 44.2289441,
+    "phone": "+964 770 274 0323",
+    "address_ar": "وزارة التخطيط العراقية، شارع الفانوس السحري بغداد المنصور، 10013",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnl1Dq5zcz_DBudwpxwgVDsvo2VcUnKHz5N2TQOWTAOgCvO1iksQBskcj62KIMyQTce6UdZ-PQUEyPFuh17KVXEbZRWhVj5cXPMKFlxAO_-wQ6ArtXYRaYnw1Kp8CJd02eNarSP=w151-h86-k-no",
+    "maps_name": "وزارة التخطيط العراقية",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x1559d9e3935e163d:0xa38f9a4b3c4851a8",
+    "maps_rating": 4,
+    "maps_categories": [
+      "مكتب حكومي"
+    ],
+    "pool_size": 18,
+    "candidates": [
+      "17|وزارة التخطيط العراقية|33.281810799999995,44.2289441",
+      "15|وزارة التجارة / دائرة التخطيط والمتابعة|33.2985833,44.4434524",
+      "14|وزارة التخطيط|36.1979302,43.9974485",
+      "13|مديرية تخطيط النجف/ وزارة التخطيط|32.012733,44.3578616"
+    ]
+  },
+  {
+    "slug": "ministry-of-agriculture",
+    "krg": false,
+    "title_ar": "وزارة الزراعة",
+    "title_en": "Ministry of Agriculture",
+    "title_ku": "وەزارەتی کشتوکاڵ",
+    "website": "https://zeraa.gov.iq/",
+    "gps_lat": 33.3166897,
+    "gps_lon": 44.424706099999995,
+    "phone": null,
+    "address_ar": "8C8F+MVG وزارة الزراعة, Nidhal St، بغداد، بغداد محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmAb1oQoGT8zYRKbSSczLjuMTFWUlXT4QMJyS7vJwjkcryCOfaR-N7Nzc6Oom30aF5bdARg8aSBvNAc51U57jv4cPGUaKVQ87vBiKCLhkiw03FJmHwnnGMQlvyg1wPJhMZQ5OAc=w80-h106-k-no",
+    "maps_name": "وزارة الزراعة",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15578189235091f1:0x406a5d5909e3309d",
+    "maps_rating": 3.8,
+    "maps_categories": [
+      "مكتب حكومي"
+    ],
+    "pool_size": 8,
+    "candidates": [
+      "15|وزارة الزراعة|33.3166897,44.424706099999995",
+      "13|وزارة الزراعة / دائرة البيطرة|33.3705796,44.3878931",
+      "12|وزارة الزراعة / دائرة التخطيط والمتابعة/القسم الهندسي|33.3156637,44.4226477",
+      "10|وزارة الزراعة - حکومة اقلیم کوردستان|36.1597788,44.0104416"
+    ]
+  },
+  {
+    "slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "title_ar": "وزارة الصناعة والمعادن",
+    "title_en": "Ministry of Industry and Minerals",
+    "title_ku": "وەزارەتی پیشەسازی و کانزاکان",
+    "website": "https://industry.gov.iq/",
+    "gps_lat": 33.3287239,
+    "gps_lon": 44.4170145,
+    "phone": null,
+    "address_ar": "8CH8+FRJ وزارة الصناعة والمعادن، بغداد، بغداد محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkXHD8W0X5BZDupLtCLSgXloeMUcKB2ZOLCErBdzqu2Y631qmlhzA9giUE3kCdAU0QvjL_4jQ8TUkFMJTOvh_YLN2GHpm1PhXJIpZVDq5jAU-TUf2ktA7d2lobo-e2v5tTqZImd=w86-h86-k-no",
+    "maps_name": "وزارة الصناعة والمعادن",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15578218bed7755f:0x8de8cc57e4a03d91",
+    "maps_rating": 3.6,
+    "maps_categories": [
+      "مورّدو الصناعات المعدنية",
+      "منشأة حكومية"
+    ],
+    "pool_size": 2,
+    "candidates": [
+      "15|وزارة الصناعة والمعادن|33.3287239,44.4170145",
+      "9|وزارة الصناعة والمعادن|33.246097999999996,44.4926259"
+    ]
+  },
+  {
+    "slug": "ministry-of-environment",
+    "krg": false,
+    "title_ar": "وزارة البيئة",
+    "title_en": "Ministry of Environment",
+    "title_ku": "وەزارەتی ژینگە",
+    "website": "https://moen.gov.iq/",
+    "gps_lat": 33.3646087,
+    "gps_lon": 44.383894399999996,
+    "phone": "+964 780 916 6641",
+    "address_ar": "997M+RHR وزارة البيئة، بغداد، بغداد محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlnIqUKSWxKq5dEye07A85wF6XKkTWI3Ab3pnBPjqX33am6M4E8TZqyCFpsmK_4Drs0nEUaKsMl4OhqVM97MeQGbp-EY1FkUpaTfk7u-McUlEs1JD39h6yztAKZmVPMdRVWykSYKQ=w114-h86-k-no",
+    "maps_name": "وزارة البيئة",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x155778924075c3a1:0x48e1ed5275201ebb",
+    "maps_rating": 3.1,
+    "maps_categories": [
+      "مكتب حكومي"
+    ],
+    "pool_size": 2,
+    "candidates": [
+      "17|وزارة البيئة|33.3646087,44.383894399999996",
+      "11|Ministry of the Environment وزارة البيئة|33.3241817,44.3848838"
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-justice",
+    "krg": true,
+    "title_ar": "وزارة العدل — اقليم كردستان",
+    "title_en": "Ministry of Justice — Kurdistan Region",
+    "title_ku": "وەزارەتی داد",
+    "website": "https://gov.krd/moj-en/",
+    "gps_lat": 36.201531599999996,
+    "gps_lon": 44.000327299999995,
+    "phone": "+964 66 224 5522",
+    "address_ar": "6222+J48 وزارة العدل، كردستان، اربيل، أربيل محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWklwJN3OACozjCeKzHIHh_0go3hWuVn2VUYgFOnBbi_PzdfzudbJuIbTMZkXdg-3B4_qV5IG_2pNphpQwZenESncpBo5CNNRUS4XPf-QiUC4fVr0Z2ZXsL6cKSabxElnT22Ia4R=w114-h86-k-no",
+    "maps_name": "وزارة العدل",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x40072242b4a80c23:0xf96677a4f4cad32f",
+    "maps_rating": 3.5,
+    "maps_categories": [
+      "مكتب حكومي"
+    ],
+    "pool_size": 16,
+    "candidates": [
+      "17|وزارة العدل|36.201531599999996,44.000327299999995",
+      "11|Judicial institution / پەیمانگای دادوەری|36.1678774,44.009784499999995"
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-peshmerga-affairs",
+    "krg": true,
+    "title_ar": "وزارة شؤون البيشمركة",
+    "title_en": "Ministry of Peshmerga Affairs",
+    "title_ku": "وەزارەتی کاروباری پێشمەرگە",
+    "website": "https://gov.krd/mopa-en/",
+    "gps_lat": 36.228041499999996,
+    "gps_lon": 44.0504818,
+    "phone": null,
+    "address_ar": "63H2+659 Ministry of Peshmrega Affairs (MOPA) وەزارەتی کاروباری پێشمەرگە, Pirmam St, Erbil, Erbil Governorate",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnZzaQsIrazYzCNuKYjddx1l2tS2s6SpcFxs4trcDARHeSmT2B_lOk823iVr5TLQNGTznHPGltU8gseifHhPEIpp38UVvHol5RsX_D3M0gJ3r_x36vlyjtXLcpkga7_BFu3acnz=w118-h86-k-no",
+    "maps_name": "Ministry of Peshmrega Affairs (MOPA) وەزارەتی کاروباری پێشمەرگە",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x40072155336e32d9:0x2fc579637d63a7ea",
+    "maps_rating": 4.6,
+    "maps_categories": [
+      "مكتب حكومي"
+    ],
+    "pool_size": 7,
+    "candidates": [
+      "17|Ministry of Peshmrega Affairs (MOPA) وەزارەتی کاروباری پێشمەرگە|36.228041499999996,44.0504818",
+      "12|بارك البيشمركة|36.2254845,44.0219781"
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-interior",
+    "krg": true,
+    "title_ar": "وزارة الداخلية — اقليم كردستان",
+    "title_en": "Ministry of Interior — Kurdistan Region",
+    "title_ku": "وەزارەتی ناوخۆ",
+    "website": "https://gov.krd/moi-en/",
+    "gps_lat": 36.179054199999996,
+    "gps_lon": 43.995098,
+    "phone": "+964 66 229 7272",
+    "address_ar": "5XHW+J2H وزارة الداخلية لاقليم كردستان العراق، كردستان، اربيل، أربيل محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmUZzS58JtaDbGa0jsY1mE0FW269E-kPwvlu0glfLB9N2zvDNA8_sOpwu-9u28cvHdihNeLmqAX_KQ3les6Umv_ymFUwxzp_x1du0X8UHb1fwuaHSHntlf9CTFhsaeT8Io27mmj=w114-h86-k-no",
+    "maps_name": "وزارة الداخلية لاقليم كردستان العراق",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x40072313bccc02c1:0xbaac419a896744a2",
+    "maps_rating": 4.5,
+    "maps_categories": [
+      "مكتب الشركات"
+    ],
+    "pool_size": 11,
+    "candidates": [
+      "17|وزارة الداخلية لاقليم كردستان العراق|36.179054199999996,43.995098"
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-finance-and-economy",
+    "krg": true,
+    "title_ar": "وزارة المالية والاقتصاد",
+    "title_en": "Ministry of Finance and Economy",
+    "title_ku": "وەزارەتی دارایی و ئابووری",
+    "website": "https://gov.krd/mofe-en/",
+    "gps_lat": 36.1908317,
+    "gps_lon": 43.993011599999996,
+    "phone": null,
+    "address_ar": "5XRV+86J وزارة المالیة في اقلیم کردستان، كردستان، اربيل، أربيل محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWksZr6O0fFQHfyvYNhop8vXwB-CkmdDpxbemP4cqe6Y5C6g-JgeOU7iDZ-1S9LNgSrco1ym4wZCwZgFzl-ZVShzFOEDv9zyPDXSK_wDakQyfcvL0F2Rf4hZik20Vscr8Jm6wyLHnw=w129-h86-k-no",
+    "maps_name": "وزارة المالیة في اقلیم کردستان",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x400723f37c62648b:0xffb3b965f03f50ac",
+    "maps_rating": 4,
+    "maps_categories": [
+      "مؤسسة المالية"
+    ],
+    "pool_size": 5,
+    "candidates": [
+      "13|وزارة المالية والاقتصاد مديرية الضرائب لعقارات الدولة|36.164693299999996,43.9718083",
+      "13|وزارة المالیة في اقلیم کردستان|36.1908317,43.993011599999996",
+      "9|وەزارەتی دارایی و ئابووری /بەرێوەبەرایەتی گشتی خانەنشین|36.2039979,43.9899646"
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-natural-resources",
+    "krg": true,
+    "title_ar": "وزارة الثروات الطبيعية",
+    "title_en": "Ministry of Natural Resources",
+    "title_ku": "وەزارەتی سامانە سروشتییەکان",
+    "website": "https://gov.krd/mnr-en/",
+    "gps_lat": 36.195574199999996,
+    "gps_lon": 43.995821799999995,
+    "phone": null,
+    "address_ar": "5XWW+788 وزارة الموارد الطبيعية, Airport Rd، اربيل، أربيل محافظة",
+    "photo": null,
+    "maps_name": "وزارة الموارد الطبيعية",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x4007225f4b732a05:0x9729d7dc44d5428b",
+    "maps_rating": null,
+    "maps_categories": [],
+    "pool_size": 4,
+    "candidates": [
+      "11|وزارة الموارد الطبيعية|36.195574199999996,43.995821799999995",
+      "9|تاقیگەی ناوەندی وەزارەتی سامانە سروشتییەکان MNR.LAB|36.1564118,44.010112"
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-health",
+    "krg": true,
+    "title_ar": "وزارة الصحة — اقليم كردستان",
+    "title_en": "Ministry of Health — Kurdistan Region",
+    "title_ku": "وەزارەتی تەندروستی",
+    "website": "https://gov.krd/moh-en/",
+    "gps_lat": 36.193517,
+    "gps_lon": 44.0126983,
+    "phone": "+964 66 223 8015",
+    "address_ar": "52V7+C34 وەزارەتی تەندروستی، شارع شقلاوة، اربيل، أربيل محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWksIVCZLzDgaE5OHLCueWtLZxENOIqniMPSYua5tHr3iKjtQ7pkWA7MHPebp42zTURAMWaqIV3RFpyq6Qwld-33BuFSef_1ZWO-UOvh56mAws-m-gUWwKCwjVK4IwWv4WqTHUWzcA=w360-h239-k-no",
+    "maps_name": "وەزارەتی تەندروستی",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x40072253c89350d5:0xeea6bb22f8ccd29c",
+    "maps_rating": 3.8,
+    "maps_categories": [
+      "منشأة حكومية"
+    ],
+    "pool_size": 5,
+    "candidates": [
+      "13|وەزارەتی تەندروستی|36.193517,44.0126983",
+      "8|وەزارەتی تەندروستی|36.1926035,44.003980999999996"
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-education",
+    "krg": true,
+    "title_ar": "وزارة التربية — اقليم كردستان",
+    "title_en": "Ministry of Education — Kurdistan Region",
+    "title_ku": "وەزارەتی پەروەردە",
+    "website": "https://gov.krd/moe-en/",
+    "gps_lat": 36.192636,
+    "gps_lon": 43.9952921,
+    "phone": "+964 66 223 3807",
+    "address_ar": "5XVW+343 وەزارەتی پەروەردە، كردستان، اربيل، أربيل محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkcLpP0V9ns0FIgusxEZ6N2y9SfDX7z0JA2Y4BykJskTEB0cb_wMqZoP40maI4KuGqE3Unz8Z_X-kOWsiIaTI8YLcLh406GMu1wiIuYEFXmLsrMs_JlVxgE1IiZ0gU9H540UVne=w360-h239-k-no",
+    "maps_name": "وەزارەتی پەروەردە",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x400722fb2ba17bd1:0x3306b817a6e22c5a",
+    "maps_rating": 3.9,
+    "maps_categories": [
+      "وزارة التربية والتعليم",
+      "إدارة التخطيط الحضري"
+    ],
+    "pool_size": 20,
+    "candidates": [
+      "13|وەزارەتی پەروەردە|36.192636,43.9952921",
+      "12|مديرية التربية العامة في اربيل کوردستان بەڕێوبەرایەتی گشتی پەروەردەی ھەولێر general diectorate of education- erbil|36.1941197,44.0118267",
+      "11|ممثلية التربية - اربيل|36.1517282,44.058564399999995"
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-construction-and-housing",
+    "krg": true,
+    "title_ar": "وزارة الاعمار والاسكان",
+    "title_en": "Ministry of Construction and Housing",
+    "title_ku": "وەزارەتی ئاوەدانکردنەوە و نیشتەجێکردن",
+    "website": "https://gov.krd/moch-en/",
+    "gps_lat": 36.1778106,
+    "gps_lon": 44.001258799999995,
+    "phone": null,
+    "address_ar": "52H2+4GC وەزارەتی ئاوەدانکردنەوەو نیشتەجێکردن Ministry of Reconstruction & Housing, Erbil, Erbil Governorate",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWka7e8CSO89BaWFu8-vC3oc-s2SH0meZrDfb-rF4YTp6ptbB1kgxidcoFE0o6M0j9aZ_IN7iijEzC1yaZHRzOOrJ1kHtv-8zaafqodRUb52XAD_oXZRihNs3tUNOfstICXRuYsL1g=w360-h202-k-no",
+    "maps_name": "وەزارەتی ئاوەدانکردنەوەو نیشتەجێکردن Ministry of Reconstruction & Housing",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x4007231972f6aa33:0xf71480a1dd59b350",
+    "maps_rating": 3.7,
+    "maps_categories": [
+      "مكتب حكومي"
+    ],
+    "pool_size": 11,
+    "candidates": [
+      "17|وەزارەتی ئاوەدانکردنەوەو نیشتەجێکردن Ministry of Reconstruction & Housing|36.1778106,44.001258799999995"
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-municipalities-and-tourism",
+    "krg": true,
+    "title_ar": "وزارة البلديات والسياحة",
+    "title_en": "Ministry of Municipalities and Tourism",
+    "title_ku": "وەزارەتی شارەوانی و گەشتوگوزار",
+    "website": "https://gov.krd/momt-en/",
+    "gps_lat": 36.1804499,
+    "gps_lon": 43.9683047,
+    "phone": null,
+    "address_ar": "5XH9+X6X وزارة البلديات و السياحة اربيل, Erbil, Erbil Governorate",
+    "photo": null,
+    "maps_name": "وزارة البلديات و السياحة اربيل",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x4007230046d71a15:0x3e8ff83b01ed3d03",
+    "maps_rating": null,
+    "maps_categories": [
+      "مكتب حكومي"
+    ],
+    "pool_size": 9,
+    "candidates": [
+      "13|وزارة البلديات و السياحة اربيل|36.1804499,43.9683047",
+      "10|وەزارەتی شارەوانی|36.1799995,43.9681101"
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-higher-education",
+    "krg": true,
+    "title_ar": "وزارة التعليم العالي والبحث العلمي — اقليم كردستان",
+    "title_en": "Ministry of Higher Education and Scientific Research — Kurdistan Region",
+    "title_ku": "وەزارەتی خوێندنی باڵا و توێژینەوەی زانستی",
+    "website": "https://gov.krd/mohe-en/",
+    "gps_lat": 36.1613356,
+    "gps_lon": 44.0138573,
+    "phone": null,
+    "address_ar": "5267+CHW وزارة التعليم العالي والبحث العلمي، اربيل، أربيل محافظة",
+    "photo": null,
+    "maps_name": "وزارة التعليم العالي والبحث العلمي",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x40072300226f868f:0x795f7aaab4e354",
+    "maps_rating": 4.5,
+    "maps_categories": [
+      "مكتب حكومي"
+    ],
+    "pool_size": 3,
+    "candidates": [
+      "17|وزارة التعليم العالي والبحث العلمي|36.1613356,44.0138573",
+      "17|Ministry Of Higher Education and Scientific Research وەزارەتی خوێندنی باڵا و توێژینەوەی زانستی|36.161092,44.0137581",
+      "15|وزاره التعليم العالي في اربيل|36.183174,44.010549499999996"
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-planning",
+    "krg": true,
+    "title_ar": "وزارة التخطيط — اقليم كردستان",
+    "title_en": "Ministry of Planning — Kurdistan Region",
+    "title_ku": "وەزارەتی پلاندانان",
+    "website": "https://gov.krd/mop-en/",
+    "gps_lat": 36.1979302,
+    "gps_lon": 43.9974485,
+    "phone": "+964 66 222 0170",
+    "address_ar": "5XXW+5XG وزارة التخطيط، ٦٠، اربيل، أربيل محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkUTfZNkQGqOwA6JYDMEh6b4qwxQG1UHX2ySbIJ0jZWdkMYiMLQrxdHnUcA6_c4TnG1tlXTSkIGvHRUHDseX5r-POZqhVYjtbr4DFk5OOdeY1TvXhxK869ou6JVHQEv_VV1G9VO=w86-h152-k-no",
+    "maps_name": "وزارة التخطيط",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x4007225e8300e7cb:0x23abbf03304f3c9",
+    "maps_rating": 3.9,
+    "maps_categories": [
+      "مكتب حكومي",
+      "إدارة التخطيط الحضري"
+    ],
+    "pool_size": 4,
+    "candidates": [
+      "19|وزارة التخطيط|36.1979302,43.9974485"
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-labour-and-social-affairs",
+    "krg": true,
+    "title_ar": "وزارة العمل والشؤون الاجتماعية — اقليم كردستان",
+    "title_en": "Ministry of Labour and Social Affairs — Kurdistan Region",
+    "title_ku": "وەزارەتی کار و کاروباری کۆمەڵایەتی",
+    "website": "https://gov.krd/molsa-en/",
+    "gps_lat": 36.2117596,
+    "gps_lon": 44.028832099999995,
+    "phone": "+964 750 717 9453",
+    "address_ar": "626H+PG4 وزارة العمل والشؤون الاجتماعية، اربيل، أربيل محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmEg6RvS12bSXxD67ZJbPAYVlL3AtrmLJlQb9_U1osEOm5KWOiivqiVa0xb-IF-kwD6VYj1_Im6XY_lL94NyWdnnhwPn5GlPR086d9m-bis21uYPRkxmupu_Zal_uzI1GMWWvxhTg=w175-h86-k-no",
+    "maps_name": "وزارة العمل والشؤون الاجتماعية",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x400723937bb4d045:0xcb39684e420ba66a",
+    "maps_rating": 5,
+    "maps_categories": [
+      "مكتب حكومي"
+    ],
+    "pool_size": 2,
+    "candidates": [
+      "19|وزارة العمل والشؤون الاجتماعية|36.2117596,44.028832099999995"
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-culture-and-youth",
+    "krg": true,
+    "title_ar": "وزارة الثقافة والشباب",
+    "title_en": "Ministry of Culture and Youth",
+    "title_ku": "وەزارەتی ڕۆشنبیری و لاوان",
+    "website": "https://gov.krd/mocy-en/",
+    "gps_lat": 36.192504,
+    "gps_lon": 44.026899,
+    "phone": "+964 750 881 3580",
+    "address_ar": "52VG+2Q2 وزارة الثقافة و الشباب اقلیم کوردستان، شارع ٦٠متر،، اربيل، أربيل محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnUEIuMi_Qh-6wFkjs49eJXQ2Lzauzdye80QwEeZVDzfSEgrnuu6YLsoqyZOXRnyV538n9wEN90Ip5-mNJyOoKGJ9Yh6fkQg78SoXm9fqbfRNOOhMPUaH4pyPwpeE-eeSg-h1ibkA=w137-h86-k-no",
+    "maps_name": "وزارة الثقافة و الشباب اقلیم کوردستان",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x400723b3ed9a6df9:0x72d811e7055d849a",
+    "maps_rating": 3.7,
+    "maps_categories": [
+      "مكتب حكومة اتحادية"
+    ],
+    "pool_size": 6,
+    "candidates": [
+      "19|وزارة الثقافة و الشباب اقلیم کوردستان|36.192504,44.026899",
+      "10|نووسینگەی محمد کاکل& موختاری گەڕەکی ڕۆشنبیری|36.1362333,44.044643799999996"
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-martyrs-and-anfal-affairs",
+    "krg": true,
+    "title_ar": "وزارة شؤون الشهداء والمؤنفلين",
+    "title_en": "Ministry of Martyrs and Anfal Affairs",
+    "title_ku": "وەزارەتی کاروباری شەهیدان و ئەنفالکراوان",
+    "website": "https://gov.krd/moma-en/",
+    "gps_lat": 36.1833092,
+    "gps_lon": 44.0157186,
+    "phone": "+964 750 462 6568",
+    "address_ar": "وزارة شؤون الشهداء والمؤنفلين، 30 street Ministry of Martyrs and Anfal affairs, Erbil, 00964",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkdI5CXdws4A9IQvWU22DFk_8mQJakm8nDoHwTf_1dAZCH-My2xSE6YrYLvp7oswuU_-Z1-26pbc3XpaZDIOPAn2ObKQjmIm676MfM634dExAwWZlPih0XObwtJXwpO3Kd86uip=w136-h86-k-no",
+    "maps_name": "وزارة شؤون الشهداء والمؤنفلين",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x40072307c98844f1:0x890e2d6dc3d6cd1c",
+    "maps_rating": 4.6,
+    "maps_categories": [
+      "مكتب حكومي"
+    ],
+    "pool_size": 3,
+    "candidates": [
+      "22|وزارة شؤون الشهداء والمؤنفلين|36.1833092,44.0157186",
+      "21|(وزارة شؤون الشهداء والمؤنفلين )بەرێوەبەرایەتی گشتی کاروباری شەهیدان و ئەنفالکراوانی هەولێر|36.169936,44.0103301",
+      "10|وەزارەتی کاروباری شەهیدان|36.1832518,44.0162823"
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-agriculture-and-water-resources",
+    "krg": true,
+    "title_ar": "وزارة الزراعة والموارد المائية",
+    "title_en": "Ministry of Agriculture and Water Resources",
+    "title_ku": "وەزارەتی کشتوکاڵ و سەرچاوەکانی ئاو",
+    "website": "https://gov.krd/moawr-en/",
+    "gps_lat": 36.1597788,
+    "gps_lon": 44.0104416,
+    "phone": null,
+    "address_ar": "5256+W58 وزارة الزراعة - حکومة اقلیم کوردستان, 2، اربيل، أربيل محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmAtaTqSqg0Eovu-L8JrThqdUPm8KG-Rb_6FgQFsu9TiPd-28s1gJxyssPHJEB1ii_I27i2UBoq39CY5_IrUG83_uE48EdM4NcJ1KfnzRi2P4X6DoNiwXcerSvJgsa5vxrwWkMN=w114-h86-k-no",
+    "maps_name": "وزارة الزراعة - حکومة اقلیم کوردستان",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x40072342e4877ac7:0xcb1c6098acdb54a5",
+    "maps_rating": 4.1,
+    "maps_categories": [
+      "مكتب حكومة اتحادية"
+    ],
+    "pool_size": 2,
+    "candidates": [
+      "15|وزارة الزراعة - حکومة اقلیم کوردستان|36.1597788,44.0104416"
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-trade-and-industry",
+    "krg": true,
+    "title_ar": "وزارة التجارة والصناعة",
+    "title_en": "Ministry of Trade and Industry",
+    "title_ku": "وەزارەتی بازرگانی و پیشەسازی",
+    "website": "https://gov.krd/moti-en/",
+    "gps_lat": 36.1970672,
+    "gps_lon": 44.0247344,
+    "phone": "+964 751 871 8121",
+    "address_ar": "وه‌زاره‌تی بازرگانی و پیشه‌سازی/ وزارة التجارة والصناعة / Ministry of Trade and Industry، كردستان، اربيل، أربيل محافظة، 44001",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkTTSJuAGmkhnhgBT6L7tcvh1nPAdET3jG2CayzWFUeH2E5CI7AieQkEkHiEBku_zqERy9Czy3mRHjGSNn5ArDcw4BLlqTfnwfNm2yQawrseHe5KrD_-QL5niZqKUpg8ZFd_0Uhw3O3aLq6=w124-h86-k-no",
+    "maps_name": "وه‌زاره‌تی بازرگانی و پیشه‌سازی/ وزارة التجارة والصناعة / Ministry of Trade and Industry",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x4007224b201cf9c9:0x680b622adc9bb9f2",
+    "maps_rating": 4.7,
+    "maps_categories": [
+      "مكتب حكومي"
+    ],
+    "pool_size": 3,
+    "candidates": [
+      "22|وه‌زاره‌تی بازرگانی و پیشه‌سازی/ وزارة التجارة والصناعة / Ministry of Trade and Industry|36.1970672,44.0247344",
+      "13|وزارة التجارة والصناعة|36.196887499999995,44.0243906",
+      "13|ژووری بازرگانی و پیشەسازی هەولێر|36.2186095,44.0073235"
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-transport-and-communications",
+    "krg": true,
+    "title_ar": "وزارة النقل والاتصالات",
+    "title_en": "Ministry of Transport and Communications",
+    "title_ku": "وەزارەتی گواستنەوە و گەیاندن",
+    "website": "https://gov.krd/motac-en/",
+    "gps_lat": null,
+    "gps_lon": null,
+    "phone": null,
+    "address_ar": null,
+    "photo": null,
+    "maps_name": null,
+    "maps_url": null,
+    "maps_rating": null,
+    "maps_categories": [],
+    "pool_size": 10,
+    "candidates": []
+  },
+  {
+    "slug": "krg-ministry-of-endowment-and-religious-affairs",
+    "krg": true,
+    "title_ar": "وزارة الاوقاف والشؤون الدينية",
+    "title_en": "Ministry of Endowment and Religious Affairs",
+    "title_ku": "وەزارەتی ئەوقاف و کاروباری ئایینی",
+    "website": "https://gov.krd/moera-en/",
+    "gps_lat": null,
+    "gps_lon": null,
+    "phone": null,
+    "address_ar": null,
+    "photo": null,
+    "maps_name": null,
+    "maps_url": null,
+    "maps_rating": null,
+    "maps_categories": [],
+    "pool_size": 16,
+    "candidates": [
+      "12|بەڕێوەبەرایەتی ئەوقافی دەوروبەر|36.197390299999995,44.016149399999996",
+      "11|بەرێوەبەرایەتی گشتی ئەوقافی هەولێر- awqfi gshti hawler|36.175381099999996,43.961355499999996",
+      "10|مديرية الاوقاف|36.1993085,43.9961437",
+      "10|وەزارەتا ئەوقافا دهوکێ|36.8489248,43.0124375"
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-electricity",
+    "krg": true,
+    "title_ar": "وزارة الكهرباء — اقليم كردستان",
+    "title_en": "Ministry of Electricity — Kurdistan Region",
+    "title_ku": "وەزارەتی کارەبا",
+    "website": "https://gov.krd/moel-en/",
+    "gps_lat": 36.1983472,
+    "gps_lon": 44.0253758,
+    "phone": "+964 750 154 9737",
+    "address_ar": "52XG+85J وزارة الكهرباء، اربيل، أربيل محافظة",
+    "photo": null,
+    "maps_name": "وزارة الكهرباء",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x4007224a875e7005:0xb074957633de6703",
+    "maps_rating": 4.4,
+    "maps_categories": [
+      "مكتب حكومي"
+    ],
+    "pool_size": 21,
+    "candidates": [
+      "16|وزارة الكهرباء|36.1983472,44.0253758",
+      "11|کارەبای عەنکاوە|36.2400143,43.9862958",
+      "11|بەڕێوەبەرایەتی دابەشکردنی کارەبای سلێمانی/ ڕۆژهەڵات|35.550089,45.4209543",
+      "10|فەرمانگەی کارەبای شارەزوور|35.3181909,45.6782499"
+    ]
+  }
+]

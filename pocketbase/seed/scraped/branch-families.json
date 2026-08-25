@@ -1,0 +1,487 @@
+{
+  "_note": "Directorates that actually operate a provincial office network. `query` is a template searched once per province; {P} is the Arabic province name. `must` gates the Maps match.",
+  "families": [
+    {
+      "key": "passports",
+      "ministry": "ministry-of-interior",
+      "directorate_hint": "الجوازات",
+      "title_ar": "مديرية جوازات {P}",
+      "title_en": "{PE} Passports Directorate",
+      "query": "مديرية الجوازات {P}",
+      "must": [
+        "جوازات",
+        "الجوازات",
+        "جواز"
+      ],
+      "parent_slug": "general-directorate-of-passports",
+      "parent_title_ar": "مديرية شؤون الجوازات العامة"
+    },
+    {
+      "key": "nationality",
+      "ministry": "ministry-of-interior",
+      "directorate_hint": "الجنسية",
+      "title_ar": "مديرية جنسية {P}",
+      "title_en": "{PE} Nationality Directorate",
+      "query": "مديرية الجنسية والاحوال المدنية {P}",
+      "must": [
+        "الجنسية",
+        "جنسية",
+        "الاحوال المدنية",
+        "احوال مدنية"
+      ],
+      "parent_slug": "general-directorate-of-nationality",
+      "parent_title_ar": "المديرية العامة للجنسية"
+    },
+    {
+      "key": "traffic",
+      "ministry": "ministry-of-interior",
+      "directorate_hint": "المرور",
+      "title_ar": "مديرية مرور {P}",
+      "title_en": "{PE} Traffic Directorate",
+      "query": "مديرية المرور {P}",
+      "must": [
+        "مرور",
+        "المرور"
+      ],
+      "parent_slug": "general-directorate-of-traffic",
+      "parent_title_ar": "مديرية المرور العامة"
+    },
+    {
+      "key": "residence",
+      "ministry": "ministry-of-interior",
+      "directorate_hint": "الاقامة",
+      "title_ar": "مديرية اقامة {P}",
+      "title_en": "{PE} Residence Directorate",
+      "query": "مديرية الاقامة {P}",
+      "must": [
+        "الاقامة",
+        "اقامة"
+      ],
+      "parent_slug": "general-directorate-of-residence",
+      "parent_title_ar": "مديرية الاقامة العامة"
+    },
+    {
+      "key": "civil-defence",
+      "ministry": "ministry-of-interior",
+      "directorate_hint": "الدفاع المدني",
+      "title_ar": "مديرية الدفاع المدني في {P}",
+      "title_en": "{PE} Civil Defence Directorate",
+      "query": "مديرية الدفاع المدني {P}",
+      "must": [
+        "الدفاع المدني",
+        "دفاع مدني",
+        "الاطفاء"
+      ],
+      "parent_slug": "general-directorate-of-civil-defence",
+      "parent_title_ar": "المديرية العامة للدفاع المدني"
+    },
+    {
+      "key": "tax",
+      "ministry": "ministry-of-finance",
+      "directorate_hint": "الضرائب",
+      "title_ar": "فرع الهيئة العامة للضرائب في {P}",
+      "title_en": "{PE} Tax Branch",
+      "query": "الهيئة العامة للضرائب {P}",
+      "must": [
+        "الضرائب",
+        "ضرائب",
+        "ضريبة"
+      ],
+      "parent_slug": "general-commission-for-taxes",
+      "parent_title_ar": "الهيئة العامة للضرائب"
+    },
+    {
+      "key": "customs",
+      "ministry": "ministry-of-finance",
+      "directorate_hint": "الكمارك",
+      "title_ar": "مركز كمارك {P}",
+      "title_en": "{PE} Customs Centre",
+      "query": "الهيئة العامة للكمارك {P}",
+      "must": [
+        "الكمارك",
+        "كمارك",
+        "الكمرك",
+        "الجمارك"
+      ],
+      "parent_slug": "general-commission-of-customs",
+      "parent_title_ar": "الهيئة العامة للكمارك"
+    },
+    {
+      "key": "pensions",
+      "ministry": "ministry-of-finance",
+      "directorate_hint": "التقاعد",
+      "title_ar": "مديرية تقاعد {P}",
+      "title_en": "{PE} Pensions Directorate",
+      "query": "هيئة التقاعد الوطنية {P}",
+      "must": [
+        "التقاعد",
+        "تقاعد"
+      ],
+      "parent_slug": "national-board-of-pensions",
+      "parent_title_ar": "هيئة التقاعد الوطنية"
+    },
+    {
+      "key": "state-property",
+      "ministry": "ministry-of-finance",
+      "directorate_hint": "عقارات الدولة",
+      "title_ar": "دائرة عقارات الدولة في {P}",
+      "title_en": "{PE} State Property Department",
+      "query": "دائرة عقارات الدولة {P}",
+      "must": [
+        "عقارات الدولة",
+        "عقارات"
+      ],
+      "parent_slug": "state-property-department",
+      "parent_title_ar": "دائرة عقارات الدولة"
+    },
+    {
+      "key": "real-estate-registration",
+      "ministry": "ministry-of-justice",
+      "directorate_hint": "التسجيل العقاري",
+      "title_ar": "دائرة التسجيل العقاري في {P}",
+      "title_en": "{PE} Real Estate Registration",
+      "query": "دائرة التسجيل العقاري {P}",
+      "must": [
+        "التسجيل العقاري",
+        "تسجيل عقاري",
+        "الطابو"
+      ],
+      "parent_slug": "real-estate-registration-department",
+      "parent_title_ar": "دائرة التسجيل العقاري"
+    },
+    {
+      "key": "notary",
+      "ministry": "ministry-of-justice",
+      "directorate_hint": "الكاتب العدل",
+      "title_ar": "دائرة الكاتب العدل في {P}",
+      "title_en": "{PE} Notary Public",
+      "query": "دائرة الكاتب العدل {P}",
+      "must": [
+        "الكاتب العدل",
+        "كاتب العدل",
+        "كاتب عدل"
+      ],
+      "parent_slug": "notary-public-department",
+      "parent_title_ar": "دائرة الكاتب العدل"
+    },
+    {
+      "key": "health",
+      "ministry": "ministry-of-health",
+      "directorate_hint": "دائرة صحة",
+      "title_ar": "دائرة صحة {P}",
+      "title_en": "{PE} Health Directorate",
+      "query": "دائرة صحة {P}",
+      "must": [
+        "صحة",
+        "الصحة"
+      ],
+      "parent_slug": "directorate-of-public-health",
+      "parent_title_ar": "دائرة الصحة العامة"
+    },
+    {
+      "key": "education",
+      "ministry": "ministry-of-education",
+      "directorate_hint": "المديرية العامة للتربية",
+      "title_ar": "المديرية العامة لتربية {P}",
+      "title_en": "{PE} Directorate General of Education",
+      "query": "المديرية العامة لتربية {P}",
+      "must": [
+        "تربية",
+        "التربية"
+      ],
+      "parent_slug": "general-directorate-of-education",
+      "parent_title_ar": "المديرية العامة للتربية"
+    },
+    {
+      "key": "labour",
+      "ministry": "ministry-of-labour-and-social-affairs",
+      "directorate_hint": "العمل والضمان",
+      "title_ar": "مديرية العمل والضمان الاجتماعي في {P}",
+      "title_en": "{PE} Labour and Social Security Directorate",
+      "query": "مديرية العمل والضمان الاجتماعي {P}",
+      "must": [
+        "العمل",
+        "الضمان"
+      ],
+      "parent_slug": "directorate-of-labour-and-social-security",
+      "parent_title_ar": "المديرية العامة للعمل والضمان الاجتماعي"
+    },
+    {
+      "key": "social-protection",
+      "ministry": "ministry-of-labour-and-social-affairs",
+      "directorate_hint": "الحماية الاجتماعية",
+      "title_ar": "هيئة الحماية الاجتماعية في {P}",
+      "title_en": "{PE} Social Protection Authority",
+      "query": "هيئة الحماية الاجتماعية {P}",
+      "must": [
+        "الحماية الاجتماعية",
+        "الحماية",
+        "الرعاية الاجتماعية"
+      ],
+      "parent_slug": "social-protection-authority",
+      "parent_title_ar": "هيئة الحماية الاجتماعية"
+    },
+    {
+      "key": "ration-card",
+      "ministry": "ministry-of-trade",
+      "directorate_hint": "التموين",
+      "title_ar": "الشركة العامة لتجارة المواد الغذائية في {P}",
+      "title_en": "{PE} Foodstuff Trading Branch",
+      "query": "الشركة العامة لتجارة المواد الغذائية {P}",
+      "must": [
+        "المواد الغذائية",
+        "التموين",
+        "البطاقة التموينية",
+        "الغذائية"
+      ],
+      "parent_slug": "general-company-for-foodstuff-trading",
+      "parent_title_ar": "الشركة العامة لتجارة المواد الغذائية"
+    },
+    {
+      "key": "companies-registration",
+      "ministry": "ministry-of-trade",
+      "directorate_hint": "تسجيل الشركات",
+      "title_ar": "دائرة تسجيل الشركات في {P}",
+      "title_en": "{PE} Companies Registration",
+      "query": "دائرة تسجيل الشركات {P}",
+      "must": [
+        "تسجيل الشركات",
+        "الشركات"
+      ],
+      "parent_slug": "companies-registration-department",
+      "parent_title_ar": "دائرة تسجيل الشركات"
+    },
+    {
+      "key": "electricity",
+      "ministry": "ministry-of-electricity",
+      "directorate_hint": "توزيع كهرباء",
+      "title_ar": "مديرية توزيع كهرباء {P}",
+      "title_en": "{PE} Electricity Distribution Directorate",
+      "query": "مديرية توزيع كهرباء {P}",
+      "must": [
+        "كهرباء",
+        "الكهرباء"
+      ],
+      "parent_slug": "general-directorate-of-electricity-distribution",
+      "parent_title_ar": "المديرية العامة لتوزيع الكهرباء"
+    },
+    {
+      "key": "water",
+      "ministry": "ministry-of-water-resources",
+      "directorate_hint": "الموارد المائية",
+      "title_ar": "مديرية الموارد المائية في {P}",
+      "title_en": "{PE} Water Resources Directorate",
+      "query": "مديرية الموارد المائية {P}",
+      "must": [
+        "الموارد المائية",
+        "الري",
+        "المائية"
+      ],
+      "parent_slug": "general-directorate-of-water-resources",
+      "parent_title_ar": "المديرية العامة للموارد المائية"
+    },
+    {
+      "key": "agriculture",
+      "ministry": "ministry-of-agriculture",
+      "directorate_hint": "الزراعة",
+      "title_ar": "مديرية زراعة {P}",
+      "title_en": "{PE} Agriculture Directorate",
+      "query": "مديرية زراعة {P}",
+      "must": [
+        "زراعة",
+        "الزراعة"
+      ],
+      "parent_slug": "general-directorate-of-agriculture",
+      "parent_title_ar": "المديرية العامة للزراعة"
+    },
+    {
+      "key": "municipality",
+      "ministry": "ministry-of-construction-housing-municipalities-and-public-works",
+      "directorate_hint": "البلديات",
+      "title_ar": "مديرية بلديات {P}",
+      "title_en": "{PE} Municipalities Directorate",
+      "query": "مديرية بلديات {P}",
+      "must": [
+        "بلدية",
+        "بلديات",
+        "البلديات"
+      ],
+      "parent_slug": "general-directorate-of-municipalities",
+      "parent_title_ar": "المديرية العامة للبلديات"
+    },
+    {
+      "key": "youth-sports",
+      "ministry": "ministry-of-youth-and-sports",
+      "directorate_hint": "الشباب والرياضة",
+      "title_ar": "مديرية شباب ورياضة {P}",
+      "title_en": "{PE} Youth and Sports Directorate",
+      "query": "مديرية شباب ورياضة {P}",
+      "must": [
+        "شباب",
+        "الشباب",
+        "رياضة"
+      ],
+      "parent_slug": "directorate-of-youth-and-sports",
+      "parent_title_ar": "دائرة الشباب والرياضة"
+    },
+    {
+      "key": "migration",
+      "ministry": "ministry-of-migration-and-displaced",
+      "directorate_hint": "الهجرة والمهجرين",
+      "title_ar": "فرع وزارة الهجرة والمهجرين في {P}",
+      "title_en": "{PE} Migration Branch",
+      "query": "وزارة الهجرة والمهجرين فرع {P}",
+      "must": [
+        "الهجرة",
+        "المهجرين"
+      ],
+      "parent_slug": "directorate-of-migration-branches",
+      "parent_title_ar": "دائرة شؤون الفروع"
+    },
+    {
+      "key": "post",
+      "ministry": "ministry-of-communications",
+      "directorate_hint": "البريد",
+      "title_ar": "مديرية بريد {P}",
+      "title_en": "{PE} Post Directorate",
+      "query": "مديرية البريد والتوفير {P}",
+      "must": [
+        "البريد",
+        "بريد"
+      ],
+      "parent_slug": "general-company-for-post-and-savings",
+      "parent_title_ar": "الشركة العامة للبريد والتوفير"
+    },
+    {
+      "key": "antiquities",
+      "ministry": "ministry-of-culture-tourism-and-antiquities",
+      "directorate_hint": "الاثار والتراث",
+      "title_ar": "مفتشية اثار وتراث {P}",
+      "title_en": "{PE} Antiquities Inspectorate",
+      "query": "مفتشية اثار وتراث {P}",
+      "must": [
+        "اثار",
+        "الاثار",
+        "التراث"
+      ],
+      "parent_slug": "general-authority-for-antiquities-and-heritage",
+      "parent_title_ar": "الهيئة العامة للاثار والتراث"
+    }
+  ],
+  "provinces": [
+    {
+      "code": "IQ-BG",
+      "ar": "بغداد",
+      "en": "Baghdad",
+      "krg": false
+    },
+    {
+      "code": "IQ-BA",
+      "ar": "البصرة",
+      "en": "Basra",
+      "krg": false
+    },
+    {
+      "code": "IQ-NI",
+      "ar": "نينوى",
+      "en": "Nineveh",
+      "krg": false
+    },
+    {
+      "code": "IQ-AR",
+      "ar": "اربيل",
+      "en": "Erbil",
+      "krg": true
+    },
+    {
+      "code": "IQ-SU",
+      "ar": "السليمانية",
+      "en": "Sulaymaniyah",
+      "krg": true
+    },
+    {
+      "code": "IQ-DA",
+      "ar": "دهوك",
+      "en": "Duhok",
+      "krg": true
+    },
+    {
+      "code": "IQ-HA",
+      "ar": "حلبجة",
+      "en": "Halabja",
+      "krg": true
+    },
+    {
+      "code": "IQ-KI",
+      "ar": "كركوك",
+      "en": "Kirkuk",
+      "krg": false
+    },
+    {
+      "code": "IQ-AN",
+      "ar": "الانبار",
+      "en": "Al-Anbar",
+      "krg": false
+    },
+    {
+      "code": "IQ-BB",
+      "ar": "بابل",
+      "en": "Babil",
+      "krg": false
+    },
+    {
+      "code": "IQ-KA",
+      "ar": "كربلاء",
+      "en": "Karbala",
+      "krg": false
+    },
+    {
+      "code": "IQ-NA",
+      "ar": "النجف",
+      "en": "Najaf",
+      "krg": false
+    },
+    {
+      "code": "IQ-DI",
+      "ar": "ديالى",
+      "en": "Diyala",
+      "krg": false
+    },
+    {
+      "code": "IQ-DQ",
+      "ar": "ذي قار",
+      "en": "Dhi Qar",
+      "krg": false
+    },
+    {
+      "code": "IQ-MA",
+      "ar": "ميسان",
+      "en": "Maysan",
+      "krg": false
+    },
+    {
+      "code": "IQ-MU",
+      "ar": "المثنى",
+      "en": "Al-Muthanna",
+      "krg": false
+    },
+    {
+      "code": "IQ-QA",
+      "ar": "الديوانية",
+      "en": "Al-Qadisiyyah",
+      "krg": false
+    },
+    {
+      "code": "IQ-WA",
+      "ar": "واسط",
+      "en": "Wasit",
+      "krg": false
+    },
+    {
+      "code": "IQ-SD",
+      "ar": "صلاح الدين",
+      "en": "Salah al-Din",
+      "krg": false
+    }
+  ]
+}

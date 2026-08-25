@@ -1,0 +1,1592 @@
+[
+  {
+    "ministry_slug": "ministry-of-interior",
+    "krg": false,
+    "name": "دائرة العلاقات والاعلام",
+    "url": "https://moi.gov.iq/?page=37"
+  },
+  {
+    "ministry_slug": "ministry-of-interior",
+    "krg": false,
+    "name": "الوكالة الادارية والمالية",
+    "url": "https://moi.gov.iq/?page=38"
+  },
+  {
+    "ministry_slug": "ministry-of-interior",
+    "krg": false,
+    "name": "مديرية التدريب والتأهيل",
+    "url": "http://dotrq.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-interior",
+    "krg": false,
+    "name": "مديرية البنى التحتية",
+    "url": "https://moi.gov.iq/?page=50"
+  },
+  {
+    "ministry_slug": "ministry-of-interior",
+    "krg": false,
+    "name": "وكالة الوزارة لشؤون الشرطة",
+    "url": "https://moi.gov.iq/?page=39"
+  },
+  {
+    "ministry_slug": "ministry-of-interior",
+    "krg": false,
+    "name": "مديرية المرور العامة",
+    "url": "http://www.itp.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-interior",
+    "krg": false,
+    "name": "مديرية شرطة حماية الاثار والتراث",
+    "url": "https://moi.gov.iq/?page=51"
+  },
+  {
+    "ministry_slug": "ministry-of-interior",
+    "krg": false,
+    "name": "مديرية الادعاء العام",
+    "url": "https://moi.gov.iq/?page=6275"
+  },
+  {
+    "ministry_slug": "ministry-of-interior",
+    "krg": false,
+    "name": "مديرية الامن السيبراني",
+    "url": "https://moi.gov.iq/?page=6295"
+  },
+  {
+    "ministry_slug": "ministry-of-interior",
+    "krg": false,
+    "name": "مديرية العقود",
+    "url": "https://moi.gov.iq/?page=42"
+  },
+  {
+    "ministry_slug": "ministry-of-interior",
+    "krg": false,
+    "name": "مديرية شؤون الشهداء والجرحى",
+    "url": "https://moi.gov.iq/?page=43"
+  },
+  {
+    "ministry_slug": "ministry-of-interior",
+    "krg": false,
+    "name": "مديرية أمن الأفراد",
+    "url": "https://moi.gov.iq/?page=44"
+  },
+  {
+    "ministry_slug": "ministry-of-interior",
+    "krg": false,
+    "name": "مديرية المخدرات والمؤثرات العقلية",
+    "url": "https://moi.gov.iq/?page=46"
+  },
+  {
+    "ministry_slug": "ministry-of-interior",
+    "krg": false,
+    "name": "مديرية حقوق الإنسان",
+    "url": "https://moi.gov.iq/?page=45"
+  },
+  {
+    "ministry_slug": "ministry-of-interior",
+    "krg": false,
+    "name": "مديرية شؤون البطاقة الوطنية",
+    "url": "http://www.nid-moi.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-interior",
+    "krg": false,
+    "name": "مديرية الأحوال المدنية والجوازات والإقامة",
+    "url": "http://iraqinationality.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-interior",
+    "krg": false,
+    "name": "مديرية الاشراف والتقييم لمحاكم قوى الامن الداخلي",
+    "url": "https://moi.gov.iq/?page=6293"
+  },
+  {
+    "ministry_slug": "ministry-of-interior",
+    "krg": false,
+    "name": "دائرة العلاقات والاعلام قسم أصدقاء الداخلية",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-interior",
+    "krg": false,
+    "name": "مكتب الوزير مديرية الادعاء العام",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-interior",
+    "krg": false,
+    "name": "مديرية المرور العامة خدمة التكييل",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-interior",
+    "krg": false,
+    "name": "الوكالة الادارية والمالية قسم تقويم الأداء المؤسسي",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-interior",
+    "krg": false,
+    "name": "وكالة الوزارة لشؤون الشرطة مديرية المرور العامة",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-defence",
+    "krg": false,
+    "name": "مديرية الاستخبارات العسكرية",
+    "url": "https://mod.mil.iq/?topic=73"
+  },
+  {
+    "ministry_slug": "ministry-of-defence",
+    "krg": false,
+    "name": "مديرية الحوانيت العسكرية",
+    "url": "https://mod.mil.iq/?topic=66"
+  },
+  {
+    "ministry_slug": "ministry-of-defence",
+    "krg": false,
+    "name": "المديرية العامة لشؤون المحاربين",
+    "url": "https://mod.mil.iq/?topic=65"
+  },
+  {
+    "ministry_slug": "ministry-of-defence",
+    "krg": false,
+    "name": "مديرية حقوق الانسان",
+    "url": "https://mod.mil.iq/?topic=48"
+  },
+  {
+    "ministry_slug": "ministry-of-defence",
+    "krg": false,
+    "name": "دائرة التقاعد العسكري",
+    "url": "https://mod.mil.iq/?topic=60"
+  },
+  {
+    "ministry_slug": "ministry-of-defence",
+    "krg": false,
+    "name": "مديرية الامور الطبية",
+    "url": "https://mod.mil.iq/?topic=55"
+  },
+  {
+    "ministry_slug": "ministry-of-defence",
+    "krg": false,
+    "name": "المديرية العامة للموازنة والبرامج توزّع مكافأة الجرحى للوجبة (80) عبر بطاقة (الماستر كارد)",
+    "url": "https://mod.mil.iq/?article=10305"
+  },
+  {
+    "ministry_slug": "ministry-of-defence",
+    "krg": false,
+    "name": "معاون رئيس أركان الجيش للتدريب يتفقد مديرية صنف المشاة",
+    "url": "https://mod.mil.iq/?article=10289"
+  },
+  {
+    "ministry_slug": "ministry-of-defence",
+    "krg": false,
+    "name": "مديرية الإعلام والتوجيه المعنوي تستقبل المفتش العسكري ولجان التفتيش",
+    "url": "https://mod.mil.iq/?article=10148"
+  },
+  {
+    "ministry_slug": "ministry-of-defence",
+    "krg": false,
+    "name": "مديرية الاستخبارات العسكرية تطيح بأربعة من تجار ومروجي المخدرات في ميسان",
+    "url": "https://mod.mil.iq/?article=10255"
+  },
+  {
+    "ministry_slug": "ministry-of-defence",
+    "krg": false,
+    "name": "معاون رئيس أركان الجيش للتدريب يشارك ضباط ومراتب الدائرة فعالية الرياضة الصباحية",
+    "url": "https://mod.mil.iq/?article=10247"
+  },
+  {
+    "ministry_slug": "ministry-of-defence",
+    "krg": false,
+    "name": "مديرية المساحة العسكرية",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-defence",
+    "krg": false,
+    "name": "دائرة الإدعاء العام العسكري",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-defence",
+    "krg": false,
+    "name": "مديرية الاستخبارات العسكرية التفاصيل",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-defence",
+    "krg": false,
+    "name": "مديرية المساحة العسكرية التفاصيل",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-defence",
+    "krg": false,
+    "name": "دائرة الإدعاء العام العسكري التفاصيل",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-defence",
+    "krg": false,
+    "name": "مديرية الحوانيت العسكرية التفاصيل",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-defence",
+    "krg": false,
+    "name": "دائرة التقاعد العسكري التفاصيل",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-defence",
+    "krg": false,
+    "name": "المديرية العامة لشؤون المحاربين التفاصيل",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-defence",
+    "krg": false,
+    "name": "إصدارات مديرية الإعلام والتوجيه المعنوي جريدة خيمة العراق",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-defence",
+    "krg": false,
+    "name": "نشاطات وأخبار مديريات وزارة الدفاع مديرية الاستخبارات العسكرية",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-foreign-affairs",
+    "krg": false,
+    "name": "تأسست دائرة حقوق الإنسان عام 1992.",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-foreign-affairs",
+    "krg": false,
+    "name": "الصندوق الطوعي للأمم المتحدة للشعوب الاصلية.",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-justice",
+    "krg": false,
+    "name": "الدائرة الإدارية والمالية",
+    "url": "https://moj.gov.iq/#"
+  },
+  {
+    "ministry_slug": "ministry-of-justice",
+    "krg": false,
+    "name": "دائرة تسجيل العقاري",
+    "url": "https://moj.gov.iq/#"
+  },
+  {
+    "ministry_slug": "ministry-of-justice",
+    "krg": false,
+    "name": "دائرة الإصلاح العراقية",
+    "url": "https://moj.gov.iq/#"
+  },
+  {
+    "ministry_slug": "ministry-of-justice",
+    "krg": false,
+    "name": "دائرة إصلاح الأحداث",
+    "url": "https://moj.gov.iq/#"
+  },
+  {
+    "ministry_slug": "ministry-of-justice",
+    "krg": false,
+    "name": "دائرة رعاية القاصرين",
+    "url": "https://moj.gov.iq/#"
+  },
+  {
+    "ministry_slug": "ministry-of-justice",
+    "krg": false,
+    "name": "دائرة العلاقات العدلية",
+    "url": "https://moj.gov.iq/#"
+  },
+  {
+    "ministry_slug": "ministry-of-justice",
+    "krg": false,
+    "name": "دائرة الكتاب العدول",
+    "url": "https://moj.gov.iq/#"
+  },
+  {
+    "ministry_slug": "ministry-of-justice",
+    "krg": false,
+    "name": "دائرة التنفيذ",
+    "url": "https://moj.gov.iq/#"
+  },
+  {
+    "ministry_slug": "ministry-of-justice",
+    "krg": false,
+    "name": "الدائرة القانونية",
+    "url": "https://moj.gov.iq/#"
+  },
+  {
+    "ministry_slug": "ministry-of-justice",
+    "krg": false,
+    "name": "دائرة التخطيط العدلي",
+    "url": "https://moj.gov.iq/#"
+  },
+  {
+    "ministry_slug": "ministry-of-justice",
+    "krg": false,
+    "name": "دائرة الوقائع العراقية",
+    "url": "https://moj.gov.iq/#"
+  },
+  {
+    "ministry_slug": "ministry-of-justice",
+    "krg": false,
+    "name": "دائرة حقوق الإنسان",
+    "url": "https://moj.gov.iq/#"
+  },
+  {
+    "ministry_slug": "ministry-of-justice",
+    "krg": false,
+    "name": "نشاطات دائرة الأصلاح",
+    "url": "https://moj.gov.iq/reform/"
+  },
+  {
+    "ministry_slug": "ministry-of-justice",
+    "krg": false,
+    "name": "نشاطات دائرة أصلاح الأحداث",
+    "url": "https://moj.gov.iq/juvenile/"
+  },
+  {
+    "ministry_slug": "ministry-of-justice",
+    "krg": false,
+    "name": "دائرة رعاية القاصرين تكرم عددا من المتفوقين القاصرين في محافظة المثنى",
+    "url": "https://moj.gov.iq/view.10478/"
+  },
+  {
+    "ministry_slug": "ministry-of-justice",
+    "krg": false,
+    "name": "دائرة التسجيل العقاري",
+    "url": "https://moj.gov.iq/registration/"
+  },
+  {
+    "ministry_slug": "ministry-of-finance",
+    "krg": false,
+    "name": "هيئة الكمارك العامة",
+    "url": "https://mof.gov.iq/General-Customs-Authority.aspx"
+  },
+  {
+    "ministry_slug": "ministry-of-finance",
+    "krg": false,
+    "name": "هيئة التقاعد العامة",
+    "url": "https://mof.gov.iq/Public-PensionBody.aspx"
+  },
+  {
+    "ministry_slug": "ministry-of-finance",
+    "krg": false,
+    "name": "الهيئة العامة للضرائب",
+    "url": "https://mof.gov.iq/General-Tax-Authority.aspx"
+  },
+  {
+    "ministry_slug": "ministry-of-finance",
+    "krg": false,
+    "name": "الهيئة العامة للمناطق الحرة",
+    "url": "https://mof.gov.iq/General-Authority-for-Free-Zones.aspx"
+  },
+  {
+    "ministry_slug": "ministry-of-finance",
+    "krg": false,
+    "name": "الدائرة الادارية والمالية",
+    "url": "https://mof.gov.iq/Administrative-and-Financial-Department.aspx"
+  },
+  {
+    "ministry_slug": "ministry-of-finance",
+    "krg": false,
+    "name": "الدائرة القانونية",
+    "url": "https://mof.gov.iq/LegalDepartment.aspx"
+  },
+  {
+    "ministry_slug": "ministry-of-finance",
+    "krg": false,
+    "name": "دائرة المحاسبة",
+    "url": "https://mof.gov.iq/Accounting-Service.aspx"
+  },
+  {
+    "ministry_slug": "ministry-of-finance",
+    "krg": false,
+    "name": "دائرة الموازنة",
+    "url": "https://mof.gov.iq/Budget-Department.aspx"
+  },
+  {
+    "ministry_slug": "ministry-of-finance",
+    "krg": false,
+    "name": "الدائرة الاقتصادية",
+    "url": "https://mof.gov.iq/Economic-Department.aspx"
+  },
+  {
+    "ministry_slug": "ministry-of-finance",
+    "krg": false,
+    "name": "دائرة الدين العام",
+    "url": "https://mof.gov.iq/Public-Debt-Department.aspx"
+  },
+  {
+    "ministry_slug": "ministry-of-finance",
+    "krg": false,
+    "name": "دائرة تكنولوجيا المعلومات",
+    "url": "https://mof.gov.iq/Department-of-Information-Technology.aspx"
+  },
+  {
+    "ministry_slug": "ministry-of-finance",
+    "krg": false,
+    "name": "دائرة عقارات الدولة",
+    "url": "https://mof.gov.iq/Real-Estate-Department.aspx"
+  },
+  {
+    "ministry_slug": "ministry-of-finance",
+    "krg": false,
+    "name": "الصندوق العراقي للتنمية الخارجية",
+    "url": "https://mof.gov.iq/Iraqi-Fund-for-External-Development.aspx"
+  },
+  {
+    "ministry_slug": "ministry-of-oil",
+    "krg": false,
+    "name": "الشركة العامة لتعبئة وخدمات الغاز",
+    "url": "https://gfc.oil.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-oil",
+    "krg": false,
+    "name": "الشركة العامة للمعدات الهندسية الثقيلة",
+    "url": "https://heesco.oil.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-oil",
+    "krg": false,
+    "name": "دوائر مركز الوزارة التفاصيل",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "دوائر مقر الوزارة",
+    "url": "https://moelc.gov.iq/?page=41"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "مدير مديرية الوقود",
+    "url": "https://moelc.gov.iq/?page=3275"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "مديرية الوقود/قسم الوقود السائل",
+    "url": "https://moelc.gov.iq/?page=3281"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "مديرية الوقود/قسم المختبرات",
+    "url": "https://moelc.gov.iq/?page=3280"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "مديرية الوقود/ قسم الزيوت ووقود الاليات",
+    "url": "https://moelc.gov.iq/?page=3279"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "مديرية الوقود/قسم التجارية",
+    "url": "https://moelc.gov.iq/?page=3278"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "مديرية الوقود /قسم التخطيط والمتابعة",
+    "url": "https://moelc.gov.iq/?page=3276"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "مديرية الوقود/ قسم المنظومات والعدادات",
+    "url": "https://moelc.gov.iq/?page=3277"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "مدير المديرية",
+    "url": "https://moelc.gov.iq/?page=3233"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "تشكيلات الوزارة دوائر مقر الوزارة",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "الدائرة الفنية مديرة مكتب المدير العام",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "الدائرة الإدارية قسم الشؤون المالية",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "دائرة التخطيط والدراسات قسم الإدارة",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "الدائرة القانونية مكتب المدير العام",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "الدائرة الاقتصادية قسم الصيانة والشبكات",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "دائرة الاستثمارات والعقود مدير مكتب المدير العام",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "مديرية الرقابة الداخلية والتدقيق مدير المديرية",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "دائرة التخطيط والدراسات",
+    "url": "https://moelc.gov.iq/?page=44"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "دائرة الاستثمارات والعقود",
+    "url": "https://moelc.gov.iq/?page=47"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "الدائرة الفنية",
+    "url": "https://moelc.gov.iq/?page=43"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "الدائرة القانونية",
+    "url": "https://moelc.gov.iq/?page=42"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "الدائرة الادارية",
+    "url": "https://moelc.gov.iq/?page=46"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "الدائرة الاقتصادية",
+    "url": "https://moelc.gov.iq/?page=45"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "مديرية الوقود",
+    "url": "https://moelc.gov.iq/?page=1480"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "مديرية التدقيق والرقابة الداخلية",
+    "url": "https://moelc.gov.iq/?page=1704"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "الشركة العامة لانتاج الطاقة الكهربائية / الشمال",
+    "url": "https://ngpe.moelc.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "الشركة العامة لنقل الطاقة الكهربائية - المنطقة الشمالية",
+    "url": "https://ntr.moelc.gov.iq/index.php?lang=ar"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "الشركة العامة لتوزيع كهرباء الشمال",
+    "url": "https://ned.moelc.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "دائرة التشغيل والتحكم",
+    "url": "https://oco.moelc.gov.iq/index.php?lang=ar"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "الشركة العامة لأنتاج الطاقة الكهربائية/الجنوبية",
+    "url": "https://sgpe.moelc.gov.iq/index.php?lang=ar"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "الشركة العامة لنقل الطاقة الكهربائية -الجنوب",
+    "url": "https://str.moelc.gov.iq/index.php?lang=ar"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "الشركة العامة لتوزيع كهرباء الجنوب",
+    "url": "https://sed.moelc.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "دائرة التدريب وبحوث الطاقة",
+    "url": "https://ter.moelc.gov.iq/index.php?lang=ar"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "الشركة العامة لانتاج الطاقة الكهربائية / الوسطى",
+    "url": "https://mgpe.moelc.gov.iq/index.php?lang=ar"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "الشركة العامة لنقل الطاقة الكهربائية - الوسطى",
+    "url": "https://gcmr.moelc.gov.iq/index.php?lang=ar"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "الشركة العامة لتوزيع كهرباء الوسط",
+    "url": "https://med.moelc.gov.iq/index.php?lang=ar"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "الشركة العامة لفحص وتأهيل المنظومات الكهربائية",
+    "url": "https://irc.moelc.gov.iq/index.php?lang=ar"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "الشركة العامة لانتاج الطاقة الكهربائية / الفرات الاوسط",
+    "url": "https://ufgpe.moelc.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "الشركة العامة لنقل الطاقة/الفرات الاوسط",
+    "url": "https://mftr.moelc.gov.iq/index.php?lang=ar"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "الشركة العامة لتوزيع كهرباء الفرات الاوسط",
+    "url": "https://mfd.moelc.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-electricity",
+    "krg": false,
+    "name": "الشركة العامة لتوزيع كهرباء بغداد",
+    "url": "https://bged.moelc.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-construction-housing-municipalities-and-public-works",
+    "krg": false,
+    "name": "دوائر وتشكيلات الوزارة",
+    "url": "https://moch.gov.iq/?page=7"
+  },
+  {
+    "ministry_slug": "ministry-of-construction-housing-municipalities-and-public-works",
+    "krg": false,
+    "name": "صندوق الاسكان العراقي",
+    "url": "https://sandoq.moch.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-construction-housing-municipalities-and-public-works",
+    "krg": false,
+    "name": "دائرة الاسكان",
+    "url": "https://alaskan.moch.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-construction-housing-municipalities-and-public-works",
+    "krg": false,
+    "name": "دائرة المباني",
+    "url": "https://mabany.moch.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-construction-housing-municipalities-and-public-works",
+    "krg": false,
+    "name": "دائرة الاعمار الهندسي",
+    "url": "https://alimar.moch.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-construction-housing-municipalities-and-public-works",
+    "krg": false,
+    "name": "دائرة الاشغال والصيانة",
+    "url": "https://ashghal.moch.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-construction-housing-municipalities-and-public-works",
+    "krg": false,
+    "name": "هيئة تنفيذ المدن الجديدة",
+    "url": "https://ncia.moch.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-construction-housing-municipalities-and-public-works",
+    "krg": false,
+    "name": "دائرة بحوث البناء",
+    "url": "https://buhooth.moch.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-construction-housing-municipalities-and-public-works",
+    "krg": false,
+    "name": "مديرية البلديات العامة",
+    "url": "https://municipalities.moch.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-construction-housing-municipalities-and-public-works",
+    "krg": false,
+    "name": "دائرة الطرق والجسور",
+    "url": "https://turruqjissor.moch.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-construction-housing-municipalities-and-public-works",
+    "krg": false,
+    "name": "المديرية العامة للتخطيط العمراني",
+    "url": "https://gdup.moch.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-construction-housing-municipalities-and-public-works",
+    "krg": false,
+    "name": "المديرية العامة للماء",
+    "url": "https://gdw.moch.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-construction-housing-municipalities-and-public-works",
+    "krg": false,
+    "name": "المديرية العامة للمجاري",
+    "url": "http://gds.moch.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-communications",
+    "krg": false,
+    "name": "الشركة العامة للأتصالات والمعلوماتية",
+    "url": "https://itpc.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-communications",
+    "krg": false,
+    "name": "الشركة العامة للبريد والتوفير",
+    "url": "https://post.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-communications",
+    "krg": false,
+    "name": "وزارة الاتصالات تبحث مع هيئة النزاهة الاتحادية إجراءات برنامج الشفافية وحماية المال العام",
+    "url": "https://moc.gov.iq/?article=1324"
+  },
+  {
+    "ministry_slug": "ministry-of-communications",
+    "krg": false,
+    "name": "خدماتنــا الشركة العامة للأتصالات والمعلوماتية",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-communications",
+    "krg": false,
+    "name": "شركات الوزارة الشركة العامة للأتصالات والمعلوماتية",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "دائرة التنسيق الحكومي وشؤون المواطنين",
+    "url": "https://mot.gov.iq/?page=231"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "الدائرة الادارية والمالية",
+    "url": "https://mot.gov.iq/?page=173"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "اقسام الدائرة",
+    "url": "https://mot.gov.iq/?page=272"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "دائرة التخطيط والمتابعة",
+    "url": "https://mot.gov.iq/?page=162"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "دائرة العلاقات الاقتصادية الخارجية",
+    "url": "https://mot.gov.iq/?page=158"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "نشاطات دائرة العلاقات الاقتصادية الخارجية",
+    "url": "https://mot.gov.iq/?page=7444"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "دليل استرشادي لموظفي دائرة العلاقات الاقتصادية الخارجية",
+    "url": "https://mot.gov.iq/?page=271"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "القوانين والتشريعات التي تخص عمل الدائرة",
+    "url": "https://mot.gov.iq/?page=267"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "دائرة تطوير القطاع الخاص",
+    "url": "https://mot.gov.iq/?page=107"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "اقسام دائرة تطوير القطاع الخاص",
+    "url": "https://mot.gov.iq/?page=275"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "الدائرة القانونية",
+    "url": "https://mot.gov.iq/?page=161"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "اقسام الدائرة القانونية",
+    "url": "https://mot.gov.iq/?page=276"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "نشاطات الدائرة القانونية",
+    "url": "https://mot.gov.iq/?page=277"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "دائرة الرقابة التجارية والمالية",
+    "url": "https://mot.gov.iq/?page=157"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "نشاطات دائرة الرقابة التجارية والمالية",
+    "url": "https://mot.gov.iq/?page=278"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "دائرة تسجيل الشركات",
+    "url": "https://mot.gov.iq/?page=75"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "انشطة وانجازات دائرة تسجيل الشركات",
+    "url": "https://mot.gov.iq/?page=7494"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "الشركة العامة للمعارض والخدمات التجارية العراقية",
+    "url": "http://fairs.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "الشركة العامة للاسواق المركزية",
+    "url": "http://scc-mot.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "نبذة عن الشركة العامة للاسواق المركزية",
+    "url": "https://mot.gov.iq/?page=322"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "الشركة العامة لتجارة السيارات والمكائن",
+    "url": "http://gamcoiraq.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "نبذة عن الشركة العامة للسيارات",
+    "url": "https://mot.gov.iq/?page=318"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "الشركة العامة لتجارة المواد الانشائية",
+    "url": "https://tcm.mot.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "الشركة العامة لتجارة المواد الغذائية",
+    "url": "http://iraqsfsc.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "الشركة العامة لتصنيع الحبوب",
+    "url": "https://tasneehobob.mot.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "الشركة العامة لتجارة الحبوب",
+    "url": "https://grainb.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "صندوق دعم التصدير",
+    "url": "https://epf.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "الدائرة الادارية والمالية اقسام الدائرة",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "دائرة التخطيط والمتابعة اقسام الدائرة",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "صندوق دعم التصدير المكتبة الرقمية",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "هيئة النزاهة التفاصيل",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "دوائر الوزارة الدائرة الادارية والمالية اقسام الدائرة",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "دائرة العلاقات الاقتصادية الخارجية الهيكل التنظيمي",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "دائرة تطوير القطاع الخاص مجلة التجارة العراقية الالكترونية",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "الدائرة القانونية الهيكل التنظيمي",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "دائرة الرقابة التجارية والمالية الهيكل التنظيمي",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "دائرة تسجيل الشركات الهيكل التنظيمي",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "الشركة العامة للاسواق المركزية نبذة عن الشركة العامة للاسواق المركزية",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "الشركة العامة لتجارة السيارات والمكائن نبذة عن الشركة العامة للسيارات",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "الشركة العامة لتجارة المواد الانشائية نبذة تعريفية",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "الشركة العامة لتجارة المواد الغذائية نبذة تعريفية",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "الشركة العامة لتصنيع الحبوب الهيكل التنظيمي",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-trade",
+    "krg": false,
+    "name": "الشركة العامة لتجارة الحبوب نبذة عن تجارة الحبوب",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-health",
+    "krg": false,
+    "name": "مديريات الصحة",
+    "url": "https://moh.gov.iq/?map"
+  },
+  {
+    "ministry_slug": "ministry-of-health",
+    "krg": false,
+    "name": "دائرة صحة ديالى",
+    "url": "https://dyala.moh.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-health",
+    "krg": false,
+    "name": "مركز الوزارة/ دائرة الصحة العامة",
+    "url": "https://www.phd.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-health",
+    "krg": false,
+    "name": "مركز الوزارة / دائرة التخطيط وتنمية الموارد",
+    "url": "https://planning.moh.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-health",
+    "krg": false,
+    "name": "دائرة صحة ذي قار",
+    "url": "https://thiqar.moh.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-health",
+    "krg": false,
+    "name": "دائرة التفتيش",
+    "url": "https://moh.gov.iq/upload/691.doc"
+  },
+  {
+    "ministry_slug": "ministry-of-health",
+    "krg": false,
+    "name": "دائرة التخطيط و تنمية الموارد",
+    "url": "http://www.moh-planning.com/"
+  },
+  {
+    "ministry_slug": "ministry-of-health",
+    "krg": false,
+    "name": "دائرة الامور الفنية",
+    "url": "http://www.tec-moh.com/"
+  },
+  {
+    "ministry_slug": "ministry-of-health",
+    "krg": false,
+    "name": "دائرة الصحة العامة",
+    "url": "http://www.phd.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-health",
+    "krg": false,
+    "name": "الشركة العامة لتسويق الادوية والمستلزمات الطبية",
+    "url": "http://www.kimadia.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-transport",
+    "krg": false,
+    "name": "الشركة العامة للخطوط الجوية العراقية",
+    "url": "https://iraqiairways.com.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-transport",
+    "krg": false,
+    "name": "دائرة المطارات العراقية",
+    "url": "https://dim.motrans.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-transport",
+    "krg": false,
+    "name": "الشركة العامة للنقل البري",
+    "url": "http://www.sclt.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-transport",
+    "krg": false,
+    "name": "الشركة العامة لخدمات الملاحة الجوية",
+    "url": "https://www.gcans.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-transport",
+    "krg": false,
+    "name": "الشركة العامة لموانئ العراق",
+    "url": "https://gcpi.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-transport",
+    "krg": false,
+    "name": "الشركة العامة للسكك حديد العراق",
+    "url": "https://www.scr.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-transport",
+    "krg": false,
+    "name": "الهيئة العامة للانواء الجوية والرصد الزلزالي",
+    "url": "http://www.meteoseism.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-transport",
+    "krg": false,
+    "name": "الشركة العامة لادارة النقل الخاص",
+    "url": "http://scpta.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-transport",
+    "krg": false,
+    "name": "الشركة العامة لتنفيذ مشاريع النقل والمواصلات",
+    "url": "https://scitcp.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-transport",
+    "krg": false,
+    "name": "الشركة العامة للنقل البحري",
+    "url": "http://scmt.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-transport",
+    "krg": false,
+    "name": "بالانفو.. حركة قطارات الشركة العامة لسكك حديد العراق",
+    "url": "https://www.motrans.gov.iq/?article=4177"
+  },
+  {
+    "ministry_slug": "ministry-of-transport",
+    "krg": false,
+    "name": "الشركة العامة لنقل المسافرين والوفود",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-transport",
+    "krg": false,
+    "name": "تشكيلات الوزارة الشركة العامة للخطوط الجوية العراقية",
+    "url": null
+  },
+  {
+    "ministry_slug": "ministry-of-planning",
+    "krg": false,
+    "name": "الجهاز المركزي للتقييس والسيطرة النوعية",
+    "url": "https://mop.gov.iq/%d8%a7%d9%84%d8%ac%d9%87%d8%a7%d8%b2-%d8%a7%d9%84%d9%85%d8%b1%d9%83%d8%b2%d9%8a-%d9%84%d9%84%d8%aa%d9%82%d9%8a%d9%8a%d8%b3-%d9%88%d8%a7%d9%84%d8%b3%d9%8a%d8%b7%d8%b1%d8%a9-%d8%a7%d9%84%d9%86%d9%88"
+  },
+  {
+    "ministry_slug": "ministry-of-planning",
+    "krg": false,
+    "name": "الدائرة الادارية والمالية",
+    "url": "https://mop.gov.iq/%d8%a7%d9%84%d8%af%d8%a7%d8%a6%d8%b1%d8%a9-%d8%a7%d9%84%d8%a7%d8%af%d8%a7%d8%b1%d9%8a%d8%a9-%d9%88%d8%a7%d9%84%d9%85%d8%a7%d9%84%d9%8a%d8%a9"
+  },
+  {
+    "ministry_slug": "ministry-of-planning",
+    "krg": false,
+    "name": "دائرة تخطيط القطاعات",
+    "url": "https://mop.gov.iq/%d8%af%d8%a7%d8%a6%d8%b1%d8%a9-%d8%aa%d8%ae%d8%b7%d9%8a%d8%b7-%d8%a7%d9%84%d9%82%d8%b7%d8%a7%d8%b9%d8%a7%d8%aa-2"
+  },
+  {
+    "ministry_slug": "ministry-of-planning",
+    "krg": false,
+    "name": "دائرة العقود الحكومية",
+    "url": "https://mop.gov.iq/gover_contract24"
+  },
+  {
+    "ministry_slug": "ministry-of-planning",
+    "krg": false,
+    "name": "الدائرة القانونية",
+    "url": "https://mop.gov.iq/%d8%a7%d9%84%d8%af%d8%a7%d8%a6%d8%b1%d8%a9-%d8%a7%d9%84%d9%82%d8%a7%d9%86%d9%88%d9%86%d9%8a%d8%a92"
+  },
+  {
+    "ministry_slug": "ministry-of-planning",
+    "krg": false,
+    "name": "دائرة التنمية البشرية",
+    "url": "https://mop.gov.iq/%d8%af%d8%a7%d8%a6%d8%b1%d8%a9-%d8%a7%d9%84%d8%aa%d9%86%d9%85%d9%8a%d8%a9-%d8%a7%d9%84%d8%a8%d8%b4%d8%b1%d9%8a%d8%a9-2"
+  },
+  {
+    "ministry_slug": "ministry-of-planning",
+    "krg": false,
+    "name": "دائرة التنمية الاقليمية والمحلية",
+    "url": "https://mop.gov.iq/%d8%af%d8%a7%d8%a6%d8%b1%d8%a9-%d8%a7%d9%84%d8%aa%d9%86%d9%85%d9%8a%d8%a9-%d8%a7%d9%84%d8%a7%d9%82%d9%84%d9%8a%d9%85%d9%8a%d8%a9-%d9%88%d8%a7%d9%84%d9%85%d8%ad%d9%84%d9%8a%d8%a9"
+  },
+  {
+    "ministry_slug": "ministry-of-planning",
+    "krg": false,
+    "name": "دائرة السياسات الاقتصادية والمالية",
+    "url": "https://mop.gov.iq/%d8%af%d8%a7%d8%a6%d8%b1%d8%a9-%d8%a7%d9%84%d8%b3%d9%8a%d8%a7%d8%b3%d8%a7%d8%aa-%d8%a7%d9%84%d8%a7%d9%82%d8%aa%d8%b5%d8%a7%d8%af%d9%8a%d8%a9%d9%88%d8%a7%d9%84%d9%85%d8%a7%d9%84%d9%8a%d8%a9"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "المديرية العامة للتنمية الصناعية",
+    "url": "https://gdid.industry.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "شركة الفارس العامة تجهز مديرية ماء ميسان بمجمع متكامل لتصفية وتنقية المياه",
+    "url": "https://industry.gov.iq/?article=3822"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "الشركة العامة للحديد والصلب تشغّل مصنع النورة بطاقة 200 طن يومياً",
+    "url": "https://industry.gov.iq/?article=3808"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "الشركة العامة للتصميم وتنفيذ المشاريع تنجز (80%) من مشروع بناية فرع غاز النجف",
+    "url": "https://industry.gov.iq/?article=3805"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "الشركة العامة لصناعة النسيجية والجلود",
+    "url": "https://sctl.industry.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "الشركة العامة للسمنت العراقية",
+    "url": "https://www.icsc.industry.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "الشركة العامة لصناعة الادوية والمستلزمات الطبية",
+    "url": "https://sdi.industry.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "الشركة العامة للصناعات الكهربائية والالكترونية",
+    "url": "http://www.sceei.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "الشركة العامة لكبريت المشراق",
+    "url": "https://mishraq.industry.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "الشركة العامة للزجاج والحراريات",
+    "url": "https://glassref.industry.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "الشركة العامة للصناعات الغذائية",
+    "url": "http://www.fisc.industry.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "الشركة العامة للفحص والتأهيل الهندسي",
+    "url": "https://siei.industry.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "الشركة العامة للحديد والصلب",
+    "url": "https://steeliraq.industry.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "الشركة العامة للصناعات المطاطية والاطارات",
+    "url": "https://scrti.industry.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "الشركة العامة للصناعة الاسمدة الجنوبية",
+    "url": "http://sfert.industry.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "الشركة العامة لصناعة السيارات والمعدات",
+    "url": "https://scai.industry.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "الشركة العامة للفوسفات",
+    "url": "https://www.phoco.industry.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "الشركة العامة للصناعات البتروكيمياوية",
+    "url": "https://pchem.industry.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "الشركة العامة للانظمة الالكترونية",
+    "url": "https://www.gces.industry.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "الشركة العامة للتصميم وتنفيذ المشاريع",
+    "url": "https://scdpi.industry.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "الشركة العامة للصناعات الانشائية",
+    "url": "https://seci.industry.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "الشركة العامة للاسمدة الشمالية",
+    "url": "https://northasm.industry.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "الشركة العامة للصناعات الفولاذية",
+    "url": "https://scosi.industry.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "الشركة العامة للصناعات التعدينية",
+    "url": "https://altadinea.industry.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "الشركة العامة للصناعات الهيدروليكية",
+    "url": "https://hisc.industry.gov.iq/"
+  },
+  {
+    "ministry_slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "name": "الشركة العامة لمعدات الاتصالات والقدرة",
+    "url": "https://gccep.industry.gov.iq/"
+  },
+  {
+    "ministry_slug": "krg-ministry-of-interior",
+    "krg": true,
+    "name": "The General Directorate of the Diwan",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-interior",
+    "krg": true,
+    "name": "The General Directorate of the Interior",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-interior",
+    "krg": true,
+    "name": "General Directorate of Local Administration",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-labour-and-social-affairs",
+    "krg": true,
+    "name": "Directorate of Quality Control",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-labour-and-social-affairs",
+    "krg": true,
+    "name": "Directorate of Research and Training",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-labour-and-social-affairs",
+    "krg": true,
+    "name": "Directorate of Legal",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-labour-and-social-affairs",
+    "krg": true,
+    "name": "General Directorate of the Diwan",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-labour-and-social-affairs",
+    "krg": true,
+    "name": "Directorate of Administration",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-labour-and-social-affairs",
+    "krg": true,
+    "name": "Directorate of Auditing",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-labour-and-social-affairs",
+    "krg": true,
+    "name": "Directorate of Accounting",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-labour-and-social-affairs",
+    "krg": true,
+    "name": "Directorate of Planning and Follow-up",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-labour-and-social-affairs",
+    "krg": true,
+    "name": "Directorate of Media",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-martyrs-and-anfal-affairs",
+    "krg": true,
+    "name": "General Directorate for Martyrs and Anfal - Erbil",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-martyrs-and-anfal-affairs",
+    "krg": true,
+    "name": "General Directorate for Martyrs and Anfal – Sulaymaniyah",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-martyrs-and-anfal-affairs",
+    "krg": true,
+    "name": "General Directorate for Martyrs and Anfal – Duhok",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-martyrs-and-anfal-affairs",
+    "krg": true,
+    "name": "General Directorate for Martyrs and Anfal – Garmian",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-martyrs-and-anfal-affairs",
+    "krg": true,
+    "name": "General Directorate for Martyrs and Anfal - Halabja",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-martyrs-and-anfal-affairs",
+    "krg": true,
+    "name": "General Directorate of Administrative and Financial",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-martyrs-and-anfal-affairs",
+    "krg": true,
+    "name": "General Directorate of Services",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-martyrs-and-anfal-affairs",
+    "krg": true,
+    "name": "The Directorate General of Investment and Incomes",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-endowment-and-religious-affairs",
+    "krg": true,
+    "name": "General Directorate of Endowments in Erbil",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-endowment-and-religious-affairs",
+    "krg": true,
+    "name": "General Directorate of Endowments in Sulaymaniyah",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-endowment-and-religious-affairs",
+    "krg": true,
+    "name": "General Directorate of Endowments in Dohuk",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-endowment-and-religious-affairs",
+    "krg": true,
+    "name": "General Directorate of endowment in Halabja",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-endowment-and-religious-affairs",
+    "krg": true,
+    "name": "General Directorate of Hajj and Umrah",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-endowment-and-religious-affairs",
+    "krg": true,
+    "name": "General Directorate of Christian Affairs",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-endowment-and-religious-affairs",
+    "krg": true,
+    "name": "General Directorate of Yazidi Affairs",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-endowment-and-religious-affairs",
+    "krg": true,
+    "name": "General Directorate of Endowment in Garmian",
+    "url": null
+  },
+  {
+    "ministry_slug": "krg-ministry-of-endowment-and-religious-affairs",
+    "krg": true,
+    "name": "General Directorate of Administration and Finance",
+    "url": null
+  }
+]

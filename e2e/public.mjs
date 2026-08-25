@@ -409,7 +409,11 @@ try {
 
     await page.goto(`${BASE}/${locale}/ministries`, { waitUntil: 'domcontentloaded' });
     const ministryLinks = page.locator('main ul li a[href*="/ministries/"]');
-    check(`${locale}: ministries index lists bodies`, (await ministryLinks.count()) === 14);
+    // Asserted as a relationship, not a magic number. These counts track whatever is
+    // published, so pinning them to the development seed's 14 meant the suite went red
+    // the first time real content landed — which says nothing about the page working.
+    const allMinistries = await ministryLinks.count();
+    check(`${locale}: ministries index lists bodies`, allMinistries > 0, `${allMinistries} listed`);
 
     // The KRG filter is what the seeded header menu links to.
     await page.goto(`${BASE}/${locale}/ministries?krg=true`, { waitUntil: 'domcontentloaded' });
@@ -418,15 +422,15 @@ try {
     const federalCount = await page.locator('main ul li a[href*="/ministries/"]').count();
     check(
       `${locale}: krg filter splits the list`,
-      krgCount > 0 && federalCount > 0 && krgCount + federalCount === 14,
-      `krg ${krgCount} + federal ${federalCount}`,
+      krgCount > 0 && federalCount > 0 && krgCount + federalCount === allMinistries,
+      `krg ${krgCount} + federal ${federalCount}, unfiltered ${allMinistries}`,
     );
 
     // A mangled filter must degrade to the full list, not to nothing.
     await page.goto(`${BASE}/${locale}/ministries?krg=banana`, { waitUntil: 'domcontentloaded' });
     check(
       `${locale}: unknown filter value shows everything`,
-      (await page.locator('main ul li a[href*="/ministries/"]').count()) === 14,
+      (await page.locator('main ul li a[href*="/ministries/"]').count()) === allMinistries,
     );
 
     await page.goto(`${BASE}/${locale}/ministries`, { waitUntil: 'domcontentloaded' });
@@ -459,7 +463,7 @@ try {
     // Province filtering on the directorates index.
     await page.goto(`${BASE}/${locale}/directorates`, { waitUntil: 'domcontentloaded' });
     const allDirectorates = await page.locator('main ul li a[href*="/directorates/"]').count();
-    check(`${locale}: directorates index lists offices`, allDirectorates === 18);
+    check(`${locale}: directorates index lists offices`, allDirectorates > 0, `${allDirectorates} listed`);
     const provinceLink = page.locator('nav a[href*="province="]').first();
     await provinceLink.click();
     await page.waitForURL(/province=/);
