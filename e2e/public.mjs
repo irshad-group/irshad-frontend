@@ -28,11 +28,19 @@ function check(name, condition, detail = '') {
   }
 }
 
-/** Locale, expected direction, and the shell strings that must come from PocketBase. */
+/**
+ * Locale, expected direction, and the shell strings that must come from
+ * PocketBase.
+ *
+ * `nativeTerm` is a word that appears in the *displayed* procedure title for
+ * that language. The highlight only marks text the reader can see, so an
+ * English term while reading Kurdish correctly highlights nothing — the record
+ * matched on `title_en`, which is not what is on screen.
+ */
 const LOCALES = [
-  { locale: 'en', dir: 'ltr', menuLabel: 'Menu', skip: 'Skip to content', firstItem: 'Home' },
-  { locale: 'ar', dir: 'rtl', menuLabel: 'القائمة', skip: 'تخطي إلى المحتوى', firstItem: 'الرئيسية' },
-  { locale: 'ku', dir: 'rtl', menuLabel: 'پێڕست', skip: 'بازدان بۆ ناوەڕۆک', firstItem: 'سەرەکی' },
+  { locale: 'en', dir: 'ltr', menuLabel: 'Menu', skip: 'Skip to content', firstItem: 'Home', nativeTerm: 'passp' },
+  { locale: 'ar', dir: 'rtl', menuLabel: 'القائمة', skip: 'تخطي إلى المحتوى', firstItem: 'الرئيسية', nativeTerm: 'جواز' },
+  { locale: 'ku', dir: 'rtl', menuLabel: 'پێڕست', skip: 'بازدان بۆ ناوەڕۆک', firstItem: 'سەرەکی', nativeTerm: 'پاسپۆرت' },
 ];
 
 const browser = await chromium.launch();
@@ -131,6 +139,47 @@ try {
       JSON.stringify(overflow),
     );
 
+    // The brand survived the squeeze. Absence of overflow is not enough on its
+    // own: the header used to stay exactly 320px wide while the controls beside
+    // the brand took 270 of it, leaving the link 6px and letting its 36px mark
+    // spill out over the language switcher. Compare the mark against its own
+    // link box rather than against the viewport, which is what hid this.
+    const brand = await page.evaluate(() => {
+      const link = document.querySelector('header a:has(span[aria-hidden])');
+      const mark = link?.querySelector('span[aria-hidden]');
+      if (!link || !mark) return null;
+      const l = link.getBoundingClientRect();
+      const m = mark.getBoundingClientRect();
+      return { linkWidth: l.width, markWidth: m.width, spillsLeft: m.left < l.left - 1, spillsRight: m.right > l.right + 1 };
+    });
+    check(`${locale}: the brand mark is present at 320px`, (brand?.markWidth ?? 0) > 0);
+    check(
+      `${locale}: the brand mark is not clipped by its own link`,
+      brand !== null && !brand.spillsLeft && !brand.spillsRight && brand.linkWidth >= brand.markWidth,
+      JSON.stringify(brand),
+    );
+
+    // Every control a thumb can reach clears the WCAG 2.2 AA target floor of
+    // 24x24 (2.5.8). `checkVisibility` is what makes this reliable: a closed
+    // <details> still reports a layout rect for its contents, so the drawer's
+    // own links would otherwise be measured while hidden.
+    const smallTargets = await page.evaluate(() => {
+      const out = [];
+      for (const el of document.querySelectorAll('header a[href], header button, header summary')) {
+        if (!el.checkVisibility({ checkOpacity: true, checkVisibilityCSS: true })) continue;
+        const r = el.getBoundingClientRect();
+        if (r.width < 24 || r.height < 24) {
+          out.push({ text: (el.textContent || el.getAttribute('aria-label') || '').trim().slice(0, 20), w: Math.round(r.width), h: Math.round(r.height) });
+        }
+      }
+      return out;
+    });
+    check(
+      `${locale}: every header control clears 24x24 at 320px`,
+      smallTargets.length === 0,
+      JSON.stringify(smallTargets),
+    );
+
     const drawer = page.locator('header details').last();
     check(`${locale}: drawer is reachable on mobile`, await drawer.isVisible());
     await drawer.locator('summary').click();
@@ -140,13 +189,83 @@ try {
   }
 
   // The journey the site exists for: search -> procedure -> forms.
-  for (const { locale, dir } of LOCALES) {
+  for (const { locale, dir, nativeTerm } of LOCALES) {
     console.log(`\n== /${locale} search -> procedure ==`);
     const context = await browser.newContext({ viewport: { width: 1280, height: 800 } });
     const page = await context.newPage();
 
     await page.goto(`${BASE}/${locale}`, { waitUntil: 'domcontentloaded' });
     check(`${locale}: home shows procedure cards`, (await page.locator('main ul li a').count()) > 0);
+
+    // Live suggestions. These are an enhancement on top of the plain GET form,
+    // which the no-script block at the end of this file proves still works —
+    // so every assertion here is about what script *adds*, never about the
+    // only route to a result.
+    await page.setViewportSize({ width: 1280, height: 900 });
+    const searchBox = page.locator('input[name="q"]').first();
+    await searchBox.click();
+    await searchBox.fill('passp');
+    const listbox = page.locator('[role="listbox"]');
+    await listbox.waitFor({ state: 'visible', timeout: 5000 }).catch(() => {});
+    const options = listbox.locator('[role="option"]');
+    // 'passp' is English in every locale, so this also proves the
+    // cross-language match: an Arabic reader typing an English word still
+    // finds the record, because the filter covers all three languages.
+    check(`${locale}: typing offers suggestions`, (await options.count()) > 0);
+
+    await searchBox.fill(nativeTerm);
+    await page.waitForTimeout(700);
+    check(
+      `${locale}: the suggestion highlights what was typed`,
+      (await listbox.locator('mark').count()) > 0,
+    );
+    check(
+      `${locale}: suggestions are 44px touch targets`,
+      ((await options.first().boundingBox())?.height ?? 0) >= 44,
+    );
+    check(
+      `${locale}: the combobox reports itself expanded`,
+      (await searchBox.getAttribute('aria-expanded')) === 'true',
+    );
+
+    // Arrow keys move the active option, which is what a screen reader follows.
+    await searchBox.press('ArrowDown');
+    // Resolved in the page: the id is generated by React's useId and contains
+    // characters that need CSS.escape, which only exists in a browser.
+    const activeDescendant = await page.evaluate(() => {
+      const input = document.querySelector('input[name="q"]');
+      const id = input?.getAttribute('aria-activedescendant');
+      if (!id) return { id: null, pointsAtSelectedOption: false };
+      const target = document.getElementById(id);
+      return {
+        id,
+        pointsAtSelectedOption:
+          target?.getAttribute('role') === 'option' &&
+          target.getAttribute('aria-selected') === 'true',
+      };
+    });
+    check(
+      `${locale}: arrow keys move the active suggestion`,
+      activeDescendant.pointsAtSelectedOption,
+      JSON.stringify(activeDescendant),
+    );
+
+    await searchBox.press('Escape');
+    check(`${locale}: escape dismisses the suggestions`, (await listbox.count()) === 0);
+
+    // A term that matches nothing says so rather than showing an empty box.
+    await searchBox.fill('zzzqqq');
+    await page.waitForTimeout(700);
+    check(
+      `${locale}: a hopeless term reports no matches`,
+      (await listbox.count()) === 1 && (await options.count()) === 0,
+    );
+
+    // One character is below the threshold — no request, no list.
+    await searchBox.fill('p');
+    await page.waitForTimeout(500);
+    check(`${locale}: one character offers nothing`, (await listbox.count()) === 0);
+    await searchBox.fill('');
 
     // Search by an English term while reading in any language: matching runs
     // across all three languages' fields, not just the active one.
@@ -158,6 +277,40 @@ try {
     const results = page.locator('main ul li a[href*="/procedures/"]');
     check(`${locale}: search returns results`, (await results.count()) > 0);
 
+    // The results page carries the same suggestions as the hero, on top of the
+    // same plain GET form. Two things matter here that do not on the home page:
+    // the box is seeded with the query so it can be refined rather than
+    // retyped, and the list stays shut on arrival — a dropdown covering the
+    // results the reader just asked for would be worse than no dropdown.
+    const resultsBox = page.locator('input[name="q"]').first();
+    check(
+      `${locale}: the results box is seeded with the query`,
+      (await resultsBox.inputValue()) === 'passport',
+    );
+    check(
+      `${locale}: suggestions stay shut on arrival`,
+      (await page.locator('[role="listbox"]').count()) === 0,
+    );
+
+    await resultsBox.click();
+    await resultsBox.fill(nativeTerm);
+    const resultsList = page.locator('[role="listbox"]');
+    await resultsList.waitFor({ state: 'visible', timeout: 5000 }).catch(() => {});
+    check(
+      `${locale}: the results box suggests as you type`,
+      (await resultsList.locator('[role="option"]').count()) > 0,
+    );
+    check(
+      `${locale}: results-page suggestions align with their own box`,
+      await page.evaluate(() => {
+        const list = document.querySelector('[role="listbox"]')?.getBoundingClientRect();
+        const form = document.querySelector('form[role="search"]')?.getBoundingClientRect();
+        return !!list && !!form && Math.abs(list.left - form.left) < 2 && Math.abs(list.right - form.right) < 2;
+      }),
+    );
+    await resultsBox.press('Escape');
+    await resultsBox.fill('passport');
+
     await results.first().click();
     await page.waitForURL(/\/procedures\//);
 
@@ -168,9 +321,15 @@ try {
       `${locale}: fee is shown in Latin digits`,
       /[0-9]/.test(await page.locator('main dl').first().innerText()),
     );
+    // The responsible office moved out of the stats strip and into its own
+    // sidebar card when the procedure page was redesigned, so look for it in
+    // the aside. Still exactly one link: two would mean the card rendered
+    // twice, none would mean the relation failed to expand.
+    const office = page.locator('main aside a[href*="/directorates/"]');
+    check(`${locale}: responsible directorate is linked`, (await office.count()) === 1);
     check(
-      `${locale}: responsible directorate is linked`,
-      (await page.locator('main dl a[href*="/directorates/"]').count()) === 1,
+      `${locale}: the directorate link keeps the active locale`,
+      (await office.first().getAttribute('href'))?.startsWith(`/${locale}/directorates/`),
     );
     check(
       `${locale}: attached forms link to PocketBase or elsewhere`,
@@ -438,6 +597,39 @@ try {
     'no-js: language switcher links are real anchors',
     (await page.locator('nav[aria-label] a[hreflang]').count()) === 3,
   );
+
+  // Cache headers. A deploy has to be visible on the next page load, and no
+  // amount of tuning for that may make an authenticated page cacheable.
+  //
+  // Both halves are here because the obvious fix breaks the second one: a
+  // `headers()` rule matching `/:path*` replaces Cache-Control on every HTML
+  // response, stripping `s-maxage` from the prerendered pages and turning the
+  // `private, no-cache, no-store` on /account and /admin into `public`.
+  const cacheControlFor = async (path) => {
+    const response = await page.request.get(`${BASE}${path}`, {
+      headers: { Accept: 'text/html' },
+      maxRedirects: 0,
+    });
+    return response.headers()['cache-control'] ?? '';
+  };
+
+  const prerendered = await cacheControlFor('/en');
+  check(
+    'cache: a prerendered page is still shared-cacheable for an hour',
+    prerendered.includes('s-maxage=3600'),
+    prerendered,
+  );
+  check(
+    'cache: a prerendered page has no stale-while-revalidate window',
+    !prerendered.includes('stale-while-revalidate'),
+    prerendered,
+  );
+
+  for (const path of ['/en/account', '/en/account/login', '/en/search?q=passport']) {
+    const header = await cacheControlFor(path);
+    check(`cache: ${path} is never stored`, header.includes('no-store'), header);
+    check(`cache: ${path} is not public`, !header.includes('public'), header);
+  }
 
   // Search is a plain GET form, so it must work with no script at all.
   await page.goto(`${BASE}/ar`, { waitUntil: 'domcontentloaded' });

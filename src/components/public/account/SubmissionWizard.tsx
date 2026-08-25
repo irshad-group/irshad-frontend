@@ -135,7 +135,7 @@ export default function SubmissionWizard({
                   className={`block h-1 ${index <= part ? 'bg-brand-500' : 'bg-ink-200'}`}
                 />
                 <span
-                  className={`mt-1.5 block text-[11px] font-bold ${index === part ? 'text-ink-950' : 'text-ink-400'}`}
+                  className={`mt-1.5 block text-xs font-bold ${index === part ? 'text-ink-950' : 'text-ink-400'}`}
                 >
                   {labels.stepLabel.replace('{n}', String(index + 1)).replace('{total}', '3')}
                 </span>

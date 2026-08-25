@@ -4,6 +4,7 @@ import { Container, cn } from '@/components/ui/primitives';
 import { Icon, tagIcon, type IconName } from './icons';
 import IraqMap, { type MapDot } from './IraqMap';
 import InteractiveMap, { type CityMarker } from './InteractiveMap';
+import HeroSearch from './HeroSearch';
 import { Reveal } from './motion';
 
 /**
@@ -18,9 +19,8 @@ import { Reveal } from './motion';
 
 /* ── hero ─────────────────────────────────────────────────────────────── */
 
-export async function Hero({ locale }: { locale: string }) {
+export async function Hero() {
   const t = await getTranslations('home');
-  const ts = await getTranslations('search');
 
   const chips = [t('chip1'), t('chip2'), t('chip3'), t('chip4')];
   const steps = [1, 2, 3].map((n) => ({
@@ -42,29 +42,10 @@ export async function Hero({ locale }: { locale: string }) {
           </h1>
           <p className="mt-4 max-w-xl text-lg text-ink-600">{t('heroSub')}</p>
 
-          <form action={`/${locale}/search`} role="search" className="mt-7 max-w-3xl">
-            <div className="flex items-stretch border-2 border-ink-950 bg-white">
-              <span className="flex items-center ps-4 text-ink-400">
-                <Icon name="search" className="size-5" strokeWidth={2} />
-              </span>
-              <label htmlFor="q" className="sr-only">
-                {ts('label')}
-              </label>
-              <input
-                id="q"
-                type="search"
-                name="q"
-                placeholder={t('searchPlaceholder')}
-                className="min-w-0 flex-1 bg-transparent px-3 py-4 text-base text-ink-950 outline-none placeholder:text-ink-400"
-              />
-              <button
-                type="submit"
-                className="bg-ink-950 px-6 text-sm font-bold text-white hover:bg-brand-500"
-              >
-                {ts('submit')}
-              </button>
-            </div>
-          </form>
+          {/* The one interactive leaf on this page. It renders the same plain
+              GET form when JavaScript never arrives, and adds live suggestions
+              once it does — see HeroSearch. */}
+          <HeroSearch placeholder={t('searchPlaceholder')} />
 
           <div className="mt-4 flex flex-wrap items-center gap-2">
             <span className="text-sm font-bold text-ink-500">{t('tryThese')}</span>
@@ -90,7 +71,7 @@ export async function Hero({ locale }: { locale: string }) {
             إ
           </div>
           <Reveal onMount delay={0.15} className="relative flex h-full flex-col px-8 py-10">
-            <div className="mb-6 text-[11px] font-extrabold tracking-[0.16em] uppercase text-white/75">
+            <div className="mb-6 text-xs font-extrabold tracking-[0.16em] uppercase text-white/75">
               {t('howItWorks')}
             </div>
             <ol className="flex flex-col gap-6">
@@ -176,7 +157,7 @@ function SectionHead({
       </div>
       <Link
         href={linkHref}
-        className="inline-flex items-center gap-1.5 text-sm font-bold text-brand-500 hover:text-brand-600"
+        className="inline-flex min-h-6 items-center gap-1.5 text-sm font-bold text-brand-500 hover:text-brand-600"
       >
         {linkLabel}
         <Icon name="arrow" className="size-4 rtl:-scale-x-100" strokeWidth={2} />
@@ -224,12 +205,12 @@ export async function PopularSection({ cards }: { cards: PopularCard[] }) {
                 <span className="flex items-start justify-between gap-3">
                   <span className="flex items-center gap-2.5">
                     <Icon name={card.icon} className="size-5 text-brand-500" strokeWidth={1.7} />
-                    <span className="text-[11px] font-extrabold tracking-wider uppercase text-ink-500">
+                    <span className="text-xs font-extrabold tracking-wider uppercase text-ink-500">
                       {card.office}
                     </span>
                   </span>
                   {card.badge ? (
-                    <span className="shrink-0 border border-gold-400/50 bg-gold-100 px-1.5 py-0.5 text-[11px] font-extrabold text-gold-800">
+                    <span className="shrink-0 border border-gold-400/50 bg-gold-100 px-1.5 py-0.5 text-xs font-extrabold text-gold-800">
                       {card.badge}
                     </span>
                   ) : null}
@@ -242,7 +223,7 @@ export async function PopularSection({ cards }: { cards: PopularCard[] }) {
                       className={cn('block h-1 flex-1', filled ? 'bg-brand-500' : 'bg-ink-200')}
                     />
                   ))}
-                  <span className="ms-1.5 text-[11px] font-bold whitespace-nowrap text-ink-500">
+                  <span className="ms-1.5 text-xs font-bold whitespace-nowrap text-ink-500">
                     {card.stepsLabel}
                   </span>
                 </span>
@@ -358,12 +339,12 @@ export async function AnatomySection() {
             <span aria-hidden="true" className="size-2 bg-ink-300" />
             <span aria-hidden="true" className="size-2 bg-ink-300" />
             <span className="flex-1" />
-            <span className="text-[11px] font-bold tracking-wide text-ink-500" dir="ltr">
+            <span className="text-xs font-bold tracking-wide text-ink-500" dir="ltr">
               irshad.iq / {t('mockUrl')}
             </span>
           </div>
           <div className="p-5 sm:p-7">
-            <div className="mb-2 text-[11px] font-extrabold tracking-[0.12em] uppercase text-brand-500">
+            <div className="mb-2 text-xs font-extrabold tracking-[0.12em] uppercase text-brand-500">
               {t('mockCat')}
             </div>
             <div className="mb-4 text-xl font-extrabold tracking-tight text-ink-950 sm:text-2xl">
@@ -372,7 +353,7 @@ export async function AnatomySection() {
             <dl className="mb-6 grid grid-cols-2 gap-px border border-ink-200 bg-ink-200 sm:grid-cols-4">
               {facts.map(([k, v]) => (
                 <div key={k} className="bg-white px-3.5 py-3">
-                  <dt className="text-[11px] font-bold text-ink-500">{k}</dt>
+                  <dt className="text-xs font-bold text-ink-500">{k}</dt>
                   <dd className="mt-0.5 text-[15px] font-extrabold text-ink-950">{v}</dd>
                 </div>
               ))}
@@ -564,7 +545,7 @@ export async function MapSection({
         <Reveal delay={0.1} className="bg-ink-50 py-7 lg:border-s lg:border-ink-200 lg:ps-7">
           <div className="mb-4 flex items-center justify-between">
             <h3 className="text-[17px] font-extrabold text-ink-950">{t('mapOffices')}</h3>
-            <Link href="/directorates" className="text-[13px] font-bold text-brand-500">
+            <Link href="/directorates" className="inline-flex min-h-6 items-center text-[13px] font-bold text-brand-500">
               {t('viewAll')}
             </Link>
           </div>
@@ -586,7 +567,7 @@ export async function MapSection({
                       <span className="mt-0.5 block text-xs text-ink-500">{branch.address}</span>
                     ) : null}
                     {branch.provinceName ? (
-                      <span className="mt-2 inline-block bg-ink-100 px-1.5 py-0.5 text-[11px] font-bold text-ink-600">
+                      <span className="mt-2 inline-block bg-ink-100 px-1.5 py-0.5 text-xs font-bold text-ink-600">
                         {branch.provinceName}
                       </span>
                     ) : null}
@@ -614,7 +595,7 @@ export async function RecentAndFaq({ recent, faq }: { recent: RecentRow[]; faq: 
         <Reveal className="py-9 lg:border-e lg:border-ink-200 lg:pe-9">
           <div className="mb-3 flex items-center justify-between">
             <h2 className="text-xl font-extrabold text-ink-950">{t('recent')}</h2>
-            <Link href="/procedures" className="text-[13px] font-bold text-brand-500">
+            <Link href="/procedures" className="inline-flex min-h-6 items-center text-[13px] font-bold text-brand-500">
               {t('viewAll')}
             </Link>
           </div>
@@ -644,7 +625,7 @@ export async function RecentAndFaq({ recent, faq }: { recent: RecentRow[]; faq: 
         <Reveal delay={0.1} className="py-9 lg:ps-9">
           <div className="mb-3 flex items-center justify-between">
             <h2 className="text-xl font-extrabold text-ink-950">{t('faq')}</h2>
-            <Link href="/faq" className="text-[13px] font-bold text-brand-500">
+            <Link href="/faq" className="inline-flex min-h-6 items-center text-[13px] font-bold text-brand-500">
               {t('allFaq')}
             </Link>
           </div>

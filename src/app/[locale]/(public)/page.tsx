@@ -196,7 +196,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
 
   return (
     <>
-      <Hero locale={locale} />
+      <Hero />
       <StatsStrip stats={stats} />
       <PopularSection cards={popular} />
       <TopicsSection topics={topics} />

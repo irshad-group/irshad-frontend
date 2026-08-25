@@ -35,7 +35,7 @@ export default function LocationBlock({
           href={link}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-1 inline-block text-sm text-brand-700 underline"
+          className="mt-1 inline-flex min-h-6 items-center text-sm text-brand-700 underline"
         >
           {labels.openInMaps}
         </a>

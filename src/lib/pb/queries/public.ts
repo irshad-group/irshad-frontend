@@ -121,27 +121,12 @@ export function fileUrl(
 }
 
 /**
- * Filter matching a search term across every language's title and summary.
+ * The search filter now lives in `lib/public/search.ts` and is re-exported
+ * here so existing server callers keep their import path.
  *
- * Searching all three rather than only the active locale means someone who
- * knows a term in Arabic still finds the record while reading in Kurdish.
- * `~` is a substring match — no stemming, no fuzziness — which is adequate for
- * a corpus of this size. If it stops being adequate the answer is a search
- * index, not a longer filter.
+ * It moved because this module is `server-only`, and the browser-side
+ * suggestion list needs the same filter. One definition, two callers, rather
+ * than a copy in a Client Component that quietly drifts out of step with the
+ * results page it is supposed to preview.
  */
-export function searchFilter(term: string, fields: readonly string[]): string {
-  const trimmed = term.trim();
-  if (!trimmed) return '';
-  const quoted = JSON.stringify(`%${trimmed}%`);
-  return fields.map((field) => `${field} ~ ${quoted}`).join(' || ');
-}
-
-/** The title and summary fields a procedure search covers. */
-export const PROCEDURE_SEARCH_FIELDS = [
-  'title_en',
-  'title_ar',
-  'title_ku',
-  'summary_en',
-  'summary_ar',
-  'summary_ku',
-] as const;
+export { PROCEDURE_SEARCH_FIELDS, searchFilter } from '@/lib/public/search';
