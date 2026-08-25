@@ -98,8 +98,13 @@ export default function SiteHeader({
           <span className="min-w-0 truncate text-base font-bold">{siteName}</span>
         </Link>
 
-        {/* Desktop: the `menu` placement, inline. */}
-        <nav aria-label={labels.menu} className="hidden md:block">
+        {/* Desktop: the `menu` placement, inline.
+            Shown from `lg`, not `md`: at 768 px the English labels need ~470 px and
+            the actions beside them another ~470 px, in a 753 px row. The nav used to
+            absorb that by shrinking, and a shrunken flex item plus the global
+            `overflow-wrap: anywhere` broke single words in half — "Home" over two
+            lines. Below `lg` the drawer already handles this properly. */}
+        <nav aria-label={labels.menu} className="hidden shrink-0 lg:block">
           <ul className="flex items-center gap-1">
             {menu.map((item) => (
               <li key={item.id} className="relative">
@@ -107,8 +112,10 @@ export default function SiteHeader({
                   <details className="group">
                     <summary
                       className={cn(
-                        'cursor-pointer list-none rounded-md px-2.5 py-1.5 text-sm text-ink-600',
-                        'hover:bg-ink-100 hover:text-ink-900 marker:content-none',
+                        // Tighter until xl: at exactly 1024 the English labels and the
+                        // actions beside them overshoot the row by a few pixels.
+                        'cursor-pointer list-none whitespace-nowrap rounded-md px-2 py-1.5 xl:px-2.5',
+                        'text-sm text-ink-600 hover:bg-ink-100 hover:text-ink-900 marker:content-none',
                       )}
                     >
                       {localized(item, 'title', locale)}
@@ -162,8 +169,11 @@ export default function SiteHeader({
           </Link>
           <LocaleSwitcher label={labels.language} />
 
-          {/* Mobile: the `drawer` placement, behind a disclosure. */}
-          <details className="md:hidden">
+          {/* Mobile and tablet: the `drawer` placement, behind a disclosure.
+              Hidden from `lg`, matching where the inline nav takes over — at `md`
+              the two would both be hidden and the header would have no navigation
+              at all between 768 px and 1024 px. */}
+          <details className="lg:hidden">
             <summary className="flex min-h-11 cursor-pointer list-none items-center rounded-md px-3 text-sm text-ink-700 ring-1 ring-ink-200 marker:content-none">
               {labels.menu}
             </summary>
@@ -209,8 +219,11 @@ function NavItemLink({
     <Link
       href={node.endpoint || '/'}
       className={cn(
-        'rounded-md px-2.5 py-1.5 text-sm text-ink-600 hover:bg-ink-100 hover:text-ink-900',
-        block ? 'block' : 'inline-block',
+        'rounded-md py-1.5 text-sm text-ink-600 hover:bg-ink-100 hover:text-ink-900',
+        // A nav label is a known string, not pasted content. The global
+        // `overflow-wrap: anywhere` would otherwise split it mid-word.
+        // The drawer keeps the roomier padding — it is a touch target.
+        block ? 'block px-2.5' : 'inline-block whitespace-nowrap px-2 xl:px-2.5',
       )}
     >
       {localized(node, 'title', locale)}
