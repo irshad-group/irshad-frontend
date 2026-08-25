@@ -51,14 +51,38 @@ export default function SiteHeader({
           </Link>
         </Container>
       </div>
-      <Container width="wide" className="flex items-center justify-between gap-3 py-3">
+      <Container
+        width="wide"
+        className="flex flex-wrap items-center justify-between gap-3 py-3 sm:flex-nowrap"
+      >
         {/*
           The site name comes from `settings` and can be long — the seeded value
           is "Irshad — Guide to Government Services". It must be allowed to
           truncate: pinned at its natural width it pushes the page wider than a
           320 px screen, which is the smallest the portal supports.
+
+          Below `sm` the brand takes a line of its own. The controls beside it —
+          account, three languages, the drawer toggle — need 270 px, which left
+          the brand 6 px of a 320 px screen: the name truncated away to nothing
+          and the 36 px mark spilled out of its own 6 px link box, over the
+          language switcher. None of those controls can be dropped (the drawer
+          carries no account link, and the language switcher is the one control
+          a reader who cannot read the current language depends on), so the
+          header takes a second row instead. It is not sticky, so the extra
+          height costs one screenful at the top and nothing after that.
+
+          `sm:flex-nowrap` matters: flex wrapping prefers a new line over
+          shrinking an item, so an unqualified `flex-wrap` would also break the
+          header in two between 768 px and ~830 px, where truncating the name
+          is the better answer.
+
+          `min-w-9` is the floor that keeps the mark intact at any width that
+          does not wrap. It cannot be `min-w-0`, and the link cannot fall back
+          to its automatic minimum either — the name is `white-space: nowrap`,
+          so the link's min-content is the *whole* untruncated name (343 px),
+          which would defeat truncation everywhere.
         */}
-        <Link href="/" className="flex min-w-0 items-center gap-2.5 text-ink-950">
+        <Link href="/" className="flex min-w-9 items-center gap-2.5 text-ink-950">
           <span
             aria-hidden="true"
             className="flex size-9 shrink-0 items-center justify-center bg-brand-500 text-lg font-extrabold text-white"

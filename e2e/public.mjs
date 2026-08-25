@@ -131,6 +131,26 @@ try {
       JSON.stringify(overflow),
     );
 
+    // The brand survived the squeeze. Absence of overflow is not enough on its
+    // own: the header used to stay exactly 320px wide while the controls beside
+    // the brand took 270 of it, leaving the link 6px and letting its 36px mark
+    // spill out over the language switcher. Compare the mark against its own
+    // link box rather than against the viewport, which is what hid this.
+    const brand = await page.evaluate(() => {
+      const link = document.querySelector('header a:has(span[aria-hidden])');
+      const mark = link?.querySelector('span[aria-hidden]');
+      if (!link || !mark) return null;
+      const l = link.getBoundingClientRect();
+      const m = mark.getBoundingClientRect();
+      return { linkWidth: l.width, markWidth: m.width, spillsLeft: m.left < l.left - 1, spillsRight: m.right > l.right + 1 };
+    });
+    check(`${locale}: the brand mark is present at 320px`, (brand?.markWidth ?? 0) > 0);
+    check(
+      `${locale}: the brand mark is not clipped by its own link`,
+      brand !== null && !brand.spillsLeft && !brand.spillsRight && brand.linkWidth >= brand.markWidth,
+      JSON.stringify(brand),
+    );
+
     const drawer = page.locator('header details').last();
     check(`${locale}: drawer is reachable on mobile`, await drawer.isVisible());
     await drawer.locator('summary').click();
