@@ -393,21 +393,6 @@
       "scope": "all"
     },
     {
-      "key": "conscription",
-      "ministry": "ministry-of-defence",
-      "scope": "federal",
-      "directorate_hint": "التجنيد",
-      "parent_slug": "general-directorate-of-conscription",
-      "parent_title_ar": "مديرية التجنيد العامة",
-      "title_ar": "مديرية تجنيد {P}",
-      "title_en": "{PE} Conscription Directorate",
-      "query": "مديرية التجنيد {P}",
-      "must": [
-        "التجنيد",
-        "تجنيد"
-      ]
-    },
-    {
       "key": "land-transport",
       "ministry": "ministry-of-transport",
       "scope": "federal",
@@ -450,7 +435,7 @@
       "query": "شركة توزيع المنتجات النفطية {P}",
       "must": [
         "المنتجات النفطية",
-        "توزيع",
+        "المنتوجات النفطية",
         "النفطية"
       ]
     },
@@ -786,6 +771,50 @@
         "الاسكان",
         "اسكان",
         "housing"
+      ]
+    },
+    {
+      "key": "conscription",
+      "ministry": "ministry-of-defence",
+      "scope": "federal",
+      "directorate_hint": "التجنيد",
+      "parent_slug": "general-directorate-of-conscription",
+      "parent_title_ar": "ادارة التجنيد العامة",
+      "title_ar": "مركز تجنيد {P}",
+      "title_en": "{PE} Conscription Centre",
+      "query": "مركز تجنيد {P}",
+      "must": [
+        "تجنيد"
+      ]
+    },
+    {
+      "key": "military-pensions",
+      "ministry": "ministry-of-defence",
+      "scope": "federal",
+      "directorate_hint": "التقاعد العسكري",
+      "parent_slug": "directorate-of-military-pensions",
+      "parent_title_ar": "دائرة التقاعد العسكري",
+      "title_ar": "دائرة التقاعد العسكري في {P}",
+      "title_en": "{PE} Military Pensions Office",
+      "query": "دائرة التقاعد العسكري {P}",
+      "must": [
+        "التقاعد العسكري",
+        "تقاعد عسكري"
+      ]
+    },
+    {
+      "key": "industrial-development",
+      "ministry": "ministry-of-industry-and-minerals",
+      "scope": "federal",
+      "directorate_hint": "التنمية الصناعية",
+      "parent_slug": "general-directorate-of-industrial-development",
+      "parent_title_ar": "المديرية العامة للتنمية الصناعية",
+      "title_ar": "مديرية التنمية الصناعية في {P}",
+      "title_en": "{PE} Industrial Development Directorate",
+      "query": "التنمية الصناعية {P}",
+      "must": [
+        "التنمية الصناعية",
+        "تنمية صناعية"
       ]
     }
   ],

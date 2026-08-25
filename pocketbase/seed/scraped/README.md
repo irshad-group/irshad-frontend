@@ -32,7 +32,7 @@ the `provinces` collection already in PocketBase, so no province rows are create
 | `ur.gov.iq/api/public/gis` | 15 offices with government-published building photos | Small but authoritative, and the photos are government-owned rather than user-contributed. |
 | Ministry websites (structure / departments pages) | Directorate **names** | 15 of 23 federal sites published a usable structure page. |
 | **Google Maps** | Coordinates, phone, address, photo, website, rating, `title_en` / `title_ku` | The workhorse. Queried through the endpoint the Maps web app itself calls; responses are cached on disk so a re-run costs nothing. Re-querying with `hl=en` / `hl=ckb` returns the same place's name in that language — accepted only when the feature id matches, so it is provably the same place. |
-| **OpenStreetMap** (Overpass) | `working_hours`, `name:en` / `name:ckb`, phone, website, email, and coordinates for records Maps could not place | 4,996 Iraqi government features. The only source with **full-week** opening hours. © OpenStreetMap contributors, ODbL. |
+| **OpenStreetMap** (Overpass) | `working_hours`, `name:en` / `name:ckb`, phone, website, email, coordinates for records Maps could not place, **and ~890 branch offices Maps never returned** | 4,996 Iraqi government features. The only source with **full-week** opening hours. © OpenStreetMap contributors, ODbL. |
 
 ## How records were matched
 
@@ -112,13 +112,14 @@ Name matching across Arabic, Kurdish and English needs more than a string compar
   large cities. `customs` (3) and `companies-registration` (5) are genuinely sparse,
   and the Kurdistan Region families return single digits each — KRG offices are far
   less mapped than federal ones, in any of the three languages.
-- **Seven ministries still have no branches**, and for five that is correct rather
-  than missing: Foreign Affairs has no provincial offices (its network is embassies),
-  Peshmerga Affairs and Natural Resources run no public counters, and the KRG Martyrs
-  and Anfal ministry models its provincial bodies as directorates, not branches. The
-  two genuine gaps are Defence — conscription offices returned nothing under any
-  wording tried — and Industry and Minerals, which has no family defined because no
-  per-governorate citizen-facing network was identifiable without inventing one.
+- **Five ministries have no branches, and for all five that is the right answer**:
+  Foreign Affairs works through embassies rather than provincial offices; KRG Peshmerga
+  Affairs and Natural Resources run no public counters; KRG Higher Education's
+  provincial presence is its universities, which are separate institutions; and the KRG
+  Martyrs and Anfal ministry models its provincial bodies as directorates, not branches.
+  Defence and Industry were gaps and are now covered — thinly, because conscription
+  offices and industrial development directorates are barely mapped in either source
+  (4 offices each), but with real records rather than none.
 
 ## Regenerating
 
@@ -130,7 +131,8 @@ node enrich-ministries.mjs      # -> ministries-enriched.json
 node discover-directorates.mjs  # -> directorates-discovered.json
 node clean-directorates.mjs     # -> directorates-clean.json
 node enrich-directorates.mjs    # -> directorates-enriched.json
-node discover-branches.mjs      # -> branches-discovered.json
+node discover-branches.mjs      # -> branches-discovered.json (Google Maps)
+node discover-branches-osm.mjs  # appends the offices OSM has and Maps does not
 node build-dataset.mjs          # -> iraq-government-directory.json
 
 # then refine, in this order (each rewrites that file in place)

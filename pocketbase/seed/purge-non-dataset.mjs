@@ -20,6 +20,7 @@
  */
 
 import fs from 'node:fs';
+import { branchKey } from './branch-key.mjs';
 
 const argv = process.argv.slice(2);
 const arg = (n, d) => { const i = argv.indexOf(n); return i >= 0 ? argv[i + 1] : d; };
@@ -82,7 +83,9 @@ const listAll = async (c) => {
 const ds = JSON.parse(fs.readFileSync(DATA, 'utf8'));
 const wantMin = new Set(ds.ministries.map((m) => m.slug));
 const wantDir = new Set(ds.directorates.map((d) => KEEP_SLUGS[d.title_ar] || d.slug));
-const wantBranch = new Set(ds.branches.filter((b) => b.place_id).map((b) => b.place_id));
+// Keyed exactly as the importer keys them — see branch-key.mjs. Keying on the place
+// id alone deleted every office that came from OpenStreetMap, which has none.
+const dirIdBySlug = new Map();
 
 const [mins, dirs, brs, procs, items, files, comments, reviews, subs] = await Promise.all(
   ['ministries', 'directorates', 'directorate_branches', 'procedures', 'procedure_items',
@@ -90,7 +93,23 @@ const [mins, dirs, brs, procs, items, files, comments, reviews, subs] = await Pr
 
 const staleMin = mins.filter((m) => !wantMin.has(m.slug));
 const staleDir = dirs.filter((d) => !wantDir.has(d.slug));
-const staleBr = brs.filter((b) => !b.place_id || !wantBranch.has(b.place_id));
+for (const d of dirs) dirIdBySlug.set(d.slug, d.id);
+// A branch names its parent by the dataset's slug, which KEEP_SLUGS may have remapped
+// onto the seed's slug at import time. Resolve through the dataset's own directorates
+// so the id matches the one the branch actually points at in the database.
+const liveSlugForDatasetSlug = new Map(
+  ds.directorates.map((d) => [d.slug, KEEP_SLUGS[d.title_ar] || d.slug]),
+);
+const provIdByCode = new Map((await listAll('provinces')).map((p) => [p.code, p.id]));
+const wantBranch = new Set(ds.branches.map((b) => branchKey({
+  place_id: b.place_id,
+  directorate: dirIdBySlug.get(liveSlugForDatasetSlug.get(b.directorate_slug) ?? b.directorate_slug),
+  province: provIdByCode.get(b.province_code),
+  title_ar: b.title_ar,
+  gps_lat: b.gps_lat,
+  gps_lon: b.gps_lon,
+})));
+const staleBr = brs.filter((b) => !wantBranch.has(branchKey(b)));
 
 // Refuse to orphan anything.
 const blocked = [];
