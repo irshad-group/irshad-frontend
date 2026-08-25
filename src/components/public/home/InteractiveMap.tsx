@@ -45,6 +45,17 @@ export default function InteractiveMap({
       const maplibregl = await import('maplibre-gl');
       if (cancelled || !containerRef.current) return;
 
+      // maplibre-gl 6 parses tiles in a separate ESM worker and derives that
+      // worker's URL from its own module URL. Next's bundler rewrites the module,
+      // the resolution collapses to the page URL, and the worker ends up loading
+      // the HTML document as a script. It fails silently — the map builds, markers
+      // attach, no error fires — but no tile is ever parsed, so `load` never fires
+      // and the map stayed invisible behind its fallback, here and in production.
+      // Pointing at our own copy (see scripts/copy-map-worker.mjs) avoids it.
+      if (!maplibregl.getWorkerUrl()) {
+        maplibregl.setWorkerUrl('/vendor/maplibre-gl-worker.mjs');
+      }
+
       if (maplibregl.getRTLTextPluginStatus() === 'unavailable') {
         // Lazy: the worker only fetches the plugin when RTL text first appears.
         void maplibregl.setRTLTextPlugin('/vendor/mapbox-gl-rtl-text.min.js', true);
