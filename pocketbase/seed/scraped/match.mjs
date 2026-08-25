@@ -27,10 +27,17 @@ export const tokens = (s) => norm(s).split(' ').filter((w) => w.length > 2 && !S
  * `must` — at least one of these normalised tokens has to appear in the place name.
  * `reject` — tokens that disqualify the place outright (another entity's name).
  */
+// Iraq's neighbours use the same institution names in the same language, so a
+// perfect name match can land in the wrong country: "المديرية العامة للدفاع المدني"
+// matched Kuwait's, at confidence 1.0. A bounding box does not catch it — Iraq's box
+// overlaps Kuwait's northern tip — so gate on the country Maps puts in the address.
+const FOREIGN = /الكويت|ايران|إيران|السعودية|تركيا|سوريا|سورية|الاردن|الأردن|قطر|الامارات|الإمارات|البحرين|عمان\b|Kuwait|Iran|Saudi|Turkey|Türkiye|Syria|Jordan|Qatar|Emirates|Bahrain/i;
+
 export function scorePlace(place, { must = [], reject = [], krg = false, expectMinistry = false }) {
   const n = norm(place.name);
   if (reject.some((r) => n.includes(norm(r)))) return -1;
   if (must.length && !must.some((m) => n.includes(norm(m)))) return -1;
+  if (FOREIGN.test(place.address || '')) return -1;
   // Hard gate, not a penalty: a Kurdistan Region body is never in Baghdad, and a
   // high-scoring name match would otherwise outweigh a soft geographic deduction.
   if (krg && place.lat != null && place.lat < 34.8) return -1;
