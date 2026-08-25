@@ -50,10 +50,19 @@ export async function Hero({ locale }: { locale: string }) {
               <label htmlFor="q" className="sr-only">
                 {ts('label')}
               </label>
+              {/*
+                size={1} is load-bearing. An input defaults to size=20, which gives it an
+                intrinsic width of roughly 300px. `min-w-0` lets it shrink once flex layout
+                runs, but the intrinsic width still counts towards the min-content of every
+                ancestor — including the hero's auto-sized grid track, which then refused to
+                go below ~437px and pushed the whole page into horizontal scroll at 320px.
+                flex-1 grows it back to fill the row.
+              */}
               <input
                 id="q"
                 type="search"
                 name="q"
+                size={1}
                 placeholder={t('searchPlaceholder')}
                 className="min-w-0 flex-1 bg-transparent px-3 py-4 text-base text-ink-950 outline-none placeholder:text-ink-400"
               />
