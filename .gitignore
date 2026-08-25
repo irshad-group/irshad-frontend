@@ -36,3 +36,7 @@ yarn-error.log*
 
 # TypeScript
 *.tsbuildinfo
+
+# scraper response caches
+pocketbase/seed/scraped/cache-gmaps/
+pocketbase/seed/scraped/cache-http/
