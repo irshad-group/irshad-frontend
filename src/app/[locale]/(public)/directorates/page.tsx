@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
+import PrefetchLink from '@/components/public/PrefetchLink';
 import { localized } from '@/lib/i18n';
 import { listAllPublic } from '@/lib/pb/queries/public';
 import { Container, EmptyState, buttonClass, cn } from '@/components/ui/primitives';
@@ -114,7 +115,7 @@ export default async function DirectoratesIndex({
         <ul className="mt-6 grid gap-4 sm:grid-cols-2">
           {directorates.map((directorate) => (
             <li key={directorate.id}>
-              <Link
+              <PrefetchLink
                 href={`/directorates/${directorate.slug}`}
                 className="block h-full rounded-lg bg-white p-4 ring-1 ring-ink-200/70 hover:ring-brand-500"
               >
@@ -126,7 +127,7 @@ export default async function DirectoratesIndex({
                     {localized(directorate.expand.ministry, 'title', locale)}
                   </span>
                 ) : null}
-              </Link>
+              </PrefetchLink>
             </li>
           ))}
         </ul>

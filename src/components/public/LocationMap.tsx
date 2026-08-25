@@ -42,6 +42,7 @@ export default function LocationMap({
             alt=""
             width={TILE_SIZE}
             height={TILE_SIZE}
+            loading="lazy"
             decoding="async"
             className="absolute max-w-none"
             style={{ left: tile.left, top: tile.top }}

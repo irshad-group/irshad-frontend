@@ -235,7 +235,7 @@
   },
   "place": {
     "address": "ناونیشان",
-    "openInMaps": "کردنەوە لە نەخشەدا",
+    "openInMaps": "کردنەوە لە Waze",
     "contact": "پەیوەندی",
     "buildingPhoto": "وێنەی باڵەخانەی {name}",
     "closePhoto": "داخستنی وێنە"

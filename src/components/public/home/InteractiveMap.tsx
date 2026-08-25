@@ -1,8 +1,9 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import type { ReactNode } from 'react';
 import 'maplibre-gl/dist/maplibre-gl.css';
+import { useInView } from '../useInView';
 
 export type CityMarker = {
   lat: number;
@@ -22,8 +23,11 @@ export type CityMarker = {
  * the network beyond our own origin.
  *
  * maplibre-gl is imported dynamically inside the effect so its ~230 kB never
- * enters the initial bundle. The RTL text plugin is self-hosted; without it
- * Arabic tile labels render with disjoined letters.
+ * enters the initial bundle, and the effect does not run at all until the map
+ * is near the viewport: the map sits well below the fold, and loading it on
+ * arrival meant every visitor paid for ~50 vector tiles before the page they
+ * came for had finished. The RTL text plugin is self-hosted; without it Arabic
+ * tile labels render with disjoined letters.
  */
 export default function InteractiveMap({
   markers,
@@ -34,10 +38,11 @@ export default function InteractiveMap({
   dir: 'ltr' | 'rtl';
   fallback: ReactNode;
 }) {
-  const containerRef = useRef<HTMLDivElement | null>(null);
+  const [containerRef, inView] = useInView<HTMLDivElement>();
   const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
+    if (!inView) return;
     let cancelled = false;
     let map: import('maplibre-gl').Map | undefined;
 
@@ -107,7 +112,7 @@ export default function InteractiveMap({
       cancelled = true;
       map?.remove();
     };
-  }, [markers, dir]);
+  }, [containerRef, inView, markers, dir]);
 
   return (
     <div className="relative h-[420px] overflow-hidden border border-ink-200 bg-white sm:h-[520px]">

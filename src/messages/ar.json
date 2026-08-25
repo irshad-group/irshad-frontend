@@ -235,7 +235,7 @@
   },
   "place": {
     "address": "العنوان",
-    "openInMaps": "فتح في الخرائط",
+    "openInMaps": "فتح في Waze",
     "contact": "الاتصال",
     "buildingPhoto": "صورة مبنى {name}",
     "closePhoto": "اغلاق الصورة"

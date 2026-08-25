@@ -1,17 +1,21 @@
 import type { DirectorateBranchesRecord, ProvincesRecord } from '@/types/pb';
 
 /**
- * A link that opens coordinates in whatever maps application the visitor
- * already uses, rather than an embedded third-party map.
+ * A link that opens turn-by-turn navigation to these coordinates in Waze.
  *
- * An embed is typically the heaviest thing on a page and sends every visitor's
- * IP address to a third party before they have asked for a map. For a
- * government service whose users may be sensitive about being profiled, that is
- * a real cost for something most visitors do not need. A link costs nothing and
- * does the same job for the people who want it.
+ * Waze is what people here actually drive with, so "open in maps" should hand
+ * the office over to it rather than to a map the reader then has to re-enter
+ * somewhere else. `waze.com/ul` is the documented universal link: on a phone
+ * with the app it opens the app, and everywhere else it opens Waze Live Map in
+ * the browser, so a reader on a laptop is not sent to a dead end.
  *
- * `geo:` was rejected: desktop browsers mostly ignore it, and this has to work
- * for someone on a laptop in an office as well as a phone in the street.
+ * `navigate=yes` starts routing straight away — someone tapping this on the
+ * street wants directions, not a pin to look at. The map already on the page
+ * is there for looking.
+ *
+ * `geo:` was rejected for the same reason as before: desktop browsers mostly
+ * ignore it, and this has to work for someone on a laptop in an office as well
+ * as a phone in the street.
  *
  * Returns `null` unless both coordinates are present and inside the valid
  * range, so a record with one coordinate, a zero placeholder, or a swapped pair
@@ -25,7 +29,7 @@ export function mapsLink(
   if (!isCoordinate(lat, -90, 90) || !isCoordinate(lon, -180, 180)) return null;
   // 0,0 is Null Island — in this dataset it means "not filled in".
   if (lat === 0 && lon === 0) return null;
-  return `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=17/${lat}/${lon}`;
+  return `https://www.waze.com/ul?ll=${lat}%2C${lon}&navigate=yes`;
 }
 
 function isCoordinate(value: unknown, min: number, max: number): value is number {
