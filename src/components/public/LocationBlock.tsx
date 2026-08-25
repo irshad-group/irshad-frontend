@@ -1,4 +1,5 @@
 import { mapsLink } from '@/lib/public/places';
+import LocationMap from './LocationMap';
 
 /**
  * An address, and — only when the coordinates are usable — a link that opens
@@ -11,17 +12,24 @@ import { mapsLink } from '@/lib/public/places';
  *
  * With no address and no usable coordinates this renders nothing at all rather
  * than an empty heading or a broken frame.
+ *
+ * `withMap` adds a small self-rendered map above the link — see LocationMap. It
+ * is opt-in rather than automatic because this component also renders inside
+ * every provincial office card, and a directorate with sixty-one offices would
+ * otherwise mount sixty-one maps on one page.
  */
 export default function LocationBlock({
   address,
   lat,
   lon,
   labels,
+  withMap = false,
 }: {
   address: string;
   lat?: number;
   lon?: number;
   labels: { heading: string; openInMaps: string };
+  withMap?: boolean;
 }) {
   const link = mapsLink(lat, lon);
   if (!address && !link) return null;
@@ -30,7 +38,9 @@ export default function LocationBlock({
     <div>
       <h3 className="text-sm font-semibold text-ink-900">{labels.heading}</h3>
       {address ? <p className="mt-1 text-sm text-ink-600">{address}</p> : null}
-      {link ? (
+      {link && withMap && typeof lat === 'number' && typeof lon === 'number' ? (
+        <LocationMap lat={lat} lon={lon} href={link} label={labels.openInMaps} />
+      ) : link ? (
         <a
           href={link}
           target="_blank"

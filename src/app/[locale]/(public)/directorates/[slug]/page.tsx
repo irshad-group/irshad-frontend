@@ -202,6 +202,7 @@ export default async function DirectoratePage({
             address={localized(directorate, 'address', locale)}
             lat={directorate.gps_lat}
             lon={directorate.gps_lon}
+            withMap
             labels={{ heading: t('place.address'), openInMaps: t('place.openInMaps') }}
           />
 
