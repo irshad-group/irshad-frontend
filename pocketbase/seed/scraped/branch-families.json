@@ -1,5 +1,5 @@
 {
-  "_note": "Directorates that actually operate a provincial office network. `query` is a template searched once per province; {P} is the Arabic province name. `must` gates the Maps match.",
+  "_note": "Directorates that actually operate a provincial office network. `query` is a template searched once per province; {P} is the Arabic province name. `must` gates the Maps match. `scope` limits which governorates a family is searched in: `all`/`federal` = every governorate, `krg` = the four Kurdistan Region ones, where a KRG body is the only place it exists.",
   "families": [
     {
       "key": "passports",
@@ -14,7 +14,8 @@
         "جواز"
       ],
       "parent_slug": "general-directorate-of-passports",
-      "parent_title_ar": "مديرية شؤون الجوازات العامة"
+      "parent_title_ar": "مديرية شؤون الجوازات العامة",
+      "scope": "all"
     },
     {
       "key": "nationality",
@@ -30,7 +31,8 @@
         "احوال مدنية"
       ],
       "parent_slug": "general-directorate-of-nationality",
-      "parent_title_ar": "المديرية العامة للجنسية"
+      "parent_title_ar": "المديرية العامة للجنسية",
+      "scope": "all"
     },
     {
       "key": "traffic",
@@ -44,7 +46,8 @@
         "المرور"
       ],
       "parent_slug": "general-directorate-of-traffic",
-      "parent_title_ar": "مديرية المرور العامة"
+      "parent_title_ar": "مديرية المرور العامة",
+      "scope": "all"
     },
     {
       "key": "residence",
@@ -58,7 +61,8 @@
         "اقامة"
       ],
       "parent_slug": "general-directorate-of-residence",
-      "parent_title_ar": "مديرية الاقامة العامة"
+      "parent_title_ar": "مديرية الاقامة العامة",
+      "scope": "all"
     },
     {
       "key": "civil-defence",
@@ -73,7 +77,8 @@
         "الاطفاء"
       ],
       "parent_slug": "general-directorate-of-civil-defence",
-      "parent_title_ar": "المديرية العامة للدفاع المدني"
+      "parent_title_ar": "المديرية العامة للدفاع المدني",
+      "scope": "all"
     },
     {
       "key": "tax",
@@ -88,7 +93,8 @@
         "ضريبة"
       ],
       "parent_slug": "general-commission-for-taxes",
-      "parent_title_ar": "الهيئة العامة للضرائب"
+      "parent_title_ar": "الهيئة العامة للضرائب",
+      "scope": "all"
     },
     {
       "key": "customs",
@@ -104,7 +110,8 @@
         "الجمارك"
       ],
       "parent_slug": "general-commission-of-customs",
-      "parent_title_ar": "الهيئة العامة للكمارك"
+      "parent_title_ar": "الهيئة العامة للكمارك",
+      "scope": "all"
     },
     {
       "key": "pensions",
@@ -118,7 +125,8 @@
         "تقاعد"
       ],
       "parent_slug": "national-board-of-pensions",
-      "parent_title_ar": "هيئة التقاعد الوطنية"
+      "parent_title_ar": "هيئة التقاعد الوطنية",
+      "scope": "all"
     },
     {
       "key": "state-property",
@@ -132,7 +140,8 @@
         "عقارات"
       ],
       "parent_slug": "state-property-department",
-      "parent_title_ar": "دائرة عقارات الدولة"
+      "parent_title_ar": "دائرة عقارات الدولة",
+      "scope": "all"
     },
     {
       "key": "real-estate-registration",
@@ -147,7 +156,8 @@
         "الطابو"
       ],
       "parent_slug": "real-estate-registration-department",
-      "parent_title_ar": "دائرة التسجيل العقاري"
+      "parent_title_ar": "دائرة التسجيل العقاري",
+      "scope": "all"
     },
     {
       "key": "notary",
@@ -162,7 +172,8 @@
         "كاتب عدل"
       ],
       "parent_slug": "notary-public-department",
-      "parent_title_ar": "دائرة الكاتب العدل"
+      "parent_title_ar": "دائرة الكاتب العدل",
+      "scope": "all"
     },
     {
       "key": "health",
@@ -176,7 +187,8 @@
         "الصحة"
       ],
       "parent_slug": "directorate-of-public-health",
-      "parent_title_ar": "دائرة الصحة العامة"
+      "parent_title_ar": "دائرة الصحة العامة",
+      "scope": "all"
     },
     {
       "key": "education",
@@ -190,7 +202,8 @@
         "التربية"
       ],
       "parent_slug": "general-directorate-of-education",
-      "parent_title_ar": "المديرية العامة للتربية"
+      "parent_title_ar": "المديرية العامة للتربية",
+      "scope": "all"
     },
     {
       "key": "labour",
@@ -204,7 +217,8 @@
         "الضمان"
       ],
       "parent_slug": "directorate-of-labour-and-social-security",
-      "parent_title_ar": "المديرية العامة للعمل والضمان الاجتماعي"
+      "parent_title_ar": "المديرية العامة للعمل والضمان الاجتماعي",
+      "scope": "all"
     },
     {
       "key": "social-protection",
@@ -219,7 +233,8 @@
         "الرعاية الاجتماعية"
       ],
       "parent_slug": "social-protection-authority",
-      "parent_title_ar": "هيئة الحماية الاجتماعية"
+      "parent_title_ar": "هيئة الحماية الاجتماعية",
+      "scope": "all"
     },
     {
       "key": "ration-card",
@@ -235,7 +250,8 @@
         "الغذائية"
       ],
       "parent_slug": "general-company-for-foodstuff-trading",
-      "parent_title_ar": "الشركة العامة لتجارة المواد الغذائية"
+      "parent_title_ar": "الشركة العامة لتجارة المواد الغذائية",
+      "scope": "all"
     },
     {
       "key": "companies-registration",
@@ -249,7 +265,8 @@
         "الشركات"
       ],
       "parent_slug": "companies-registration-department",
-      "parent_title_ar": "دائرة تسجيل الشركات"
+      "parent_title_ar": "دائرة تسجيل الشركات",
+      "scope": "all"
     },
     {
       "key": "electricity",
@@ -263,7 +280,8 @@
         "الكهرباء"
       ],
       "parent_slug": "general-directorate-of-electricity-distribution",
-      "parent_title_ar": "المديرية العامة لتوزيع الكهرباء"
+      "parent_title_ar": "المديرية العامة لتوزيع الكهرباء",
+      "scope": "all"
     },
     {
       "key": "water",
@@ -278,7 +296,8 @@
         "المائية"
       ],
       "parent_slug": "general-directorate-of-water-resources",
-      "parent_title_ar": "المديرية العامة للموارد المائية"
+      "parent_title_ar": "المديرية العامة للموارد المائية",
+      "scope": "all"
     },
     {
       "key": "agriculture",
@@ -292,7 +311,8 @@
         "الزراعة"
       ],
       "parent_slug": "general-directorate-of-agriculture",
-      "parent_title_ar": "المديرية العامة للزراعة"
+      "parent_title_ar": "المديرية العامة للزراعة",
+      "scope": "all"
     },
     {
       "key": "municipality",
@@ -307,7 +327,8 @@
         "البلديات"
       ],
       "parent_slug": "general-directorate-of-municipalities",
-      "parent_title_ar": "المديرية العامة للبلديات"
+      "parent_title_ar": "المديرية العامة للبلديات",
+      "scope": "all"
     },
     {
       "key": "youth-sports",
@@ -322,7 +343,8 @@
         "رياضة"
       ],
       "parent_slug": "directorate-of-youth-and-sports",
-      "parent_title_ar": "دائرة الشباب والرياضة"
+      "parent_title_ar": "دائرة الشباب والرياضة",
+      "scope": "all"
     },
     {
       "key": "migration",
@@ -336,7 +358,8 @@
         "المهجرين"
       ],
       "parent_slug": "directorate-of-migration-branches",
-      "parent_title_ar": "دائرة شؤون الفروع"
+      "parent_title_ar": "دائرة شؤون الفروع",
+      "scope": "all"
     },
     {
       "key": "post",
@@ -350,7 +373,8 @@
         "بريد"
       ],
       "parent_slug": "general-company-for-post-and-savings",
-      "parent_title_ar": "الشركة العامة للبريد والتوفير"
+      "parent_title_ar": "الشركة العامة للبريد والتوفير",
+      "scope": "all"
     },
     {
       "key": "antiquities",
@@ -365,7 +389,404 @@
         "التراث"
       ],
       "parent_slug": "general-authority-for-antiquities-and-heritage",
-      "parent_title_ar": "الهيئة العامة للاثار والتراث"
+      "parent_title_ar": "الهيئة العامة للاثار والتراث",
+      "scope": "all"
+    },
+    {
+      "key": "conscription",
+      "ministry": "ministry-of-defence",
+      "scope": "federal",
+      "directorate_hint": "التجنيد",
+      "parent_slug": "general-directorate-of-conscription",
+      "parent_title_ar": "مديرية التجنيد العامة",
+      "title_ar": "مديرية تجنيد {P}",
+      "title_en": "{PE} Conscription Directorate",
+      "query": "مديرية التجنيد {P}",
+      "must": [
+        "التجنيد",
+        "تجنيد"
+      ]
+    },
+    {
+      "key": "land-transport",
+      "ministry": "ministry-of-transport",
+      "scope": "federal",
+      "directorate_hint": "النقل البري",
+      "parent_slug": "general-company-for-land-transport",
+      "parent_title_ar": "الشركة العامة للنقل البري",
+      "title_ar": "مديرية النقل البري في {P}",
+      "title_en": "{PE} Land Transport Directorate",
+      "query": "الشركة العامة للنقل البري {P}",
+      "must": [
+        "النقل البري",
+        "النقل",
+        "الكراج"
+      ]
+    },
+    {
+      "key": "statistics",
+      "ministry": "ministry-of-planning",
+      "scope": "federal",
+      "directorate_hint": "الاحصاء",
+      "parent_slug": "central-statistical-organisation",
+      "parent_title_ar": "الجهاز المركزي للاحصاء",
+      "title_ar": "مديرية احصاء {P}",
+      "title_en": "{PE} Statistics Directorate",
+      "query": "مديرية احصاء {P}",
+      "must": [
+        "احصاء",
+        "الاحصاء"
+      ]
+    },
+    {
+      "key": "fuel-distribution",
+      "ministry": "ministry-of-oil",
+      "scope": "federal",
+      "directorate_hint": "توزيع المنتجات النفطية",
+      "parent_slug": "oil-products-distribution-company",
+      "parent_title_ar": "شركة توزيع المنتجات النفطية",
+      "title_ar": "هيأة توزيع {P}",
+      "title_en": "{PE} Fuel Distribution Authority",
+      "query": "شركة توزيع المنتجات النفطية {P}",
+      "must": [
+        "المنتجات النفطية",
+        "توزيع",
+        "النفطية"
+      ]
+    },
+    {
+      "key": "environment",
+      "ministry": "ministry-of-environment",
+      "scope": "federal",
+      "directorate_hint": "البيئة",
+      "parent_slug": "general-directorate-of-environment",
+      "parent_title_ar": "المديرية العامة للبيئة",
+      "title_ar": "مديرية بيئة {P}",
+      "title_en": "{PE} Environment Directorate",
+      "query": "مديرية بيئة {P}",
+      "must": [
+        "بيئة",
+        "البيئة"
+      ]
+    },
+    {
+      "key": "university",
+      "ministry": "ministry-of-higher-education",
+      "scope": "federal",
+      "directorate_hint": "الجامعات",
+      "parent_slug": "general-directorate-of-universities",
+      "parent_title_ar": "دائرة الدراسات والتخطيط والمتابعة",
+      "title_ar": "جامعة {P}",
+      "title_en": "University of {PE}",
+      "query": "جامعة {P} الحكومية",
+      "must": [
+        "جامعة"
+      ]
+    },
+    {
+      "key": "krg-traffic",
+      "ministry": "krg-ministry-of-interior",
+      "scope": "krg",
+      "directorate_hint": "المرور",
+      "parent_slug": "krg-general-directorate-of-traffic",
+      "parent_title_ar": "المديرية العامة للمرور — اقليم كردستان",
+      "title_ar": "مديرية مرور {P}",
+      "title_en": "{PE} Traffic Directorate",
+      "query": "بەڕێوەبەرایەتی هاتوچۆی {P}",
+      "must": [
+        "هاتوچۆ",
+        "مرور",
+        "المرور",
+        "traffic"
+      ]
+    },
+    {
+      "key": "krg-residency",
+      "ministry": "krg-ministry-of-interior",
+      "scope": "krg",
+      "directorate_hint": "الاقامة",
+      "parent_slug": "krg-general-directorate-of-residency",
+      "parent_title_ar": "المديرية العامة للاقامة — اقليم كردستان",
+      "title_ar": "مديرية اقامة {P}",
+      "title_en": "{PE} Residency Directorate",
+      "query": "مديرية الاقامة {P} اقليم كردستان",
+      "must": [
+        "الاقامة",
+        "اقامة",
+        "ڕەوانبوون",
+        "residency"
+      ]
+    },
+    {
+      "key": "krg-civil-status",
+      "ministry": "krg-ministry-of-interior",
+      "scope": "krg",
+      "directorate_hint": "الاحوال المدنية",
+      "parent_slug": "krg-general-directorate-of-civil-status",
+      "parent_title_ar": "المديرية العامة للاحوال المدنية — اقليم كردستان",
+      "title_ar": "مديرية الاحوال المدنية في {P}",
+      "title_en": "{PE} Civil Status Directorate",
+      "query": "بەڕێوەبەرایەتی باری شارستانی {P}",
+      "must": [
+        "باری شارستانی",
+        "الاحوال المدنية",
+        "الجنسية",
+        "civil"
+      ]
+    },
+    {
+      "key": "krg-health",
+      "ministry": "krg-ministry-of-health",
+      "scope": "krg",
+      "directorate_hint": "صحة",
+      "parent_slug": "krg-general-directorate-of-health",
+      "parent_title_ar": "المديرية العامة للصحة — اقليم كردستان",
+      "title_ar": "مديرية صحة {P}",
+      "title_en": "{PE} Health Directorate",
+      "query": "بەڕێوەبەرایەتی تەندروستی {P}",
+      "must": [
+        "تەندروستی",
+        "صحة",
+        "health"
+      ]
+    },
+    {
+      "key": "krg-education",
+      "ministry": "krg-ministry-of-education",
+      "scope": "krg",
+      "directorate_hint": "تربية",
+      "parent_slug": "krg-general-directorate-of-education",
+      "parent_title_ar": "المديرية العامة للتربية — اقليم كردستان",
+      "title_ar": "مديرية تربية {P}",
+      "title_en": "{PE} Education Directorate",
+      "query": "بەڕێوەبەرایەتی پەروەردەی {P}",
+      "must": [
+        "پەروەردە",
+        "تربية",
+        "education"
+      ]
+    },
+    {
+      "key": "krg-labour",
+      "ministry": "krg-ministry-of-labour-and-social-affairs",
+      "scope": "krg",
+      "directorate_hint": "العمل",
+      "parent_slug": "krg-general-directorate-of-labour",
+      "parent_title_ar": "المديرية العامة للعمل والشؤون الاجتماعية — اقليم كردستان",
+      "title_ar": "مديرية العمل والشؤون الاجتماعية في {P}",
+      "title_en": "{PE} Labour and Social Affairs Directorate",
+      "query": "بەڕێوەبەرایەتی کار و کاروباری کۆمەڵایەتی {P}",
+      "must": [
+        "کار و",
+        "العمل",
+        "labour",
+        "labor"
+      ]
+    },
+    {
+      "key": "krg-tax",
+      "ministry": "krg-ministry-of-finance-and-economy",
+      "scope": "krg",
+      "directorate_hint": "الضرائب",
+      "parent_slug": "krg-general-directorate-of-taxes",
+      "parent_title_ar": "المديرية العامة للضرائب — اقليم كردستان",
+      "title_ar": "مديرية ضرائب {P}",
+      "title_en": "{PE} Tax Directorate",
+      "query": "بەڕێوەبەرایەتی باج {P}",
+      "must": [
+        "باج",
+        "الضرائب",
+        "ضرائب",
+        "tax"
+      ]
+    },
+    {
+      "key": "krg-customs",
+      "ministry": "krg-ministry-of-finance-and-economy",
+      "scope": "krg",
+      "directorate_hint": "الكمارك",
+      "parent_slug": "krg-general-directorate-of-customs",
+      "parent_title_ar": "المديرية العامة للكمارك — اقليم كردستان",
+      "title_ar": "كمارك {P}",
+      "title_en": "{PE} Customs",
+      "query": "بەڕێوەبەرایەتی گومرگ {P}",
+      "must": [
+        "گومرگ",
+        "الكمارك",
+        "كمارك",
+        "customs"
+      ]
+    },
+    {
+      "key": "krg-municipality",
+      "ministry": "krg-ministry-of-municipalities-and-tourism",
+      "scope": "krg",
+      "directorate_hint": "البلدية",
+      "parent_slug": "krg-general-directorate-of-municipalities",
+      "parent_title_ar": "المديرية العامة للبلديات — اقليم كردستان",
+      "title_ar": "بلدية {P}",
+      "title_en": "{PE} Municipality",
+      "query": "بەڕێوەبەرایەتی شارەوانی {P}",
+      "must": [
+        "شارەوانی",
+        "بلدية",
+        "البلديات",
+        "municipal"
+      ]
+    },
+    {
+      "key": "krg-agriculture",
+      "ministry": "krg-ministry-of-agriculture-and-water-resources",
+      "scope": "krg",
+      "directorate_hint": "الزراعة",
+      "parent_slug": "krg-general-directorate-of-agriculture",
+      "parent_title_ar": "المديرية العامة للزراعة — اقليم كردستان",
+      "title_ar": "مديرية زراعة {P}",
+      "title_en": "{PE} Agriculture Directorate",
+      "query": "بەڕێوەبەرایەتی کشتوکاڵی {P}",
+      "must": [
+        "کشتوکاڵ",
+        "زراعة",
+        "الزراعة",
+        "agricultur"
+      ]
+    },
+    {
+      "key": "krg-electricity",
+      "ministry": "krg-ministry-of-electricity",
+      "scope": "krg",
+      "directorate_hint": "الكهرباء",
+      "parent_slug": "krg-general-directorate-of-electricity",
+      "parent_title_ar": "المديرية العامة للكهرباء — اقليم كردستان",
+      "title_ar": "مديرية كهرباء {P}",
+      "title_en": "{PE} Electricity Directorate",
+      "query": "بەڕێوەبەرایەتی کارەبای {P}",
+      "must": [
+        "کارەبا",
+        "كهرباء",
+        "الكهرباء",
+        "electric"
+      ]
+    },
+    {
+      "key": "krg-awqaf",
+      "ministry": "krg-ministry-of-endowment-and-religious-affairs",
+      "scope": "krg",
+      "directorate_hint": "الاوقاف",
+      "parent_slug": "krg-general-directorate-of-endowments",
+      "parent_title_ar": "المديرية العامة للاوقاف — اقليم كردستان",
+      "title_ar": "مديرية اوقاف {P}",
+      "title_en": "{PE} Endowments Directorate",
+      "query": "بەڕێوەبەرایەتی ئەوقافی {P}",
+      "must": [
+        "ئەوقاف",
+        "الاوقاف",
+        "اوقاف",
+        "endowment"
+      ]
+    },
+    {
+      "key": "krg-youth-sports",
+      "ministry": "krg-ministry-of-culture-and-youth",
+      "scope": "krg",
+      "directorate_hint": "الشباب",
+      "parent_slug": "krg-general-directorate-of-youth-and-sports",
+      "parent_title_ar": "المديرية العامة للشباب والرياضة — اقليم كردستان",
+      "title_ar": "مديرية شباب ورياضة {P}",
+      "title_en": "{PE} Youth and Sports Directorate",
+      "query": "بەڕێوەبەرایەتی لاوان و وەرزشی {P}",
+      "must": [
+        "لاوان",
+        "وەرزش",
+        "الشباب",
+        "رياضة",
+        "youth"
+      ]
+    },
+    {
+      "key": "krg-transport",
+      "ministry": "krg-ministry-of-transport-and-communications",
+      "scope": "krg",
+      "directorate_hint": "النقل",
+      "parent_slug": "krg-general-directorate-of-transport",
+      "parent_title_ar": "المديرية العامة للنقل والاتصالات — اقليم كردستان",
+      "title_ar": "مديرية نقل {P}",
+      "title_en": "{PE} Transport Directorate",
+      "query": "بەڕێوەبەرایەتی گواستنەوەی {P}",
+      "must": [
+        "گواستنەوە",
+        "النقل",
+        "نقل",
+        "transport"
+      ]
+    },
+    {
+      "key": "krg-quality-control",
+      "ministry": "krg-ministry-of-trade-and-industry",
+      "scope": "krg",
+      "directorate_hint": "السيطرة النوعية",
+      "parent_slug": "krg-general-directorate-of-quality-control",
+      "parent_title_ar": "المديرية العامة للسيطرة النوعية — اقليم كردستان",
+      "title_ar": "مديرية السيطرة النوعية في {P}",
+      "title_en": "{PE} Quality Control Directorate",
+      "query": "بەڕێوەبەرایەتی دڵنیایی جۆری {P}",
+      "must": [
+        "دڵنیایی جۆری",
+        "السيطرة النوعية",
+        "النوعية",
+        "quality"
+      ]
+    },
+    {
+      "key": "krg-statistics",
+      "ministry": "krg-ministry-of-planning",
+      "scope": "krg",
+      "directorate_hint": "الاحصاء",
+      "parent_slug": "krg-general-directorate-of-statistics",
+      "parent_title_ar": "المديرية العامة للاحصاء — اقليم كردستان",
+      "title_ar": "مديرية احصاء {P}",
+      "title_en": "{PE} Statistics Directorate",
+      "query": "بەڕێوەبەرایەتی ئامار {P}",
+      "must": [
+        "ئامار",
+        "احصاء",
+        "الاحصاء",
+        "statistic"
+      ]
+    },
+    {
+      "key": "krg-land-registry",
+      "ministry": "krg-ministry-of-justice",
+      "scope": "krg",
+      "directorate_hint": "التسجيل العقاري",
+      "parent_slug": "krg-general-directorate-of-land-registry",
+      "parent_title_ar": "المديرية العامة للتسجيل العقاري — اقليم كردستان",
+      "title_ar": "دائرة التسجيل العقاري في {P}",
+      "title_en": "{PE} Land Registry",
+      "query": "بەڕێوەبەرایەتی تۆماری خانووبەرەی {P}",
+      "must": [
+        "خانووبەرە",
+        "التسجيل العقاري",
+        "الطابو",
+        "registry"
+      ]
+    },
+    {
+      "key": "krg-housing",
+      "ministry": "krg-ministry-of-construction-and-housing",
+      "scope": "krg",
+      "directorate_hint": "الاسكان",
+      "parent_slug": "krg-general-directorate-of-housing",
+      "parent_title_ar": "المديرية العامة للاعمار والاسكان — اقليم كردستان",
+      "title_ar": "مديرية اسكان {P}",
+      "title_en": "{PE} Housing Directorate",
+      "query": "بەڕێوەبەرایەتی نیشتەجێکردنی {P}",
+      "must": [
+        "نیشتەجێ",
+        "الاسكان",
+        "اسكان",
+        "housing"
+      ]
     }
   ],
   "provinces": [

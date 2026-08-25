@@ -210,4 +210,4 @@ const left = [...ds.ministries, ...ds.directorates, ...ds.branches].filter((r) =
 console.log(`\nArabic names recovered : ${stats.ar}`);
 console.log(`Kurdish names recovered: ${stats.ku}`);
 console.log(`still needing a translation: ${left.length}`);
-for (const r of left) console.log(`   ${r.ministry_slug.padEnd(46)} ${r.title_ar}`);
+for (const r of left) console.log(`   ${String(r.ministry_slug ?? "(branch)").padEnd(46)} ${r.title_ar}`);

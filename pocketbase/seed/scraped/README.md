@@ -109,7 +109,16 @@ Name matching across Arabic, Kurdish and English needs more than a string compar
   The names and ministry links are real and remain; the rows are flagged
   `_ambiguous_name`.
 - Branch coverage is only as good as Maps' own coverage, which is thin outside the
-  large cities. `customs` (3) and `companies-registration` (5) are genuinely sparse.
+  large cities. `customs` (3) and `companies-registration` (5) are genuinely sparse,
+  and the Kurdistan Region families return single digits each — KRG offices are far
+  less mapped than federal ones, in any of the three languages.
+- **Seven ministries still have no branches**, and for five that is correct rather
+  than missing: Foreign Affairs has no provincial offices (its network is embassies),
+  Peshmerga Affairs and Natural Resources run no public counters, and the KRG Martyrs
+  and Anfal ministry models its provincial bodies as directorates, not branches. The
+  two genuine gaps are Defence — conscription offices returned nothing under any
+  wording tried — and Industry and Minerals, which has no family defined because no
+  per-governorate citizen-facing network was identifiable without inventing one.
 
 ## Regenerating
 
@@ -148,7 +157,10 @@ Shared modules: `gmaps.mjs` (Maps client + on-disk cache + concurrency pool),
 normalisation and scoring), `osm.mjs` (Overpass loader, `opening_hours` parser,
 proximity matching). Inputs: `seed-ministries.json` (the 42 ministries),
 `seed-gap-directorates.json` (candidates for ministries whose site is unreachable),
-`branch-families.json` (which directorates run a provincial network).
+`branch-families.json` (which directorates run a provincial network, and — via
+`scope` — which governorates each is searched in: a Kurdistan Region body has no
+office in Basra, and asking for one returns a similarly-named federal office,
+which is noise dressed as coverage).
 
 `pb.txt` is the Google Maps request template captured from a real browser session. If
 Maps starts returning empty results, that template has gone stale: open Maps in a

@@ -116,15 +116,31 @@ try {
       JSON.stringify(box),
     );
 
-    // Footer, driven by `settings`.
-    check(
-      `${locale}: footer contact email from settings`,
-      (await page.locator('footer a[href^="mailto:"]').innerText()) === 'info@irshad.gov.iq',
-    );
-    check(
-      `${locale}: phone renders left-to-right even in RTL`,
-      (await page.locator('footer a[href^="tel:"]').getAttribute('dir')) === 'ltr',
-    );
+    // Footer, driven by `settings`. Both of these are optional: the site publishes a
+    // contact address and phone only if someone has set them, and pinning the test to
+    // the development seed's invented values meant clearing those values — which was
+    // the right thing to do, they were fabricated — turned the suite red. Assert the
+    // behaviour where the setting exists instead of asserting that it exists.
+    const mailLink = page.locator('footer a[href^="mailto:"]');
+    if (await mailLink.count()) {
+      const href = await mailLink.first().getAttribute('href');
+      check(
+        `${locale}: footer email is a usable mailto link`,
+        href?.startsWith('mailto:') && href.includes('@'),
+        href ?? '',
+      );
+    } else {
+      console.log(`  SKIP  ${locale}: no contact email published`);
+    }
+    const telLink = page.locator('footer a[href^="tel:"]');
+    if (await telLink.count()) {
+      check(
+        `${locale}: phone renders left-to-right even in RTL`,
+        (await telLink.first().getAttribute('dir')) === 'ltr',
+      );
+    } else {
+      console.log(`  SKIP  ${locale}: no contact phone published`);
+    }
     check(`${locale}: social links`, (await page.locator('footer a[target="_blank"]').count()) === 3);
 
     // Smallest supported viewport.
@@ -593,7 +609,9 @@ try {
   await page.goto(`${BASE}/ar`, { waitUntil: 'domcontentloaded' });
   check('no-js: menu still renders', (await page.locator('header nav ul > li').count()) > 0);
   check('no-js: skip link present', (await page.locator('a.skip-link').count()) === 1);
-  check('no-js: footer still renders', (await page.locator('footer a[href^="mailto:"]').count()) === 1);
+  // Was keyed on the contact email, which is optional — this check is about the
+  // footer surviving without JavaScript, not about a particular setting being set.
+  check('no-js: footer still renders', (await page.locator('footer a').count()) > 0);
   const details = page.locator('header details').first();
   await details.locator('summary').click();
   check('no-js: native disclosure still opens', await details.evaluate((d) => d.open));
