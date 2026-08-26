@@ -1,5 +1,6 @@
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { localized } from '@/lib/i18n';
+import { thumbSize } from '@/lib/public/thumbs';
 import { fileUrl, listAllPublic, listPublic } from '@/lib/pb/queries/public';
 import { countByField, proceduresPerMinistry, stepDots } from '@/lib/public/home';
 import { projectPoint } from '@/lib/public/geo';
@@ -120,7 +121,7 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
     .map((ministry) => ({
       slug: ministry.slug,
       title: localized(ministry, 'title', locale),
-      logoUrl: fileUrl(ministry, ministry.logo, { thumb: '120x120' }),
+      logoUrl: fileUrl(ministry, ministry.logo, { thumb: thumbSize('ministryLogo') }),
       countLabel: t('countProcedures', { count: ministryCounts.get(ministry.id) ?? 0 }),
     }));
 
