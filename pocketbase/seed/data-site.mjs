@@ -152,8 +152,12 @@ export const settings = [
   ['support_hours', 'Support hours', 'contact', false, 'Sunday – Thursday, 09:00 – 15:00', 'الأحد – الخميس، ٩:٠٠ – ١٥:٠٠', 'یەکشەممە – پێنجشەممە، ٩:٠٠ – ١٥:٠٠'],
   ['office_address', 'Office address', 'contact', false, 'Al-Karrada, Baghdad, Iraq', 'الكرادة، بغداد، العراق', 'کەڕادە، بەغدا، عێراق'],
   ['facebook_url', 'Facebook', 'social', true, 'https://facebook.com/irshad.iq', 'https://facebook.com/irshad.iq', 'https://facebook.com/irshad.iq'],
-  ['x_url', 'X (Twitter)', 'social', true, 'https://x.com/irshad_iq', 'https://x.com/irshad_iq', 'https://x.com/irshad_iq'],
-  ['youtube_url', 'YouTube', 'social', true, 'https://youtube.com/@irshad-iq', 'https://youtube.com/@irshad-iq', 'https://youtube.com/@irshad-iq'],
+  // Empty, not invented. Both of these shipped pointing at accounts nobody had
+  // created and both returned 404 from the footer of every page for months. The
+  // footer drops a social entry with no value, so an empty setting simply does
+  // not render, and staff can fill it in from the admin once the account exists.
+  ['x_url', 'X (Twitter)', 'social', true, '', '', ''],
+  ['youtube_url', 'YouTube', 'social', true, '', '', ''],
   ['footer_note', 'Footer note', 'general', false,
     'Irshad is an informational guide. Always confirm fees and requirements with the responsible directorate.',
     'إرشاد دليل معلوماتي. تأكد دائما من الرسوم والمتطلبات لدى الدائرة المختصة.',

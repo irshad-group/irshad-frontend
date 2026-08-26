@@ -141,7 +141,17 @@ try {
     } else {
       console.log(`  SKIP  ${locale}: no contact phone published`);
     }
-    check(`${locale}: social links`, (await page.locator('footer a[target="_blank"]').count()) === 3);
+    // Not pinned to a count. Two of the three the seed shipped pointed at
+    // accounts nobody had created — both 404 on every page of the site — and a
+    // test asserting "there are three" is what certified them as fine. What
+    // matters is that whatever the footer does link out to opens safely.
+    const footerLinks = page.locator('footer a[target="_blank"]');
+    const footerCount = await footerLinks.count();
+    let unsafe = 0;
+    for (let i = 0; i < footerCount; i += 1) {
+      if (!((await footerLinks.nth(i).getAttribute('rel')) ?? '').includes('noopener')) unsafe += 1;
+    }
+    check(`${locale}: footer external links open safely`, unsafe === 0, `${unsafe} of ${footerCount} missing rel=noopener`);
 
     // Smallest supported viewport.
     await page.setViewportSize({ width: 320, height: 720 });
