@@ -161,6 +161,10 @@ node crawl-ministry-sites.mjs            # -> ministry-site-candidates.json
 node build-ministry-site-branches.mjs    # -> ministry-site-branches.json
 node build-ministry-site-directorates.mjs # -> ministry-site-directorates.json
 node merge-ministry-sites.mjs            # folds both into the dataset (adds only)
+
+# and two repairs the pass above exposed
+node drop-shared-phones.mjs              # withdraw a number claimed by two ministries
+node fix-prose-titles.mjs                # three titles that were sentences, not names
 ```
 
 The chain is deterministic and every network response is cached, so re-running it

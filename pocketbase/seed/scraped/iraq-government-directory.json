@@ -53,8 +53,8 @@
       "title_ku": "وەزارەتی بەرگری",
       "krg": false,
       "website": "https://mod.mil.iq/",
-      "phone": "+964 780 940 2568",
-      "email": null,
+      "phone": "+964 790 111 5965",
+      "email": "sgoffice@mod.mil.iq",
       "address_ar": "وزارة الدفاع العراقية, جسر، بغداد، بغداد محافظة",
       "address_en": null,
       "address_ku": null,
@@ -76,7 +76,8 @@
         "id": "way/888025737",
         "distance_m": 118,
         "name_similarity": 1
-      }
+      },
+      "_contact_source": "https://mod.mil.iq/?page=2461"
     },
     {
       "slug": "ministry-of-foreign-affairs",
@@ -1851,7 +1852,7 @@
       "title_ku": null,
       "website": "https://moi.gov.iq/?page=43",
       "_website_source": "ministry-site",
-      "phone": "+964 780 554 3161",
+      "phone": null,
       "address_ar": "مديرية الشهداء والجرحى، بغداد، بغداد محافظة",
       "gps_lat": 33.339779,
       "gps_lon": 44.4290945,
@@ -1864,7 +1865,8 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "مديرية الشهداء والجرحى"
+      "_maps_name": "مديرية الشهداء والجرحى",
+      "_phone_withdrawn": "shared with 2 ministries; no evidence which owns it"
     },
     {
       "slug": "mdyrya-amn-alafrad",
@@ -1921,7 +1923,7 @@
       "title_ku": null,
       "website": "https://moi.gov.iq/?page=45",
       "_website_source": "ministry-site",
-      "phone": "+964 773 048 5040",
+      "phone": null,
       "address_ar": "المفوضية العليا لحقوق الانسان في العراق، بغداد، بغداد محافظة",
       "gps_lat": 33.3467655,
       "gps_lon": 44.4412047,
@@ -1940,7 +1942,8 @@
         "distance_m": 15,
         "name_similarity": 0.67
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "place-match",
+      "_phone_withdrawn": "shared with 2 ministries; no evidence which owns it"
     },
     {
       "slug": "mdyrya-shwwn-albtaqa-alwtnya",
@@ -2191,7 +2194,7 @@
       "title_ku": null,
       "website": "https://mod.mil.iq/?topic=48",
       "_website_source": "ministry-site",
-      "phone": "+964 773 048 5040",
+      "phone": "+964 790 194 5476",
       "address_ar": "المفوضية العليا لحقوق الانسان في العراق، بغداد، بغداد محافظة",
       "gps_lat": 33.3467655,
       "gps_lon": 44.4412047,
@@ -2210,7 +2213,9 @@
         "distance_m": 15,
         "name_similarity": 0.67
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "place-match",
+      "email": "hmr-dir@mod.mil.iq",
+      "_contact_source": "https://mod.mil.iq/?page=2461"
     },
     {
       "slug": "mdyrya-alamwr-altbya",
@@ -2338,7 +2343,7 @@
     {
       "slug": "tasst-dayra-hqwq-alinsan-aam-1992",
       "ministry_slug": "ministry-of-foreign-affairs",
-      "title_ar": "تأسست دائرة حقوق الإنسان عام 1992.",
+      "title_ar": "دائرة حقوق الإنسان",
       "title_en": null,
       "title_ku": null,
       "website": null,
@@ -2356,7 +2361,8 @@
       "_verified": false,
       "_confidence": 0.4,
       "_source": "ministry-site",
-      "_maps_name": "المفوضية العليا لحقوق الانسان في العراق"
+      "_maps_name": "المفوضية العليا لحقوق الانسان في العراق",
+      "_title_repaired": "scraped text was a sentence or a doubled heading, not a name"
     },
     {
       "slug": "alsndwq-altway-llamm-almthda-llshawb-alaslya",
@@ -2704,7 +2710,7 @@
       "title_ku": null,
       "website": null,
       "_website_source": null,
-      "phone": "+964 773 048 5040",
+      "phone": null,
       "address_ar": "المفوضية العليا لحقوق الانسان في العراق، بغداد، بغداد محافظة",
       "gps_lat": 33.3467655,
       "gps_lon": 44.4412047,
@@ -2723,7 +2729,8 @@
         "distance_m": 15,
         "name_similarity": 0.67
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "place-match",
+      "_phone_withdrawn": "shared with 2 ministries; no evidence which owns it"
     },
     {
       "slug": "dayra-raaya-alqasryn-tkrm-adda-mn-almtfwqyn-alqasryn-fy-mhaf",
@@ -3126,7 +3133,7 @@
       "title_ku": null,
       "website": "https://moelc.gov.iq/?page=3275",
       "_website_source": "ministry-site",
-      "phone": "+964 780 554 3161",
+      "phone": null,
       "address_ar": "مديرية الشهداء والجرحى، بغداد، بغداد محافظة",
       "gps_lat": 33.339779,
       "gps_lon": 44.4290945,
@@ -3144,7 +3151,8 @@
         "id": "node/12293243620",
         "distance_m": 244,
         "name_similarity": 0.67
-      }
+      },
+      "_phone_withdrawn": "shared with 2 ministries; no evidence which owns it"
     },
     {
       "slug": "mdyrya-alwqwd-qsm-alwqwd-alsayl",
@@ -6275,7 +6283,7 @@
     {
       "slug": "balanfw-hrka-qtarat-alshrka-alaama-lskk-hdyd-alaraq",
       "ministry_slug": "ministry-of-transport",
-      "title_ar": "بالانفو.. حركة قطارات الشركة العامة لسكك حديد العراق",
+      "title_ar": "الشركة العامة لسكك حديد العراق",
       "title_en": null,
       "title_ku": null,
       "website": "https://www.motrans.gov.iq/?article=4177",
@@ -6293,7 +6301,8 @@
       "_verified": false,
       "_confidence": 0,
       "_source": "ministry-site",
-      "_maps_name": null
+      "_maps_name": null,
+      "_title_repaired": "scraped text was a sentence or a doubled heading, not a name"
     },
     {
       "slug": "alshrka-alaama-lnql-almsafryn-walwfwd",
@@ -7678,9 +7687,9 @@
     {
       "slug": "general-directorate-of-endowments-in-sulaymaniyah",
       "ministry_slug": "krg-ministry-of-endowment-and-religious-affairs",
-      "title_ar": "بەڕێوبەرایەتی گشتی ئەوقافی سلێمانی General Directorate of Endowments of Sulaimani",
-      "title_en": "بەڕێوبەرایەتی گشتی ئەوقافی سلێمانی General Directorate of Endowments of Sulaimani",
-      "title_ku": "بەڕێوبەرایەتی گشتی ئەوقافی سلێمانی General Directorate of Endowments of Sulaimani",
+      "title_ar": "General Directorate of Endowments of Sulaimani",
+      "title_en": "General Directorate of Endowments of Sulaimani",
+      "title_ku": "بەڕێوبەرایەتی گشتی ئەوقافی سلێمانی",
       "website": null,
       "_website_source": null,
       "phone": null,
@@ -7704,7 +7713,8 @@
       },
       "_title_en_source": "place-match",
       "_title_ku_source": "place-match",
-      "_title_ar_recovered": "google-maps hl=ar, matched by place id"
+      "_title_ar_recovered": "google-maps hl=ar, matched by place id",
+      "_title_repaired": "scraped text was a sentence or a doubled heading, not a name"
     },
     {
       "slug": "general-directorate-of-endowments-in-dohuk",
@@ -8194,7 +8204,7 @@
       "title_ku": null,
       "website": null,
       "_website_source": null,
-      "phone": "+964 770 811 7410",
+      "phone": null,
       "address_ar": "وزارة التعليم العالي والبحث العلمي، بغداد، بغداد محافظة",
       "gps_lat": 33.3276877,
       "gps_lon": 44.4191016,
@@ -8213,7 +8223,8 @@
         "distance_m": 57,
         "name_similarity": 0.33
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "place-match",
+      "_phone_withdrawn": "shared with 2 ministries; no evidence which owns it"
     },
     {
       "slug": "dayra-albathat-walalaqat-althqafya",
@@ -9669,7 +9680,7 @@
       "title_ku": "وەزارەتی کار و کاروباری کۆمەڵایەتی",
       "website": "https://gov.krd/molsa",
       "_website_source": "place-match",
-      "phone": "+964 750 717 9453",
+      "phone": null,
       "address_ar": "وزارة العمل والشؤون الاجتماعية، اربيل، أربيل محافظة",
       "gps_lat": 36.2117596,
       "gps_lon": 44.028832099999995,
@@ -9689,7 +9700,8 @@
         "name_similarity": 0.2
       },
       "_title_en_source": "place-match",
-      "_title_ku_source": "place-match"
+      "_title_ku_source": "place-match",
+      "_phone_withdrawn": "shared with 2 ministries; no evidence which owns it"
     },
     {
       "slug": "mtar-arbyl-aldwly",
