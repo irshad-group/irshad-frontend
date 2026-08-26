@@ -4,6 +4,7 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { locales } from '@/i18n/routing';
 import { localized } from '@/lib/i18n';
+import { thumbSize } from '@/lib/public/thumbs';
 import { formatFee } from '@/lib/public/procedures';
 import { mapsLink } from '@/lib/public/places';
 import { fileUrl, findPublicBySlug, listAllPublic, publicSlugs } from '@/lib/pb/queries/public';
@@ -260,7 +261,7 @@ export default async function ProcedurePage({
                         // eslint-disable-next-line @next/next/no-img-element -- PocketBase thumbs, fixed small size.
                         <img
                           key={photo}
-                          src={fileUrl(directorate, photo, { thumb: '800x0' }) ?? undefined}
+                          src={fileUrl(directorate, photo, { thumb: thumbSize('directoratePhoto') }) ?? undefined}
                           alt=""
                           loading="lazy"
                           className="aspect-square w-full border border-ink-200 object-cover"

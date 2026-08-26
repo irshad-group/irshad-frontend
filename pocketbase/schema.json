@@ -546,7 +546,8 @@
         "system": false,
         "thumbs": [
           "100x100",
-          "800x0"
+          "800x0",
+          "224x160"
         ],
         "type": "file"
       },
@@ -879,7 +880,8 @@
         "system": false,
         "thumbs": [
           "100x100",
-          "800x0"
+          "800x0",
+          "224x160"
         ],
         "type": "file"
       },
@@ -1512,7 +1514,9 @@
         "protected": false,
         "required": false,
         "system": false,
-        "thumbs": null,
+        "thumbs": [
+          "1200x0"
+        ],
         "type": "file"
       },
       {

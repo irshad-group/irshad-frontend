@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { localized } from '@/lib/i18n';
+import { thumbSize } from '@/lib/public/thumbs';
 import { fileUrl, listAllPublic } from '@/lib/pb/queries/public';
 import { Container, EmptyState } from '@/components/ui/primitives';
 
@@ -25,7 +26,7 @@ export default async function TeamPage({ params }: { params: Promise<{ locale: s
       ) : (
         <ul className="mt-8 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {members.map((member) => {
-            const photo = fileUrl(member, member.photo, { thumb: '200x200' });
+            const photo = fileUrl(member, member.photo, { thumb: thumbSize('teamPhoto') });
             return (
               <li key={member.id} className="rounded-lg bg-white p-5 ring-1 ring-ink-200/70">
                 {photo ? (

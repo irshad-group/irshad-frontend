@@ -6,6 +6,7 @@ import { Link } from '@/i18n/navigation';
 import { locales } from '@/i18n/routing';
 import { directionOf } from '@/i18n/routing';
 import { localized } from '@/lib/i18n';
+import { thumbSize } from '@/lib/public/thumbs';
 import { fileUrl, findPublicBySlug, listAllPublic, publicSlugs } from '@/lib/pb/queries/public';
 import { Container, EmptyState, Badge } from '@/components/ui/primitives';
 import Lightbox from '@/components/public/Lightbox';
@@ -72,13 +73,13 @@ export default async function MinistryPage({
     officesByDirectorate.set(branch.directorate, entry);
   }
 
-  const logo = fileUrl(ministry, ministry.logo, { thumb: '240x240' });
+  const logo = fileUrl(ministry, ministry.logo, { thumb: thumbSize('ministryLogoLarge') });
   const address = localized(ministry, 'address', locale);
   const name = localized(ministry, 'title', locale);
   // The building, which every ministry has and none of them was showing. A
   // reader who has to go there benefits from recognising it more than from a
   // second look at the crest.
-  const buildingThumb = fileUrl(ministry, ministry.photos?.[0], { thumb: '1200x0' });
+  const buildingThumb = fileUrl(ministry, ministry.photos?.[0], { thumb: thumbSize('ministryBanner') });
   const buildingFull = fileUrl(ministry, ministry.photos?.[0]);
 
   return (
