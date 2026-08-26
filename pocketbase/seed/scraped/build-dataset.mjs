@@ -7,6 +7,7 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import { norm, stripTashkeel } from './match.mjs';
+import { slugify, translit } from './slug.mjs';
 import { largePhoto } from './photo-url.mjs';
 
 const HERE = path.dirname(new URL(import.meta.url).pathname.replace(/^\/([A-Za-z]:)/, '$1'));
@@ -65,11 +66,6 @@ function toWorkingHours(hours) {
   }
   return out.length ? out : null;
 }
-
-const slugify = (s, fallback) => {
-  const base = (s || '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
-  return base || fallback;
-};
 
 const ministries = mins.map((m, i) => {
   const ur = urMatch(m.title_ar, m.krg);
@@ -141,13 +137,6 @@ const directorates = dirs.map((d, i) => {
     _maps_name: d.maps_name || null,
   };
 });
-
-// Very small Arabic -> Latin map, only good enough to make a readable URL slug.
-function translit(ar) {
-  const M = { 'ا': 'a', 'أ': 'a', 'إ': 'i', 'آ': 'a', 'ب': 'b', 'ت': 't', 'ث': 'th', 'ج': 'j', 'ح': 'h', 'خ': 'kh', 'د': 'd', 'ذ': 'dh', 'ر': 'r', 'ز': 'z', 'س': 's', 'ش': 'sh', 'ص': 's', 'ض': 'd', 'ط': 't', 'ظ': 'z', 'ع': 'a', 'غ': 'gh', 'ف': 'f', 'ق': 'q', 'ك': 'k', 'ل': 'l', 'م': 'm', 'ن': 'n', 'ه': 'h', 'ة': 'a', 'و': 'w', 'ي': 'y', 'ى': 'a', 'ئ': 'y', 'ؤ': 'w', 'ء': '', 'ﻻ': 'la' };
-  return stripTashkeel(ar).split('').map((c) => (M[c] !== undefined ? M[c] : (/[a-zA-Z0-9]/.test(c) ? c : ' '))).join('')
-    .replace(/\s+/g, '-').replace(/-+/g, '-').replace(/^-|-$/g, '').slice(0, 60);
-}
 
 // --- branches ---------------------------------------------------------------
 // Every family has one canonical parent directorate with a fixed slug. Where the

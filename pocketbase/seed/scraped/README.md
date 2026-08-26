@@ -66,6 +66,19 @@ Name matching across Arabic, Kurdish and English needs more than a string compar
 
 ## Known gaps
 
+- **Defence has no provincial offices, and none can be obtained.** Military estate is
+  deliberately absent from public maps, and `mod.mil.iq` publishes no branch directory:
+  no addresses, and nothing in 42 of its own news articles naming a recruitment or
+  pensions office in any governorate. What its site does give is the rest of the
+  ministry — a defence university, a naval academy, a special-forces school, research
+  and training centres — seven bodies the dataset did not have, four of them locatable.
+  The four provincial offices Defence does carry come from Maps, not from the ministry.
+- **Industry is invisible to a search for the ministry.** Each of its 23 directorates is
+  a state company trading under its own name, so nothing about "معمل سمنت كبيسة" says
+  "وزارة الصناعة" to Maps or OSM. Their own sites do: the cement company plots all 21 of
+  its plants with coordinates, and the textile, pharmaceutical and mining companies list
+  their factories and marketing centres. That is where Industry's 33 offices come from.
+
 - **Opening hours cover 106 of 1,091 records.** Google Maps' search response carries
   only *today's* interval, never the week, and the place-detail route needs a session
   token this pipeline could not obtain. Every weekly schedule here therefore comes from
@@ -142,6 +155,12 @@ node enrich-names.mjs           # title_en / title_ku from localised Maps querie
 node normalize-names.mjs        # enforce the right script in each name field
 node recover-krg-names.mjs      # Arabic + Kurdish names from gov.krd's own lists
 node drop-ambiguous.mjs         # withdraw locations a generic name could not have earned
+
+# finally, the two ministries neither Maps nor OSM can see (Defence, Industry)
+node crawl-ministry-sites.mjs            # -> ministry-site-candidates.json
+node build-ministry-site-branches.mjs    # -> ministry-site-branches.json
+node build-ministry-site-directorates.mjs # -> ministry-site-directorates.json
+node merge-ministry-sites.mjs            # folds both into the dataset (adds only)
 ```
 
 The chain is deterministic and every network response is cached, so re-running it

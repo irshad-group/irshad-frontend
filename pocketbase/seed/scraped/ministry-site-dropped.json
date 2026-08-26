@@ -1,0 +1,170 @@
+[
+ {
+  "name": "معمل خياطة بغداد / الخيم يشكل لجاناً جوالة لبيع المنتجات",
+  "page": "https://sctl.industry.gov.iq/news-details/83",
+  "via": "link",
+  "source": "https://sctl.industry.gov.iq/",
+  "why": "not a place",
+  "target": "الشركة العامة لصناعة النسيجية والجلود"
+ },
+ {
+  "name": "مصانع الشركة",
+  "via": "text",
+  "source": "https://sctl.industry.gov.iq/",
+  "why": "not a place",
+  "target": "الشركة العامة لصناعة النسيجية والجلود"
+ },
+ {
+  "name": "معامل الشركة",
+  "page": "https://www.icsc.industry.gov.iq/categories",
+  "via": "link",
+  "source": "https://www.icsc.industry.gov.iq/",
+  "why": "not a place",
+  "target": "الشركة العامة للسمنت العراقية"
+ },
+ {
+  "name": "معمل سمنت كبيسة يحصل على شهادة ISO9001:2015 العالمية وشهادة ISO14001:2015 من شركة IFC العالمية",
+  "via": "text",
+  "source": "https://www.icsc.industry.gov.iq/",
+  "why": "not a place",
+  "target": "الشركة العامة للسمنت العراقية"
+ },
+ {
+  "name": "معمل تجريب معمل تجريبي",
+  "page": "https://www.icsc.industry.gov.iq/categories/details/25",
+  "via": "link",
+  "source": "https://www.icsc.industry.gov.iq/categories",
+  "why": "not a place",
+  "target": "الشركة العامة للسمنت العراقية"
+ },
+ {
+  "name": "معمل تجريب",
+  "via": "text",
+  "source": "https://www.icsc.industry.gov.iq/categories",
+  "why": "not a place",
+  "target": "الشركة العامة للسمنت العراقية"
+ },
+ {
+  "name": "معمل تجريبي",
+  "via": "text",
+  "source": "https://www.icsc.industry.gov.iq/categories",
+  "why": "not a place",
+  "target": "الشركة العامة للسمنت العراقية"
+ },
+ {
+  "name": "مصانع الشركة",
+  "page": "https://sdi.industry.gov.iq/#",
+  "via": "link",
+  "source": "https://sdi.industry.gov.iq/",
+  "why": "not a place",
+  "target": "الشركة العامة لصناعة الادوية والمستلزمات الطبية"
+ },
+ {
+  "name": "مدرسة ثانوية",
+  "via": "text",
+  "source": "https://sdi.industry.gov.iq/staff?lang=ar",
+  "why": "not a place",
+  "target": "الشركة العامة لصناعة الادوية والمستلزمات الطبية"
+ },
+ {
+  "name": "مدرسة اعدادية",
+  "via": "text",
+  "source": "https://sdi.industry.gov.iq/staff?lang=ar",
+  "why": "not a place",
+  "target": "الشركة العامة لصناعة الادوية والمستلزمات الطبية"
+ },
+ {
+  "name": "مصنع ابن سينا :- هذا المصنع متخصص بانتاج البنسلينات وتشمل كبسول المضادات الحياتية بطاقة انتاجية 691 الف كبسولة",
+  "via": "text",
+  "source": "https://sdi.industry.gov.iq/factory/2?lang=ar",
+  "why": "not a place",
+  "target": "الشركة العامة لصناعة الادوية والمستلزمات الطبية"
+ },
+ {
+  "name": "مصنع ابن النفيس :- يقوم بانتاج الاشربة المختلفة، المعلقات",
+  "via": "text",
+  "source": "https://sdi.industry.gov.iq/factory/2?lang=ar",
+  "why": "not a place",
+  "target": "الشركة العامة لصناعة الادوية والمستلزمات الطبية"
+ },
+ {
+  "name": "مصنع ابن حيان :- يقوم بإنتاج قطرات العيون، المراهم، الكريمات",
+  "via": "text",
+  "source": "https://sdi.industry.gov.iq/factory/2?lang=ar",
+  "why": "not a place",
+  "target": "الشركة العامة لصناعة الادوية والمستلزمات الطبية"
+ },
+ {
+  "name": "مصنع الزهراوي :- يقوم بانتاج الحبوب المضغوطة بأنواعها وأشكالها المختلفة",
+  "via": "text",
+  "source": "https://sdi.industry.gov.iq/factory/2?lang=ar",
+  "why": "not a place",
+  "target": "الشركة العامة لصناعة الادوية والمستلزمات الطبية"
+ },
+ {
+  "name": "مصنع الرازي :- يقوم بإنتاج السيفالوسبورينات وتشمل الكبسول، المساحيق",
+  "via": "text",
+  "source": "https://sdi.industry.gov.iq/factory/2?lang=ar",
+  "why": "not a place",
+  "target": "الشركة العامة لصناعة الادوية والمستلزمات الطبية"
+ },
+ {
+  "name": "شعبة تسويق بغداد - الموقع البديل في هيئة البحث والتطوير الصناعي- الجادرية",
+  "map": "https://maps.app.goo.gl/yK2Rh78DDTVMkuU17?g_st=ic",
+  "via": "map-link",
+  "source": "https://sdi.industry.gov.iq/marketing/center?lang=ar",
+  "resolved": {
+   "final": "https://maps.google.com/maps?q=79GP+7JR+هيأة+البحث+والتطوير+الصناعي,+Unnamed+Road،+Baghdad,+Baghdad+Governorate&ftid=0x15577f828281bd31:0x249dc6d4c3a3cd5e&entry=gps&shh=CAE&lucs=,94297699,100820695,94231188,94280568,47071704,94218641,94282134,100813464,94286869&g_ep=CAISEjI2LjI1LjMuOTMyMTI1MTg3MBgAINeCAypTLDk0Mjk3Njk5LDEwMDgyMDY5NSw5NDIzMTE4OCw5NDI4MDU2OCw0NzA3MTcwNCw5NDIxODY0MSw5NDI4MjEzNCwxMDA4MTM0NjQsOTQyODY4NjlCAklR&skid=62ecd61b-83fa-458a-9114-f435125207b8&g_st=ic",
+   "lat": null,
+   "lon": null,
+   "label": "79GP 7JR هيأة البحث والتطوير الصناعي, Unnamed Road، Baghdad, Baghdad Governorate",
+   "ftid": "0x15577f828281bd31:0x249dc6d4c3a3cd5e"
+  },
+  "why": "not a place",
+  "target": "الشركة العامة لصناعة الادوية والمستلزمات الطبية"
+ },
+ {
+  "name": "مركز تسويق كركوك في كركوك /المنطقة الشمالية مقابل مستشفى كركوك العام",
+  "map": "https://maps.app.goo.gl/LwnpU5haQwQ8vxVK8?g_st=ic",
+  "via": "map-link",
+  "source": "https://sdi.industry.gov.iq/marketing/center?lang=ar",
+  "resolved": {
+   "final": "https://maps.google.com/maps?q=F93M+484+مركز+تسويق+كركوك+شركة+ادوية+سامراء,+Kirkuk,+Kirkuk+Governorate&ftid=0x1554d7003c9b524f:0xc94905139a8a9365&entry=gps&shh=CAE&lucs=,94297699,100820695,94231188,94280568,47071704,94218641,94282134,100813464,94286869&g_ep=CAISEjI2LjI1LjMuOTMyMTI1MTg3MBgAINeCAypTLDk0Mjk3Njk5LDEwMDgyMDY5NSw5NDIzMTE4OCw5NDI4MDU2OCw0NzA3MTcwNCw5NDIxODY0MSw5NDI4MjEzNCwxMDA4MTM0NjQsOTQyODY4NjlCAklR&skid=74cc5f7b-3afe-4885-8886-42f2e1635686&g_st=ic",
+   "lat": null,
+   "lon": null,
+   "label": "F93M 484 مركز تسويق كركوك شركة ادوية سامراء, Kirkuk, Kirkuk Governorate",
+   "ftid": "0x1554d7003c9b524f:0xc94905139a8a9365"
+  },
+  "why": "not a place",
+  "target": "الشركة العامة لصناعة الادوية والمستلزمات الطبية"
+ },
+ {
+  "name": "شعبة تسويق بغداد - الموقع البديل في هيئة البحث والتطوير الصناعي- الجادرية الموقع الجغرافي",
+  "via": "text",
+  "source": "https://sdi.industry.gov.iq/marketing/center?lang=ar",
+  "why": "not a place",
+  "target": "الشركة العامة لصناعة الادوية والمستلزمات الطبية"
+ },
+ {
+  "name": "مركز تسويق كركوك في كركوك /المنطقة الشمالية مقابل مستشفى كركوك العام الموقع الجغرافي",
+  "via": "text",
+  "source": "https://sdi.industry.gov.iq/marketing/center?lang=ar",
+  "why": "not a place",
+  "target": "الشركة العامة لصناعة الادوية والمستلزمات الطبية"
+ },
+ {
+  "name": "مصانع الشركة",
+  "page": "https://scosi.industry.gov.iq/page/73/%D9%85%D8%B5%D8%A7%D9%86%D8%B9-%D8%A7%D9%84%D8%B4%D8%B1%D9%83%D8%A9",
+  "via": "link",
+  "source": "https://scosi.industry.gov.iq/",
+  "why": "not a place",
+  "target": "الشركة العامة للصناعات الفولاذية"
+ },
+ {
+  "name": "هيئة النزاهة تعقد ندوة لتعزيز الشفافية ومكافحة الفساد في الصناعات الهيدروليكية",
+  "via": "text",
+  "source": "https://hisc.industry.gov.iq/",
+  "why": "not a place",
+  "target": "الشركة العامة للصناعات الهيدروليكية"
+ }
+]
