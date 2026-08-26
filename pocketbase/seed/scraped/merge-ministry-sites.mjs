@@ -6,9 +6,10 @@
  * to a built dataset rather than being another input to the build, so a change
  * here cannot disturb the twenty-odd ministries it has nothing to do with.
  *
- * Only adds. A record already in the dataset is left exactly as it is, so this
- * is safe to re-run and cannot quietly overwrite a better-sourced address with
- * a worse one.
+ * Only adds records. An existing one is left exactly as it is, so this is safe
+ * to re-run and cannot quietly overwrite a better-sourced address with a worse
+ * one. The one exception is the contact table below, which deliberately
+ * replaces, and says why.
  *
  *   node merge-ministry-sites.mjs [--dry]
  */
@@ -29,6 +30,59 @@ const before = {
   directorates: dataset.directorates.length,
   branches: dataset.branches.length,
 };
+
+/**
+ * Contact details a ministry publishes on its own contact page.
+ *
+ * Read off `mod.mil.iq/?page=2461` by hand rather than scraped, because the page
+ * lists five channels for five different offices and only the sentence above
+ * each one says which is which. A regex would have picked the first number it
+ * found; these are the two the page actually offers a citizen.
+ *
+ * This overwrites, unlike everything else here. Defence's stored number was a
+ * `+964 780` mobile that Google Maps attached to the building — plausible enough
+ * to survive review, and not something the ministry ever published. A number
+ * printed on the ministry's own contact page beats one inferred from a map pin,
+ * and a wrong phone number on a government directory is worse than none.
+ */
+const CONTACTS = [
+  {
+    kind: 'ministry',
+    slug: 'ministry-of-defence',
+    // "الاتصال عبر الخط الساخن لقسم الإعلام والعلاقات - مكتب الأمين العام"
+    phone: '+964 790 111 5965',
+    email: 'sgoffice@mod.mil.iq',
+  },
+  {
+    kind: 'directorate',
+    // Scoped to the ministry, not just the title: Interior, Justice and Defence
+    // each have a "مديرية حقوق الإنسان", and matching on the name alone put
+    // Defence's hotline on Interior's directorate.
+    ministry_slug: 'ministry-of-defence',
+    title_ar: 'مديرية حقوق الانسان',
+    // "الخط الساخن لمديرية حقوق الإنسان"
+    phone: '+964 790 194 5476',
+    email: 'hmr-dir@mod.mil.iq',
+  },
+];
+
+let contactsApplied = 0;
+for (const c of CONTACTS) {
+  const rows = c.kind === 'ministry'
+    ? dataset.ministries.filter((m) => m.slug === c.slug)
+    : dataset.directorates.filter((d) => d.ministry_slug === c.ministry_slug
+      && norm(d.title_ar) === norm(c.title_ar));
+  if (!rows.length) { console.log(`  contact target not found: ${c.slug ?? c.title_ar}`); continue; }
+  for (const row of rows) {
+    const changed = row.phone !== c.phone || row.email !== c.email;
+    if (!changed) continue;
+    console.log(`  ${row.title_ar}: phone ${row.phone || '—'} -> ${c.phone}, email ${row.email || '—'} -> ${c.email}`);
+    row.phone = c.phone;
+    row.email = c.email;
+    row._contact_source = 'https://mod.mil.iq/?page=2461';
+    contactsApplied += 1;
+  }
+}
 
 // --- directorates -----------------------------------------------------------
 const haveDirectorate = new Set(dataset.directorates.map((d) => `${d.ministry_slug}::${norm(d.title_ar)}`));
@@ -102,6 +156,7 @@ for (const key of ['directorates', 'branches']) {
 
 console.log(`directorates ${before.directorates} -> ${dataset.directorates.length} (+${addedDirectorates})`);
 console.log(`branches     ${before.branches} -> ${dataset.branches.length} (+${addedBranches})`);
+console.log(`contacts     ${contactsApplied} record(s) took the ministry's published phone and email`);
 
 if (DRY) { console.log('\n--dry: nothing written.'); process.exit(0); }
 fs.writeFileSync(file('iraq-government-directory.json'), JSON.stringify(dataset, null, 2));
