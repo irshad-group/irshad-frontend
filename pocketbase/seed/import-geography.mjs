@@ -23,7 +23,16 @@ import { rasterizeLogo } from './raster-logo.mjs';
 const argv = process.argv.slice(2);
 const arg = (n, d) => { const i = argv.indexOf(n); return i >= 0 ? argv[i + 1] : d; };
 const DRY = argv.includes('--dry-run');
-const WITH_FILES = argv.includes('--files');
+/**
+ * `--files` re-fetches and re-uploads every logo and photograph in the dataset —
+ * hundreds of megabytes, and PocketBase gives each upload a fresh filename, so
+ * every prerendered page that referenced the old one 404s until it revalidates.
+ * `--new-files` attaches files only to records this run actually creates, which
+ * is what an incremental import wants: the 29 offices just added get their
+ * photographs, and the 2,190 already there keep the files they have.
+ */
+const NEW_FILES_ONLY = argv.includes('--new-files');
+const WITH_FILES = argv.includes('--files') || NEW_FILES_ONLY;
 const DATA = arg('--data', './dataset.json');
 
 const { PB_URL, PB_EMAIL, PB_PASSWORD } = process.env;
@@ -153,6 +162,9 @@ const stats = { created: 0, updated: 0, skipped: 0, files: 0 };
  * branch lookup never matched its own index and re-running the import created a
  * second copy of all 687 rows.
  */
+/** Record ids this run created, for `--new-files`. */
+const created = new Set();
+
 async function upsert(col, lookupKey, body, existingIndex, allowed) {
   const payload = drop(body, allowed);
   const found = existingIndex.get(lookupKey);
@@ -169,12 +181,14 @@ async function upsert(col, lookupKey, body, existingIndex, allowed) {
     method: 'POST', headers: H, body: JSON.stringify(payload),
   });
   existingIndex.set(lookupKey, rec);
+  created.add(rec.id);
   stats.created++;
   return rec.id;
 }
 
 async function attach(col, id, field, url) {
   if (!WITH_FILES || !url || DRY) return;
+  if (NEW_FILES_ONLY && !created.has(id)) return;
   try {
     let res;
     for (let i = 0; i < 3 && !res; i++) {
