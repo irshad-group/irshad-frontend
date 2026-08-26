@@ -104,6 +104,11 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 - Sign-in could not be retried after a wrong password. React 19 resets an uncontrolled form once its action resolves, which emptied the email box; the browser's `required` check then blocked the next submit without sending a request or showing an error. The same reset discarded everything typed into a record form whenever validation failed.
 
+### Removed
+
+- **Six fabricated partners, eight fabricated comments and ten fabricated reviews, deleted from the live instance.** The partners page listed وزارة التخطيط, حكومة إقليم كردستان, **برنامج الأمم المتحدة الإنمائي (UNDP)**, نقابة المحامين العراقيين, اتحاد الغرف التجارية العراقية and المركز الوطني للحوكمة الرقمية under "المؤسسات التي يعمل معها إرشاد" — six real organisations named as partners of a site whose own header says it is affiliated with no government body, each linking to that organisation's real website. The comments made specific operational claims about real offices ("The Karkh office now opens a second counter at 07:30"), and the reviews were testimonials from users who do not exist. All 24 came from the development seed, none was ever anything but placeholder, and `approved = true` made the comments and reviews readable through the public API even though no page rendered them. Removed by `purge-seed-content.mjs`, which only deletes rows carrying the seed's own id prefix and reports anything else rather than touching it.
+- `seed.mjs` now refuses to run against anything but a local instance unless passed `--i-know-this-is-not-local`. It had no such guard, which is how invented partners reached a public government guide in the first place; without one, a single `pb:seed` with production credentials would put all 24 records straight back.
+
 ### Security
 
 - The public site is a placeholder, so nothing citizen-facing reads from PocketBase yet.

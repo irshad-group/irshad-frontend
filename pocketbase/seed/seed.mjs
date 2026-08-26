@@ -1,4 +1,12 @@
 // Seeds the Irshad PocketBase instance. Idempotent: existing records are PATCHed.
+//
+// DEVELOPMENT DATA. It invents partners, comments and reviews to give the admin
+// something to moderate, and every one of them is a statement about the world
+// that is not true: six real organisations — a UN agency among them — listed as
+// partners of a site affiliated with nobody, and comments making specific claims
+// about real government offices. All of that was live on the public instance for
+// months before anyone noticed, and had to be deleted by hand
+// (`purge-seed-content.mjs`). Hence the guard below.
 import { provinces, ministries, directorates, branches, tags } from './data-core.mjs';
 import { procedures, procedureItems, files } from './data-procedures.mjs';
 import {
@@ -15,6 +23,21 @@ for (const [name, value] of Object.entries({ PB_URL: URL_BASE, PB_EMAIL: EMAIL, 
     console.error(`Missing required environment variable: ${name}`);
     process.exit(1);
   }
+}
+
+// Refuse to write invented content to anything that is not a local instance.
+// `--i-know-this-is-not-local` is deliberately awkward to type: there is no
+// ordinary reason to seed a deployed backend, and the cost of doing it by
+// accident is fabricated partners and reviews on a public government guide.
+const LOCAL_HOSTS = new Set(['localhost', '127.0.0.1', '0.0.0.0', '::1', '[::1]']);
+const targetHost = (() => {
+  try { return new URL(URL_BASE).hostname; } catch { return ''; }
+})();
+if (!LOCAL_HOSTS.has(targetHost) && !process.argv.includes('--i-know-this-is-not-local')) {
+  console.error(`Refusing to seed ${URL_BASE}: this writes development data, including`);
+  console.error('invented partners, comments and reviews, and that is not a local instance.');
+  console.error('Pass --i-know-this-is-not-local if you really mean it.');
+  process.exit(1);
 }
 
 let token = '';
