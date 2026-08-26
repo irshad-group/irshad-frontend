@@ -541,13 +541,25 @@ try {
     // test that fails because someone joined is a test that gets ignored.
     check(`${locale}: team lists members`, (await page.locator('main ul > li').count()) >= 1);
 
+    // The partners collection is empty on purpose — the six it held were seed
+    // rows naming real organisations, a UN agency among them, as partners of a
+    // site affiliated with nobody. So this checks the page copes either way:
+    // a list when there are partners, the empty state when there are none, and
+    // safe links for whatever it does show.
     await page.goto(`${BASE}/${locale}/partners`, { waitUntil: 'domcontentloaded' });
-    check(`${locale}: partners listed`, (await page.locator('main ul > li').count()) === 6);
+    const partnerCount = await page.locator('main ul > li').count();
+    const partnersEmpty = await page.locator('main').getByText(
+      { ar: 'لا يوجد شركاء', en: 'No partners', ku: 'هێشتا هیچ هاوبەش' }[locale],
+    ).count();
+    check(`${locale}: partners page lists partners or says there are none`,
+      partnerCount > 0 || partnersEmpty > 0, `${partnerCount} listed, empty state ${partnersEmpty}`);
     const partnerLinks = page.locator('main a[target="_blank"]');
-    check(
-      `${locale}: partner links are safe`,
-      (await partnerLinks.first().getAttribute('rel'))?.includes('noopener'),
-    );
+    if (await partnerLinks.count()) {
+      check(
+        `${locale}: partner links are safe`,
+        (await partnerLinks.first().getAttribute('rel'))?.includes('noopener'),
+      );
+    }
 
     // 404: localized, inside the shell, and offering real ways out.
     const missing = await page.goto(`${BASE}/${locale}/procedures/no-such-thing`, {
