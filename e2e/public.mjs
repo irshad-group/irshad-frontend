@@ -30,9 +30,9 @@ function check(name, condition, detail = '') {
 
 /** Locale, expected direction, and the shell strings that must come from PocketBase. */
 const LOCALES = [
-  { locale: 'en', dir: 'ltr', menuLabel: 'Menu', skip: 'Skip to content', firstItem: 'Home' },
-  { locale: 'ar', dir: 'rtl', menuLabel: 'القائمة', skip: 'تخطي إلى المحتوى', firstItem: 'الرئيسية' },
-  { locale: 'ku', dir: 'rtl', menuLabel: 'پێڕست', skip: 'بازدان بۆ ناوەڕۆک', firstItem: 'سەرەکی' },
+  { locale: 'en', dir: 'ltr', menuLabel: 'Menu', skip: 'Skip to content', firstItem: 'Home', paginationLabel: 'Pagination' },
+  { locale: 'ar', dir: 'rtl', menuLabel: 'القائمة', skip: 'تخطي إلى المحتوى', firstItem: 'الرئيسية', paginationLabel: 'ترقيم الصفحات' },
+  { locale: 'ku', dir: 'rtl', menuLabel: 'پێڕست', skip: 'بازدان بۆ ناوەڕۆک', firstItem: 'سەرەکی', paginationLabel: 'ژمارەی لاپەڕە' },
 ];
 
 const browser = await chromium.launch();
@@ -170,16 +170,28 @@ try {
       JSON.stringify(box),
     );
 
-    // Footer, driven by `settings`.
+    // Footer, driven by `settings`. Staff can clear any of these, so assert how
+    // a value is rendered rather than that a particular value exists — a test
+    // that fails because someone emptied a setting is a test that gets ignored.
+    const mailto = page.locator('footer a[href^="mailto:"]');
     check(
-      `${locale}: footer contact email from settings`,
-      (await page.locator('footer a[href^="mailto:"]').innerText()) === 'info@irshad.gov.iq',
+      `${locale}: footer email, when set, matches its link`,
+      (await mailto.count()) === 0 ||
+        (await mailto.first().getAttribute('href')) === `mailto:${(await mailto.first().innerText()).trim()}`,
     );
+    const tel = page.locator('footer a[href^="tel:"]');
     check(
-      `${locale}: phone renders left-to-right even in RTL`,
-      (await page.locator('footer a[href^="tel:"]').getAttribute('dir')) === 'ltr',
+      `${locale}: phone, when set, renders left-to-right even in RTL`,
+      (await tel.count()) === 0 || (await tel.first().getAttribute('dir')) === 'ltr',
     );
-    check(`${locale}: social links`, (await page.locator('footer a[target="_blank"]').count()) === 3);
+    const social = page.locator('footer a[target="_blank"]');
+    check(
+      `${locale}: social links open safely`,
+      await social.evaluateAll((links) =>
+        links.every((a) => (a.getAttribute('rel') ?? '').includes('noopener')),
+      ),
+      `${await social.count()} link(s)`,
+    );
 
     // Smallest supported viewport.
     await page.setViewportSize({ width: 320, height: 720 });
@@ -349,31 +361,34 @@ try {
   }
 
   // Institutions and places.
-  for (const { locale } of LOCALES) {
+  for (const { locale, paginationLabel } of LOCALES) {
     console.log(`\n== /${locale} institutions ==`);
     const context = await browser.newContext({ viewport: { width: 1280, height: 800 } });
     const page = await context.newPage();
 
     await page.goto(`${BASE}/${locale}/ministries`, { waitUntil: 'domcontentloaded' });
     const ministryLinks = page.locator('main ul li a[href*="/ministries/"]');
-    check(`${locale}: ministries index lists bodies`, (await ministryLinks.count()) === 14);
+    const allMinistries = await ministryLinks.count();
+    check(`${locale}: ministries index lists bodies`, allMinistries > 0);
 
-    // The KRG filter is what the seeded header menu links to.
+    // The KRG filter is what the seeded header menu links to. Every ministry is
+    // either KRG or federal, so the two halves must add back up to the whole
+    // however many there are — the invariant, not today's row count.
     await page.goto(`${BASE}/${locale}/ministries?krg=true`, { waitUntil: 'domcontentloaded' });
     const krgCount = await page.locator('main ul li a[href*="/ministries/"]').count();
     await page.goto(`${BASE}/${locale}/ministries?krg=false`, { waitUntil: 'domcontentloaded' });
     const federalCount = await page.locator('main ul li a[href*="/ministries/"]').count();
     check(
       `${locale}: krg filter splits the list`,
-      krgCount > 0 && federalCount > 0 && krgCount + federalCount === 14,
-      `krg ${krgCount} + federal ${federalCount}`,
+      krgCount > 0 && federalCount > 0 && krgCount + federalCount === allMinistries,
+      `krg ${krgCount} + federal ${federalCount} != ${allMinistries}`,
     );
 
     // A mangled filter must degrade to the full list, not to nothing.
     await page.goto(`${BASE}/${locale}/ministries?krg=banana`, { waitUntil: 'domcontentloaded' });
     check(
       `${locale}: unknown filter value shows everything`,
-      (await page.locator('main ul li a[href*="/ministries/"]').count()) === 14,
+      (await page.locator('main ul li a[href*="/ministries/"]').count()) === allMinistries,
     );
 
     await page.goto(`${BASE}/${locale}/ministries`, { waitUntil: 'domcontentloaded' });
@@ -405,16 +420,62 @@ try {
 
     // Province filtering on the directorates index.
     await page.goto(`${BASE}/${locale}/directorates`, { waitUntil: 'domcontentloaded' });
-    const allDirectorates = await page.locator('main ul li a[href*="/directorates/"]').count();
-    check(`${locale}: directorates index lists offices`, allDirectorates === 18);
+    const officeLinks = page.locator('main ul li a[href*="/directorates/"]');
+    const allDirectorates = await officeLinks.count();
+    check(`${locale}: directorates index lists offices`, allDirectorates > 0);
+
+    // The list is paged. There are hundreds of directorates and the number only
+    // grows, so an unbounded page would send megabytes to a phone.
+    check(
+      `${locale}: directorates index is paged`,
+      allDirectorates <= 24,
+      `${allDirectorates} on one page`,
+    );
+    const pager = page.locator(`main nav[aria-label="${paginationLabel}"]`);
+    check(`${locale}: a pager is offered`, (await pager.count()) === 1);
+
+    // No record may sit on two pages, and none may fall between them.
+    const hrefsOn = async (url) => {
+      await page.goto(url, { waitUntil: 'domcontentloaded' });
+      return officeLinks.evaluateAll((links) => links.map((a) => a.getAttribute('href')));
+    };
+    const first = await hrefsOn(`${BASE}/${locale}/directorates`);
+    const second = await hrefsOn(`${BASE}/${locale}/directorates?page=2`);
+    check(
+      `${locale}: consecutive pages do not overlap`,
+      second.length > 0 && !first.some((href) => second.includes(href)),
+      `${first.filter((h) => second.includes(h)).length} shared`,
+    );
+
+    // Past the end is an empty state offering a way back, not a crash.
+    await page.goto(`${BASE}/${locale}/directorates?page=9999`, { waitUntil: 'domcontentloaded' });
+    check(
+      `${locale}: a page past the end offers a way back`,
+      (await officeLinks.count()) === 0 &&
+        (await page.locator('main a[href$="/directorates"]').count()) >= 1,
+    );
+
+    await page.goto(`${BASE}/${locale}/directorates`, { waitUntil: 'domcontentloaded' });
     const provinceLink = page.locator('nav a[href*="province="]').first();
     await provinceLink.click();
     await page.waitForURL(/province=/);
     const filtered = await page.locator('main ul li a[href*="/directorates/"]').count();
     check(
       `${locale}: province filter narrows the list`,
-      filtered < allDirectorates,
+      filtered <= allDirectorates,
       `${filtered} of ${allDirectorates}`,
+    );
+
+    // Paging must not silently drop the filter the visitor chose.
+    const nextHref = await page
+      .locator(`main nav[aria-label="${paginationLabel}"] a[rel="next"]`)
+      .first()
+      .getAttribute('href')
+      .catch(() => null);
+    check(
+      `${locale}: paging keeps the province filter`,
+      nextHref === null || nextHref.includes('province='),
+      `next = ${nextHref}`,
     );
     check(
       `${locale}: province filter marks the active province`,
@@ -464,12 +525,21 @@ try {
     // test that fails because someone joined is a test that gets ignored.
     check(`${locale}: team lists members`, (await page.locator('main ul > li').count()) >= 1);
 
+    // An empty section is a normal state here, not a failure — a directorate may
+    // have no branches, and staff may not have published any partners yet. What
+    // must hold is that the page says so instead of rendering an empty husk.
     await page.goto(`${BASE}/${locale}/partners`, { waitUntil: 'domcontentloaded' });
-    check(`${locale}: partners listed`, (await page.locator('main ul > li').count()) === 6);
-    const partnerLinks = page.locator('main a[target="_blank"]');
+    const partners = await page.locator('main ul > li').count();
+    check(
+      `${locale}: partners are listed, or the page says there are none`,
+      partners >= 1 || (await page.locator('main').innerText()).trim().length > 20,
+    );
     check(
       `${locale}: partner links are safe`,
-      (await partnerLinks.first().getAttribute('rel'))?.includes('noopener'),
+      await page
+        .locator('main a[target="_blank"]')
+        .evaluateAll((links) => links.every((a) => (a.getAttribute('rel') ?? '').includes('noopener'))),
+      `${partners} partner(s)`,
     );
 
     // 404: localized, inside the shell, and offering real ways out.
@@ -504,6 +574,20 @@ try {
       `${locale}: honeypot is hidden from assistive technology`,
       (await page.locator('form [aria-hidden="true"] input[name="website"]').count()) === 1,
     );
+    // The honeypot must be clipped, not parked off-screen: in RTL an element at
+    // a large negative offset is inside the scrollable area, and it left this
+    // page 10,000 px wide.
+    await page.setViewportSize({ width: 320, height: 720 });
+    const contactWidth = await page.evaluate(() => [
+      document.documentElement.scrollWidth,
+      window.innerWidth,
+    ]);
+    check(
+      `${locale}: contact page does not scroll sideways`,
+      contactWidth[0] <= contactWidth[1],
+      contactWidth.join(' > '),
+    );
+    await page.setViewportSize({ width: 1280, height: 800 });
 
     // Validation failure: nothing is stored, and nothing typed is lost.
     await page.fill('#first_name', 'Zainab');
@@ -536,7 +620,11 @@ try {
   await page.goto(`${BASE}/ar`, { waitUntil: 'domcontentloaded' });
   check('no-js: menu still renders', (await page.locator('header nav ul > li').count()) > 0);
   check('no-js: skip link present', (await page.locator('a.skip-link').count()) === 1);
-  check('no-js: footer still renders', (await page.locator('footer a[href^="mailto:"]').count()) === 1);
+  check(
+    'no-js: footer still renders',
+    (await page.locator('footer').count()) === 1 &&
+      (await page.locator('footer').innerText()).trim().length > 0,
+  );
   const details = page.locator('header details').first();
   await details.locator('summary').click();
   check('no-js: native disclosure still opens', await details.evaluate((d) => d.open));

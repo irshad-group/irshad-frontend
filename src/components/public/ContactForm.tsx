@@ -131,9 +131,17 @@ export default function ContactForm({ labels }: { labels: Labels }) {
         />
       </Field>
 
-      {/* Honeypot: off-screen rather than display:none, and explicitly hidden
-          from assistive technology, so a screen-reader user never meets it. */}
-      <div aria-hidden="true" className="absolute -left-[9999px]">
+      {/* Honeypot: clipped rather than `display:none`, so a bot reading the DOM
+          still finds it, and explicitly hidden from assistive technology, so a
+          screen-reader user never meets it.
+
+          Not the usual `-left-[9999px]`: pushing an element outside the page
+          only fails to create scrollable space on the *start* side, which is
+          the left in English and the right in Arabic and Kurdish. In RTL it
+          left the contact page 10,000 px wide, so a visitor could swipe
+          sideways into nothing. `sr-only` clips instead of moving, which is
+          the same in both directions. */}
+      <div aria-hidden="true" className="sr-only">
         <label htmlFor="website">Website</label>
         <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
       </div>

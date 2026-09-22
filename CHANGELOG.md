@@ -51,9 +51,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Changed
 
+- The end-to-end suite asserts invariants instead of frozen row counts. Checks pinned to "14 ministries", "18 directorates", "6 partners" and one specific support email broke as soon as real data replaced the seed, and a suite that fails for that reason stops being read. The KRG filter now has to split the list into two halves that add back up to the whole, a configurable footer value has to match its own link *if it is set*, and an empty section has to say it is empty rather than exist.
+
 - The route guard lives in `src/proxy.ts`. Next 16 renamed the `middleware` convention to `proxy`; `CLAUDE.md` now describes it correctly.
 
 ### Fixed
+
+- **The directorates index is paged.** It rendered all 358 offices at once: 1.4 MB and a 37,000 px page sent to exactly the cheap phone this portal is built for, and pressing Back after filtering left the previous province's results on screen for several seconds while the replacement rendered. It now shows 24 per page (264 DOM nodes, 3,300 px), narrows through a PocketBase back-relation filter rather than fetching the whole table, and sorts by `sort_order,id` — `sort_order` alone is not unique (51 directorates share the value 5), so a page boundary inside a tie dropped some records and repeated others.
+
+- **The contact page scrolled sideways in Arabic and Kurdish.** The form's honeypot was parked at `left: -9999px`. Outside the page is only unreachable on the *start* side, which is the left in English but the right in RTL, so Arabic and Kurdish visitors got a 10,000 px-wide page they could swipe into. The field is clipped now instead of moved, which behaves the same in both directions.
+
+- Arabic UI strings carried tashkeel (`جارٍ الحفظ`, `لم يُنشر`, `مسجّل`). Removed from all 14, leaving the tatweel in `لـ «…»` and `بـ «…»`, which is a typographic connector rather than a diacritic.
 
 - **The public header now behaves like a menu.** Submenu entries no longer wrap mid-label; opening one submenu closes the other, and a click elsewhere, Escape, or choosing a link closes whatever is open — the layout survives client navigation, so an open menu used to follow the visitor onto the next page. The current page is marked with `aria-current="page"` (a query-scoped entry such as *Kurdistan Region Ministries* lights only for its own query, and its parent lights with it). On phones the drawer button is a labelled hamburger that turns into a close icon, and the drawer opens as a full-width layer under the bar over a dimmed page that closes it when tapped. Between 768 and ~900 px the bar also stopped breaking labels mid-word ("Ho me"). All of it still works with JavaScript off; the behaviours are progressive enhancement over native `<details>`.
 
