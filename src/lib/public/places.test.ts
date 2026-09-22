@@ -3,10 +3,16 @@ import type { DirectorateBranchesRecord, ProvincesRecord } from '@/types/pb';
 import { groupBranchesByProvince, mapsLink, type BranchWithProvince } from './places';
 
 describe('mapsLink', () => {
-  it('builds a link for valid coordinates', () => {
+  it('builds a Waze universal link for valid coordinates', () => {
     const link = mapsLink(33.3152, 44.3661);
-    expect(link).toContain('mlat=33.3152');
-    expect(link).toContain('mlon=44.3661');
+    expect(link).toBe('https://www.waze.com/ul?ll=33.3152%2C44.3661&navigate=yes&zoom=17');
+  });
+
+  it('encodes the comma between the pair, so Waze reads one parameter', () => {
+    // A literal comma survives most clients, but an encoded one survives all of
+    // them; a split pair sends the visitor to latitude only.
+    expect(mapsLink(33.3152, 44.3661)).toContain('%2C');
+    expect(mapsLink(33.3152, 44.3661)).not.toContain('ll=33.3152,');
   });
 
   it('accepts the extremes of the valid range', () => {

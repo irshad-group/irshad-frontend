@@ -37,5 +37,6 @@ yarn-error.log*
 # TypeScript
 *.tsbuildinfo
 
-# Local PocketBase data dumps — snapshots of live records, not part of the app
-pb-tashkeel-backup.json
+# Local PocketBase data dumps — snapshots of live records taken before a bulk
+# edit, not part of the app
+pb-*-backup.json

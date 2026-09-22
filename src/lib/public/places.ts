@@ -1,17 +1,22 @@
 import type { DirectorateBranchesRecord, ProvincesRecord } from '@/types/pb';
 
 /**
- * A link that opens coordinates in whatever maps application the visitor
- * already uses, rather than an embedded third-party map.
+ * A Waze link for a set of coordinates, rather than an embedded map.
  *
- * An embed is typically the heaviest thing on a page and sends every visitor's
- * IP address to a third party before they have asked for a map. For a
- * government service whose users may be sensitive about being profiled, that is
- * a real cost for something most visitors do not need. A link costs nothing and
- * does the same job for the people who want it.
+ * Still a link, never an embed: an embed is typically the heaviest thing on a
+ * page and hands every visitor's IP to a third party before they have asked for
+ * a map. A link costs nothing until someone chooses to follow it, which is the
+ * property that matters on a government service.
  *
- * `geo:` was rejected: desktop browsers mostly ignore it, and this has to work
- * for someone on a laptop in an office as well as a phone in the street.
+ * `waze.com/ul` is the documented universal link: it opens the Waze app when it
+ * is installed — which on an Iraqi phone it very often is, Waze being the
+ * common way to navigate here — and falls back to Waze's web map otherwise, so
+ * it also works for someone at a desk. `navigate=yes` starts routing rather
+ * than dropping the visitor on a map they then have to act on, since anyone
+ * following this link is trying to reach an office.
+ *
+ * `geo:` was rejected for the same reason as before: desktop browsers mostly
+ * ignore it.
  *
  * Returns `null` unless both coordinates are present and inside the valid
  * range, so a record with one coordinate, a zero placeholder, or a swapped pair
@@ -25,7 +30,7 @@ export function mapsLink(
   if (!isCoordinate(lat, -90, 90) || !isCoordinate(lon, -180, 180)) return null;
   // 0,0 is Null Island — in this dataset it means "not filled in".
   if (lat === 0 && lon === 0) return null;
-  return `https://www.openstreetmap.org/?mlat=${lat}&mlon=${lon}#map=17/${lat}/${lon}`;
+  return `https://www.waze.com/ul?ll=${lat}%2C${lon}&navigate=yes&zoom=17`;
 }
 
 function isCoordinate(value: unknown, min: number, max: number): value is number {

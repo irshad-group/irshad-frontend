@@ -51,11 +51,15 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Changed
 
+- Location links open **Waze** instead of OpenStreetMap, with `navigate=yes` so the visitor gets routing rather than a map they then have to act on. Still a link and never an embed, so nothing reaches a third party until someone follows it.
+
 - The end-to-end suite asserts invariants instead of frozen row counts. Checks pinned to "14 ministries", "18 directorates", "6 partners" and one specific support email broke as soon as real data replaced the seed, and a suite that fails for that reason stops being read. The KRG filter now has to split the list into two halves that add back up to the whole, a configurable footer value has to match its own link *if it is set*, and an empty section has to say it is empty rather than exist.
 
 - The route guard lives in `src/proxy.ts`. Next 16 renamed the `middleware` convention to `proxy`; `CLAUDE.md` now describes it correctly.
 
 ### Fixed
+
+- **English directorate names are English.** 202 of the 358 directorates carried their Arabic name in `title_en` — the scrape had no English for them and the importer copied the Arabic across, so the records looked translated. A further 128 took their English from a Google Maps place match, which returns the label of whichever place matched rather than a translation, and 80 of those named a *different institution*: the Public Prosecution Directorate as "Supreme Judicial Council of Iraq", Halabja's education directorate as "General Directorate of Arbil Education", the petrochemical company as "State Company for Electrical and Electronic Industries", and one as "court aby gerb". 219 records now carry a reviewed translation of their Arabic name. These are translations, not the bodies' registered English names — staff should treat them as a starting point. `pocketbase/seed/fix-directorate-titles.mjs` is idempotent and dry-runs by default.
 
 - **The directorates index is paged.** It rendered all 358 offices at once: 1.4 MB and a 37,000 px page sent to exactly the cheap phone this portal is built for, and pressing Back after filtering left the previous province's results on screen for several seconds while the replacement rendered. It now shows 24 per page (264 DOM nodes, 3,300 px), narrows through a PocketBase back-relation filter rather than fetching the whole table, and sorts by `sort_order,id` — `sort_order` alone is not unique (51 directorates share the value 5), so a page boundary inside a tie dropped some records and repeated others.
 
@@ -79,6 +83,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Archiving a procedure withdraws its steps and its downloadable forms in the same action, because those collections gate reads on the parent's state.
 
 ### Notes
+
+- 16 rows in `directorates` are not institutions but scraped page titles, nav crumbs and one news headline ("دائرة رعاية القاصرين تكرم عددا من المتفوقين..."). No English name was invented for them, and `title_en` is required by the schema so they could not be blanked either. They are listed by `fix-directorate-titles.mjs` and want deleting — a decision for staff, not the script.
 
 - **Contact messages carry no IP address or user agent.** Both fields are marked hidden in the schema, and PocketBase strips hidden fields from a create it does not trust — verified against the live instance, where an anonymous create supplying them stores empty strings. Populating them would require a privileged client on a public endpoint, which is precisely what must not happen. To get this data, either unhide the fields in the schema or capture it at the edge.
 - **No rate limiting on the contact form.** The create-only API rule and the honeypot are the only protections; a determined submitter can still flood the inbox. This needs infrastructure the app does not have.
