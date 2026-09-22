@@ -55,6 +55,8 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 
 ### Fixed
 
+- **The public header now behaves like a menu.** Submenu entries no longer wrap mid-label; opening one submenu closes the other, and a click elsewhere, Escape, or choosing a link closes whatever is open — the layout survives client navigation, so an open menu used to follow the visitor onto the next page. The current page is marked with `aria-current="page"` (a query-scoped entry such as *Kurdistan Region Ministries* lights only for its own query, and its parent lights with it). On phones the drawer button is a labelled hamburger that turns into a close icon, and the drawer opens as a full-width layer under the bar over a dimmed page that closes it when tapped. Between 768 and ~900 px the bar also stopped breaking labels mid-word ("Ho me"). All of it still works with JavaScript off; the behaviours are progressive enhancement over native `<details>`.
+
 - **A fee crashed the page when the URL's first segment was not a locale.** `formatFee` built an `Intl.NumberFormat` tag from it, so a request for `/favicon.ico` produced `favicon.ico-u-nu-latn` and a `RangeError` that took down every procedure card on the page. Found in the server log while debugging something unrelated. An unusable tag now falls back to English formatting — grouping a number is never worth losing the page over.
 
 - Sign-in could not be retried after a wrong password. React 19 resets an uncontrolled form once its action resolves, which emptied the email box; the browser's `required` check then blocked the next submit without sending a request or showing an error. The same reset discarded everything typed into a record form whenever validation failed.

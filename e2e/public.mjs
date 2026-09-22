@@ -95,7 +95,69 @@ try {
       `${locale}: submenu links carry the locale prefix`,
       (await firstDisclosure.locator('ul a').first().getAttribute('href'))?.startsWith(`/${locale}/`),
     );
-    await firstDisclosure.locator('summary').click();
+    // Submenu entries sit on one line each: the panel grows to fit them.
+    check(
+      `${locale}: submenu entries do not wrap`,
+      await firstDisclosure.locator('ul a').evaluateAll((links) =>
+        links.every((a) => a.getBoundingClientRect().height < 40),
+      ),
+    );
+
+    // The menu behaves like one: opening a second submenu closes the first,
+    // a click elsewhere closes whatever is open, and Escape does the same and
+    // hands focus back to the trigger.
+    const secondDisclosure = disclosures.nth(1);
+    await secondDisclosure.locator('summary').click();
+    check(
+      `${locale}: opening a submenu closes the other`,
+      !(await firstDisclosure.evaluate((d) => d.open)) && (await secondDisclosure.evaluate((d) => d.open)),
+    );
+    // The page gutter: nothing there to navigate to.
+    await page.mouse.click(8, 400);
+    check(
+      `${locale}: clicking outside closes the submenu`,
+      !(await secondDisclosure.evaluate((d) => d.open)),
+    );
+    await secondDisclosure.locator('summary').click();
+    await page.keyboard.press('Escape');
+    check(
+      `${locale}: Escape closes the submenu and refocuses its trigger`,
+      !(await secondDisclosure.evaluate((d) => d.open)) &&
+        (await page.evaluate(() => document.activeElement?.tagName)) === 'SUMMARY',
+    );
+
+    // The current page is marked. On the home page that is the first entry.
+    check(
+      `${locale}: home is marked current on the home page`,
+      (await roots.first().locator('a[aria-current="page"]').count()) === 1 &&
+        (await menu.locator('[aria-current="page"]').count()) === 1,
+    );
+    // A query-scoped entry lights only for its own query, and its parent
+    // trigger lights with it so the section is visible while it is closed.
+    await page.goto(`${BASE}/${locale}/ministries?krg=true`, { waitUntil: 'domcontentloaded' });
+    const currentTexts = await menu
+      .locator('[aria-current="page"]')
+      .evaluateAll((els) => els.map((el) => el.getAttribute('href') ?? el.tagName));
+    check(
+      `${locale}: query-scoped entry and its parent are current`,
+      currentTexts.length === 2 &&
+        currentTexts.includes('SUMMARY') &&
+        currentTexts.includes(`/${locale}/ministries?krg=true`),
+      JSON.stringify(currentTexts),
+    );
+
+    // Choosing a submenu link ends the interaction: the layout persists across
+    // a client navigation, so the menu must close itself.
+    await page.goto(`${BASE}/${locale}`, { waitUntil: 'domcontentloaded' });
+    const reopened = page.locator(`header nav[aria-label="${menuLabel}"] details`).first();
+    await reopened.locator('summary').click();
+    await reopened.locator('ul a').last().click();
+    await page.waitForURL(/ministries/);
+    check(
+      `${locale}: submenu closes after choosing a link`,
+      !(await reopened.evaluate((d) => d.open)),
+    );
+    await page.goto(`${BASE}/${locale}`, { waitUntil: 'domcontentloaded' });
 
     // The leading edge must follow the writing direction.
     const box = await skipLink.evaluate((el) => {
@@ -133,8 +195,52 @@ try {
 
     const drawer = page.locator('header details').last();
     check(`${locale}: drawer is reachable on mobile`, await drawer.isVisible());
+    // An icon-only button still needs a name.
+    check(
+      `${locale}: drawer button is labelled`,
+      (await drawer.locator('summary').getAttribute('aria-label')) === menuLabel,
+    );
     await drawer.locator('summary').click();
     check(`${locale}: drawer lists its entries`, (await drawer.locator('nav a').count()) === 7);
+
+    // The drawer is a layer: full width, hanging from the header's bottom
+    // edge, over a dimmed page — and the bar itself stays undimmed.
+    const geometry = await page.evaluate(() => {
+      const header = document.querySelector('header').getBoundingClientRect();
+      const nav = document.querySelector('header details:last-of-type nav').getBoundingClientRect();
+      const backdrop = document.querySelector('header [data-dismiss]').getBoundingClientRect();
+      return { header, nav, backdrop, inner: window.innerWidth };
+    });
+    check(
+      `${locale}: drawer spans the viewport below the header`,
+      Math.abs(geometry.nav.top - geometry.header.bottom) < 2 &&
+        geometry.nav.left === 0 &&
+        geometry.nav.width === geometry.inner,
+      JSON.stringify(geometry),
+    );
+    check(
+      `${locale}: backdrop starts below the header`,
+      Math.abs(geometry.backdrop.top - geometry.header.bottom) < 2 && geometry.backdrop.width === geometry.inner,
+      JSON.stringify(geometry.backdrop),
+    );
+    check(
+      `${locale}: drawer marks the current page`,
+      (await drawer.locator('nav a[aria-current="page"]').count()) === 1,
+    );
+
+    // Tapping the dimmed page closes the drawer.
+    await page.mouse.click(160, 600);
+    check(`${locale}: tapping the backdrop closes the drawer`, !(await drawer.evaluate((d) => d.open)));
+
+    // Choosing an entry closes it too, and the new page is marked.
+    await drawer.locator('summary').click();
+    await drawer.locator('nav a').last().click();
+    await page.waitForURL(/contact/);
+    check(
+      `${locale}: drawer closes after choosing a link`,
+      !(await drawer.evaluate((d) => d.open)) &&
+        (await drawer.locator('nav a[aria-current="page"]').getAttribute('href')) === `/${locale}/contact`,
+    );
 
     await context.close();
   }
