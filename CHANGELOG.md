@@ -82,9 +82,13 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/),
 - Comments and reviews cannot be self-approved or posted under another user's identity; both are held for staff moderation before they appear publicly.
 - Archiving a procedure withdraws its steps and its downloadable forms in the same action, because those collections gate reads on the parent's state.
 
+### Removed
+
+- **16 `directorates` rows that were never institutions** — navigation crumbs ("اقسام الدائرة", "دوائر مقر الوزارة"), a job title ("مدير المديرية"), a staff handbook, a page of legislation and a news headline, all turned into records by the scrape that followed ministry websites. Nothing referenced them: no procedure, branch, comment or review, so nothing cascaded. 358 directorates down to 342, and no record now carries Arabic in `title_en`. `pocketbase/seed/delete-nonInstitution-directorates.mjs` derives the list the same way the title repair does rather than hard-coding ids, checks every relation that points at a row before touching it, skips anything referenced, and writes the full records to a JSON file so the deletion can be undone.
+
 ### Notes
 
-- 16 rows in `directorates` are not institutions but scraped page titles, nav crumbs and one news headline ("دائرة رعاية القاصرين تكرم عددا من المتفوقين..."). No English name was invented for them, and `title_en` is required by the schema so they could not be blanked either. They are listed by `fix-directorate-titles.mjs` and want deleting — a decision for staff, not the script.
+- The 16 non-institution rows have been deleted (see **Removed**). `fix-directorate-titles.mjs` still identifies that shape of row if the scrape is ever re-run.
 
 - **Contact messages carry no IP address or user agent.** Both fields are marked hidden in the schema, and PocketBase strips hidden fields from a create it does not trust — verified against the live instance, where an anonymous create supplying them stores empty strings. Populating them would require a privileged client on a public endpoint, which is precisely what must not happen. To get this data, either unhide the fields in the schema or capture it at the edge.
 - **No rate limiting on the contact form.** The create-only API rule and the honeypot are the only protections; a determined submitter can still flood the inbox. This needs infrastructure the app does not have.
