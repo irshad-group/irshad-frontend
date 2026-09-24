@@ -2,9 +2,29 @@ import { getTranslations } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { Badge, BoolMark } from '@/components/ui/primitives';
 import type { ColumnDef, CollectionDef } from '@/lib/admin/registry';
+import { PB_URL } from '@/lib/pb/server';
 import { localized, translationStatus } from '@/lib/i18n';
 
-type Row = Record<string, unknown> & { id: string; expand?: Record<string, unknown> };
+type Row = Record<string, unknown> & {
+  id: string;
+  collectionId?: string;
+  expand?: Record<string, unknown>;
+};
+
+function ImageCell({ row, column }: { row: Row; column: ColumnDef }) {
+  const raw = row[column.name];
+  const filename = Array.isArray(raw) ? raw[0] : raw;
+  if (typeof filename !== 'string' || !filename || !row.collectionId) {
+    return <span aria-hidden="true" className="block size-8 border border-ink-200 bg-ink-50" />;
+  }
+  const src = `${PB_URL}/api/files/${row.collectionId}/${row.id}/${encodeURIComponent(filename)}${
+    column.thumb ? `?thumb=${encodeURIComponent(column.thumb)}` : ''
+  }`;
+  return (
+    // eslint-disable-next-line @next/next/no-img-element -- PocketBase thumb at a fixed 32px; next/image would proxy it for nothing.
+    <img src={src} alt="" className="size-8 border border-ink-200 bg-white object-contain" />
+  );
+}
 
 function relationLabel(row: Row, column: ColumnDef): string {
   const expanded = row.expand?.[column.name];
@@ -46,6 +66,8 @@ async function TranslationCell({ row, fields }: { row: Row; fields: readonly str
 
 async function Cell({ row, column, locale }: { row: Row; column: ColumnDef; locale: string }) {
   switch (column.kind) {
+    case 'image':
+      return <ImageCell row={row} column={column} />;
     case 'bool':
       return <BoolMark value={row[column.name]} />;
     case 'badge': {

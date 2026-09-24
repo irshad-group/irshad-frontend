@@ -52,18 +52,32 @@ function buildPayload(
       clears.push(field.name);
       continue;
     }
-    const file = formData.get(field.name);
-    // An untouched file input still submits an empty File; skipping it leaves
-    // the stored file alone, which is what an editor expects.
-    if (file instanceof File && file.size > 0) uploads.push([field.name, file]);
+    // A multi-file field appends (PocketBase's `field+` modifier) so uploading
+    // adds to the gallery instead of replacing it; single files replace.
+    const key = field.multiple ? `${field.name}+` : field.name;
+    for (const file of formData.getAll(field.name)) {
+      // An untouched file input still submits an empty File; skipping it leaves
+      // the stored file alone, which is what an editor expects.
+      if (file instanceof File && file.size > 0) uploads.push([key, file]);
+    }
   }
 
   if (!uploads.length && !clears.length) {
     return data;
   }
 
+  const jsonFields = new Set(
+    (def?.fields ?? []).filter((f) => f.kind === 'json').map((f) => f.name),
+  );
+
   const payload = new FormData();
   for (const [key, value] of Object.entries(data)) {
+    // A json field is a parsed value by now; String() would turn an array of
+    // day objects into "[object Object]" entries and destroy the schedule.
+    if (jsonFields.has(key)) {
+      payload.append(key, value === undefined || value === null ? '' : JSON.stringify(value));
+      continue;
+    }
     if (Array.isArray(value)) {
       if (!value.length) payload.append(key, '');
       else value.forEach((v) => payload.append(key, String(v)));

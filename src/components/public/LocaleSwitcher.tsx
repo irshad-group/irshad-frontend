@@ -41,7 +41,12 @@ function LocaleLinks({ label, query }: { label: string; query: string }) {
             hrefLang={locale}
             aria-current={current ? 'true' : undefined}
             className={cn(
-              'rounded-md px-2 py-1 text-sm transition-colors',
+              // The switcher is the one control a reader who cannot read the
+              // current language depends on, so it gets a full 44px touch
+              // target on a phone and settles back to 36px once there is a
+              // mouse. `px-1.5` on the narrowest screens keeps three languages
+              // plus the brand and drawer inside 320px.
+              'flex min-h-11 items-center rounded-md px-1.5 text-sm transition-colors sm:px-2 md:min-h-9',
               current
                 ? 'bg-brand-50 font-medium text-brand-700'
                 : 'text-ink-600 hover:bg-ink-100 hover:text-ink-900',

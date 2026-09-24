@@ -4,7 +4,7 @@ import typescript from 'eslint-config-next/typescript';
 // eslint-config-next 16 ships native flat configs, so no FlatCompat shim.
 const config = [
   {
-    ignores: ['.next/**', 'node_modules/**', 'next-env.d.ts', 'pocketbase/seed/**', 'e2e/**', 'scripts/**'],
+    ignores: ['.next/**', 'node_modules/**', 'next-env.d.ts', 'pocketbase/seed/**', 'e2e/**', 'scripts/**', 'public/vendor/**'],
   },
   ...coreWebVitals,
   ...typescript,

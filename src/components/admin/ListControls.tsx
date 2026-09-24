@@ -39,6 +39,47 @@ export function SearchBox({ placeholder, label }: { placeholder: string; label: 
   );
 }
 
+export function RelationFilter({
+  label,
+  allLabel,
+  options,
+}: {
+  label: string;
+  allLabel: string;
+  options: ReadonlyArray<{ id: string; label: string }>;
+}) {
+  const router = useRouter();
+  const pathname = usePathname();
+  const params = useSearchParams();
+  const [pending, start] = useTransition();
+
+  function apply(value: string) {
+    const next = new URLSearchParams(params.toString());
+    if (value) next.set('f', value);
+    else next.delete('f');
+    // Any filter change invalidates the current page number.
+    next.delete('page');
+    start(() => router.push(`${pathname}?${next.toString()}`));
+  }
+
+  return (
+    <select
+      aria-label={label}
+      value={params.get('f') ?? ''}
+      onChange={(event) => apply(event.target.value)}
+      disabled={pending}
+      className={cn(inputClass, 'w-auto min-w-44')}
+    >
+      <option value="">{allLabel}</option>
+      {options.map((option) => (
+        <option key={option.id} value={option.id}>
+          {option.label}
+        </option>
+      ))}
+    </select>
+  );
+}
+
 export function Pagination({
   page,
   totalPages,

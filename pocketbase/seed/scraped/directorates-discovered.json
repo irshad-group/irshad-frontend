@@ -1,0 +1,2719 @@
+[
+  {
+    "slug": "ministry-of-interior",
+    "krg": false,
+    "website": "https://moi.gov.iq/",
+    "site_logo": "http://moi.gov.iq/upload/1804816048.png",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [
+      "33.33321391236129,44.4233597369895"
+    ],
+    "site_social": [
+      "https://www.facebook.com/ministry.of.interior.iraq",
+      "https://www.youtube.com/watch?v=d_CHCfzPCEM",
+      "https://www.youtube.com/watch?v=QHt46WfNMOc",
+      "https://www.youtube.com/watch?v=MNU6hzcC63s",
+      "https://www.youtube.com/watch?v=A2ZKqidARno",
+      "https://www.youtube.com/watch?v=WfJGxAvn9bw",
+      "https://www.youtube.com/watch?v=I5TiU7d3HpI",
+      "https://www.youtube.com/watch?v=auCmfBOrLB8",
+      "https://www.youtube.com/watch?v=eoS7rlo5j6I",
+      "https://www.youtube.com/watch?v=mp7ODqv0n_I"
+    ],
+    "structure_pages": [
+      "https://moi.gov.iq/?topic"
+    ],
+    "bodies": [
+      {
+        "name": "دائرة العلاقات والاعلام",
+        "url": "https://moi.gov.iq/?page=37"
+      },
+      {
+        "name": "الوكالة الادارية والمالية",
+        "url": "https://moi.gov.iq/?page=38"
+      },
+      {
+        "name": "مديرية التدريب والتأهيل",
+        "url": "http://dotrq.iq/"
+      },
+      {
+        "name": "مديرية البنى التحتية",
+        "url": "https://moi.gov.iq/?page=50"
+      },
+      {
+        "name": "وكالة الوزارة لشؤون الشرطة",
+        "url": "https://moi.gov.iq/?page=39"
+      },
+      {
+        "name": "مديرية المرور العامة",
+        "url": "http://www.itp.gov.iq/"
+      },
+      {
+        "name": "مديرية شرطة حماية الاثار والتراث",
+        "url": "https://moi.gov.iq/?page=51"
+      },
+      {
+        "name": "مديرية الادعاء العام",
+        "url": "https://moi.gov.iq/?page=6275"
+      },
+      {
+        "name": "مديرية الامن السيبراني",
+        "url": "https://moi.gov.iq/?page=6295"
+      },
+      {
+        "name": "مديرية العقود",
+        "url": "https://moi.gov.iq/?page=42"
+      },
+      {
+        "name": "مديرية شؤون الشهداء والجرحى",
+        "url": "https://moi.gov.iq/?page=43"
+      },
+      {
+        "name": "مديرية أمن الأفراد",
+        "url": "https://moi.gov.iq/?page=44"
+      },
+      {
+        "name": "مديرية المخدرات والمؤثرات العقلية",
+        "url": "https://moi.gov.iq/?page=46"
+      },
+      {
+        "name": "مديرية حقوق الإنسان",
+        "url": "https://moi.gov.iq/?page=45"
+      },
+      {
+        "name": "مديرية شؤون البطاقة الوطنية",
+        "url": "http://www.nid-moi.gov.iq/"
+      },
+      {
+        "name": "مديرية الأحوال المدنية والجوازات والإقامة",
+        "url": "http://iraqinationality.gov.iq/"
+      },
+      {
+        "name": "مديرية الاشراف والتقييم لمحاكم قوى الامن الداخلي",
+        "url": "https://moi.gov.iq/?page=6293"
+      },
+      {
+        "name": "رئيس دائرة العلاقات والإعلام في وزارة الداخلية يلتقي الفنان أوس فاضل لبحث تعزيز التعاون التوعوي والفني",
+        "url": "https://moi.gov.iq/?article=20945"
+      },
+      {
+        "name": "بمناسبة المولد النبوي الشريف... وفدٌ من دائرة العلاقات والإعلام في وزارة الداخلية يزور المجمع الفقهي العراقي ومرقد الإمام أبي حنيفة النعمان ( رض )",
+        "url": "https://moi.gov.iq/?article=20940"
+      },
+      {
+        "name": "الوكيل الأقدم لوزارة الداخلية يترأس اجتماع هيئة الرأي لمناقشة الملفات الأمنية والخدمية",
+        "url": "https://moi.gov.iq/?article=20693"
+      },
+      {
+        "name": "رئيس دائرة العلاقات والإعلام في وزارة الداخلية يلتقي الفنان أوس فاضل لبحث تعز...",
+        "url": "https://moi.gov.iq/?article=20945"
+      },
+      {
+        "name": "دائرة العلاقات والاعلام قسم أصدقاء الداخلية",
+        "url": null
+      },
+      {
+        "name": "مكتب الوزير مديرية الادعاء العام",
+        "url": null
+      },
+      {
+        "name": "مديرية المرور العامة خدمة التكييل",
+        "url": null
+      },
+      {
+        "name": "الوكالة الادارية والمالية قسم تقويم الأداء المؤسسي",
+        "url": null
+      },
+      {
+        "name": "وكالة الوزارة لشؤون الشرطة مديرية المرور العامة",
+        "url": null
+      },
+      {
+        "name": "&bull; رئيس دائرة العلاقات والإعلام في وزارة الداخلية يلتقي الفنان أوس فاضل لبحث تعزيز التعاون التوعوي والفني",
+        "url": "https://moi.gov.iq/?article=20945"
+      },
+      {
+        "name": "&bull; لبحث تعزيز التعاون والتنسيق المشترك.. رئيس دائرة العلاقات والإعلام في وزارة الداخلية يستقبل قائد شرطة بابل",
+        "url": "https://moi.gov.iq/?article=20941"
+      },
+      {
+        "name": "&bull; دائرة العلاقات والإعلام في وزارة الداخلية تنفذ أنشطة إعلامية وتوعوية متكاملة في بغداد والمحافظات ضمن خطة الأربعينية",
+        "url": "https://moi.gov.iq/?article=20849"
+      },
+      {
+        "name": "&bull; ​رئيس دائرة العلاقات والإعلام في وزارة الداخلية يزور رئيس هيئة الإعلام والاتصالات ويقدم التهاني بمناسبة تسنّمه منصبه",
+        "url": "https://moi.gov.iq/?article=20458"
+      },
+      {
+        "name": "&bull; رئيس دائرة العلاقات والإعلام يهنئ نقيب الصحفيين العراقيين ونائبيه بمناسبة فوزهم في انتخابات النقابة",
+        "url": "https://moi.gov.iq/?article=20455"
+      }
+    ]
+  },
+  {
+    "slug": "ministry-of-defence",
+    "krg": false,
+    "website": "https://mod.mil.iq/",
+    "site_logo": "http://mod.mil.iq/upload/1310956282.png",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [
+      "33.34449405477068,44.37899657507019"
+    ],
+    "site_social": [
+      "https://www.youtube.com/playlist?list=PLc7EA02Dju6mwCetj-fxOfL4E0cA9v1uY",
+      "https://www.facebook.com/mod.mil.iq/photos?locale=ar_AR",
+      "https://www.facebook.com/mod.mil.iq",
+      "https://twitter.com/modmiliq",
+      "https://instagram.com/modmiliq/",
+      "https://www.youtube.com/channel/UC6nKMPDjepQNUkg400ZxTyQ"
+    ],
+    "structure_pages": [
+      "https://mod.mil.iq/?page=2466"
+    ],
+    "bodies": [
+      {
+        "name": "مديرية الاستخبارات العسكرية",
+        "url": "https://mod.mil.iq/?topic=73"
+      },
+      {
+        "name": "مديرية الحوانيت العسكرية",
+        "url": "https://mod.mil.iq/?topic=66"
+      },
+      {
+        "name": "المديرية العامة لشؤون المحاربين",
+        "url": "https://mod.mil.iq/?topic=65"
+      },
+      {
+        "name": "مديرية حقوق الانسان",
+        "url": "https://mod.mil.iq/?topic=48"
+      },
+      {
+        "name": "دائرة التقاعد العسكري",
+        "url": "https://mod.mil.iq/?topic=60"
+      },
+      {
+        "name": "مديرية الامور الطبية",
+        "url": "https://mod.mil.iq/?topic=55"
+      },
+      {
+        "name": "المديرية العامة للموازنة والبرامج توزّع مكافأة الجرحى للوجبة (80) عبر بطاقة (الماستر كارد)",
+        "url": "https://mod.mil.iq/?article=10305"
+      },
+      {
+        "name": "هيئة النزاهة الاتحادية تعقد ورشة تثقيفية بالتعاون مع دائرة الادعاء العام العسكري في وزارة الدفاع",
+        "url": "https://mod.mil.iq/?article=10292"
+      },
+      {
+        "name": "معاون رئيس أركان الجيش للتدريب يتفقد مديرية صنف المشاة",
+        "url": "https://mod.mil.iq/?article=10289"
+      },
+      {
+        "name": "دائرة الادعاء العام العسكري تنظم ورشة تعريفية في الدائرة القانونية",
+        "url": "https://mod.mil.iq/?article=10285"
+      },
+      {
+        "name": "مديرية الإعلام والتوجيه المعنوي في وزارة الدفاع تكرّم ابنة الشهيد المقدم الركن علي النداوي لنجاحها بتفوق",
+        "url": "https://mod.mil.iq/?article=10163"
+      },
+      {
+        "name": "مديرية الإعلام والتوجيه المعنوي تستقبل المفتش العسكري ولجان التفتيش",
+        "url": "https://mod.mil.iq/?article=10148"
+      },
+      {
+        "name": "المديرية العامة للموازنة والبرامج توزّع مكافأة الجرحى للوجبة (80) عبر بطاقة (...",
+        "url": "https://mod.mil.iq/?article=10305"
+      },
+      {
+        "name": "هيئة النزاهة الاتحادية تعقد ورشة تثقيفية بالتعاون مع دائرة الادعاء العام العس...",
+        "url": "https://mod.mil.iq/?article=10292"
+      },
+      {
+        "name": "مدير الإعلام يلتقي رئيس الدائرة القانونية ويهنئه بمناسبة تسنمه منصبه",
+        "url": "https://mod.mil.iq/?article=10278"
+      },
+      {
+        "name": "مديرية الاستخبارات العسكرية تطيح بأربعة من تجار ومروجي المخدرات في ميسان",
+        "url": "https://mod.mil.iq/?article=10255"
+      },
+      {
+        "name": "معاون رئيس أركان الجيش للتدريب يشارك ضباط ومراتب الدائرة فعالية الرياضة الصباحية",
+        "url": "https://mod.mil.iq/?article=10247"
+      },
+      {
+        "name": "مديرية المساحة العسكرية",
+        "url": null
+      },
+      {
+        "name": "دائرة الإدعاء العام العسكري",
+        "url": null
+      },
+      {
+        "name": "مديرية الاستخبارات العسكرية التفاصيل",
+        "url": null
+      },
+      {
+        "name": "مديرية المساحة العسكرية التفاصيل",
+        "url": null
+      },
+      {
+        "name": "دائرة الإدعاء العام العسكري التفاصيل",
+        "url": null
+      },
+      {
+        "name": "مديرية الحوانيت العسكرية التفاصيل",
+        "url": null
+      },
+      {
+        "name": "دائرة التقاعد العسكري التفاصيل",
+        "url": null
+      },
+      {
+        "name": "المديرية العامة لشؤون المحاربين التفاصيل",
+        "url": null
+      },
+      {
+        "name": "إصدارات مديرية الإعلام والتوجيه المعنوي جريدة خيمة العراق",
+        "url": null
+      },
+      {
+        "name": "نشاطات وأخبار مديريات وزارة الدفاع مديرية الاستخبارات العسكرية",
+        "url": null
+      }
+    ]
+  },
+  {
+    "slug": "ministry-of-foreign-affairs",
+    "krg": false,
+    "website": "https://mofa.gov.iq/",
+    "site_logo": "https://mofa.gov.iq/wp-content/uploads/2025/06/IMG_2300-1-scaled.png",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [],
+    "site_social": [
+      "https://www.facebook.com/MOFA.IQ",
+      "https://twitter.com/Iraqimofa",
+      "https://www.instagram.com/iraqmofa/",
+      "https://www.youtube.com/channel/UChF-ueFRRjvLadjK4BIYBMA"
+    ],
+    "structure_pages": [
+      "https://mofa.gov.iq/%d8%af%d9%88%d8%a7%d8%a6%d8%b1-%d8%a7%d9%84%d9%88%d8%b2%d8%a7%d8%b1%d8%a9/"
+    ],
+    "bodies": [
+      {
+        "name": "دوائر الوزارة",
+        "url": "https://mofa.gov.iq/%d8%af%d9%88%d8%a7%d8%a6%d8%b1-%d8%a7%d9%84%d9%88%d8%b2%d8%a7%d8%b1%d8%a9/"
+      },
+      {
+        "name": "تأسست دائرة حقوق الإنسان عام 1992.",
+        "url": null
+      },
+      {
+        "name": "هذه الدائرة مسؤولة عن متابعة النشاطات المتعلقة بحقوق الإنسان التابعة لمنظمة الأمم المتحدة والمنظمات الإقليمية والدولية والمنظمات غير الحكومية.",
+        "url": null
+      },
+      {
+        "name": "كما تتعامل هذه الدائرة مع قضايا حقوق الإنسان والشكاوى والخروقات التي تؤثر على العراقيين داخل العراق وخارجه إضافة إلى المواطنين الأجانب في العراق.",
+        "url": null
+      },
+      {
+        "name": "ويشمل دور القسم ومهام عمله في ابداء الرأي والتشاور مع بعض دوائر الوزارة لبلورة موقف سياسي مناسب بشان مشاريع القرارات المعروضة.",
+        "url": null
+      },
+      {
+        "name": "تمثيل وزارة الخارجية في هيئة رعاية الطفولة التابعة لوزارة العمل و الشؤون الاجتماعية.",
+        "url": null
+      },
+      {
+        "name": "الصندوق الطوعي للأمم المتحدة للشعوب الاصلية.",
+        "url": null
+      }
+    ]
+  },
+  {
+    "slug": "ministry-of-justice",
+    "krg": false,
+    "website": "https://moj.gov.iq/",
+    "site_logo": "https://moj.gov.iq/assets/images/favicon.ico",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [],
+    "site_social": [
+      "https://www.facebook.com/Justice.gov.iraq",
+      "https://twitter.com/moj_iq",
+      "https://www.instagram.com/iq_moj",
+      "https://www.youtube.com/@iq_moj"
+    ],
+    "structure_pages": [
+      "https://moj.gov.iq/#",
+      "https://moj.gov.iq/contact_us.php",
+      "https://moj.gov.iq/view.10454/",
+      "https://moj.gov.iq/view.10446/",
+      "https://moj.gov.iq/view.10456/"
+    ],
+    "bodies": [
+      {
+        "name": "الدائرة الإدارية والمالية",
+        "url": "https://moj.gov.iq/#"
+      },
+      {
+        "name": "دائرة تسجيل العقاري",
+        "url": "https://moj.gov.iq/#"
+      },
+      {
+        "name": "دائرة الإصلاح العراقية",
+        "url": "https://moj.gov.iq/#"
+      },
+      {
+        "name": "دائرة إصلاح الأحداث",
+        "url": "https://moj.gov.iq/#"
+      },
+      {
+        "name": "دائرة رعاية القاصرين",
+        "url": "https://moj.gov.iq/#"
+      },
+      {
+        "name": "دائرة العلاقات العدلية",
+        "url": "https://moj.gov.iq/#"
+      },
+      {
+        "name": "دائرة الكتاب العدول",
+        "url": "https://moj.gov.iq/#"
+      },
+      {
+        "name": "دائرة التنفيذ",
+        "url": "https://moj.gov.iq/#"
+      },
+      {
+        "name": "الدائرة القانونية",
+        "url": "https://moj.gov.iq/#"
+      },
+      {
+        "name": "دائرة التخطيط العدلي",
+        "url": "https://moj.gov.iq/#"
+      },
+      {
+        "name": "دائرة الوقائع العراقية",
+        "url": "https://moj.gov.iq/#"
+      },
+      {
+        "name": "دائرة حقوق الإنسان",
+        "url": "https://moj.gov.iq/#"
+      },
+      {
+        "name": "خلال زيارته الميدانية إلى مديرية رعاية القاصرين في الكرخ.. وزير العدل: تعديل قانون رعاية القاصرين سيسهم بشكل كبير في إنصاف شريحة القاصرين المشمولين بأحكامه",
+        "url": "https://moj.gov.iq/view.10465/"
+      },
+      {
+        "name": "وكيل وزارة العدل الأقدم يلتقي رئيس جهاز مكافحة الإرهاب لبحث تعزيز التعاون المشترك لتعزيز الامن في الدوائر الاصلاحية",
+        "url": "https://moj.gov.iq/view.10446/"
+      },
+      {
+        "name": "نشاطات دائرة الأصلاح",
+        "url": "https://moj.gov.iq/reform/"
+      },
+      {
+        "name": "نشاطات دائرة أصلاح الأحداث",
+        "url": "https://moj.gov.iq/juvenile/"
+      },
+      {
+        "name": "تنفيذاً لتوجيهات معـــالي وزير العـــدل.. لجنة مختصة بتدقيق الحسابات من دائرة رعاية القاصرين تجري زيارة ميدانية الى مديريتي نينوى وصلاح الدين",
+        "url": "https://moj.gov.iq/view.10482/"
+      },
+      {
+        "name": "دائرة رعاية القاصرين تكرم عددا من المتفوقين القاصرين في محافظة المثنى",
+        "url": "https://moj.gov.iq/view.10478/"
+      },
+      {
+        "name": "لتبسيط الإجراءات وتسريع إنجاز المعاملات.. وزارة العدل تعلن إطلاق نظام الأتمتة الإلكتروني في مديرية تنفيذ البياع",
+        "url": "https://moj.gov.iq/view.10477/"
+      },
+      {
+        "name": "استمراراً لنهج الوزارة نحو التحول الرقمي… وزارة العدل تعلن إطلاق نظام الأتمتة الإلكتروني في دائرة كاتب عدل الحرية",
+        "url": "https://moj.gov.iq/view.10475/"
+      },
+      {
+        "name": "مدير عام دائرة الكتاب العدول يستقبل عددا من المراجعين ضمن اللقاءات الأسبوعية",
+        "url": "https://moj.gov.iq/view.10471/"
+      },
+      {
+        "name": "بعد مديريتي الشعب والكرخ الأولى.. وزارة العدل تعلن إطلاق نظام أتمتة معاملات البيع والشراء في مديرية تسجيل عقاري الكاظمية الأولى",
+        "url": "https://moj.gov.iq/view.10469/"
+      },
+      {
+        "name": "مدير عام دائرة رعاية القاصرين يستقبل المواطنين ويستمع الى طلباتهم",
+        "url": "https://moj.gov.iq/view.10467/"
+      },
+      {
+        "name": "مدير عام دائرة الكتاب العدول يجري زيارة تفقدية إلى دائرة كاتب عدل الشعلة للاطلاع على انسيابية انجاز معاملات المواطنين",
+        "url": "https://moj.gov.iq/view.10463/"
+      },
+      {
+        "name": "دائرة رعاية القاصرين تقيم ورشة تخصصية لتطوير مهارات الباحثين الاجتماعيين",
+        "url": "https://moj.gov.iq/view.10461/"
+      },
+      {
+        "name": "المدير العام لدائرة رعاية القاصرين يجري معايشة ميدانية في مديرية رعاية القاصرين بمدينة الصدر",
+        "url": "https://moj.gov.iq/view.10448/"
+      },
+      {
+        "name": "مدير عام دائرة العلاقات العدلية يبحث مع رئيس مؤسسة جذور للتنمية المستدامة تعزيز البرامج التاهيلية للنزلاء داخل المؤسسات الاصلاحية",
+        "url": "https://moj.gov.iq/view.10444/"
+      },
+      {
+        "name": "وزير العدل الدكتور خالد شواني يستقبل ذوي النزلاء في دائرة الإصلاح العراقية",
+        "url": "https://moj.gov.iq/view.10415/"
+      },
+      {
+        "name": "الدائرة الادارية والمالية",
+        "url": "https://moj.gov.iq/financial/"
+      },
+      {
+        "name": "دائرة التسجيل العقاري",
+        "url": "https://moj.gov.iq/registration/"
+      },
+      {
+        "name": "دائرة الأصلاح العراقية",
+        "url": "https://moj.gov.iq/reform/"
+      },
+      {
+        "name": "دائرة حقوق الانسان",
+        "url": "https://moj.gov.iq/human/"
+      },
+      {
+        "name": "بالتعاون مع هيئة النزاهة الاتحادية ... مكتب الوزير ينظم ورشة تدريبية حول مكافحة الفساد ونشر الثقافة والشفافية",
+        "url": "https://moj.gov.iq/view.10481/"
+      }
+    ]
+  },
+  {
+    "slug": "ministry-of-finance",
+    "krg": false,
+    "website": "https://mof.gov.iq/",
+    "site_logo": "https://mof.gov.iq/_app/immutable/assets/IMoF_logo_ar.B0LKJCLU.png",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [],
+    "site_social": [
+      "https://twitter.com/MofIraq",
+      "https://www.facebook.com/mof.gov.iq"
+    ],
+    "structure_pages": [
+      "https://mof.gov.iq/About-Ministry.aspx",
+      "https://mof.gov.iq/Orgnization-Structure.aspx",
+      "https://mof.gov.iq/Administrative-and-Financial-Department.aspx",
+      "https://mof.gov.iq/LegalDepartment.aspx",
+      "https://mof.gov.iq/Budget-Department.aspx",
+      "https://mof.gov.iq/Economic-Department.aspx"
+    ],
+    "bodies": [
+      {
+        "name": "هيئة الكمارك العامة",
+        "url": "https://mof.gov.iq/General-Customs-Authority.aspx"
+      },
+      {
+        "name": "هيئة التقاعد العامة",
+        "url": "https://mof.gov.iq/Public-PensionBody.aspx"
+      },
+      {
+        "name": "الهيئة العامة للضرائب",
+        "url": "https://mof.gov.iq/General-Tax-Authority.aspx"
+      },
+      {
+        "name": "الهيئة العامة للمناطق الحرة",
+        "url": "https://mof.gov.iq/General-Authority-for-Free-Zones.aspx"
+      },
+      {
+        "name": "دوائر الوزارة",
+        "url": "https://mof.gov.iq/"
+      },
+      {
+        "name": "الدائرة الادارية والمالية",
+        "url": "https://mof.gov.iq/Administrative-and-Financial-Department.aspx"
+      },
+      {
+        "name": "الدائرة القانونية",
+        "url": "https://mof.gov.iq/LegalDepartment.aspx"
+      },
+      {
+        "name": "دائرة المحاسبة",
+        "url": "https://mof.gov.iq/Accounting-Service.aspx"
+      },
+      {
+        "name": "دائرة الموازنة",
+        "url": "https://mof.gov.iq/Budget-Department.aspx"
+      },
+      {
+        "name": "الدائرة الاقتصادية",
+        "url": "https://mof.gov.iq/Economic-Department.aspx"
+      },
+      {
+        "name": "دائرة الدين العام",
+        "url": "https://mof.gov.iq/Public-Debt-Department.aspx"
+      },
+      {
+        "name": "دائرة تكنولوجيا المعلومات",
+        "url": "https://mof.gov.iq/Department-of-Information-Technology.aspx"
+      },
+      {
+        "name": "دائرة عقارات الدولة",
+        "url": "https://mof.gov.iq/Real-Estate-Department.aspx"
+      },
+      {
+        "name": "الصندوق العراقي للتنمية الخارجية",
+        "url": "https://mof.gov.iq/Iraqi-Fund-for-External-Development.aspx"
+      }
+    ]
+  },
+  {
+    "slug": "ministry-of-education",
+    "krg": false,
+    "title_ar": "وزارة التربية",
+    "title_en": "Ministry of Education",
+    "title_ku": "وەزارەتی پەروەردە",
+    "website": "https://moedu.gov.iq/",
+    "gps_lat": 33.328196999999996,
+    "gps_lon": 44.4190501,
+    "phone": "+964 1 816 7465",
+    "address_ar": "8CH9+7JF وزارة التربية العراقية، بغداد، بغداد محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWm00wlDmPkQ4r_jlVGSLiTwxucuTaWUJToPyrmykh1S2J692iVBUQftLKSzNphLWG1jlS_Rch6ntZyhXUB9p1I28HRkPrfwO9dJcUFrgey-QqCqIh2NqN3Z8HpViifKL4L3PNA=w152-h86-k-no",
+    "maps_name": "وزارة التربية العراقية",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15578327d7f5d9cf:0xa3a4e278f5745c82",
+    "maps_rating": 3.2,
+    "maps_categories": [
+      "وزارة التربية والتعليم",
+      "مكتب الشركات"
+    ],
+    "pool_size": 14,
+    "candidates": [
+      "15|وزارة التربية العراقية|33.328196999999996,44.4190501",
+      "15|دائرة المهندس المقيم في المثنى / وزارة التربية|31.3105549,45.2726532",
+      "13|وزارة التربية العراقية ( الدجيل )|33.834309,44.253185099999996",
+      "13|وزارة التربية|33.2385711,44.316203699999996"
+    ],
+    "bodies": [],
+    "site_status": "unreachable"
+  },
+  {
+    "slug": "ministry-of-higher-education",
+    "krg": false,
+    "title_ar": "وزارة التعليم العالي والبحث العلمي",
+    "title_en": "Ministry of Higher Education and Scientific Research",
+    "title_ku": "وەزارەتی خوێندنی باڵا و توێژینەوەی زانستی",
+    "website": "https://mohesr.gov.iq/",
+    "gps_lat": 33.3276877,
+    "gps_lon": 44.4191016,
+    "phone": "+964 770 811 7410",
+    "address_ar": "8CH9+3JH وزارة التعليم العالي والبحث العلمي، بغداد، بغداد محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmHpRmlYGXnxpZWZRL4cxBH7JgWVwsGtVuLwHaEOA1QuXPKwunRCXaOeBdtsRS4aWg6CuoRjLItMYrkHx9rErdWyg-vau1WIJ9PH1vlhrR3AnCSoUVqD4OAK6DyFPGhcQ7Q5WT7fQ=w152-h86-k-no",
+    "maps_name": "وزارة التعليم العالي والبحث العلمي",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15578372ae534fd7:0x97182e72691e801b",
+    "maps_rating": 3.6,
+    "maps_categories": [
+      "مكتب حكومي"
+    ],
+    "pool_size": 11,
+    "candidates": [
+      "18|وزارة التعليم العالي والبحث العلمي|33.3276877,44.4191016",
+      "18|وزارة التعليم العالي والبحث العلمي /هيئة البحث العلمي|33.2777428,44.3880699",
+      "16|وزارة التعليم العالي /هيئة البحث العلمي ..محطة ابحاث اللطيفية|32.9980826,44.4134384",
+      "16|صندوق وزارة التعليم العالي|33.3175501,44.4316027"
+    ],
+    "bodies": [],
+    "site_status": "unreachable"
+  },
+  {
+    "slug": "ministry-of-oil",
+    "krg": false,
+    "website": "https://oil.gov.iq/",
+    "site_logo": "http://oil.gov.iq/upload/3448817478.png",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [
+      "33.340758354964485,44.43104937506992"
+    ],
+    "site_social": [
+      "https://www.facebook.com/ministryofoil201",
+      "https://www.facebook.com/share/1BaEQMUw9K/",
+      "https://x.com/mediaofficeoil",
+      "https://www.instagram.com/ministry_of_oil?igsh=MXJ5d3gzMTBpYWRwbw==",
+      "https://www.youtube.com/@IraqiMinistryofOil"
+    ],
+    "structure_pages": [
+      "https://oil.gov.iq/?article=1938"
+    ],
+    "bodies": [
+      {
+        "name": "الشركة العامة لتعبئة وخدمات الغاز",
+        "url": "https://gfc.oil.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة للمعدات الهندسية الثقيلة",
+        "url": "https://heesco.oil.gov.iq/"
+      },
+      {
+        "name": "دوائر مركز الوزارة التفاصيل",
+        "url": null
+      }
+    ]
+  },
+  {
+    "slug": "ministry-of-labour-and-social-affairs",
+    "krg": false,
+    "title_ar": "وزارة العمل والشؤون الاجتماعية",
+    "title_en": "Ministry of Labour and Social Affairs",
+    "title_ku": "وەزارەتی کار و کاروباری کۆمەڵایەتی",
+    "website": "https://molsa.gov.iq/",
+    "gps_lat": 33.373263699999995,
+    "gps_lon": 44.3981807,
+    "phone": "+964 770 512 2236",
+    "address_ar": "99FX+873 وزارة العمل والشؤون الاجتماعية، بغداد، بغداد محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWkQClWiUQGZb51PncJiuOlh3qgybd7CQOsKkacwApCG7h41h_DzHZvYeQlbO1vV5-5ZtkBIaE4cTPXHZPZbs-rE838hsW_HhCIVfsetcjm9F2DS_kMurhjeSXCBxQJTAFSski6unPNuhAFQ=w114-h86-k-no",
+    "maps_name": "وزارة العمل والشؤون الاجتماعية",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x1557787eb7d5e499:0xa611d04e7c3c201",
+    "maps_rating": 3.6,
+    "maps_categories": [
+      "مكتب حكومة الولاية",
+      "وزارة الأشغال العامة"
+    ],
+    "pool_size": 12,
+    "candidates": [
+      "17|وزارة العمل والشؤون الاجتماعية|33.373263699999995,44.3981807",
+      "14|وزارة العمل والشؤون الاجتماعية|36.2117596,44.028832099999995",
+      "13|وزارة العمل والشؤون الاجتماعية، ذي قار|31.023115299999997,46.2497739",
+      "12|مجمع وزارة العمل والشؤون الاجتماعية|32.518050599999995,45.8251826"
+    ],
+    "bodies": [],
+    "site_status": "unreachable"
+  },
+  {
+    "slug": "ministry-of-electricity",
+    "krg": false,
+    "website": "https://moelc.gov.iq/",
+    "site_logo": "http://moelc.gov.iq/https://storage.moelc.gov.iq/2024/01/27/2024_01_27_11944585554.png",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [
+      "33.31516063711943,44.36401180852199"
+    ],
+    "site_social": [
+      "https://www.facebook.com/moeministry",
+      "https://www.facebook.com/moeministry/?ref=embed_page",
+      "https://www.instagram.com/moeministry"
+    ],
+    "structure_pages": [
+      "https://moelc.gov.iq/?page=3201",
+      "https://moelc.gov.iq/#",
+      "https://moelc.gov.iq/?page=41",
+      "https://moelc.gov.iq/?page=26",
+      "https://moelc.gov.iq/?page=3274"
+    ],
+    "bodies": [
+      {
+        "name": "دوائر مقر الوزارة",
+        "url": "https://moelc.gov.iq/?page=41"
+      },
+      {
+        "name": "مدير مديرية الوقود",
+        "url": "https://moelc.gov.iq/?page=3275"
+      },
+      {
+        "name": "مديرية الوقود/قسم الوقود السائل",
+        "url": "https://moelc.gov.iq/?page=3281"
+      },
+      {
+        "name": "مديرية الوقود/قسم المختبرات",
+        "url": "https://moelc.gov.iq/?page=3280"
+      },
+      {
+        "name": "مديرية الوقود/ قسم الزيوت ووقود الاليات",
+        "url": "https://moelc.gov.iq/?page=3279"
+      },
+      {
+        "name": "مديرية الوقود/قسم التجارية",
+        "url": "https://moelc.gov.iq/?page=3278"
+      },
+      {
+        "name": "مديرية الوقود /قسم التخطيط والمتابعة",
+        "url": "https://moelc.gov.iq/?page=3276"
+      },
+      {
+        "name": "مديرية الوقود/ قسم المنظومات والعدادات",
+        "url": "https://moelc.gov.iq/?page=3277"
+      },
+      {
+        "name": "مدير المديرية",
+        "url": "https://moelc.gov.iq/?page=3233"
+      },
+      {
+        "name": "تشكيلات الوزارة دوائر مقر الوزارة",
+        "url": null
+      },
+      {
+        "name": "الدائرة الفنية مديرة مكتب المدير العام",
+        "url": null
+      },
+      {
+        "name": "الدائرة الإدارية قسم الشؤون المالية",
+        "url": null
+      },
+      {
+        "name": "دائرة التخطيط والدراسات قسم الإدارة",
+        "url": null
+      },
+      {
+        "name": "الدائرة القانونية مكتب المدير العام",
+        "url": null
+      },
+      {
+        "name": "الدائرة الاقتصادية قسم الصيانة والشبكات",
+        "url": null
+      },
+      {
+        "name": "دائرة الاستثمارات والعقود مدير مكتب المدير العام",
+        "url": null
+      },
+      {
+        "name": "مديرية الرقابة الداخلية والتدقيق مدير المديرية",
+        "url": null
+      },
+      {
+        "name": "دائرة التخطيط والدراسات",
+        "url": "https://moelc.gov.iq/?page=44"
+      },
+      {
+        "name": "دائرة الاستثمارات والعقود",
+        "url": "https://moelc.gov.iq/?page=47"
+      },
+      {
+        "name": "الدائرة الفنية",
+        "url": "https://moelc.gov.iq/?page=43"
+      },
+      {
+        "name": "الدائرة القانونية",
+        "url": "https://moelc.gov.iq/?page=42"
+      },
+      {
+        "name": "الدائرة الادارية",
+        "url": "https://moelc.gov.iq/?page=46"
+      },
+      {
+        "name": "الدائرة الاقتصادية",
+        "url": "https://moelc.gov.iq/?page=45"
+      },
+      {
+        "name": "مديرية الوقود",
+        "url": "https://moelc.gov.iq/?page=1480"
+      },
+      {
+        "name": "مديرية التدقيق والرقابة الداخلية",
+        "url": "https://moelc.gov.iq/?page=1704"
+      },
+      {
+        "name": "الشركة العامة لانتاج الطاقة الكهربائية / الشمال",
+        "url": "https://ngpe.moelc.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة لنقل الطاقة الكهربائية - المنطقة الشمالية",
+        "url": "https://ntr.moelc.gov.iq/index.php?lang=ar"
+      },
+      {
+        "name": "الشركة العامة لتوزيع كهرباء الشمال",
+        "url": "https://ned.moelc.gov.iq/"
+      },
+      {
+        "name": "دائرة التشغيل والتحكم",
+        "url": "https://oco.moelc.gov.iq/index.php?lang=ar"
+      },
+      {
+        "name": "الشركة العامة لأنتاج الطاقة الكهربائية/الجنوبية",
+        "url": "https://sgpe.moelc.gov.iq/index.php?lang=ar"
+      },
+      {
+        "name": "الشركة العامة لنقل الطاقة الكهربائية -الجنوب",
+        "url": "https://str.moelc.gov.iq/index.php?lang=ar"
+      },
+      {
+        "name": "الشركة العامة لتوزيع كهرباء الجنوب",
+        "url": "https://sed.moelc.gov.iq/"
+      },
+      {
+        "name": "دائرة التدريب وبحوث الطاقة",
+        "url": "https://ter.moelc.gov.iq/index.php?lang=ar"
+      },
+      {
+        "name": "الشركة العامة لانتاج الطاقة الكهربائية / الوسطى",
+        "url": "https://mgpe.moelc.gov.iq/index.php?lang=ar"
+      },
+      {
+        "name": "الشركة العامة لنقل الطاقة الكهربائية - الوسطى",
+        "url": "https://gcmr.moelc.gov.iq/index.php?lang=ar"
+      },
+      {
+        "name": "الشركة العامة لتوزيع كهرباء الوسط",
+        "url": "https://med.moelc.gov.iq/index.php?lang=ar"
+      },
+      {
+        "name": "الشركة العامة لفحص وتأهيل المنظومات الكهربائية",
+        "url": "https://irc.moelc.gov.iq/index.php?lang=ar"
+      },
+      {
+        "name": "الشركة العامة لانتاج الطاقة الكهربائية / الفرات الاوسط",
+        "url": "https://ufgpe.moelc.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة لنقل الطاقة/الفرات الاوسط",
+        "url": "https://mftr.moelc.gov.iq/index.php?lang=ar"
+      },
+      {
+        "name": "الشركة العامة لتوزيع كهرباء الفرات الاوسط",
+        "url": "https://mfd.moelc.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة لتوزيع كهرباء بغداد",
+        "url": "https://bged.moelc.gov.iq/"
+      }
+    ]
+  },
+  {
+    "slug": "ministry-of-migration-and-displaced",
+    "krg": false,
+    "website": "https://momd.gov.iq/",
+    "site_logo": "https://momd.gov.iq/images/logo.jpg",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [],
+    "site_social": [
+      "https://www.facebook.com/Othman.Ali.ALGhanmi",
+      "https://www.facebook.com/profile.php?id=100052043543927",
+      "https://twitter.com/alghanmiothman?s=11&t=IKyg4AgOt6SFEaAGk51s0g",
+      "https://www.twitter.com/EvanGabro",
+      "https://youtube.com/channel/UC1KZXQZf5LOHQ74j43TsfOQ"
+    ],
+    "structure_pages": [
+      "https://momd.gov.iq/pages/department_posts.html?departmentId=631",
+      "https://momd.gov.iq/pages/department_posts.html?departmentId=632",
+      "https://momd.gov.iq/pages/department_posts.html?departmentId=493",
+      "https://momd.gov.iq/pages/department_posts.html?departmentId=633",
+      "https://momd.gov.iq/pages/department_posts.html?departmentId=626",
+      "https://momd.gov.iq/pages/department_posts.html?departmentId=0"
+    ],
+    "bodies": []
+  },
+  {
+    "slug": "ministry-of-water-resources",
+    "krg": false,
+    "title_ar": "وزارة الموارد المائية",
+    "title_en": "Ministry of Water Resources",
+    "title_ku": "وەزارەتی سەرچاوەکانی ئاو",
+    "website": "https://mowr.gov.iq/",
+    "gps_lat": 33.3412363,
+    "gps_lon": 44.4384041,
+    "phone": "+964 1 772 0240",
+    "address_ar": "8CRQ+F9R وزارة الموارد المائية العراقية، بغداد، بغداد محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWniMPP6q3XW_YLxVN3eQ_yVpWENz7oI1_MwffnjVyBgZbnDvH7LwPHgyfP4Wefoi4p1oOg2trL6n0DKWdRU6KD0iF0WGwPVqOODZAlj6cP0YIeGMUb_n5NxI1lq4AjK7l6Y5XvgIarVApfJ=w114-h86-k-no",
+    "maps_name": "وزارة الموارد المائية العراقية",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x155783b2a3d9d675:0x505c5a03d89d1f13",
+    "maps_rating": 4.1,
+    "maps_categories": [
+      "منشأة حكومية"
+    ],
+    "pool_size": 1,
+    "candidates": [
+      "18|وزارة الموارد المائية العراقية|33.3412363,44.4384041"
+    ],
+    "bodies": [],
+    "site_status": "unreachable"
+  },
+  {
+    "slug": "ministry-of-construction-housing-municipalities-and-public-works",
+    "krg": false,
+    "website": "https://moch.gov.iq/",
+    "site_logo": "http://moch.gov.iq/https://storage.nodesbox.com/moch.gov.iq/2024/07/14/2024_07_14_12046866594_8281892853444645.png",
+    "site_emails": [],
+    "site_phones": [
+      "07760499007"
+    ],
+    "site_coords": [
+      "33.325074543778136,44.37726482748985"
+    ],
+    "site_social": [
+      "https://www.youtube.com/watch?v=dvsvawpwnvo",
+      "https://www.youtube.com/watch?v=k6SW9QryFms",
+      "https://www.youtube.com/watch?v=A1vYJh144Io",
+      "https://www.youtube.com/watch?v=H67DwBMPTDc",
+      "https://www.youtube.com/watch?v=xrKrrzNWnHI",
+      "https://www.youtube.com/watch?v=_YDJcu5ef6U",
+      "https://www.youtube.com/watch?v=TMF3fS4Mndo",
+      "https://www.youtube.com/watch?v=5FbcCv0077s",
+      "https://www.youtube.com/watch?v=XmqYzVauS0Y",
+      "https://www.facebook.com/100064875573410/"
+    ],
+    "structure_pages": [
+      "https://moch.gov.iq/?page=8",
+      "https://moch.gov.iq/?page=7",
+      "https://moch.gov.iq/?article=2968"
+    ],
+    "bodies": [
+      {
+        "name": "غداً الاثنين 2026/8/24، الساعة العاشرة صباحاً، سيبدأ التقديم الإلكتروني على قروض صندوق الإسكان العراقي لمحافظات ذي قار وكربلاء المقدسة وبابل",
+        "url": "https://moch.gov.iq/?article=2966"
+      },
+      {
+        "name": "تنويه نؤكد مجدداً ولتزامن يوم الثلاثـاء الموافق 2026/8/25 ضمن جدول أيام التقديم الإلكتروني على قروض صندوق الإسكان العراقي",
+        "url": "https://moch.gov.iq/?article=2961"
+      },
+      {
+        "name": "دوائر وتشكيلات الوزارة",
+        "url": "https://moch.gov.iq/?page=7"
+      },
+      {
+        "name": "وزير الإعمار وكالة يصادق على التصاميم الأساسية لثلاث مدن ضمن مشروع المليون قطعة أرض",
+        "url": "https://moch.gov.iq/?article=2970"
+      },
+      {
+        "name": "وزارة الإعمار تحتفي بالسيد مدير عام دائرة الإسكان المهندس صادق الفرطوسي بمناسبة احالته الى التقاعد",
+        "url": "https://moch.gov.iq/?article=2969"
+      },
+      {
+        "name": "وزير الإعمار وكالة يصادق على التصاميم الأساسية لثلاث مدن ضمن مشروع المليون قط...",
+        "url": "https://moch.gov.iq/?article=2970"
+      },
+      {
+        "name": "وزارة الإعمار تحتفي بالسيد مدير عام دائرة الإسكان المهندس صادق الفرطوسي بمناس...",
+        "url": "https://moch.gov.iq/?article=2969"
+      },
+      {
+        "name": "ممثلاً عن وزير الخارجية وزير الإعمار والإسكان والبلديات العامة وكالة السيد فؤ...",
+        "url": "https://moch.gov.iq/?article=2967"
+      },
+      {
+        "name": "صندوق الاسكان العراقي",
+        "url": "https://sandoq.moch.gov.iq/"
+      },
+      {
+        "name": "دائرة الاسكان",
+        "url": "https://alaskan.moch.gov.iq/"
+      },
+      {
+        "name": "دائرة المباني",
+        "url": "https://mabany.moch.gov.iq/"
+      },
+      {
+        "name": "دائرة الاعمار الهندسي",
+        "url": "https://alimar.moch.gov.iq/"
+      },
+      {
+        "name": "دائرة الاشغال والصيانة",
+        "url": "https://ashghal.moch.gov.iq/"
+      },
+      {
+        "name": "هيئة تنفيذ المدن الجديدة",
+        "url": "https://ncia.moch.gov.iq/"
+      },
+      {
+        "name": "دائرة بحوث البناء",
+        "url": "https://buhooth.moch.gov.iq/"
+      },
+      {
+        "name": "مديرية البلديات العامة",
+        "url": "https://municipalities.moch.gov.iq/"
+      },
+      {
+        "name": "دائرة الطرق والجسور",
+        "url": "https://turruqjissor.moch.gov.iq/"
+      },
+      {
+        "name": "المديرية العامة للتخطيط العمراني",
+        "url": "https://gdup.moch.gov.iq/"
+      },
+      {
+        "name": "المديرية العامة للماء",
+        "url": "https://gdw.moch.gov.iq/"
+      },
+      {
+        "name": "المديرية العامة للمجاري",
+        "url": "http://gds.moch.gov.iq/"
+      }
+    ]
+  },
+  {
+    "slug": "ministry-of-communications",
+    "krg": false,
+    "website": "https://moc.gov.iq/",
+    "site_logo": "http://moc.gov.iq/upload/1569382703.png",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [
+      "33.303689475440606,44.35210810451041"
+    ],
+    "site_social": [
+      "https://www.facebook.com/moc.gov.iq/?locale=ar_AR"
+    ],
+    "structure_pages": [
+      "https://moc.gov.iq/?article=1321",
+      "https://moc.gov.iq/?article=1313"
+    ],
+    "bodies": [
+      {
+        "name": "الشركة العامة للأتصالات والمعلوماتية",
+        "url": "https://itpc.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة للبريد والتوفير",
+        "url": "https://post.iq/"
+      },
+      {
+        "name": "وزارة الاتصالات تبحث مع هيئة النزاهة الاتحادية إجراءات برنامج الشفافية وحماية المال العام",
+        "url": "https://moc.gov.iq/?article=1324"
+      },
+      {
+        "name": "وزارة الاتصالات تبحث مع هيئة النزاهة الاتحادية إجراءات برنامج الشفافية وحماية...",
+        "url": "https://moc.gov.iq/?article=1324"
+      },
+      {
+        "name": "خدماتنــا الشركة العامة للأتصالات والمعلوماتية",
+        "url": null
+      },
+      {
+        "name": "شركات الوزارة الشركة العامة للأتصالات والمعلوماتية",
+        "url": null
+      }
+    ]
+  },
+  {
+    "slug": "ministry-of-youth-and-sports",
+    "krg": false,
+    "title_ar": "وزارة الشباب والرياضة",
+    "title_en": "Ministry of Youth and Sports",
+    "title_ku": "وەزارەتی لاوان و وەرزش",
+    "website": "http://www.moys.gov.iq/",
+    "gps_lat": 33.3343894,
+    "gps_lon": 44.4469808,
+    "phone": null,
+    "address_ar": "8CMW+QQ5 وزارة الشباب والرياضة، بغداد، بغداد محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWnU95uSCyPxsl2_tmXh9fDchNjyyXHemxwDtF8FaLny5vFxqq_srRKFQsZs4cJKHlUJJAF0CzaBLzJP7O7kjNu0hla24fMmvehLFOTtWSvvT0pgBsxSQlF4qHi64orj4UU_RmXk=w152-h86-k-no",
+    "maps_name": "وزارة الشباب والرياضة",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x155783ba72259059:0x3a3252c86abdffdd",
+    "maps_rating": 3.9,
+    "maps_categories": [
+      "مجمع رياضي",
+      "مكتب حكومي"
+    ],
+    "pool_size": 2,
+    "candidates": [
+      "15|وزارة الشباب والرياضة|33.3343894,44.4469808"
+    ],
+    "bodies": [],
+    "site_status": "unreachable"
+  },
+  {
+    "slug": "ministry-of-culture-tourism-and-antiquities",
+    "krg": false,
+    "title_ar": "وزارة الثقافة والسياحة والاثار",
+    "title_en": "Ministry of Culture, Tourism and Antiquities",
+    "title_ku": "وەزارەتی ڕۆشنبیری و گەشتوگوزار و شوێنەوارەکان",
+    "website": "https://mocul.gov.iq/",
+    "gps_lat": 33.3337278,
+    "gps_lon": 44.385563399999995,
+    "phone": null,
+    "address_ar": "89MP+F6W وزارة الثقافة العراقية، شارع حيفا، بغداد، بغداد محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmNk7aXUC3PnxbYk7IjC90VI10uqOpXWMP-wcJoUX1aUU-X5kQ78LeiFATfDJRNZS6h8sgdmb1JQznOn9ocbC__fjDCzdlEqZCaSfhOKUKPU89vKNK4M1B7QFe5qLgEg005X0Vb=w114-h86-k-no",
+    "maps_name": "وزارة الثقافة العراقية",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15577f4c039a3431:0x3378a5e07c21aaef",
+    "maps_rating": 3.9,
+    "maps_categories": [
+      "مبنى المحافظة"
+    ],
+    "pool_size": 2,
+    "candidates": [
+      "11|وزارة الثقافة العراقية|33.3337278,44.385563399999995"
+    ],
+    "bodies": [],
+    "site_status": "unreachable"
+  },
+  {
+    "slug": "ministry-of-trade",
+    "krg": false,
+    "website": "https://mot.gov.iq/",
+    "site_logo": "http://mot.gov.iq/https://storage.mot.gov.iq/2023/10/25/2023_10_25_11887746106.png",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [
+      "33.322213555925885,44.36451337506913"
+    ],
+    "site_social": [
+      "https://facebook.com/100064754017349"
+    ],
+    "structure_pages": [
+      "https://mot.gov.iq/?page=272",
+      "https://mot.gov.iq/?page=273",
+      "https://mot.gov.iq/?page=265",
+      "https://mot.gov.iq/?page=7443",
+      "https://mot.gov.iq/?page=275",
+      "https://mot.gov.iq/?page=276"
+    ],
+    "bodies": [
+      {
+        "name": "دائرة التنسيق الحكومي وشؤون المواطنين",
+        "url": "https://mot.gov.iq/?page=231"
+      },
+      {
+        "name": "الدائرة الادارية والمالية",
+        "url": "https://mot.gov.iq/?page=173"
+      },
+      {
+        "name": "اقسام الدائرة",
+        "url": "https://mot.gov.iq/?page=272"
+      },
+      {
+        "name": "دائرة التخطيط والمتابعة",
+        "url": "https://mot.gov.iq/?page=162"
+      },
+      {
+        "name": "دائرة العلاقات الاقتصادية الخارجية",
+        "url": "https://mot.gov.iq/?page=158"
+      },
+      {
+        "name": "نشاطات دائرة العلاقات الاقتصادية الخارجية",
+        "url": "https://mot.gov.iq/?page=7444"
+      },
+      {
+        "name": "دليل استرشادي لموظفي دائرة العلاقات الاقتصادية الخارجية",
+        "url": "https://mot.gov.iq/?page=271"
+      },
+      {
+        "name": "القوانين والتشريعات التي تخص عمل الدائرة",
+        "url": "https://mot.gov.iq/?page=267"
+      },
+      {
+        "name": "دائرة تطوير القطاع الخاص",
+        "url": "https://mot.gov.iq/?page=107"
+      },
+      {
+        "name": "اقسام دائرة تطوير القطاع الخاص",
+        "url": "https://mot.gov.iq/?page=275"
+      },
+      {
+        "name": "الدائرة القانونية",
+        "url": "https://mot.gov.iq/?page=161"
+      },
+      {
+        "name": "اقسام الدائرة القانونية",
+        "url": "https://mot.gov.iq/?page=276"
+      },
+      {
+        "name": "نشاطات الدائرة القانونية",
+        "url": "https://mot.gov.iq/?page=277"
+      },
+      {
+        "name": "دائرة الرقابة التجارية والمالية",
+        "url": "https://mot.gov.iq/?page=157"
+      },
+      {
+        "name": "نشاطات دائرة الرقابة التجارية والمالية",
+        "url": "https://mot.gov.iq/?page=278"
+      },
+      {
+        "name": "دائرة تسجيل الشركات",
+        "url": "https://mot.gov.iq/?page=75"
+      },
+      {
+        "name": "انشطة وانجازات دائرة تسجيل الشركات",
+        "url": "https://mot.gov.iq/?page=7494"
+      },
+      {
+        "name": "الشركة العامة للمعارض والخدمات التجارية العراقية",
+        "url": "http://fairs.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة للاسواق المركزية",
+        "url": "http://scc-mot.iq/"
+      },
+      {
+        "name": "نبذة عن الشركة العامة للاسواق المركزية",
+        "url": "https://mot.gov.iq/?page=322"
+      },
+      {
+        "name": "الشركة العامة لتجارة السيارات والمكائن",
+        "url": "http://gamcoiraq.gov.iq/"
+      },
+      {
+        "name": "نبذة عن الشركة العامة للسيارات",
+        "url": "https://mot.gov.iq/?page=318"
+      },
+      {
+        "name": "الشركة العامة لتجارة المواد الانشائية",
+        "url": "https://tcm.mot.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة لتجارة المواد الغذائية",
+        "url": "http://iraqsfsc.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة لتصنيع الحبوب",
+        "url": "https://tasneehobob.mot.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة لتجارة الحبوب",
+        "url": "https://grainb.iq/"
+      },
+      {
+        "name": "صندوق دعم التصدير",
+        "url": "https://epf.gov.iq/"
+      },
+      {
+        "name": "مدير عام دائرة تطوير القطاع الخاص يشارك في ورشة حول أحدث تقنيات الطاقة والأنظمة الهجينة",
+        "url": "https://mot.gov.iq/?article=12982"
+      },
+      {
+        "name": "وزير التجارة يبحث مع رئيس جهاز الأمن الوطني سبل التعاون المشترك",
+        "url": "https://mot.gov.iq/?article=12969"
+      },
+      {
+        "name": "زار وزير التجارة الدكتور مصطفى نزار العاني، اليوم، رئيس جهاز الأمن الوطني العراقي السيد باسم البدري، وبحث معه عدداً من الملفات ذات الاهتمام المشترك.",
+        "url": "https://mot.gov.iq/?article=12969"
+      },
+      {
+        "name": "مدير عام دائرة تطوير القطاع الخاص يشارك في ورشة حول أحدث تقنيات الطاقة والأنظ...",
+        "url": "https://mot.gov.iq/?article=12982"
+      },
+      {
+        "name": "الدائرة الادارية والمالية اقسام الدائرة",
+        "url": null
+      },
+      {
+        "name": "دائرة التخطيط والمتابعة اقسام الدائرة",
+        "url": null
+      },
+      {
+        "name": "صندوق دعم التصدير المكتبة الرقمية",
+        "url": null
+      },
+      {
+        "name": "هيئة النزاهة التفاصيل",
+        "url": null
+      },
+      {
+        "name": "دوائر الوزارة الدائرة الادارية والمالية اقسام الدائرة",
+        "url": null
+      },
+      {
+        "name": "دائرة العلاقات الاقتصادية الخارجية الهيكل التنظيمي",
+        "url": null
+      },
+      {
+        "name": "دائرة تطوير القطاع الخاص مجلة التجارة العراقية الالكترونية",
+        "url": null
+      },
+      {
+        "name": "الدائرة القانونية الهيكل التنظيمي",
+        "url": null
+      },
+      {
+        "name": "دائرة الرقابة التجارية والمالية الهيكل التنظيمي",
+        "url": null
+      },
+      {
+        "name": "دائرة تسجيل الشركات الهيكل التنظيمي",
+        "url": null
+      },
+      {
+        "name": "الشركة العامة للمعارض والخدمات التجارية العراقية بوابة منظومة الاستيراد والتصدير الالكترونية",
+        "url": null
+      },
+      {
+        "name": "الشركة العامة للاسواق المركزية نبذة عن الشركة العامة للاسواق المركزية",
+        "url": null
+      },
+      {
+        "name": "الشركة العامة لتجارة السيارات والمكائن نبذة عن الشركة العامة للسيارات",
+        "url": null
+      },
+      {
+        "name": "الشركة العامة لتجارة المواد الانشائية نبذة تعريفية",
+        "url": null
+      },
+      {
+        "name": "الشركة العامة لتجارة المواد الغذائية نبذة تعريفية",
+        "url": null
+      },
+      {
+        "name": "الشركة العامة لتصنيع الحبوب الهيكل التنظيمي",
+        "url": null
+      },
+      {
+        "name": "الشركة العامة لتجارة الحبوب نبذة عن تجارة الحبوب",
+        "url": null
+      }
+    ]
+  },
+  {
+    "slug": "ministry-of-health",
+    "krg": false,
+    "website": "https://moh.gov.iq/",
+    "site_logo": "https://moh.gov.iq/upload/1062710770.png",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [
+      "33.347624773430425,44.378703175439824"
+    ],
+    "site_social": [
+      "https://www.facebook.com/MOH.GOV.IQ",
+      "https://www.youtube.com/watch?v=3QKWh1W2kXs",
+      "https://www.youtube.com/channel/UC5UPXHNEGeI2dj6YbzPIYAg/videos"
+    ],
+    "structure_pages": [
+      "https://moh.gov.iq/?map",
+      "https://moh.gov.iq/?page=45"
+    ],
+    "bodies": [
+      {
+        "name": "مديريات الصحة",
+        "url": "https://moh.gov.iq/?map"
+      },
+      {
+        "name": "دائرة صحة ديالى",
+        "url": "https://dyala.moh.gov.iq/"
+      },
+      {
+        "name": "مركز الوزارة/ دائرة الصحة العامة",
+        "url": "https://www.phd.iq/"
+      },
+      {
+        "name": "مركز الوزارة / دائرة التخطيط وتنمية الموارد",
+        "url": "https://planning.moh.gov.iq/"
+      },
+      {
+        "name": "دائرة صحة ذي قار",
+        "url": "https://thiqar.moh.gov.iq/"
+      },
+      {
+        "name": "دائرة التفتيش",
+        "url": "https://moh.gov.iq/upload/691.doc"
+      },
+      {
+        "name": "دائرة التخطيط و تنمية الموارد",
+        "url": "http://www.moh-planning.com/"
+      },
+      {
+        "name": "دائرة الامور الفنية",
+        "url": "http://www.tec-moh.com/"
+      },
+      {
+        "name": "دائرة الصحة العامة",
+        "url": "http://www.phd.iq/"
+      },
+      {
+        "name": "الشركة العامة لتسويق الادوية والمستلزمات الطبية",
+        "url": "http://www.kimadia.iq/"
+      }
+    ]
+  },
+  {
+    "slug": "ministry-of-transport",
+    "krg": false,
+    "website": "https://motrans.gov.iq/",
+    "site_logo": "http://motrans.gov.iq/upload/1910351885.png",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [
+      "33.347577154610725,44.441215375070314"
+    ],
+    "site_social": [
+      "https://www.instagram.com/motrans.iq",
+      "https://www.youtube.com/channel/UCDR7mbOGePdODtgIxYPn43w"
+    ],
+    "structure_pages": [],
+    "bodies": [
+      {
+        "name": "الشركة العامة للخطوط الجوية العراقية",
+        "url": "https://iraqiairways.com.iq/"
+      },
+      {
+        "name": "دائرة المطارات العراقية",
+        "url": "https://dim.motrans.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة للنقل البري",
+        "url": "http://www.sclt.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة لخدمات الملاحة الجوية",
+        "url": "https://www.gcans.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة لموانئ العراق",
+        "url": "https://gcpi.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة للسكك حديد العراق",
+        "url": "https://www.scr.gov.iq/"
+      },
+      {
+        "name": "الهيئة العامة للانواء الجوية والرصد الزلزالي",
+        "url": "http://www.meteoseism.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة لادارة النقل الخاص",
+        "url": "http://scpta.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة لتنفيذ مشاريع النقل والمواصلات",
+        "url": "https://scitcp.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة للنقل البحري",
+        "url": "http://scmt.gov.iq/"
+      },
+      {
+        "name": "وزير النقل يعقد اجتماعاً في الشركة العامة للنقل البحري بحضور رئيس مجلس المحافظة وعدد من نوابها",
+        "url": "https://www.motrans.gov.iq/?article=4215"
+      },
+      {
+        "name": "بالانفو.. حركة قطارات الشركة العامة لسكك حديد العراق",
+        "url": "https://www.motrans.gov.iq/?article=4177"
+      },
+      {
+        "name": "خلال زيارته البصرة.. السيد وزير النقل وهب الحسني يتفقد مقر الشركة العامة للنقل البري ويلتقي موظفيها للاطلاع على احتياجاتهم بشكل مباشر",
+        "url": "https://motrans.gov.iq/?article=4217"
+      },
+      {
+        "name": "الشركة العامة لنقل المسافرين والوفود",
+        "url": null
+      },
+      {
+        "name": "تشكيلات الوزارة الشركة العامة للخطوط الجوية العراقية",
+        "url": null
+      }
+    ]
+  },
+  {
+    "slug": "ministry-of-planning",
+    "krg": false,
+    "website": "https://mop.gov.iq/",
+    "site_logo": "https://mop.gov.iq/wp-content/uploads/2023/05/new_logo-150x150.png",
+    "site_emails": [
+      "info@mop.gov.iq"
+    ],
+    "site_phones": [],
+    "site_coords": [],
+    "site_social": [
+      "https://www.facebook.com/p/%D9%88%D8%B2%D8%A7%D8%B1%D8%A9-%D8%A7%D9%84%D8%AA%D8%AE%D8%B7%D9%8A%D8%B7-%D8%A7%D9%84%D8%B9%D8%B1%D8%A7%D9%82%D9%8A%D8%A9-100064619419429/",
+      "https://www.youtube.com/channel/UCaXoeg81TCcViwq6dmrUkYg"
+    ],
+    "structure_pages": [
+      "https://mop.gov.iq/%d8%a7%d9%84%d9%87%d9%8a%d9%83%d9%84-%d8%a7%d9%84%d8%aa%d9%86%d8%b8%d9%8a%d9%85%d9%8a-2",
+      "https://mop.gov.iq/%d8%aa%d8%b4%d9%83%d9%8a%d9%84%d8%a7%d8%aa-%d8%a7%d9%84%d9%88%d8%b2%d8%a7%d8%b1%d8%a9",
+      "https://mop.gov.iq/?page_id=3738"
+    ],
+    "bodies": [
+      {
+        "name": "الجهاز المركزي للتقييس والسيطرة النوعية",
+        "url": "https://mop.gov.iq/%d8%a7%d9%84%d8%ac%d9%87%d8%a7%d8%b2-%d8%a7%d9%84%d9%85%d8%b1%d9%83%d8%b2%d9%8a-%d9%84%d9%84%d8%aa%d9%82%d9%8a%d9%8a%d8%b3-%d9%88%d8%a7%d9%84%d8%b3%d9%8a%d8%b7%d8%b1%d8%a9-%d8%a7%d9%84%d9%86%d9%88"
+      },
+      {
+        "name": "وزارة التخطيط تبحث مع الوكالة الكورية للتعاون الدولي (كويكا) إجراءات إطلاق معدات مختبرات اللغة متعددة الوسائط",
+        "url": "https://mop.gov.iq/archives/38729"
+      },
+      {
+        "name": "الدائرة الادارية والمالية",
+        "url": "https://mop.gov.iq/%d8%a7%d9%84%d8%af%d8%a7%d8%a6%d8%b1%d8%a9-%d8%a7%d9%84%d8%a7%d8%af%d8%a7%d8%b1%d9%8a%d8%a9-%d9%88%d8%a7%d9%84%d9%85%d8%a7%d9%84%d9%8a%d8%a9"
+      },
+      {
+        "name": "دائرة تخطيط القطاعات",
+        "url": "https://mop.gov.iq/%d8%af%d8%a7%d8%a6%d8%b1%d8%a9-%d8%aa%d8%ae%d8%b7%d9%8a%d8%b7-%d8%a7%d9%84%d9%82%d8%b7%d8%a7%d8%b9%d8%a7%d8%aa-2"
+      },
+      {
+        "name": "دائرة العقود الحكومية",
+        "url": "https://mop.gov.iq/gover_contract24"
+      },
+      {
+        "name": "الدائرة القانونية",
+        "url": "https://mop.gov.iq/%d8%a7%d9%84%d8%af%d8%a7%d8%a6%d8%b1%d8%a9-%d8%a7%d9%84%d9%82%d8%a7%d9%86%d9%88%d9%86%d9%8a%d8%a92"
+      },
+      {
+        "name": "دائرة التنمية البشرية",
+        "url": "https://mop.gov.iq/%d8%af%d8%a7%d8%a6%d8%b1%d8%a9-%d8%a7%d9%84%d8%aa%d9%86%d9%85%d9%8a%d8%a9-%d8%a7%d9%84%d8%a8%d8%b4%d8%b1%d9%8a%d8%a9-2"
+      },
+      {
+        "name": "دائرة التنمية الاقليمية والمحلية",
+        "url": "https://mop.gov.iq/%d8%af%d8%a7%d8%a6%d8%b1%d8%a9-%d8%a7%d9%84%d8%aa%d9%86%d9%85%d9%8a%d8%a9-%d8%a7%d9%84%d8%a7%d9%82%d9%84%d9%8a%d9%85%d9%8a%d8%a9-%d9%88%d8%a7%d9%84%d9%85%d8%ad%d9%84%d9%8a%d8%a9"
+      },
+      {
+        "name": "دائرة السياسات الاقتصادية والمالية",
+        "url": "https://mop.gov.iq/%d8%af%d8%a7%d8%a6%d8%b1%d8%a9-%d8%a7%d9%84%d8%b3%d9%8a%d8%a7%d8%b3%d8%a7%d8%aa-%d8%a7%d9%84%d8%a7%d9%82%d8%aa%d8%b5%d8%a7%d8%af%d9%8a%d8%a9%d9%88%d8%a7%d9%84%d9%85%d8%a7%d9%84%d9%8a%d8%a9"
+      },
+      {
+        "name": "الصندوق الاجتماعي للتنمية",
+        "url": "https://mop.gov.iq/social_dev"
+      }
+    ]
+  },
+  {
+    "slug": "ministry-of-agriculture",
+    "krg": false,
+    "title_ar": "وزارة الزراعة",
+    "title_en": "Ministry of Agriculture",
+    "title_ku": "وەزارەتی کشتوکاڵ",
+    "website": "https://zeraa.gov.iq/",
+    "gps_lat": 33.3166897,
+    "gps_lon": 44.424706099999995,
+    "phone": null,
+    "address_ar": "8C8F+MVG وزارة الزراعة, Nidhal St، بغداد، بغداد محافظة",
+    "photo": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWmAb1oQoGT8zYRKbSSczLjuMTFWUlXT4QMJyS7vJwjkcryCOfaR-N7Nzc6Oom30aF5bdARg8aSBvNAc51U57jv4cPGUaKVQ87vBiKCLhkiw03FJmHwnnGMQlvyg1wPJhMZQ5OAc=w80-h106-k-no",
+    "maps_name": "وزارة الزراعة",
+    "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15578189235091f1:0x406a5d5909e3309d",
+    "maps_rating": 3.8,
+    "maps_categories": [
+      "مكتب حكومي"
+    ],
+    "pool_size": 8,
+    "candidates": [
+      "15|وزارة الزراعة|33.3166897,44.424706099999995",
+      "13|وزارة الزراعة / دائرة البيطرة|33.3705796,44.3878931",
+      "12|وزارة الزراعة / دائرة التخطيط والمتابعة/القسم الهندسي|33.3156637,44.4226477",
+      "10|وزارة الزراعة - حکومة اقلیم کوردستان|36.1597788,44.0104416"
+    ],
+    "bodies": [],
+    "site_status": "unreachable"
+  },
+  {
+    "slug": "ministry-of-industry-and-minerals",
+    "krg": false,
+    "website": "https://industry.gov.iq/",
+    "site_logo": "http://industry.gov.iq/upload/1671635909.png",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [
+      "33.328728355587344,44.41958942441203"
+    ],
+    "site_social": [
+      "https://www.facebook.com/industry.iraqi",
+      "https://www.youtube.com/watch?v=n36qLauYk0k",
+      "https://www.youtube.com/watch?v=9qDjo73wr8k",
+      "https://www.youtube.com/watch?v=v4Zgiv316TI",
+      "https://www.youtube.com/watch?v=gzP_kzWE3Y8",
+      "https://www.youtube.com/watch?v=Bbo0tyGV090",
+      "https://www.youtube.com/watch?v=s4vbbbq9kR8",
+      "https://www.youtube.com/watch?v=iHiCZwgWy1U",
+      "https://www.youtube.com/watch?v=wy6gCtIha9M",
+      "https://www.youtube.com/watch?v=VJvmjM0cQqY"
+    ],
+    "structure_pages": [
+      "https://industry.gov.iq/?page=56",
+      "https://industry.gov.iq/?page=72",
+      "https://industry.gov.iq/?page=154",
+      "https://industry.gov.iq/?article=3838"
+    ],
+    "bodies": [
+      {
+        "name": "المديرية العامة للتنمية الصناعية",
+        "url": "https://gdid.industry.gov.iq/"
+      },
+      {
+        "name": "شركة الفارس العامة تجهز مديرية ماء ميسان بمجمع متكامل لتصفية وتنقية المياه",
+        "url": "https://industry.gov.iq/?article=3822"
+      },
+      {
+        "name": "وزارة الصناعة والمعادن وبالتعاون مع هيئة النزاهة الاتحادية تقيم ورشة عمل بعنوان (الاطار القانوني في تعزيز الرقابة المجتمعية)",
+        "url": "https://industry.gov.iq/?article=3821"
+      },
+      {
+        "name": "الشركة العامة للحديد والصلب تشغّل مصنع النورة بطاقة 200 طن يومياً",
+        "url": "https://industry.gov.iq/?article=3808"
+      },
+      {
+        "name": "الشركة العامة للتصميم وتنفيذ المشاريع تنجز (80%) من مشروع بناية فرع غاز النجف",
+        "url": "https://industry.gov.iq/?article=3805"
+      },
+      {
+        "name": "وزير الصناعة والمعادن يجري جولة في مديرية التنمية الصناعية ويلتقي عددا من المراجعين والموظفين",
+        "url": "https://industry.gov.iq/?article=3829"
+      },
+      {
+        "name": "وزير الصناعة والمعادن يجري جولة في مديرية التنمية الصناعية ويلتقي عددا من الم...",
+        "url": "https://industry.gov.iq/?article=3829"
+      },
+      {
+        "name": "الشركة العامة لصناعة النسيجية والجلود",
+        "url": "https://sctl.industry.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة للسمنت العراقية",
+        "url": "https://www.icsc.industry.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة لصناعة الادوية والمستلزمات الطبية",
+        "url": "https://sdi.industry.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة للصناعات الكهربائية والالكترونية",
+        "url": "http://www.sceei.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة لكبريت المشراق",
+        "url": "https://mishraq.industry.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة للزجاج والحراريات",
+        "url": "https://glassref.industry.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة للصناعات الغذائية",
+        "url": "http://www.fisc.industry.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة للفحص والتأهيل الهندسي",
+        "url": "https://siei.industry.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة للحديد والصلب",
+        "url": "https://steeliraq.industry.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة للصناعات المطاطية والاطارات",
+        "url": "https://scrti.industry.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة للصناعة الاسمدة الجنوبية",
+        "url": "http://sfert.industry.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة لصناعة السيارات والمعدات",
+        "url": "https://scai.industry.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة للفوسفات",
+        "url": "https://www.phoco.industry.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة للصناعات البتروكيمياوية",
+        "url": "https://pchem.industry.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة للانظمة الالكترونية",
+        "url": "https://www.gces.industry.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة للتصميم وتنفيذ المشاريع",
+        "url": "https://scdpi.industry.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة للصناعات الانشائية",
+        "url": "https://seci.industry.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة للاسمدة الشمالية",
+        "url": "https://northasm.industry.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة للصناعات الفولاذية",
+        "url": "https://scosi.industry.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة للصناعات التعدينية",
+        "url": "https://altadinea.industry.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة للصناعات الهيدروليكية",
+        "url": "https://hisc.industry.gov.iq/"
+      },
+      {
+        "name": "الشركة العامة لمعدات الاتصالات والقدرة",
+        "url": "https://gccep.industry.gov.iq/"
+      }
+    ]
+  },
+  {
+    "slug": "ministry-of-environment",
+    "krg": false,
+    "website": "https://moen.gov.iq/",
+    "site_logo": "https://moen.gov.iq/favicon.ico",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [],
+    "site_social": [],
+    "structure_pages": [],
+    "bodies": []
+  },
+  {
+    "slug": "krg-ministry-of-justice",
+    "krg": true,
+    "website": "https://gov.krd/moj-en/",
+    "site_logo": "https://gov.krd/media/1099/govkrdlogobig.svg",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [],
+    "site_social": [
+      "https://www.facebook.com/Kurdistan/",
+      "https://x.com/Kurdistan",
+      "https://www.instagram.com/kurdistan/",
+      "https://www.youtube.com/@KurdistanRegionalGovernment"
+    ],
+    "structure_pages": [
+      "https://gov.krd/english/government/entities/"
+    ],
+    "bodies": [
+      {
+        "name": "Department of Foreign Relations",
+        "url": "https://gov.krd/dfr-en/"
+      },
+      {
+        "name": "Department of Media and Information",
+        "url": "https://gov.krd/dmi-en/"
+      },
+      {
+        "name": "Department of Coordination and Follow-Up",
+        "url": "https://gov.krd/dcf-en/"
+      },
+      {
+        "name": "Department of Information Technology",
+        "url": "https://gov.krd/dit-en/"
+      },
+      {
+        "name": "Department of Non-Governmental Organization",
+        "url": "https://gov.krd/dngo-en/"
+      },
+      {
+        "name": "Mine Action Agency",
+        "url": "https://gov.krd/maa-en/"
+      }
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-peshmerga-affairs",
+    "krg": true,
+    "website": "https://gov.krd/mopa-en/",
+    "site_logo": "https://gov.krd/media/1099/govkrdlogobig.svg",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [],
+    "site_social": [
+      "https://www.facebook.com/Kurdistan/",
+      "https://x.com/Kurdistan",
+      "https://www.instagram.com/kurdistan/",
+      "https://www.youtube.com/@KurdistanRegionalGovernment"
+    ],
+    "structure_pages": [
+      "https://gov.krd/english/government/entities/"
+    ],
+    "bodies": [
+      {
+        "name": "Department of Foreign Relations",
+        "url": "https://gov.krd/dfr-en/"
+      },
+      {
+        "name": "Department of Media and Information",
+        "url": "https://gov.krd/dmi-en/"
+      },
+      {
+        "name": "Department of Coordination and Follow-Up",
+        "url": "https://gov.krd/dcf-en/"
+      },
+      {
+        "name": "Department of Information Technology",
+        "url": "https://gov.krd/dit-en/"
+      },
+      {
+        "name": "Department of Non-Governmental Organization",
+        "url": "https://gov.krd/dngo-en/"
+      },
+      {
+        "name": "Mine Action Agency",
+        "url": "https://gov.krd/maa-en/"
+      }
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-interior",
+    "krg": true,
+    "website": "https://gov.krd/moi-en/",
+    "site_logo": "https://gov.krd/media/1099/govkrdlogobig.svg",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [],
+    "site_social": [
+      "https://www.facebook.com/Kurdistan/",
+      "https://x.com/Kurdistan",
+      "https://www.instagram.com/kurdistan/",
+      "https://www.youtube.com/@KurdistanRegionalGovernment"
+    ],
+    "structure_pages": [
+      "https://gov.krd/english/government/entities/",
+      "https://gov.krd/english/government/entities/moi/components/",
+      "https://gov.krd/english/government/entities/moi/publications/",
+      "https://gov.krd/english/government/entities/moi/services/",
+      "https://gov.krd/english/government/entities/moi/contact/",
+      "https://gov.krd/english/government/entities/moi/"
+    ],
+    "bodies": [
+      {
+        "name": "Department of Foreign Relations",
+        "url": "https://gov.krd/dfr-en/"
+      },
+      {
+        "name": "Department of Media and Information",
+        "url": "https://gov.krd/dmi-en/"
+      },
+      {
+        "name": "Department of Coordination and Follow-Up",
+        "url": "https://gov.krd/dcf-en/"
+      },
+      {
+        "name": "Department of Information Technology",
+        "url": "https://gov.krd/dit-en/"
+      },
+      {
+        "name": "Department of Non-Governmental Organization",
+        "url": "https://gov.krd/dngo-en/"
+      },
+      {
+        "name": "Mine Action Agency",
+        "url": "https://gov.krd/maa-en/"
+      },
+      {
+        "name": "The General Directorate of the Diwan",
+        "url": null
+      },
+      {
+        "name": "The General Directorate of the Interior",
+        "url": null
+      },
+      {
+        "name": "General Directorate of Local Administration",
+        "url": null
+      }
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-finance-and-economy",
+    "krg": true,
+    "website": "https://gov.krd/mofe-en/",
+    "site_logo": "https://gov.krd/media/1099/govkrdlogobig.svg",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [],
+    "site_social": [
+      "https://www.facebook.com/Kurdistan/",
+      "https://x.com/Kurdistan",
+      "https://www.instagram.com/kurdistan/",
+      "https://www.youtube.com/@KurdistanRegionalGovernment"
+    ],
+    "structure_pages": [
+      "https://gov.krd/english/government/entities/"
+    ],
+    "bodies": [
+      {
+        "name": "Department of Foreign Relations",
+        "url": "https://gov.krd/dfr-en/"
+      },
+      {
+        "name": "Department of Media and Information",
+        "url": "https://gov.krd/dmi-en/"
+      },
+      {
+        "name": "Department of Coordination and Follow-Up",
+        "url": "https://gov.krd/dcf-en/"
+      },
+      {
+        "name": "Department of Information Technology",
+        "url": "https://gov.krd/dit-en/"
+      },
+      {
+        "name": "Department of Non-Governmental Organization",
+        "url": "https://gov.krd/dngo-en/"
+      },
+      {
+        "name": "Mine Action Agency",
+        "url": "https://gov.krd/maa-en/"
+      }
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-natural-resources",
+    "krg": true,
+    "website": "https://gov.krd/mnr-en/",
+    "site_logo": "https://gov.krd/media/1099/govkrdlogobig.svg",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [],
+    "site_social": [
+      "https://www.facebook.com/Kurdistan/",
+      "https://x.com/Kurdistan",
+      "https://www.instagram.com/kurdistan/",
+      "https://www.youtube.com/@KurdistanRegionalGovernment"
+    ],
+    "structure_pages": [
+      "https://gov.krd/english/government/entities/"
+    ],
+    "bodies": [
+      {
+        "name": "Department of Foreign Relations",
+        "url": "https://gov.krd/dfr-en/"
+      },
+      {
+        "name": "Department of Media and Information",
+        "url": "https://gov.krd/dmi-en/"
+      },
+      {
+        "name": "Department of Coordination and Follow-Up",
+        "url": "https://gov.krd/dcf-en/"
+      },
+      {
+        "name": "Department of Information Technology",
+        "url": "https://gov.krd/dit-en/"
+      },
+      {
+        "name": "Department of Non-Governmental Organization",
+        "url": "https://gov.krd/dngo-en/"
+      },
+      {
+        "name": "Mine Action Agency",
+        "url": "https://gov.krd/maa-en/"
+      }
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-health",
+    "krg": true,
+    "website": "https://gov.krd/moh-en/",
+    "site_logo": "https://gov.krd/media/1099/govkrdlogobig.svg",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [],
+    "site_social": [
+      "https://www.facebook.com/Kurdistan/",
+      "https://x.com/Kurdistan",
+      "https://www.instagram.com/kurdistan/",
+      "https://www.youtube.com/@KurdistanRegionalGovernment"
+    ],
+    "structure_pages": [
+      "https://gov.krd/english/government/entities/",
+      "https://gov.krd/arabic/government/entities/moh/"
+    ],
+    "bodies": [
+      {
+        "name": "Department of Foreign Relations",
+        "url": "https://gov.krd/dfr-en/"
+      },
+      {
+        "name": "Department of Media and Information",
+        "url": "https://gov.krd/dmi-en/"
+      },
+      {
+        "name": "Department of Coordination and Follow-Up",
+        "url": "https://gov.krd/dcf-en/"
+      },
+      {
+        "name": "Department of Information Technology",
+        "url": "https://gov.krd/dit-en/"
+      },
+      {
+        "name": "Department of Non-Governmental Organization",
+        "url": "https://gov.krd/dngo-en/"
+      },
+      {
+        "name": "Mine Action Agency",
+        "url": "https://gov.krd/maa-en/"
+      }
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-education",
+    "krg": true,
+    "website": "https://gov.krd/moe-en/",
+    "site_logo": "https://gov.krd/media/1099/govkrdlogobig.svg",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [],
+    "site_social": [
+      "https://www.facebook.com/Kurdistan/",
+      "https://x.com/Kurdistan",
+      "https://www.instagram.com/kurdistan/",
+      "https://www.youtube.com/@KurdistanRegionalGovernment"
+    ],
+    "structure_pages": [
+      "https://gov.krd/english/government/entities/"
+    ],
+    "bodies": [
+      {
+        "name": "Department of Foreign Relations",
+        "url": "https://gov.krd/dfr-en/"
+      },
+      {
+        "name": "Department of Media and Information",
+        "url": "https://gov.krd/dmi-en/"
+      },
+      {
+        "name": "Department of Coordination and Follow-Up",
+        "url": "https://gov.krd/dcf-en/"
+      },
+      {
+        "name": "Department of Information Technology",
+        "url": "https://gov.krd/dit-en/"
+      },
+      {
+        "name": "Department of Non-Governmental Organization",
+        "url": "https://gov.krd/dngo-en/"
+      },
+      {
+        "name": "Mine Action Agency",
+        "url": "https://gov.krd/maa-en/"
+      }
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-construction-and-housing",
+    "krg": true,
+    "website": "https://gov.krd/moch-en/",
+    "site_logo": "https://gov.krd/media/1099/govkrdlogobig.svg",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [],
+    "site_social": [
+      "https://www.facebook.com/Kurdistan/",
+      "https://x.com/Kurdistan",
+      "https://www.instagram.com/kurdistan/",
+      "https://www.youtube.com/@KurdistanRegionalGovernment"
+    ],
+    "structure_pages": [
+      "https://gov.krd/english/government/entities/",
+      "https://gov.krd/english/government/entities/moch/components/",
+      "https://gov.krd/english/government/entities/moch/publications/",
+      "https://gov.krd/english/government/entities/moch/publications/about-moch/",
+      "https://gov.krd/english/government/entities/moch/publications/projects/",
+      "https://gov.krd/english/government/entities/moch/publications/regulations/"
+    ],
+    "bodies": [
+      {
+        "name": "Department of Foreign Relations",
+        "url": "https://gov.krd/dfr-en/"
+      },
+      {
+        "name": "Department of Media and Information",
+        "url": "https://gov.krd/dmi-en/"
+      },
+      {
+        "name": "Department of Coordination and Follow-Up",
+        "url": "https://gov.krd/dcf-en/"
+      },
+      {
+        "name": "Department of Information Technology",
+        "url": "https://gov.krd/dit-en/"
+      },
+      {
+        "name": "Department of Non-Governmental Organization",
+        "url": "https://gov.krd/dngo-en/"
+      },
+      {
+        "name": "Mine Action Agency",
+        "url": "https://gov.krd/maa-en/"
+      }
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-municipalities-and-tourism",
+    "krg": true,
+    "website": "https://gov.krd/momt-en/",
+    "site_logo": "https://gov.krd/media/1099/govkrdlogobig.svg",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [],
+    "site_social": [
+      "https://www.facebook.com/Kurdistan/",
+      "https://x.com/Kurdistan",
+      "https://www.instagram.com/kurdistan/",
+      "https://www.youtube.com/@KurdistanRegionalGovernment"
+    ],
+    "structure_pages": [
+      "https://gov.krd/english/government/entities/"
+    ],
+    "bodies": [
+      {
+        "name": "Department of Foreign Relations",
+        "url": "https://gov.krd/dfr-en/"
+      },
+      {
+        "name": "Department of Media and Information",
+        "url": "https://gov.krd/dmi-en/"
+      },
+      {
+        "name": "Department of Coordination and Follow-Up",
+        "url": "https://gov.krd/dcf-en/"
+      },
+      {
+        "name": "Department of Information Technology",
+        "url": "https://gov.krd/dit-en/"
+      },
+      {
+        "name": "Department of Non-Governmental Organization",
+        "url": "https://gov.krd/dngo-en/"
+      },
+      {
+        "name": "Mine Action Agency",
+        "url": "https://gov.krd/maa-en/"
+      }
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-higher-education",
+    "krg": true,
+    "website": "https://gov.krd/mohe-en/",
+    "site_logo": "https://gov.krd/media/1099/govkrdlogobig.svg",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [],
+    "site_social": [
+      "https://www.facebook.com/Kurdistan/",
+      "https://x.com/Kurdistan",
+      "https://www.instagram.com/kurdistan/",
+      "https://www.youtube.com/@KurdistanRegionalGovernment"
+    ],
+    "structure_pages": [
+      "https://gov.krd/english/government/entities/"
+    ],
+    "bodies": [
+      {
+        "name": "Department of Foreign Relations",
+        "url": "https://gov.krd/dfr-en/"
+      },
+      {
+        "name": "Department of Media and Information",
+        "url": "https://gov.krd/dmi-en/"
+      },
+      {
+        "name": "Department of Coordination and Follow-Up",
+        "url": "https://gov.krd/dcf-en/"
+      },
+      {
+        "name": "Department of Information Technology",
+        "url": "https://gov.krd/dit-en/"
+      },
+      {
+        "name": "Department of Non-Governmental Organization",
+        "url": "https://gov.krd/dngo-en/"
+      },
+      {
+        "name": "Mine Action Agency",
+        "url": "https://gov.krd/maa-en/"
+      }
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-planning",
+    "krg": true,
+    "website": "https://gov.krd/mop-en/",
+    "site_logo": "https://gov.krd/media/1099/govkrdlogobig.svg",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [],
+    "site_social": [
+      "https://www.facebook.com/Kurdistan/",
+      "https://x.com/Kurdistan",
+      "https://www.instagram.com/kurdistan/",
+      "https://www.youtube.com/@KurdistanRegionalGovernment"
+    ],
+    "structure_pages": [
+      "https://gov.krd/english/government/entities/"
+    ],
+    "bodies": [
+      {
+        "name": "Department of Foreign Relations",
+        "url": "https://gov.krd/dfr-en/"
+      },
+      {
+        "name": "Department of Media and Information",
+        "url": "https://gov.krd/dmi-en/"
+      },
+      {
+        "name": "Department of Coordination and Follow-Up",
+        "url": "https://gov.krd/dcf-en/"
+      },
+      {
+        "name": "Department of Information Technology",
+        "url": "https://gov.krd/dit-en/"
+      },
+      {
+        "name": "Department of Non-Governmental Organization",
+        "url": "https://gov.krd/dngo-en/"
+      },
+      {
+        "name": "Mine Action Agency",
+        "url": "https://gov.krd/maa-en/"
+      }
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-labour-and-social-affairs",
+    "krg": true,
+    "website": "https://gov.krd/molsa-en/",
+    "site_logo": "https://gov.krd/media/1099/govkrdlogobig.svg",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [],
+    "site_social": [
+      "https://www.facebook.com/Kurdistan/",
+      "https://x.com/Kurdistan",
+      "https://www.instagram.com/kurdistan/",
+      "https://www.youtube.com/@KurdistanRegionalGovernment"
+    ],
+    "structure_pages": [
+      "https://gov.krd/english/government/entities/",
+      "https://gov.krd/english/government/entities/molsa/components/",
+      "https://gov.krd/english/government/entities/molsa/publications/",
+      "https://gov.krd/english/government/entities/molsa/services/",
+      "https://gov.krd/english/government/entities/molsa/contact/",
+      "https://gov.krd/arabic/government/entities/molsa/components/"
+    ],
+    "bodies": [
+      {
+        "name": "Department of Foreign Relations",
+        "url": "https://gov.krd/dfr-en/"
+      },
+      {
+        "name": "Department of Media and Information",
+        "url": "https://gov.krd/dmi-en/"
+      },
+      {
+        "name": "Department of Coordination and Follow-Up",
+        "url": "https://gov.krd/dcf-en/"
+      },
+      {
+        "name": "Department of Information Technology",
+        "url": "https://gov.krd/dit-en/"
+      },
+      {
+        "name": "Department of Non-Governmental Organization",
+        "url": "https://gov.krd/dngo-en/"
+      },
+      {
+        "name": "Mine Action Agency",
+        "url": "https://gov.krd/maa-en/"
+      },
+      {
+        "name": "Directorate of Quality Control",
+        "url": null
+      },
+      {
+        "name": "Directorate of Research and Training",
+        "url": null
+      },
+      {
+        "name": "Directorate of Legal",
+        "url": null
+      },
+      {
+        "name": "General Directorate of the Diwan",
+        "url": null
+      },
+      {
+        "name": "Directorate of Administration",
+        "url": null
+      },
+      {
+        "name": "Directorate of Auditing",
+        "url": null
+      },
+      {
+        "name": "Directorate of Accounting",
+        "url": null
+      },
+      {
+        "name": "Directorate of Planning and Follow-up",
+        "url": null
+      },
+      {
+        "name": "Directorate of Media",
+        "url": null
+      }
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-culture-and-youth",
+    "krg": true,
+    "website": "https://gov.krd/mocy-en/",
+    "site_logo": "https://gov.krd/media/1099/govkrdlogobig.svg",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [],
+    "site_social": [
+      "https://www.facebook.com/Kurdistan/",
+      "https://x.com/Kurdistan",
+      "https://www.instagram.com/kurdistan/",
+      "https://www.youtube.com/@KurdistanRegionalGovernment"
+    ],
+    "structure_pages": [
+      "https://gov.krd/english/government/entities/"
+    ],
+    "bodies": [
+      {
+        "name": "Department of Foreign Relations",
+        "url": "https://gov.krd/dfr-en/"
+      },
+      {
+        "name": "Department of Media and Information",
+        "url": "https://gov.krd/dmi-en/"
+      },
+      {
+        "name": "Department of Coordination and Follow-Up",
+        "url": "https://gov.krd/dcf-en/"
+      },
+      {
+        "name": "Department of Information Technology",
+        "url": "https://gov.krd/dit-en/"
+      },
+      {
+        "name": "Department of Non-Governmental Organization",
+        "url": "https://gov.krd/dngo-en/"
+      },
+      {
+        "name": "Mine Action Agency",
+        "url": "https://gov.krd/maa-en/"
+      }
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-martyrs-and-anfal-affairs",
+    "krg": true,
+    "website": "https://gov.krd/moma-en/",
+    "site_logo": "https://gov.krd/media/1099/govkrdlogobig.svg",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [],
+    "site_social": [
+      "https://www.facebook.com/Kurdistan/",
+      "https://x.com/Kurdistan",
+      "https://www.instagram.com/kurdistan/",
+      "https://www.youtube.com/@KurdistanRegionalGovernment"
+    ],
+    "structure_pages": [
+      "https://gov.krd/english/government/entities/",
+      "https://gov.krd/english/government/entities/moma/components/",
+      "https://gov.krd/english/government/entities/moma/publications/",
+      "https://gov.krd/english/government/entities/moma/services/",
+      "https://gov.krd/english/government/entities/moma/contact/",
+      "https://gov.krd/arabic/government/entities/moma/components/"
+    ],
+    "bodies": [
+      {
+        "name": "Department of Foreign Relations",
+        "url": "https://gov.krd/dfr-en/"
+      },
+      {
+        "name": "Department of Media and Information",
+        "url": "https://gov.krd/dmi-en/"
+      },
+      {
+        "name": "Department of Coordination and Follow-Up",
+        "url": "https://gov.krd/dcf-en/"
+      },
+      {
+        "name": "Department of Information Technology",
+        "url": "https://gov.krd/dit-en/"
+      },
+      {
+        "name": "Department of Non-Governmental Organization",
+        "url": "https://gov.krd/dngo-en/"
+      },
+      {
+        "name": "Mine Action Agency",
+        "url": "https://gov.krd/maa-en/"
+      },
+      {
+        "name": "General Directorate for Martyrs and Anfal - Erbil",
+        "url": null
+      },
+      {
+        "name": "General Directorate for Martyrs and Anfal – Sulaymaniyah",
+        "url": null
+      },
+      {
+        "name": "General Directorate for Martyrs and Anfal – Duhok",
+        "url": null
+      },
+      {
+        "name": "General Directorate for Martyrs and Anfal – Garmian",
+        "url": null
+      },
+      {
+        "name": "General Directorate for Martyrs and Anfal - Halabja",
+        "url": null
+      },
+      {
+        "name": "General Directorate of Administrative and Financial",
+        "url": null
+      },
+      {
+        "name": "General Directorate of Services",
+        "url": null
+      },
+      {
+        "name": "The Directorate General of Investment and Incomes",
+        "url": null
+      }
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-agriculture-and-water-resources",
+    "krg": true,
+    "website": "https://gov.krd/moawr-en/",
+    "site_logo": "https://gov.krd/media/1099/govkrdlogobig.svg",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [],
+    "site_social": [
+      "https://www.facebook.com/Kurdistan/",
+      "https://x.com/Kurdistan",
+      "https://www.instagram.com/kurdistan/",
+      "https://www.youtube.com/@KurdistanRegionalGovernment"
+    ],
+    "structure_pages": [
+      "https://gov.krd/english/government/entities/"
+    ],
+    "bodies": [
+      {
+        "name": "Department of Foreign Relations",
+        "url": "https://gov.krd/dfr-en/"
+      },
+      {
+        "name": "Department of Media and Information",
+        "url": "https://gov.krd/dmi-en/"
+      },
+      {
+        "name": "Department of Coordination and Follow-Up",
+        "url": "https://gov.krd/dcf-en/"
+      },
+      {
+        "name": "Department of Information Technology",
+        "url": "https://gov.krd/dit-en/"
+      },
+      {
+        "name": "Department of Non-Governmental Organization",
+        "url": "https://gov.krd/dngo-en/"
+      },
+      {
+        "name": "Mine Action Agency",
+        "url": "https://gov.krd/maa-en/"
+      }
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-trade-and-industry",
+    "krg": true,
+    "website": "https://gov.krd/moti-en/",
+    "site_logo": "https://gov.krd/media/1099/govkrdlogobig.svg",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [],
+    "site_social": [
+      "https://www.facebook.com/Kurdistan/",
+      "https://x.com/Kurdistan",
+      "https://www.instagram.com/kurdistan/",
+      "https://www.youtube.com/@KurdistanRegionalGovernment"
+    ],
+    "structure_pages": [
+      "https://gov.krd/english/government/entities/"
+    ],
+    "bodies": [
+      {
+        "name": "Department of Foreign Relations",
+        "url": "https://gov.krd/dfr-en/"
+      },
+      {
+        "name": "Department of Media and Information",
+        "url": "https://gov.krd/dmi-en/"
+      },
+      {
+        "name": "Department of Coordination and Follow-Up",
+        "url": "https://gov.krd/dcf-en/"
+      },
+      {
+        "name": "Department of Information Technology",
+        "url": "https://gov.krd/dit-en/"
+      },
+      {
+        "name": "Department of Non-Governmental Organization",
+        "url": "https://gov.krd/dngo-en/"
+      },
+      {
+        "name": "Mine Action Agency",
+        "url": "https://gov.krd/maa-en/"
+      }
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-transport-and-communications",
+    "krg": true,
+    "website": "https://gov.krd/motac-en/",
+    "site_logo": "https://gov.krd/media/1099/govkrdlogobig.svg",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [],
+    "site_social": [
+      "https://www.facebook.com/Kurdistan/",
+      "https://x.com/Kurdistan",
+      "https://www.instagram.com/kurdistan/",
+      "https://www.youtube.com/@KurdistanRegionalGovernment"
+    ],
+    "structure_pages": [
+      "https://gov.krd/english/government/entities/"
+    ],
+    "bodies": [
+      {
+        "name": "Department of Foreign Relations",
+        "url": "https://gov.krd/dfr-en/"
+      },
+      {
+        "name": "Department of Media and Information",
+        "url": "https://gov.krd/dmi-en/"
+      },
+      {
+        "name": "Department of Coordination and Follow-Up",
+        "url": "https://gov.krd/dcf-en/"
+      },
+      {
+        "name": "Department of Information Technology",
+        "url": "https://gov.krd/dit-en/"
+      },
+      {
+        "name": "Department of Non-Governmental Organization",
+        "url": "https://gov.krd/dngo-en/"
+      },
+      {
+        "name": "Mine Action Agency",
+        "url": "https://gov.krd/maa-en/"
+      }
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-endowment-and-religious-affairs",
+    "krg": true,
+    "website": "https://gov.krd/moera-en/",
+    "site_logo": "https://gov.krd/media/1099/govkrdlogobig.svg",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [],
+    "site_social": [
+      "https://www.facebook.com/Kurdistan/",
+      "https://x.com/Kurdistan",
+      "https://www.instagram.com/kurdistan/",
+      "https://www.youtube.com/@KurdistanRegionalGovernment"
+    ],
+    "structure_pages": [
+      "https://gov.krd/english/government/entities/",
+      "https://gov.krd/english/government/entities/moera/components/",
+      "https://gov.krd/english/government/entities/moera/publications/",
+      "https://gov.krd/english/government/entities/moera/services/",
+      "https://gov.krd/english/government/entities/moera/contact/",
+      "https://gov.krd/arabic/government/entities/moera/components/"
+    ],
+    "bodies": [
+      {
+        "name": "Department of Foreign Relations",
+        "url": "https://gov.krd/dfr-en/"
+      },
+      {
+        "name": "Department of Media and Information",
+        "url": "https://gov.krd/dmi-en/"
+      },
+      {
+        "name": "Department of Coordination and Follow-Up",
+        "url": "https://gov.krd/dcf-en/"
+      },
+      {
+        "name": "Department of Information Technology",
+        "url": "https://gov.krd/dit-en/"
+      },
+      {
+        "name": "Department of Non-Governmental Organization",
+        "url": "https://gov.krd/dngo-en/"
+      },
+      {
+        "name": "Mine Action Agency",
+        "url": "https://gov.krd/maa-en/"
+      },
+      {
+        "name": "General Directorate of Endowments in Erbil",
+        "url": null
+      },
+      {
+        "name": "General Directorate of Endowments in Sulaymaniyah",
+        "url": null
+      },
+      {
+        "name": "General Directorate of Endowments in Dohuk",
+        "url": null
+      },
+      {
+        "name": "General Directorate of endowment in Halabja",
+        "url": null
+      },
+      {
+        "name": "General Directorate of Hajj and Umrah",
+        "url": null
+      },
+      {
+        "name": "General Directorate of Christian Affairs",
+        "url": null
+      },
+      {
+        "name": "General Directorate of Yazidi Affairs",
+        "url": null
+      },
+      {
+        "name": "General Directorate of Endowment in Garmian",
+        "url": null
+      },
+      {
+        "name": "General Directorate of Administration and Finance",
+        "url": null
+      }
+    ]
+  },
+  {
+    "slug": "krg-ministry-of-electricity",
+    "krg": true,
+    "website": "https://gov.krd/moel-en/",
+    "site_logo": "https://gov.krd/media/1099/govkrdlogobig.svg",
+    "site_emails": [],
+    "site_phones": [],
+    "site_coords": [],
+    "site_social": [
+      "https://www.facebook.com/Kurdistan/",
+      "https://x.com/Kurdistan",
+      "https://www.instagram.com/kurdistan/",
+      "https://www.youtube.com/@KurdistanRegionalGovernment"
+    ],
+    "structure_pages": [
+      "https://gov.krd/english/government/entities/"
+    ],
+    "bodies": [
+      {
+        "name": "Department of Foreign Relations",
+        "url": "https://gov.krd/dfr-en/"
+      },
+      {
+        "name": "Department of Media and Information",
+        "url": "https://gov.krd/dmi-en/"
+      },
+      {
+        "name": "Department of Coordination and Follow-Up",
+        "url": "https://gov.krd/dcf-en/"
+      },
+      {
+        "name": "Department of Information Technology",
+        "url": "https://gov.krd/dit-en/"
+      },
+      {
+        "name": "Department of Non-Governmental Organization",
+        "url": "https://gov.krd/dngo-en/"
+      },
+      {
+        "name": "Mine Action Agency",
+        "url": "https://gov.krd/maa-en/"
+      }
+    ]
+  }
+]

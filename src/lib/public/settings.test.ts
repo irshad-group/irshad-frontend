@@ -54,8 +54,13 @@ describe('settingValue', () => {
     expect(settingValue(settings, 'site_name', 'en')).toBe('Irshad');
   });
 
-  it('falls back to English when the requested language is empty', () => {
-    expect(settingValue(settings, 'tagline', 'ku')).toBe('Know before you go');
+  it('falls back to Arabic when the requested language is empty', () => {
+    expect(settingValue(settings, 'tagline', 'ku')).toBe('اعرف قبل أن تذهب');
+  });
+
+  it('falls back to English when there is no Arabic either', () => {
+    const english = settingsMap([setting({ key: 'only_en', value_en: 'English only' })]);
+    expect(settingValue(english, 'only_en', 'ku')).toBe('English only');
   });
 
   it('reads an untranslated value from the English column whatever the locale', () => {
@@ -80,7 +85,7 @@ describe('settingValue', () => {
     expect(settingValue(sparse, 'empty', 'en')).toBe('');
   });
 
-  it('falls back to English for an unknown locale string', () => {
-    expect(settingValue(settings, 'site_name', 'fr')).toBe('Irshad');
+  it('falls back to the default language for an unknown locale string', () => {
+    expect(settingValue(settings, 'site_name', 'fr')).toBe('إرشاد');
   });
 });

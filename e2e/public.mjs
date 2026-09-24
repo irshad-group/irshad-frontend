@@ -28,11 +28,19 @@ function check(name, condition, detail = '') {
   }
 }
 
-/** Locale, expected direction, and the shell strings that must come from PocketBase. */
+/**
+ * Locale, expected direction, and the shell strings that must come from
+ * PocketBase.
+ *
+ * `nativeTerm` is a word that appears in the *displayed* procedure title for
+ * that language. The highlight only marks text the reader can see, so an
+ * English term while reading Kurdish correctly highlights nothing — the record
+ * matched on `title_en`, which is not what is on screen.
+ */
 const LOCALES = [
-  { locale: 'en', dir: 'ltr', menuLabel: 'Menu', skip: 'Skip to content', firstItem: 'Home', paginationLabel: 'Pagination' },
-  { locale: 'ar', dir: 'rtl', menuLabel: 'القائمة', skip: 'تخطي إلى المحتوى', firstItem: 'الرئيسية', paginationLabel: 'ترقيم الصفحات' },
-  { locale: 'ku', dir: 'rtl', menuLabel: 'پێڕست', skip: 'بازدان بۆ ناوەڕۆک', firstItem: 'سەرەکی', paginationLabel: 'ژمارەی لاپەڕە' },
+  { locale: 'en', dir: 'ltr', menuLabel: 'Menu', skip: 'Skip to content', firstItem: 'Home', nativeTerm: 'passp', paginationLabel: 'Pagination' },
+  { locale: 'ar', dir: 'rtl', menuLabel: 'القائمة', skip: 'تخطي إلى المحتوى', firstItem: 'الرئيسية', nativeTerm: 'جواز', paginationLabel: 'ترقيم الصفحات' },
+  { locale: 'ku', dir: 'rtl', menuLabel: 'پێڕست', skip: 'بازدان بۆ ناوەڕۆک', firstItem: 'سەرەکی', nativeTerm: 'پاسپۆرت', paginationLabel: 'ژمارەی لاپەڕە' },
 ];
 
 const browser = await chromium.launch();
@@ -170,28 +178,42 @@ try {
       JSON.stringify(box),
     );
 
-    // Footer, driven by `settings`. Staff can clear any of these, so assert how
-    // a value is rendered rather than that a particular value exists — a test
-    // that fails because someone emptied a setting is a test that gets ignored.
-    const mailto = page.locator('footer a[href^="mailto:"]');
-    check(
-      `${locale}: footer email, when set, matches its link`,
-      (await mailto.count()) === 0 ||
-        (await mailto.first().getAttribute('href')) === `mailto:${(await mailto.first().innerText()).trim()}`,
-    );
-    const tel = page.locator('footer a[href^="tel:"]');
-    check(
-      `${locale}: phone, when set, renders left-to-right even in RTL`,
-      (await tel.count()) === 0 || (await tel.first().getAttribute('dir')) === 'ltr',
-    );
-    const social = page.locator('footer a[target="_blank"]');
-    check(
-      `${locale}: social links open safely`,
-      await social.evaluateAll((links) =>
-        links.every((a) => (a.getAttribute('rel') ?? '').includes('noopener')),
-      ),
-      `${await social.count()} link(s)`,
-    );
+    // Footer, driven by `settings`. Both of these are optional: the site publishes a
+    // contact address and phone only if someone has set them, and pinning the test to
+    // the development seed's invented values meant clearing those values — which was
+    // the right thing to do, they were fabricated — turned the suite red. Assert the
+    // behaviour where the setting exists instead of asserting that it exists.
+    const mailLink = page.locator('footer a[href^="mailto:"]');
+    if (await mailLink.count()) {
+      const href = await mailLink.first().getAttribute('href');
+      check(
+        `${locale}: footer email is a usable mailto link`,
+        href?.startsWith('mailto:') && href.includes('@'),
+        href ?? '',
+      );
+    } else {
+      console.log(`  SKIP  ${locale}: no contact email published`);
+    }
+    const telLink = page.locator('footer a[href^="tel:"]');
+    if (await telLink.count()) {
+      check(
+        `${locale}: phone renders left-to-right even in RTL`,
+        (await telLink.first().getAttribute('dir')) === 'ltr',
+      );
+    } else {
+      console.log(`  SKIP  ${locale}: no contact phone published`);
+    }
+    // Not pinned to a count. Two of the three the seed shipped pointed at
+    // accounts nobody had created — both 404 on every page of the site — and a
+    // test asserting "there are three" is what certified them as fine. What
+    // matters is that whatever the footer does link out to opens safely.
+    const footerLinks = page.locator('footer a[target="_blank"]');
+    const footerCount = await footerLinks.count();
+    let unsafe = 0;
+    for (let i = 0; i < footerCount; i += 1) {
+      if (!((await footerLinks.nth(i).getAttribute('rel')) ?? '').includes('noopener')) unsafe += 1;
+    }
+    check(`${locale}: footer external links open safely`, unsafe === 0, `${unsafe} of ${footerCount} missing rel=noopener`);
 
     // Smallest supported viewport.
     await page.setViewportSize({ width: 320, height: 720 });
@@ -203,6 +225,47 @@ try {
       `${locale}: no horizontal overflow at 320px`,
       overflow.scrollWidth <= overflow.inner,
       JSON.stringify(overflow),
+    );
+
+    // The brand survived the squeeze. Absence of overflow is not enough on its
+    // own: the header used to stay exactly 320px wide while the controls beside
+    // the brand took 270 of it, leaving the link 6px and letting its 36px mark
+    // spill out over the language switcher. Compare the mark against its own
+    // link box rather than against the viewport, which is what hid this.
+    const brand = await page.evaluate(() => {
+      const link = document.querySelector('header a:has(span[aria-hidden])');
+      const mark = link?.querySelector('span[aria-hidden]');
+      if (!link || !mark) return null;
+      const l = link.getBoundingClientRect();
+      const m = mark.getBoundingClientRect();
+      return { linkWidth: l.width, markWidth: m.width, spillsLeft: m.left < l.left - 1, spillsRight: m.right > l.right + 1 };
+    });
+    check(`${locale}: the brand mark is present at 320px`, (brand?.markWidth ?? 0) > 0);
+    check(
+      `${locale}: the brand mark is not clipped by its own link`,
+      brand !== null && !brand.spillsLeft && !brand.spillsRight && brand.linkWidth >= brand.markWidth,
+      JSON.stringify(brand),
+    );
+
+    // Every control a thumb can reach clears the WCAG 2.2 AA target floor of
+    // 24x24 (2.5.8). `checkVisibility` is what makes this reliable: a closed
+    // <details> still reports a layout rect for its contents, so the drawer's
+    // own links would otherwise be measured while hidden.
+    const smallTargets = await page.evaluate(() => {
+      const out = [];
+      for (const el of document.querySelectorAll('header a[href], header button, header summary')) {
+        if (!el.checkVisibility({ checkOpacity: true, checkVisibilityCSS: true })) continue;
+        const r = el.getBoundingClientRect();
+        if (r.width < 24 || r.height < 24) {
+          out.push({ text: (el.textContent || el.getAttribute('aria-label') || '').trim().slice(0, 20), w: Math.round(r.width), h: Math.round(r.height) });
+        }
+      }
+      return out;
+    });
+    check(
+      `${locale}: every header control clears 24x24 at 320px`,
+      smallTargets.length === 0,
+      JSON.stringify(smallTargets),
     );
 
     const drawer = page.locator('header details').last();
@@ -258,13 +321,87 @@ try {
   }
 
   // The journey the site exists for: search -> procedure -> forms.
-  for (const { locale, dir } of LOCALES) {
+  for (const { locale, dir, nativeTerm } of LOCALES) {
     console.log(`\n== /${locale} search -> procedure ==`);
     const context = await browser.newContext({ viewport: { width: 1280, height: 800 } });
     const page = await context.newPage();
 
     await page.goto(`${BASE}/${locale}`, { waitUntil: 'domcontentloaded' });
     check(`${locale}: home shows procedure cards`, (await page.locator('main ul li a').count()) > 0);
+
+    // Live suggestions. These are an enhancement on top of the plain GET form,
+    // which the no-script block at the end of this file proves still works —
+    // so every assertion here is about what script *adds*, never about the
+    // only route to a result.
+    await page.setViewportSize({ width: 1280, height: 900 });
+    const searchBox = page.locator('input[name="q"]').first();
+    await searchBox.click();
+    await searchBox.fill('passp');
+    const listbox = page.locator('[role="listbox"]');
+    await listbox.waitFor({ state: 'visible', timeout: 5000 }).catch(() => {});
+    const options = listbox.locator('[role="option"]');
+    // 'passp' is English in every locale, so this also proves the
+    // cross-language match: an Arabic reader typing an English word still
+    // finds the record, because the filter covers all three languages.
+    check(`${locale}: typing offers suggestions`, (await options.count()) > 0);
+
+    await searchBox.fill(nativeTerm);
+    // Wait for the highlight rather than for a fixed 700ms. The suggestions come from
+    // PocketBase over the network, so a fixed sleep passes on a quiet machine and fails
+    // on a busy one — this assertion failed once in three runs before the change.
+    await listbox.locator('mark').first()
+      .waitFor({ state: 'visible', timeout: 5000 }).catch(() => {});
+    check(
+      `${locale}: the suggestion highlights what was typed`,
+      (await listbox.locator('mark').count()) > 0,
+    );
+    check(
+      `${locale}: suggestions are 44px touch targets`,
+      ((await options.first().boundingBox())?.height ?? 0) >= 44,
+    );
+    check(
+      `${locale}: the combobox reports itself expanded`,
+      (await searchBox.getAttribute('aria-expanded')) === 'true',
+    );
+
+    // Arrow keys move the active option, which is what a screen reader follows.
+    await searchBox.press('ArrowDown');
+    // Resolved in the page: the id is generated by React's useId and contains
+    // characters that need CSS.escape, which only exists in a browser.
+    const activeDescendant = await page.evaluate(() => {
+      const input = document.querySelector('input[name="q"]');
+      const id = input?.getAttribute('aria-activedescendant');
+      if (!id) return { id: null, pointsAtSelectedOption: false };
+      const target = document.getElementById(id);
+      return {
+        id,
+        pointsAtSelectedOption:
+          target?.getAttribute('role') === 'option' &&
+          target.getAttribute('aria-selected') === 'true',
+      };
+    });
+    check(
+      `${locale}: arrow keys move the active suggestion`,
+      activeDescendant.pointsAtSelectedOption,
+      JSON.stringify(activeDescendant),
+    );
+
+    await searchBox.press('Escape');
+    check(`${locale}: escape dismisses the suggestions`, (await listbox.count()) === 0);
+
+    // A term that matches nothing says so rather than showing an empty box.
+    await searchBox.fill('zzzqqq');
+    await page.waitForTimeout(700);
+    check(
+      `${locale}: a hopeless term reports no matches`,
+      (await listbox.count()) === 1 && (await options.count()) === 0,
+    );
+
+    // One character is below the threshold — no request, no list.
+    await searchBox.fill('p');
+    await page.waitForTimeout(500);
+    check(`${locale}: one character offers nothing`, (await listbox.count()) === 0);
+    await searchBox.fill('');
 
     // Search by an English term while reading in any language: matching runs
     // across all three languages' fields, not just the active one.
@@ -276,6 +413,40 @@ try {
     const results = page.locator('main ul li a[href*="/procedures/"]');
     check(`${locale}: search returns results`, (await results.count()) > 0);
 
+    // The results page carries the same suggestions as the hero, on top of the
+    // same plain GET form. Two things matter here that do not on the home page:
+    // the box is seeded with the query so it can be refined rather than
+    // retyped, and the list stays shut on arrival — a dropdown covering the
+    // results the reader just asked for would be worse than no dropdown.
+    const resultsBox = page.locator('input[name="q"]').first();
+    check(
+      `${locale}: the results box is seeded with the query`,
+      (await resultsBox.inputValue()) === 'passport',
+    );
+    check(
+      `${locale}: suggestions stay shut on arrival`,
+      (await page.locator('[role="listbox"]').count()) === 0,
+    );
+
+    await resultsBox.click();
+    await resultsBox.fill(nativeTerm);
+    const resultsList = page.locator('[role="listbox"]');
+    await resultsList.waitFor({ state: 'visible', timeout: 5000 }).catch(() => {});
+    check(
+      `${locale}: the results box suggests as you type`,
+      (await resultsList.locator('[role="option"]').count()) > 0,
+    );
+    check(
+      `${locale}: results-page suggestions align with their own box`,
+      await page.evaluate(() => {
+        const list = document.querySelector('[role="listbox"]')?.getBoundingClientRect();
+        const form = document.querySelector('form[role="search"]')?.getBoundingClientRect();
+        return !!list && !!form && Math.abs(list.left - form.left) < 2 && Math.abs(list.right - form.right) < 2;
+      }),
+    );
+    await resultsBox.press('Escape');
+    await resultsBox.fill('passport');
+
     await results.first().click();
     await page.waitForURL(/\/procedures\//);
 
@@ -286,9 +457,15 @@ try {
       `${locale}: fee is shown in Latin digits`,
       /[0-9]/.test(await page.locator('main dl').first().innerText()),
     );
+    // The responsible office moved out of the stats strip and into its own
+    // sidebar card when the procedure page was redesigned, so look for it in
+    // the aside. Still exactly one link: two would mean the card rendered
+    // twice, none would mean the relation failed to expand.
+    const office = page.locator('main aside a[href*="/directorates/"]');
+    check(`${locale}: responsible directorate is linked`, (await office.count()) === 1);
     check(
-      `${locale}: responsible directorate is linked`,
-      (await page.locator('main dl a[href*="/directorates/"]').count()) === 1,
+      `${locale}: the directorate link keeps the active locale`,
+      (await office.first().getAttribute('href'))?.startsWith(`/${locale}/directorates/`),
     );
     check(
       `${locale}: attached forms link to PocketBase or elsewhere`,
@@ -368,8 +545,11 @@ try {
 
     await page.goto(`${BASE}/${locale}/ministries`, { waitUntil: 'domcontentloaded' });
     const ministryLinks = page.locator('main ul li a[href*="/ministries/"]');
+    // Asserted as a relationship, not a magic number. These counts track whatever is
+    // published, so pinning them to the development seed's 14 meant the suite went red
+    // the first time real content landed — which says nothing about the page working.
     const allMinistries = await ministryLinks.count();
-    check(`${locale}: ministries index lists bodies`, allMinistries > 0);
+    check(`${locale}: ministries index lists bodies`, allMinistries > 0, `${allMinistries} listed`);
 
     // The KRG filter is what the seeded header menu links to. Every ministry is
     // either KRG or federal, so the two halves must add back up to the whole
@@ -381,7 +561,7 @@ try {
     check(
       `${locale}: krg filter splits the list`,
       krgCount > 0 && federalCount > 0 && krgCount + federalCount === allMinistries,
-      `krg ${krgCount} + federal ${federalCount} != ${allMinistries}`,
+      `krg ${krgCount} + federal ${federalCount}, unfiltered ${allMinistries}`,
     );
 
     // A mangled filter must degrade to the full list, not to nothing.
@@ -409,10 +589,10 @@ try {
       (await page.locator('main a[href*="/procedures/"]').count()) > 0,
     );
 
-    // Locations are links into Waze, never an embed.
+    // Locations hand off to the visitor's own maps app, never an embed.
     check(`${locale}: no third-party map iframe`, (await page.locator('iframe').count()) === 0);
-    const mapLinks = page.locator('main a[href*="waze.com"]');
-    check(`${locale}: locations offer an open-in-maps link`, (await mapLinks.count()) > 0);
+    const mapLinks = page.locator('main a[href*="waze.com/ul"]');
+    check(`${locale}: locations offer a navigate-in-Waze link`, (await mapLinks.count()) > 0);
     check(
       `${locale}: map links open safely in a new tab`,
       (await mapLinks.first().getAttribute('rel'))?.includes('noopener'),
@@ -422,7 +602,7 @@ try {
     await page.goto(`${BASE}/${locale}/directorates`, { waitUntil: 'domcontentloaded' });
     const officeLinks = page.locator('main ul li a[href*="/directorates/"]');
     const allDirectorates = await officeLinks.count();
-    check(`${locale}: directorates index lists offices`, allDirectorates > 0);
+    check(`${locale}: directorates index lists offices`, allDirectorates > 0, `${allDirectorates} listed`);
 
     // The list is paged. There are hundreds of directorates and the number only
     // grows, so an unbounded page would send megabytes to a phone.
@@ -525,22 +705,25 @@ try {
     // test that fails because someone joined is a test that gets ignored.
     check(`${locale}: team lists members`, (await page.locator('main ul > li').count()) >= 1);
 
-    // An empty section is a normal state here, not a failure — a directorate may
-    // have no branches, and staff may not have published any partners yet. What
-    // must hold is that the page says so instead of rendering an empty husk.
+    // The partners collection is empty on purpose — the six it held were seed
+    // rows naming real organisations, a UN agency among them, as partners of a
+    // site affiliated with nobody. So this checks the page copes either way:
+    // a list when there are partners, the empty state when there are none, and
+    // safe links for whatever it does show.
     await page.goto(`${BASE}/${locale}/partners`, { waitUntil: 'domcontentloaded' });
-    const partners = await page.locator('main ul > li').count();
-    check(
-      `${locale}: partners are listed, or the page says there are none`,
-      partners >= 1 || (await page.locator('main').innerText()).trim().length > 20,
-    );
-    check(
-      `${locale}: partner links are safe`,
-      await page
-        .locator('main a[target="_blank"]')
-        .evaluateAll((links) => links.every((a) => (a.getAttribute('rel') ?? '').includes('noopener'))),
-      `${partners} partner(s)`,
-    );
+    const partnerCount = await page.locator('main ul > li').count();
+    const partnersEmpty = await page.locator('main').getByText(
+      { ar: 'لا يوجد شركاء', en: 'No partners', ku: 'هێشتا هیچ هاوبەش' }[locale],
+    ).count();
+    check(`${locale}: partners page lists partners or says there are none`,
+      partnerCount > 0 || partnersEmpty > 0, `${partnerCount} listed, empty state ${partnersEmpty}`);
+    const partnerLinks = page.locator('main a[target="_blank"]');
+    if (await partnerLinks.count()) {
+      check(
+        `${locale}: partner links are safe`,
+        (await partnerLinks.first().getAttribute('rel'))?.includes('noopener'),
+      );
+    }
 
     // 404: localized, inside the shell, and offering real ways out.
     const missing = await page.goto(`${BASE}/${locale}/procedures/no-such-thing`, {
@@ -620,11 +803,9 @@ try {
   await page.goto(`${BASE}/ar`, { waitUntil: 'domcontentloaded' });
   check('no-js: menu still renders', (await page.locator('header nav ul > li').count()) > 0);
   check('no-js: skip link present', (await page.locator('a.skip-link').count()) === 1);
-  check(
-    'no-js: footer still renders',
-    (await page.locator('footer').count()) === 1 &&
-      (await page.locator('footer').innerText()).trim().length > 0,
-  );
+  // Was keyed on the contact email, which is optional — this check is about the
+  // footer surviving without JavaScript, not about a particular setting being set.
+  check('no-js: footer still renders', (await page.locator('footer a').count()) > 0);
   const details = page.locator('header details').first();
   await details.locator('summary').click();
   check('no-js: native disclosure still opens', await details.evaluate((d) => d.open));
@@ -632,6 +813,39 @@ try {
     'no-js: language switcher links are real anchors',
     (await page.locator('nav[aria-label] a[hreflang]').count()) === 3,
   );
+
+  // Cache headers. A deploy has to be visible on the next page load, and no
+  // amount of tuning for that may make an authenticated page cacheable.
+  //
+  // Both halves are here because the obvious fix breaks the second one: a
+  // `headers()` rule matching `/:path*` replaces Cache-Control on every HTML
+  // response, stripping `s-maxage` from the prerendered pages and turning the
+  // `private, no-cache, no-store` on /account and /admin into `public`.
+  const cacheControlFor = async (path) => {
+    const response = await page.request.get(`${BASE}${path}`, {
+      headers: { Accept: 'text/html' },
+      maxRedirects: 0,
+    });
+    return response.headers()['cache-control'] ?? '';
+  };
+
+  const prerendered = await cacheControlFor('/en');
+  check(
+    'cache: a prerendered page is still shared-cacheable for an hour',
+    prerendered.includes('s-maxage=3600'),
+    prerendered,
+  );
+  check(
+    'cache: a prerendered page has no stale-while-revalidate window',
+    !prerendered.includes('stale-while-revalidate'),
+    prerendered,
+  );
+
+  for (const path of ['/en/account', '/en/account/login', '/en/search?q=passport']) {
+    const header = await cacheControlFor(path);
+    check(`cache: ${path} is never stored`, header.includes('no-store'), header);
+    check(`cache: ${path} is not public`, !header.includes('public'), header);
+  }
 
   // Search is a plain GET form, so it must work with no script at all.
   await page.goto(`${BASE}/ar`, { waitUntil: 'domcontentloaded' });

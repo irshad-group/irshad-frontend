@@ -3,11 +3,14 @@ import { notFound } from 'next/navigation';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import { locales } from '@/i18n/routing';
+import { directionOf } from '@/i18n/routing';
 import { localized } from '@/lib/i18n';
+import { thumbSize } from '@/lib/public/thumbs';
 import { groupBranchesByProvince, type BranchWithProvince } from '@/lib/public/places';
-import { findPublicBySlug, listAllPublic, publicSlugs } from '@/lib/pb/queries/public';
+import { fileUrl, findPublicBySlug, listAllPublic, publicSlugs } from '@/lib/pb/queries/public';
 import { Container, EmptyState } from '@/components/ui/primitives';
 import LocationBlock from '@/components/public/LocationBlock';
+import WorkingHours from '@/components/public/WorkingHours';
 import type { DirectoratesRecord, MinistriesRecord } from '@/types/pb';
 
 export const revalidate = 3600;
@@ -69,14 +72,13 @@ export default async function DirectoratePage({
 
   const { directorate, branches, procedures } = data;
   const ministry = directorate.expand?.ministry;
-  const hours = localized(directorate, 'working_hours', locale);
   const groups = groupBranchesByProvince(branches);
 
   return (
     <Container className="py-10">
       <header>
         {ministry ? (
-          <Link href={`/ministries/${ministry.slug}`} className="text-sm text-brand-700 underline">
+          <Link href={`/ministries/${ministry.slug}`} className="inline-flex min-h-6 items-center text-sm text-brand-700 underline">
             {localized(ministry, 'title', locale)}
           </Link>
         ) : null}
@@ -159,6 +161,28 @@ export default async function DirectoratePage({
                                 </a>
                               </p>
                             ) : null}
+                            <WorkingHours
+                              value={branch.working_hours}
+                              variant="inline"
+                              className="block text-sm text-ink-500"
+                            />
+                            {/* The building, for someone who has never been to this
+                                office. That is what the field is for, and it had been
+                                collected for 571 offices without ever being shown. */}
+                            {(branch.photos ?? []).length > 0 ? (
+                              <div className="flex gap-1.5">
+                                {(branch.photos ?? []).slice(0, 2).map((photo) => (
+                                  // eslint-disable-next-line @next/next/no-img-element -- PocketBase thumb, fixed small size.
+                                  <img
+                                    key={photo}
+                                    src={fileUrl(branch, photo, { thumb: thumbSize('officeCard') }) ?? undefined}
+                                    alt=""
+                                    loading="lazy"
+                                    className="h-20 w-28 shrink-0 border border-ink-200 object-cover"
+                                  />
+                                ))}
+                              </div>
+                            ) : null}
                           </div>
                         </li>
                       ))}
@@ -171,17 +195,17 @@ export default async function DirectoratePage({
         </div>
 
         <aside className="space-y-6">
-          {hours ? (
-            <div>
-              <h3 className="text-sm font-semibold text-ink-900">{t('directorate.workingHours')}</h3>
-              <p className="mt-1 text-sm text-ink-600">{hours}</p>
-            </div>
-          ) : null}
+          <WorkingHours
+            value={directorate.working_hours}
+            heading={t('directorate.workingHours')}
+          />
 
           <LocationBlock
             address={localized(directorate, 'address', locale)}
             lat={directorate.gps_lat}
             lon={directorate.gps_lon}
+            withMap
+            dir={directionOf(locale)}
             labels={{ heading: t('place.address'), openInMaps: t('place.openInMaps') }}
           />
 

@@ -1,7 +1,9 @@
 import Image from 'next/image';
 import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
+import PrefetchLink from '@/components/public/PrefetchLink';
 import { localized } from '@/lib/i18n';
+import { thumbSize } from '@/lib/public/thumbs';
 import { fileUrl, listAllPublic } from '@/lib/pb/queries/public';
 import { Container, EmptyState, Badge, cn } from '@/components/ui/primitives';
 
@@ -71,10 +73,10 @@ export default async function MinistriesIndex({
       ) : (
         <ul className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {ministries.map((ministry) => {
-            const logo = fileUrl(ministry, ministry.logo, { thumb: '120x120' });
+            const logo = fileUrl(ministry, ministry.logo, { thumb: thumbSize('ministryLogo') });
             return (
               <li key={ministry.id}>
-                <Link
+                <PrefetchLink
                   href={`/ministries/${ministry.slug}`}
                   className="flex h-full items-start gap-3 rounded-lg bg-white p-4 ring-1 ring-ink-200/70 hover:ring-brand-500"
                 >
@@ -103,7 +105,7 @@ export default async function MinistriesIndex({
                       </span>
                     ) : null}
                   </span>
-                </Link>
+                </PrefetchLink>
               </li>
             );
           })}

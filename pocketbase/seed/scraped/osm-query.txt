@@ -1,0 +1,17 @@
+[out:json][timeout:300];
+area["ISO3166-1"="IQ"][admin_level=2]->.iq;
+(
+  node["office"="government"](area.iq);
+  way["office"="government"](area.iq);
+  node["amenity"="townhall"](area.iq);
+  way["amenity"="townhall"](area.iq);
+  node["government"](area.iq);
+  way["government"](area.iq);
+  node["amenity"="courthouse"](area.iq);
+  way["amenity"="courthouse"](area.iq);
+  node["office"="tax"](area.iq);
+  way["office"="tax"](area.iq);
+  node["amenity"="post_office"](area.iq);
+  way["amenity"="post_office"](area.iq);
+);
+out center tags;

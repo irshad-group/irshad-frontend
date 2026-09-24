@@ -1,4 +1,4 @@
-import { Link } from '@/i18n/navigation';
+import PrefetchLink from './PrefetchLink';
 import { localized } from '@/lib/i18n';
 import { formatFee } from '@/lib/public/procedures';
 import type { ProceduresRecord, TagsRecord } from '@/types/pb';
@@ -28,7 +28,7 @@ export default function ProcedureCard({
 
   return (
     <li>
-      <Link
+      <PrefetchLink
         href={`/procedures/${procedure.slug}`}
         className="block h-full rounded-lg bg-white p-5 ring-1 ring-ink-200/70 transition-colors hover:ring-brand-500"
       >
@@ -70,7 +70,7 @@ export default function ProcedureCard({
             ))}
           </ul>
         ) : null}
-      </Link>
+      </PrefetchLink>
     </li>
   );
 }

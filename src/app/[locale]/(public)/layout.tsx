@@ -50,7 +50,15 @@ export default async function PublicLayout({
         drawer={buildNavTree(navigation, 'drawer')}
         siteName={siteName}
         locale={locale}
-        labels={{ menu: t('site.menu'), language: t('site.language') }}
+        labels={{
+          menu: t('site.menu'),
+          language: t('site.language'),
+          disclaimer: t('site.disclaimerShort'),
+          help: t('site.help'),
+          account: t('site.account'),
+          signIn: t('account.signInBtn'),
+          suggest: t('account.newSubmission'),
+        }}
       />
 
       <main id="main" className="flex-1">
@@ -60,7 +68,11 @@ export default async function PublicLayout({
       <SiteFooter
         settings={settings}
         locale={locale}
-        labels={{ contact: t('site.contact'), follow: t('site.follow') }}
+        labels={{
+          contact: t('site.contact'),
+          follow: t('site.follow'),
+          disclaimer: t('site.disclaimerLong'),
+        }}
       />
     </div>
   );

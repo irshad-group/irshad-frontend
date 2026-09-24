@@ -1,0 +1,284 @@
+#!/usr/bin/env node
+/**
+ * Import the scraped ministry / directorate / branch dataset into PocketBase.
+ *
+ * Upserts by slug, so it is safe to re-run: an existing record is PATCHed, never
+ * duplicated, and never deleted. That matters because the development seed's
+ * directorates already have `procedures` hanging off them — replacing those rows
+ * would orphan every procedure that points at one. The KEEP_SLUGS map below
+ * re-uses those existing records instead of creating near-duplicates beside them.
+ *
+ * Files (logos and building photos) are fetched and uploaded only with --files,
+ * because that turns a fast metadata pass into a slow one.
+ *
+ * Usage:
+ *   PB_URL=... PB_EMAIL=... PB_PASSWORD=... \
+ *     node pocketbase/seed/import-geography.mjs --data ./dataset.json [--dry-run] [--files]
+ */
+
+import fs from 'node:fs';
+import { branchKey } from './branch-key.mjs';
+import { rasterizeLogo } from './raster-logo.mjs';
+
+const argv = process.argv.slice(2);
+const arg = (n, d) => { const i = argv.indexOf(n); return i >= 0 ? argv[i + 1] : d; };
+const DRY = argv.includes('--dry-run');
+/**
+ * `--files` re-fetches and re-uploads every logo and photograph in the dataset —
+ * hundreds of megabytes, and PocketBase gives each upload a fresh filename, so
+ * every prerendered page that referenced the old one 404s until it revalidates.
+ * `--new-files` attaches files only to records this run actually creates, which
+ * is what an incremental import wants: the 29 offices just added get their
+ * photographs, and the 2,190 already there keep the files they have.
+ */
+const NEW_FILES_ONLY = argv.includes('--new-files');
+const WITH_FILES = argv.includes('--files') || NEW_FILES_ONLY;
+const DATA = arg('--data', './dataset.json');
+
+const { PB_URL, PB_EMAIL, PB_PASSWORD } = process.env;
+if (!PB_URL || !PB_EMAIL || !PB_PASSWORD) {
+  console.error('PB_URL, PB_EMAIL and PB_PASSWORD must all be set.');
+  process.exit(1);
+}
+const BASE = PB_URL.replace(/\/$/, '');
+const ds = JSON.parse(fs.readFileSync(DATA, 'utf8'));
+
+/**
+ * Directorates already present in the development seed, keyed by the Arabic title
+ * the scrape produces. Matching here keeps their id — and therefore every
+ * procedure, procedure_item and file already attached to them.
+ */
+const KEEP_SLUGS = {
+  'المديرية العامة للجنسية': 'general-directorate-of-nationality',
+  'مديرية شؤون الجوازات العامة': 'general-directorate-of-passports',
+  'مديرية المرور العامة': 'general-directorate-of-traffic',
+  'مديرية الإقامة العامة': 'general-directorate-of-residence',
+  'مديرية الاقامة العامة': 'general-directorate-of-residence',
+  'دائرة الصحة العامة': 'directorate-of-public-health',
+  'المديرية العامة لتربية بغداد الرصافة': 'general-directorate-of-education-baghdad-rusafa',
+  'دائرة الدراسات والتخطيط والمتابعة': 'directorate-of-studies-and-planning',
+  'دائرة البعثات والعلاقات الثقافية': 'directorate-of-missions-and-cultural-relations',
+  'الهيئة العامة للضرائب': 'general-commission-for-taxes',
+  'الهيئة العامة للكمارك': 'general-commission-of-customs',
+  'هيئة التقاعد الوطنية': 'national-board-of-pensions',
+  'دائرة التسجيل العقاري': 'real-estate-registration-department',
+  'دائرة الكاتب العدل': 'notary-public-department',
+  'هيئة الحماية الاجتماعية': 'social-protection-authority',
+  'دائرة تسجيل الشركات': 'companies-registration-department',
+  'الشركة العامة لتجارة المواد الغذائية': 'general-company-for-foodstuff-trading',
+};
+
+const sleep = (ms) => new Promise((r) => { setTimeout(r, ms); });
+
+/**
+ * One request, retried through the failures that are the connection's fault
+ * rather than the request's.
+ *
+ * This import is ~2,200 records and, with --files, several hundred megabytes of
+ * photographs. Over a long run the far side will eventually close a socket
+ * mid-upload; without this the whole import died there, hundreds of records in,
+ * having already done most of the work. A dropped connection or a 5xx is worth
+ * retrying. A 4xx is not — that is the payload being wrong, and repeating it
+ * just asks the same bad question more slowly.
+ */
+async function api(path, init = {}, attempt = 0) {
+  let res;
+  try {
+    res = await fetch(`${BASE}${path}`, {
+      ...init,
+      headers: {
+        ...(init.body instanceof FormData ? {} : { 'Content-Type': 'application/json' }),
+        ...(init.headers || {}),
+      },
+    });
+  } catch (err) {
+    if (attempt >= 4) throw new Error(`${init.method || 'GET'} ${path} -> ${err}`);
+    await sleep(500 * 2 ** attempt);
+    return api(path, init, attempt + 1);
+  }
+  const text = await res.text();
+  if (res.status >= 500 && attempt < 4) {
+    await sleep(500 * 2 ** attempt);
+    return api(path, init, attempt + 1);
+  }
+  if (!res.ok) throw new Error(`${init.method || 'GET'} ${path} -> ${res.status} ${text.slice(0, 400)}`);
+  return text ? JSON.parse(text) : null;
+}
+
+const auth = await api('/api/collections/_superusers/auth-with-password', {
+  method: 'POST',
+  body: JSON.stringify({ identity: PB_EMAIL, password: PB_PASSWORD }),
+});
+const H = { Authorization: auth.token };
+
+async function listAll(col) {
+  const out = [];
+  for (let page = 1; ; page++) {
+    const r = await api(`/api/collections/${col}/records?perPage=500&page=${page}`, { headers: H });
+    out.push(...r.items);
+    if (page >= r.totalPages) break;
+  }
+  return out;
+}
+
+/** Which optional fields the live schema actually has, so we never PATCH an unknown one. */
+async function fieldsOf(col) {
+  const c = await api(`/api/collections/${col}`, { headers: H });
+  return new Set(c.fields.map((f) => f.name));
+}
+
+/**
+ * Fields the dataset owns outright. For these, a null in the dataset means "no value",
+ * not "leave whatever is there" — so they are sent as null and PocketBase clears them.
+ *
+ * Without this the importer could only ever add. A record that picked up a wrong
+ * coordinate on an earlier run kept it forever, because the corrected dataset carried
+ * null and null was silently dropped. That left a trade directorate sitting on a
+ * Kuwaiti address, with a +965 phone, after the scrape had already disowned it.
+ *
+ * `title_ar` and `title_en` are excluded: the schema requires them, so they are always
+ * written with a value and never cleared.
+ */
+const SCRAPE_OWNED = new Set([
+  'phone', 'email', 'address_ar', 'gps_lat', 'gps_lon', 'place_id', 'working_hours',
+]);
+
+const drop = (obj, allowed) => Object.fromEntries(
+  Object.entries(obj).filter(([k, v]) => {
+    if (!allowed.has(k)) return false;
+    if (v !== null && v !== undefined) return true;
+    return SCRAPE_OWNED.has(k);          // keep the null so the field is cleared
+  }).map(([k, v]) => [k, v === undefined ? null : v]),
+);
+
+const stats = { created: 0, updated: 0, skipped: 0, files: 0 };
+
+/**
+ * PATCH the record `existingIndex` holds under `lookupKey`, or POST a new one.
+ *
+ * `lookupKey` is deliberately a separate argument from the payload: branches have no
+ * unique slug, so they are keyed on a composite (place id, or directorate + title)
+ * that is not itself a field. Deriving the key from a payload field instead meant the
+ * branch lookup never matched its own index and re-running the import created a
+ * second copy of all 687 rows.
+ */
+/** Record ids this run created, for `--new-files`. */
+const created = new Set();
+
+async function upsert(col, lookupKey, body, existingIndex, allowed) {
+  const payload = drop(body, allowed);
+  const found = existingIndex.get(lookupKey);
+  if (found) {
+    if (DRY) { stats.updated++; return found.id; }
+    await api(`/api/collections/${col}/records/${found.id}`, {
+      method: 'PATCH', headers: H, body: JSON.stringify(payload),
+    });
+    stats.updated++;
+    return found.id;
+  }
+  if (DRY) { stats.created++; return `dry-${lookupKey}`; }
+  const rec = await api(`/api/collections/${col}/records`, {
+    method: 'POST', headers: H, body: JSON.stringify(payload),
+  });
+  existingIndex.set(lookupKey, rec);
+  created.add(rec.id);
+  stats.created++;
+  return rec.id;
+}
+
+async function attach(col, id, field, url) {
+  if (!WITH_FILES || !url || DRY) return;
+  if (NEW_FILES_ONLY && !created.has(id)) return;
+  try {
+    let res;
+    for (let i = 0; i < 3 && !res; i++) {
+      try { res = await fetch(url); } catch { await sleep(400 * 2 ** i); }
+    }
+    if (!res?.ok) return;
+    let buf = Buffer.from(await res.arrayBuffer());
+    if (buf.length < 500) return;                       // placeholder / error image
+    let type = res.headers.get('content-type') || 'image/jpeg';
+    let ext = type.includes('png') ? 'png' : type.includes('webp') ? 'webp' : type.includes('svg') ? 'svg' : 'jpg';
+    // Vector logos cannot be resized by anything downstream — see raster-logo.mjs.
+    const raster = await rasterizeLogo(buf, type);
+    if (raster) ({ buffer: buf, type, ext } = raster);
+    const fd = new FormData();
+    fd.append(field, new Blob([buf], { type }), `${field}.${ext}`);
+    await api(`/api/collections/${col}/records/${id}`, { method: 'PATCH', headers: H, body: fd });
+    stats.files++;
+  } catch (e) { /* a missing image must not fail the import */ }
+}
+
+// ---------------------------------------------------------------- provinces
+const provinces = await listAll('provinces');
+const provByCode = new Map(provinces.map((p) => [p.code, p]));
+console.log(`provinces: ${provinces.length} present (not modified)`);
+
+// --------------------------------------------------------------- ministries
+const minFields = await fieldsOf('ministries');
+const minIndex = new Map((await listAll('ministries')).map((m) => [m.slug, m]));
+const minIdBySlug = new Map();
+
+for (const m of ds.ministries) {
+  const id = await upsert('ministries', m.slug, {
+    slug: m.slug, title_ar: m.title_ar, title_en: m.title_en, title_ku: m.title_ku,
+    krg: m.krg, website: m.website, phone: m.phone, email: m.email,
+    address_ar: m.address_ar, address_en: m.address_en, address_ku: m.address_ku,
+    gps_lat: m.gps_lat, gps_lon: m.gps_lon,
+    place_id: m.place_id, working_hours: m.working_hours,
+    sort_order: m.sort_order, archived: false,
+  }, minIndex, minFields);
+  minIdBySlug.set(m.slug, id);
+  await attach('ministries', id, 'logo', m.logo_url);
+  if (minFields.has('photos')) await attach('ministries', id, 'photos', m.photo_url);
+}
+console.log(`ministries: ${ds.ministries.length} processed`);
+
+// ------------------------------------------------------------- directorates
+const dirFields = await fieldsOf('directorates');
+const dirIndex = new Map((await listAll('directorates')).map((d) => [d.slug, d]));
+const dirIdBySlug = new Map();
+
+for (const d of ds.directorates) {
+  const ministry = minIdBySlug.get(d.ministry_slug);
+  if (!ministry || String(ministry).startsWith('dry-')) {
+    if (!ministry) { stats.skipped++; console.warn(`  skip directorate (no ministry ${d.ministry_slug}): ${d.title_ar}`); continue; }
+  }
+  const slug = KEEP_SLUGS[d.title_ar] || d.slug;
+  const id = await upsert('directorates', slug, {
+    slug, ministry, title_ar: d.title_ar, title_en: d.title_en || d.title_ar, title_ku: d.title_ku,
+    website: d.website, phone: d.phone, email: d.email, address_ar: d.address_ar,
+    gps_lat: d.gps_lat, gps_lon: d.gps_lon,
+    working_hours: d.working_hours, place_id: d.place_id,
+    sort_order: d.sort_order, archived: false,
+  }, dirIndex, dirFields);
+  dirIdBySlug.set(d.slug, id);
+  await attach('directorates', id, 'photos', d.photo_url);
+}
+console.log(`directorates: ${ds.directorates.length} processed`);
+
+// ------------------------------------------------------------------ branches
+const brFields = await fieldsOf('directorate_branches');
+const existingBranches = await listAll('directorate_branches');
+const brIndex = new Map();
+for (const b of existingBranches) brIndex.set(branchKey(b), b);
+
+for (const b of ds.branches) {
+  const directorate = dirIdBySlug.get(b.directorate_slug);
+  const province = provByCode.get(b.province_code)?.id;
+  if (!directorate || !province) { stats.skipped++; continue; }
+  const key = branchKey({ ...b, directorate, province });
+  const id = await upsert('directorate_branches', key, {
+    directorate, province,
+    title_ar: b.title_ar, title_en: b.title_en || b.title_ar, title_ku: b.title_ku,
+    address_ar: b.address_ar, gps_lat: b.gps_lat, gps_lon: b.gps_lon,
+    phone: b.phone, website: b.website, email: b.email,
+    working_hours: b.working_hours, place_id: b.place_id,
+    sort_order: b.sort_order, archived: false,
+  }, brIndex, brFields);
+  await attach('directorate_branches', id, 'photos', b.photo_url);
+}
+console.log(`branches: ${ds.branches.length} processed`);
+
+console.log(`\n${DRY ? '[dry run] ' : ''}created ${stats.created}, updated ${stats.updated}, skipped ${stats.skipped}, files uploaded ${stats.files}`);
+if (!WITH_FILES) console.log('(logos and photos not uploaded — re-run with --files to fetch and attach them)');

@@ -23,7 +23,9 @@ export type FieldKind =
   | 'date'
   | 'select'
   | 'relation'
-  | 'file';
+  | 'file'
+  /** Raw JSON edited as text; validated and stored as a parsed value. */
+  | 'json';
 
 export interface FieldDef {
   /** Base name. When `translatable`, the stored fields are `${name}_en|_ar|_ku`. */
@@ -39,6 +41,8 @@ export interface FieldDef {
   relation?: { collection: CollectionName; multiple?: boolean };
   /** `file` only — accept attribute for the input. */
   accept?: string;
+  /** `file` only — the field stores several files; uploads append to it. */
+  multiple?: boolean;
   /** `number` only. */
   min?: number;
   max?: number;
@@ -46,7 +50,16 @@ export interface FieldDef {
   readOnly?: boolean;
 }
 
-export type ColumnKind = 'text' | 'bool' | 'badge' | 'relation' | 'date' | 'number' | 'translations';
+export type ColumnKind =
+  | 'text'
+  | 'bool'
+  | 'badge'
+  | 'relation'
+  | 'date'
+  | 'number'
+  | 'translations'
+  /** A file field shown as a small thumbnail (e.g. a ministry logo). */
+  | 'image';
 
 export interface ColumnDef {
   name: string;
@@ -56,6 +69,18 @@ export interface ColumnDef {
   /** `translations` only — the base fields whose completeness is summarised. */
   fields?: readonly string[];
   relationLabel?: string;
+  /** `image` only — the PocketBase thumb size to request. */
+  thumb?: string;
+}
+
+/** A single relation dropdown offered above a list view (e.g. directorates by ministry). */
+export interface ListFilterDef {
+  /** The relation field on this collection to filter by. */
+  name: string;
+  label: string;
+  collection: CollectionName;
+  /** Field on the target collection used as the option label. */
+  labelField: string;
 }
 
 export interface CollectionDef {
@@ -78,6 +103,8 @@ export interface CollectionDef {
   /** Relations to expand when listing, so relation columns can render a label. */
   expand?: string;
   description?: string;
+  /** Optional relation dropdown above the list view. */
+  listFilter?: ListFilterDef;
 }
 
 const SORT: FieldDef = {
@@ -276,6 +303,7 @@ export const collections: readonly CollectionDef[] = [
     searchFields: ['title_en', 'title_ar', 'title_ku', 'slug'],
     defaultSort: 'sort_order',
     listColumns: [
+      { name: 'logo', label: 'Logo', kind: 'image', thumb: '120x120' },
       { name: 'title', label: 'Ministry', kind: 'text', translatable: true },
       { name: 'krg', label: 'KRG', kind: 'bool' },
       { name: 'translations', label: 'Languages', kind: 'translations', fields: ['title', 'address'] },
@@ -310,6 +338,7 @@ export const collections: readonly CollectionDef[] = [
     searchFields: ['title_en', 'title_ar', 'title_ku', 'slug'],
     defaultSort: 'sort_order',
     expand: 'ministry',
+    listFilter: { name: 'ministry', label: 'Ministry', collection: 'ministries', labelField: 'title_en' },
     listColumns: [
       { name: 'title', label: 'Directorate', kind: 'text', translatable: true },
       { name: 'ministry', label: 'Ministry', kind: 'relation', relationLabel: 'title_en' },
@@ -317,7 +346,7 @@ export const collections: readonly CollectionDef[] = [
         name: 'translations',
         label: 'Languages',
         kind: 'translations',
-        fields: ['title', 'address', 'working_hours'],
+        fields: ['title', 'address'],
       },
       { name: 'archived', label: 'Archived', kind: 'bool' },
     ],
@@ -332,8 +361,23 @@ export const collections: readonly CollectionDef[] = [
         relation: { collection: 'ministries' },
       },
       { name: 'logo', label: 'Logo', kind: 'file', accept: 'image/*' },
+      {
+        name: 'photos',
+        label: 'Building photos',
+        kind: 'file',
+        accept: 'image/*',
+        multiple: true,
+        help: 'Photos of the building and entrance, to help visitors find it.',
+      },
       { name: 'address', label: 'Address', kind: 'textarea', translatable: true },
-      { name: 'working_hours', label: 'Working hours', kind: 'text', translatable: true },
+      {
+        name: 'working_hours',
+        label: 'Working hours',
+        kind: 'json',
+        help:
+          'One entry per day: {"day":"SUN","from":"08:00","to":"14:00","note":""}. ' +
+          'Null from/to means closed. Day names are translated by the portal.',
+      },
       ...GPS,
       ...CONTACT_FIELDS,
       SORT,
@@ -373,6 +417,14 @@ export const collections: readonly CollectionDef[] = [
         kind: 'relation',
         required: true,
         relation: { collection: 'provinces' },
+      },
+      {
+        name: 'photos',
+        label: 'Building photos',
+        kind: 'file',
+        accept: 'image/*',
+        multiple: true,
+        help: 'Photos of the building and entrance, to help visitors find it.',
       },
       { name: 'address', label: 'Address', kind: 'textarea', translatable: true },
       ...GPS,
@@ -446,8 +498,10 @@ export const collections: readonly CollectionDef[] = [
     titleTranslatable: true,
     searchFields: ['question_en', 'question_ar', 'question_ku'],
     defaultSort: 'sort_order',
+    expand: 'procedure',
     listColumns: [
       { name: 'question', label: 'Question', kind: 'text', translatable: true },
+      { name: 'procedure', label: 'Procedure', kind: 'relation', relationLabel: 'title_en' },
       { name: 'translations', label: 'Languages', kind: 'translations', fields: ['question', 'answer'] },
       { name: 'sort_order', label: 'Order', kind: 'number' },
       { name: 'enabled', label: 'Published', kind: 'bool' },
@@ -455,6 +509,13 @@ export const collections: readonly CollectionDef[] = [
     fields: [
       { name: 'question', label: 'Question', kind: 'text', translatable: true, required: true },
       { name: 'answer', label: 'Answer', kind: 'editor', translatable: true },
+      {
+        name: 'procedure',
+        label: 'Related procedure',
+        kind: 'relation',
+        relation: { collection: 'procedures' },
+        help: 'Optional — set when the question is about one specific procedure.',
+      },
       SORT,
       ENABLED,
     ],
@@ -693,6 +754,61 @@ export const collections: readonly CollectionDef[] = [
       { name: 'rating', label: 'Rating', kind: 'number', min: 1, max: 5, required: true },
       { name: 'body', label: 'Review', kind: 'textarea' },
       { name: 'approved', label: 'Approved', kind: 'bool' },
+    ],
+  },
+  {
+    name: 'procedure_submissions',
+    label: 'Suggestion',
+    labelPlural: 'Procedure suggestions',
+    group: 'Inbox',
+    canCreate: false,
+    canDelete: true,
+    titleField: 'title',
+    searchFields: ['title', 'summary', 'notes'],
+    defaultSort: '-created',
+    expand: 'user,ministry,directorate',
+    description:
+      'Procedures suggested by citizens. Review, then create the real procedure by hand — approving here does not publish anything by itself.',
+    listColumns: [
+      { name: 'title', label: 'Title', kind: 'text' },
+      { name: 'user', label: 'By', kind: 'relation', relationLabel: 'full_name' },
+      { name: 'ministry', label: 'Ministry', kind: 'relation', relationLabel: 'title_en' },
+      { name: 'status', label: 'Status', kind: 'badge' },
+      { name: 'created', label: 'Received', kind: 'date' },
+    ],
+    fields: [
+      { name: 'title', label: 'Title', kind: 'text', required: true },
+      { name: 'summary', label: 'Summary', kind: 'textarea' },
+      {
+        name: 'ministry',
+        label: 'Ministry',
+        kind: 'relation',
+        relation: { collection: 'ministries' },
+      },
+      {
+        name: 'directorate',
+        label: 'Directorate',
+        kind: 'relation',
+        relation: { collection: 'directorates' },
+      },
+      { name: 'steps', label: 'Steps (one per line, as JSON)', kind: 'json' },
+      { name: 'documents', label: 'Documents (JSON)', kind: 'json' },
+      { name: 'fee_iqd', label: 'Fee (IQD)', kind: 'number', min: 0 },
+      { name: 'processing_time', label: 'Processing time', kind: 'text' },
+      { name: 'notes', label: 'Notes from the citizen', kind: 'textarea' },
+      {
+        name: 'status',
+        label: 'Status',
+        kind: 'select',
+        required: true,
+        options: ['submitted', 'in_review', 'approved', 'rejected'],
+      },
+      {
+        name: 'review_note',
+        label: 'Review note',
+        kind: 'textarea',
+        help: 'Shown to the citizen on their account page when the suggestion is rejected.',
+      },
     ],
   },
   {

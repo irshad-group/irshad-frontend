@@ -22,7 +22,10 @@ import { cn } from '@/components/ui/primitives';
  * wait for the client.
  */
 
-const LINK_CLASS = 'rounded-md px-2.5 py-1.5 text-sm transition-colors';
+const LINK_CLASS = 'rounded-md py-1.5 text-sm transition-colors';
+// Inline entries are tighter until `xl`: at exactly 1024 px the English
+// labels and the account actions beside them overshoot the row otherwise.
+const INLINE_PAD = 'px-2 xl:px-2.5';
 const IDLE_CLASS = 'text-ink-600 hover:bg-ink-100 hover:text-ink-900';
 // Weight changes with the colour so the state survives without it.
 const CURRENT_CLASS = 'bg-brand-50 font-medium text-brand-700';
@@ -49,9 +52,10 @@ function LinkView({
       className={cn(
         LINK_CLASS,
         current ? CURRENT_CLASS : IDLE_CLASS,
-        // Inline entries never wrap: the site name is what gives way when
-        // the bar is tight, not the words in the menu.
-        block ? 'block' : 'inline-block whitespace-nowrap',
+        // A nav label is a known string, not pasted content, so the global
+        // `overflow-wrap: anywhere` must not split it mid-word. The drawer keeps
+        // the roomier padding — there it is a touch target.
+        block ? 'block px-2.5' : cn('inline-block whitespace-nowrap', INLINE_PAD),
       )}
     >
       {localized(node, 'title', locale)}
@@ -91,6 +95,7 @@ function SummaryView({ current, children }: { current: boolean; children: ReactN
       className={cn(
         'flex cursor-pointer list-none items-center gap-1 whitespace-nowrap marker:content-none',
         LINK_CLASS,
+        INLINE_PAD,
         current ? CURRENT_CLASS : IDLE_CLASS,
       )}
     >

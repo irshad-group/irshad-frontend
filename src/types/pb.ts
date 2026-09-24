@@ -53,6 +53,11 @@ export interface DirectorateBranchesRecord extends BaseRecord {
   phone?: string;
   sort_order?: number;
   archived?: boolean;
+  photos?: string[];
+  website?: string;
+  email?: string;
+  working_hours?: unknown;
+  place_id?: string;
 }
 
 /** `directorates` */
@@ -68,14 +73,14 @@ export interface DirectoratesRecord extends BaseRecord {
   address_ku?: string;
   gps_lat?: number;
   gps_lon?: number;
-  working_hours_en?: string;
-  working_hours_ar?: string;
-  working_hours_ku?: string;
   website?: string;
   phone?: string;
   email?: string;
   sort_order?: number;
   archived?: boolean;
+  photos?: string[];
+  working_hours?: unknown;
+  place_id?: string;
 }
 
 /** `faq` */
@@ -88,6 +93,7 @@ export interface FaqRecord extends BaseRecord {
   answer_ku?: string;
   sort_order?: number;
   enabled?: boolean;
+  procedure?: RecordId<'procedures'>;
 }
 
 /** `files` */
@@ -120,6 +126,9 @@ export interface MinistriesRecord extends BaseRecord {
   email?: string;
   sort_order?: number;
   archived?: boolean;
+  photos?: string[];
+  working_hours?: unknown;
+  place_id?: string;
 }
 
 /** `navigation` */
@@ -161,6 +170,22 @@ export interface ProcedureItemsRecord extends BaseRecord {
   enabled?: boolean;
 }
 
+/** `procedure_submissions` */
+export interface ProcedureSubmissionsRecord extends BaseRecord {
+  user: RecordId<'users'>;
+  title: string;
+  summary?: string;
+  ministry?: RecordId<'ministries'>;
+  directorate?: RecordId<'directorates'>;
+  steps?: unknown;
+  documents?: unknown;
+  fee_iqd?: number;
+  processing_time?: string;
+  notes?: string;
+  status: 'submitted' | 'in_review' | 'approved' | 'rejected';
+  review_note?: string;
+}
+
 /** `procedures` */
 export interface ProceduresRecord extends BaseRecord {
   slug: string;
@@ -184,6 +209,8 @@ export interface ProceduresRecord extends BaseRecord {
   publish_date?: string;
   sort_order?: number;
   archived?: boolean;
+  author?: RecordId<'team'>;
+  show_author?: boolean;
 }
 
 /** `provinces` */
@@ -284,6 +311,7 @@ export interface CollectionRecords {
   navigation: NavigationRecord;
   partners: PartnersRecord;
   procedure_items: ProcedureItemsRecord;
+  procedure_submissions: ProcedureSubmissionsRecord;
   procedures: ProceduresRecord;
   provinces: ProvincesRecord;
   reviews: ReviewsRecord;
@@ -307,6 +335,7 @@ export const COLLECTION_NAMES = [
   'navigation',
   'partners',
   'procedure_items',
+  'procedure_submissions',
   'procedures',
   'provinces',
   'reviews',

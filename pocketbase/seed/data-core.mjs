@@ -3,9 +3,15 @@
 export const pid = (prefix, n) => prefix + String(n).padStart(12, '0');
 
 const HOURS = {
-  working_hours_en: 'Sunday – Thursday, 08:00 – 14:00. Closed Friday and Saturday.',
-  working_hours_ar: 'الأحد – الخميس، ٨:٠٠ – ١٤:٠٠. عطلة الجمعة والسبت.',
-  working_hours_ku: 'یەکشەممە – پێنجشەممە، ٨:٠٠ – ١٤:٠٠. هەینی و شەممە داخراوە.',
+  working_hours: [
+    { day: 'SUN', from: '08:00', to: '14:00' },
+    { day: 'MON', from: '08:00', to: '14:00' },
+    { day: 'TUE', from: '08:00', to: '14:00' },
+    { day: 'WED', from: '08:00', to: '14:00' },
+    { day: 'THU', from: '08:00', to: '14:00' },
+    { day: 'FRI', from: null, to: null },
+    { day: 'SAT', from: null, to: null },
+  ],
 };
 
 export const provinces = [

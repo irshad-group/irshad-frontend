@@ -21,9 +21,16 @@ function readSuffixed(record: Translatable, field: string, locale: ContentLocale
  * Resolve a translatable content field for the requested locale.
  *
  * Content is frequently only partially translated, so this walks a fallback
- * chain — requested locale, then English, then the first non-empty language —
- * rather than rendering a blank. Never hardcode `_en` / `_ar` / `_ku` suffixes
- * at a call site; go through here so the fallback stays consistent.
+ * chain — requested locale, then Arabic, then English, then the first non-empty
+ * language — rather than rendering a blank. Never hardcode `_en` / `_ar` /
+ * `_ku` suffixes at a call site; go through here so the fallback stays
+ * consistent.
+ *
+ * Arabic comes before English because most of this content is Arabic in the
+ * first place, and because a Kurdish reader shown an untranslated record is far
+ * more likely to read the Arabic than the English. For an English reader the
+ * chain is unchanged: English is either present, or the record has no English
+ * and the reader was always going to see another language.
  */
 export function localized(record: Translatable, field: string, locale: string): string {
   const requested: ContentLocale = isLocale(locale) ? locale : defaultLocale;
@@ -31,8 +38,10 @@ export function localized(record: Translatable, field: string, locale: string): 
   const direct = readSuffixed(record, field, requested);
   if (direct) return direct;
 
-  const english = readSuffixed(record, field, 'en');
-  if (english) return english;
+  for (const fallback of ['ar', 'en'] as const) {
+    const value = readSuffixed(record, field, fallback);
+    if (value) return value;
+  }
 
   for (const candidate of contentLocales) {
     const value = readSuffixed(record, field, candidate);

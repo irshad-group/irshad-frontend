@@ -82,5 +82,23 @@
  },
  "clear": [
   "مديريات الصحة"
+ ],
+ "not_institutions": [
+  "alqwanyn-waltshryaat-alty-tkhs-aml-aldayra",
+  "anshta-wanjazat-dayra-tsjyl-alshrkat",
+  "aqsam-aldayra",
+  "aqsam-aldayra-alqanwnya",
+  "aqsam-dayra-ttwyr-alqtaa-alkhas",
+  "dayra-raaya-alqasryn-tkrm-adda-mn-almtfwqyn-alqasryn-fy-mhaf",
+  "dlyl-astrshady-lmwzfy-dayra-alalaqat-alaqtsadya-alkharjya",
+  "dwayr-alwzara-aldayra-aladarya-walmalya-aqsam-aldayra",
+  "dwayr-mqr-alwzara",
+  "dwayr-mrkz-alwzara",
+  "dwayr-wtshkylat-alwzara",
+  "mdyr-almdyrya",
+  "mdyr-mdyrya-alwqwd",
+  "mdyryat-alsha",
+  "nbdha-an-alshrka-alaama-llaswaq-almrkzya",
+  "tshkylat-alwzara-dwayr-mqr-alwzara"
  ]
 }

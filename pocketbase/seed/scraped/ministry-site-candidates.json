@@ -1,0 +1,1223 @@
+[
+ {
+  "ministry": "ministry-of-industry-and-minerals",
+  "directorate": "alshrka-alaama-lsnaaa-alnsyjya-waljlwd",
+  "title": "الشركة العامة لصناعة النسيجية والجلود",
+  "site": "https://sctl.industry.gov.iq/",
+  "pages": 5,
+  "phones": [
+   "07725702123"
+  ],
+  "emails": [
+   "media@sctl.industry.gov.iq"
+  ],
+  "candidates": [
+   {
+    "name": "مصنع محلج قطن كركوك",
+    "page": "https://sctl.industry.gov.iq/factories-details/17",
+    "via": "link",
+    "source": "https://sctl.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع منسوجات ذي قار",
+    "page": "https://sctl.industry.gov.iq/factories-details/16",
+    "via": "link",
+    "source": "https://sctl.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع نسيج وحياكة واسط",
+    "page": "https://sctl.industry.gov.iq/factories-details/15",
+    "via": "link",
+    "source": "https://sctl.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع الألبسة الرجالية في النجف الأشرف",
+    "page": "https://sctl.industry.gov.iq/factories-details/14",
+    "via": "link",
+    "source": "https://sctl.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع الألبسة الجاهزة في الموصل",
+    "page": "https://sctl.industry.gov.iq/factories-details/13",
+    "via": "link",
+    "source": "https://sctl.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع منسوجات الديوانية",
+    "page": "https://sctl.industry.gov.iq/factories-details/12",
+    "via": "link",
+    "source": "https://sctl.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع نسيج الحلة",
+    "page": "https://sctl.industry.gov.iq/factories-details/11",
+    "via": "link",
+    "source": "https://sctl.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع القطنية",
+    "page": "https://sctl.industry.gov.iq/factories-details/10",
+    "via": "link",
+    "source": "https://sctl.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع السجاد اليدوي",
+    "page": "https://sctl.industry.gov.iq/factories-details/9",
+    "via": "link",
+    "source": "https://sctl.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع الصوفية",
+    "page": "https://sctl.industry.gov.iq/factories-details/8",
+    "via": "link",
+    "source": "https://sctl.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع الجلدية",
+    "page": "https://sctl.industry.gov.iq/factories-details/7",
+    "via": "link",
+    "source": "https://sctl.industry.gov.iq/"
+   },
+   {
+    "name": "معمل خياطة بغداد / الخيم يشكل لجاناً جوالة لبيع المنتجات",
+    "page": "https://sctl.industry.gov.iq/news-details/83",
+    "via": "link",
+    "source": "https://sctl.industry.gov.iq/"
+   },
+   {
+    "name": "مصانع الشركة",
+    "via": "text",
+    "source": "https://sctl.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع الالبسة الرجالية في النجف الاشرف",
+    "via": "text",
+    "source": "https://sctl.industry.gov.iq/about/company"
+   }
+  ]
+ },
+ {
+  "ministry": "ministry-of-industry-and-minerals",
+  "directorate": "alshrka-alaama-llsmnt-alaraqya",
+  "title": "الشركة العامة للسمنت العراقية",
+  "site": "https://www.icsc.industry.gov.iq/",
+  "pages": 18,
+  "phones": [],
+  "emails": [
+   "info@gmail.com",
+   "icsc.comp@industry.gov.iq",
+   "example@gmail.com"
+  ],
+  "candidates": [
+   {
+    "name": "مقر الشركة",
+    "lat": 33.273956,
+    "lon": 44.461031,
+    "via": "plotted",
+    "source": "https://www.icsc.industry.gov.iq/"
+   },
+   {
+    "name": "معمل سمنت القائم",
+    "lat": 34.258806,
+    "lon": 41.213611,
+    "via": "plotted",
+    "source": "https://www.icsc.industry.gov.iq/"
+   },
+   {
+    "name": "معمل سمنت كبيسة",
+    "lat": 33.590458,
+    "lon": 42.504912,
+    "via": "plotted",
+    "source": "https://www.icsc.industry.gov.iq/"
+   },
+   {
+    "name": "معمل سمنت الفلوجة",
+    "lat": 33.36992,
+    "lon": 43.849409,
+    "via": "plotted",
+    "source": "https://www.icsc.industry.gov.iq/"
+   },
+   {
+    "name": "معمل سمنت كركوك",
+    "lat": 35.343504,
+    "lon": 44.477172,
+    "via": "plotted",
+    "source": "https://www.icsc.industry.gov.iq/"
+   },
+   {
+    "name": "معاونية السمنت الشمالية",
+    "lat": 36.329021,
+    "lon": 43.178142,
+    "via": "plotted",
+    "source": "https://www.icsc.industry.gov.iq/"
+   },
+   {
+    "name": "معمل سمنت الحدباء",
+    "lat": 36.199265,
+    "lon": 43.213692,
+    "via": "plotted",
+    "source": "https://www.icsc.industry.gov.iq/"
+   },
+   {
+    "name": "معمل سمنت حمام العليل الجديد",
+    "lat": 36.16202,
+    "lon": 43.246613,
+    "via": "plotted",
+    "source": "https://www.icsc.industry.gov.iq/"
+   },
+   {
+    "name": "معمل سمنت سنجار",
+    "lat": 36.349831,
+    "lon": 42.076104,
+    "via": "plotted",
+    "source": "https://www.icsc.industry.gov.iq/"
+   },
+   {
+    "name": "معمل سمنت الرافدين",
+    "lat": 36.441786,
+    "lon": 42.931207,
+    "via": "plotted",
+    "source": "https://www.icsc.industry.gov.iq/"
+   },
+   {
+    "name": "معمل سمنت بادوش الجديد",
+    "lat": 36.441786,
+    "lon": 42.931207,
+    "via": "plotted",
+    "source": "https://www.icsc.industry.gov.iq/"
+   },
+   {
+    "name": "معمل سمنت بادوش التوسيع",
+    "lat": 36.441786,
+    "lon": 42.931207,
+    "via": "plotted",
+    "source": "https://www.icsc.industry.gov.iq/"
+   },
+   {
+    "name": "معاونية السمنت الجنوبية",
+    "lat": 31.965165,
+    "lon": 44.43416,
+    "via": "plotted",
+    "source": "https://www.icsc.industry.gov.iq/"
+   },
+   {
+    "name": "معمل سمنت الكوفة",
+    "lat": 31.964414,
+    "lon": 44.437246,
+    "via": "plotted",
+    "source": "https://www.icsc.industry.gov.iq/"
+   },
+   {
+    "name": "معمل سمنت النجف الاشرف",
+    "lat": 31.970307,
+    "lon": 44.440691,
+    "via": "plotted",
+    "source": "https://www.icsc.industry.gov.iq/"
+   },
+   {
+    "name": "معمل سمنت بابل",
+    "lat": 32.73889,
+    "lon": 44.27218,
+    "via": "plotted",
+    "source": "https://www.icsc.industry.gov.iq/"
+   },
+   {
+    "name": "معمل سمنت المثنى",
+    "lat": 31.224966,
+    "lon": 45.001604,
+    "via": "plotted",
+    "source": "https://www.icsc.industry.gov.iq/"
+   },
+   {
+    "name": "معمل سمنت السماوة",
+    "lat": 31.300051,
+    "lon": 45.299678,
+    "via": "plotted",
+    "source": "https://www.icsc.industry.gov.iq/"
+   },
+   {
+    "name": "معمل سمنت كربلاء",
+    "lat": 32.342805,
+    "lon": 43.326302,
+    "via": "plotted",
+    "source": "https://www.icsc.industry.gov.iq/"
+   },
+   {
+    "name": "معمل كربلاء المقدسة للسمنت والنورة",
+    "lat": 32.563637,
+    "lon": 43.904103,
+    "via": "plotted",
+    "source": "https://www.icsc.industry.gov.iq/"
+   },
+   {
+    "name": "معمل سمنت البصرة",
+    "lat": 30.035008,
+    "lon": 47.946278,
+    "via": "plotted",
+    "source": "https://www.icsc.industry.gov.iq/"
+   },
+   {
+    "name": "معامل الشركة",
+    "page": "https://www.icsc.industry.gov.iq/categories",
+    "via": "link",
+    "source": "https://www.icsc.industry.gov.iq/"
+   },
+   {
+    "name": "مركز النظم والمعلومات",
+    "page": "https://www.icsc.industry.gov.iq/page/20?lang=ar",
+    "via": "link",
+    "source": "https://www.icsc.industry.gov.iq/"
+   },
+   {
+    "name": "إدارة الجودة الشاملة والتطوير المؤسسي",
+    "page": "https://www.icsc.industry.gov.iq/page/31?lang=ar",
+    "via": "link",
+    "source": "https://www.icsc.industry.gov.iq/"
+   },
+   {
+    "name": ".bindPopup(` ${location.name}",
+    "map": "https://www.google.com/maps/search/?api=1&query=${location.lat},${location.lng}",
+    "via": "map-link",
+    "source": "https://www.icsc.industry.gov.iq/",
+    "resolved": {
+     "final": "https://www.google.com/maps/search/?api=1&query=${location.lat},${location.lng}",
+     "lat": null,
+     "lon": null,
+     "label": null,
+     "ftid": null
+    }
+   },
+   {
+    "name": "معمل سمنت كبيسة يحصل على شهادة ISO9001:2015 العالمية وشهادة ISO14001:2015 من شركة IFC العالمية",
+    "via": "text",
+    "source": "https://www.icsc.industry.gov.iq/"
+   },
+   {
+    "name": "معمل تجريب معمل تجريبي",
+    "page": "https://www.icsc.industry.gov.iq/categories/details/25",
+    "via": "link",
+    "source": "https://www.icsc.industry.gov.iq/categories"
+   },
+   {
+    "name": "معمل سمنت سنجار .",
+    "page": "https://www.icsc.industry.gov.iq/categories/details/24",
+    "via": "link",
+    "source": "https://www.icsc.industry.gov.iq/categories"
+   },
+   {
+    "name": "معمل سمنت الحدباء .",
+    "page": "https://www.icsc.industry.gov.iq/categories/details/23",
+    "via": "link",
+    "source": "https://www.icsc.industry.gov.iq/categories"
+   },
+   {
+    "name": "معمل سمنت حمام العليل الجديد .",
+    "page": "https://www.icsc.industry.gov.iq/categories/details/22",
+    "via": "link",
+    "source": "https://www.icsc.industry.gov.iq/categories"
+   },
+   {
+    "name": "معمل سمنت بادوش التوسيع .",
+    "page": "https://www.icsc.industry.gov.iq/categories/details/21",
+    "via": "link",
+    "source": "https://www.icsc.industry.gov.iq/categories"
+   },
+   {
+    "name": "معمل سمنت بادوش الجديد .",
+    "page": "https://www.icsc.industry.gov.iq/categories/details/20",
+    "via": "link",
+    "source": "https://www.icsc.industry.gov.iq/categories"
+   },
+   {
+    "name": "معمل سمنت الرافدين .",
+    "page": "https://www.icsc.industry.gov.iq/categories/details/19",
+    "via": "link",
+    "source": "https://www.icsc.industry.gov.iq/categories"
+   },
+   {
+    "name": "معمل سمنت القائم .",
+    "page": "https://www.icsc.industry.gov.iq/categories/details/18",
+    "via": "link",
+    "source": "https://www.icsc.industry.gov.iq/categories"
+   },
+   {
+    "name": "معمل سمنت كبيسة .",
+    "page": "https://www.icsc.industry.gov.iq/categories/details/17",
+    "via": "link",
+    "source": "https://www.icsc.industry.gov.iq/categories"
+   },
+   {
+    "name": "معمل سمنت كركوك .",
+    "page": "https://www.icsc.industry.gov.iq/categories/details/16",
+    "via": "link",
+    "source": "https://www.icsc.industry.gov.iq/categories"
+   },
+   {
+    "name": "معمل سمنت البصرة .",
+    "page": "https://www.icsc.industry.gov.iq/categories/details/15",
+    "via": "link",
+    "source": "https://www.icsc.industry.gov.iq/categories"
+   },
+   {
+    "name": "معمل سمنت السماوة .",
+    "page": "https://www.icsc.industry.gov.iq/categories/details/14",
+    "via": "link",
+    "source": "https://www.icsc.industry.gov.iq/categories"
+   },
+   {
+    "name": "معمل تجريب",
+    "via": "text",
+    "source": "https://www.icsc.industry.gov.iq/categories"
+   },
+   {
+    "name": "معمل تجريبي",
+    "via": "text",
+    "source": "https://www.icsc.industry.gov.iq/categories"
+   },
+   {
+    "name": "معمل سمنت المثنى .",
+    "page": "https://www.icsc.industry.gov.iq/categories/details/13",
+    "via": "link",
+    "source": "https://www.icsc.industry.gov.iq/categories?page=2"
+   },
+   {
+    "name": "معمل سمنت بابل .",
+    "page": "https://www.icsc.industry.gov.iq/categories/details/12",
+    "via": "link",
+    "source": "https://www.icsc.industry.gov.iq/categories?page=2"
+   },
+   {
+    "name": "معمل النورة .",
+    "page": "https://www.icsc.industry.gov.iq/categories/details/11",
+    "via": "link",
+    "source": "https://www.icsc.industry.gov.iq/categories?page=2"
+   },
+   {
+    "name": "معمل سمنت كربلاء المقدسة .",
+    "page": "https://www.icsc.industry.gov.iq/categories/details/9",
+    "via": "link",
+    "source": "https://www.icsc.industry.gov.iq/categories?page=2"
+   },
+   {
+    "name": "معمل سمنت النجف الأشرف .",
+    "page": "https://www.icsc.industry.gov.iq/categories/details/7",
+    "via": "link",
+    "source": "https://www.icsc.industry.gov.iq/categories?page=2"
+   },
+   {
+    "name": "معمل سمنت الفلوجة .",
+    "page": "https://www.icsc.industry.gov.iq/categories/details/3",
+    "via": "link",
+    "source": "https://www.icsc.industry.gov.iq/categories?page=2"
+   },
+   {
+    "name": "معمل سمنت الكوفة .",
+    "page": "https://www.icsc.industry.gov.iq/categories/details/2",
+    "via": "link",
+    "source": "https://www.icsc.industry.gov.iq/categories?page=2"
+   },
+   {
+    "name": "معمل النورة",
+    "via": "text",
+    "source": "https://www.icsc.industry.gov.iq/categories?page=2"
+   },
+   {
+    "name": "معمل سمنت كربلاء المقدسة",
+    "via": "text",
+    "source": "https://www.icsc.industry.gov.iq/categories?page=2"
+   },
+   {
+    "name": "معمل سمنت النجف الأشرف",
+    "via": "text",
+    "source": "https://www.icsc.industry.gov.iq/categories?page=2"
+   }
+  ]
+ },
+ {
+  "ministry": "ministry-of-industry-and-minerals",
+  "directorate": "alshrka-alaama-lsnaaa-aladwya-walmstlzmat-altbya",
+  "title": "الشركة العامة لصناعة الادوية والمستلزمات الطبية",
+  "site": "https://sdi.industry.gov.iq/",
+  "pages": 18,
+  "phones": [
+   "0772711839"
+  ],
+  "emails": [
+   "sdi.comp@industry.gov.iq",
+   "sdi.comp1@industry.gov.iq",
+   "sdicd.samarra@gmail.com",
+   "sdisamarra.mim@gmail.com",
+   "import@sdisamarra.com",
+   "sdi.planning%20@gmail.com",
+   "sdi.planning@gmail.com",
+   "sdianticorruption@gmail.com"
+  ],
+  "candidates": [
+   {
+    "name": "مصانع الشركة",
+    "page": "https://sdi.industry.gov.iq/#",
+    "via": "link",
+    "source": "https://sdi.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع ادوية سامراء",
+    "page": "https://sdi.industry.gov.iq/factory/2?lang=ar",
+    "via": "link",
+    "source": "https://sdi.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع بابل",
+    "page": "https://sdi.industry.gov.iq/factory/3?lang=ar",
+    "via": "link",
+    "source": "https://sdi.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع بغداد",
+    "page": "https://sdi.industry.gov.iq/factory/9?lang=ar",
+    "via": "link",
+    "source": "https://sdi.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع ادوية نينوى",
+    "page": "https://sdi.industry.gov.iq/factory/10?lang=ar",
+    "via": "link",
+    "source": "https://sdi.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع المحاليل الوريدية",
+    "page": "https://sdi.industry.gov.iq/factory/11?lang=ar",
+    "via": "link",
+    "source": "https://sdi.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع الطارق",
+    "page": "https://sdi.industry.gov.iq/factory/12?lang=ar",
+    "via": "link",
+    "source": "https://sdi.industry.gov.iq/"
+   },
+   {
+    "name": "مدرسة ثانوية",
+    "via": "text",
+    "source": "https://sdi.industry.gov.iq/staff?lang=ar"
+   },
+   {
+    "name": "مدرسة اعدادية",
+    "via": "text",
+    "source": "https://sdi.industry.gov.iq/staff?lang=ar"
+   },
+   {
+    "name": "مدرسة ابتدائية",
+    "via": "text",
+    "source": "https://sdi.industry.gov.iq/staff?lang=ar"
+   },
+   {
+    "name": "مصنع ابن سينا :- هذا المصنع متخصص بانتاج البنسلينات وتشمل كبسول المضادات الحياتية بطاقة انتاجية 691 الف كبسولة",
+    "via": "text",
+    "source": "https://sdi.industry.gov.iq/factory/2?lang=ar"
+   },
+   {
+    "name": "مصنع ابن النفيس :- يقوم بانتاج الاشربة المختلفة، المعلقات",
+    "via": "text",
+    "source": "https://sdi.industry.gov.iq/factory/2?lang=ar"
+   },
+   {
+    "name": "مصنع ابن حيان :- يقوم بإنتاج قطرات العيون، المراهم، الكريمات،",
+    "via": "text",
+    "source": "https://sdi.industry.gov.iq/factory/2?lang=ar"
+   },
+   {
+    "name": "مصنع الزهراوي :- يقوم بانتاج الحبوب المضغوطة بأنواعها وأشكالها المختلفة.",
+    "via": "text",
+    "source": "https://sdi.industry.gov.iq/factory/2?lang=ar"
+   },
+   {
+    "name": "مصنع الرازي :- يقوم بإنتاج السيفالوسبورينات وتشمل الكبسول، المساحيق",
+    "via": "text",
+    "source": "https://sdi.industry.gov.iq/factory/2?lang=ar"
+   },
+   {
+    "name": "مركز تسويق سامراء في مقر الشركة في سامراء",
+    "map": "https://maps.app.goo.gl/8hWdcYi5iMbzQpmUA?g_st=ic",
+    "via": "map-link",
+    "source": "https://sdi.industry.gov.iq/marketing/center?lang=ar",
+    "resolved": {
+     "final": "https://maps.google.com/maps?q=6V5P+X3H+مقر+ادارة+شركة+ادوية+سامراء,+SDI,+Samarra,+Saladin+Governorate&ftid=0x1556d1ad91c29a0d:0x66ef9757fdfb83d0&entry=gps&shh=CAE&lucs=,94297699,100820695,94231188,94280568,47071704,94218641,94282134,100813464,94286869&g_ep=CAISEjI2LjI1LjMuOTMyMTI1MTg3MBgAIIgnKlMsOTQyOTc2OTksMTAwODIwNjk1LDk0MjMxMTg4LDk0MjgwNTY4LDQ3MDcxNzA0LDk0MjE4NjQxLDk0MjgyMTM0LDEwMDgxMzQ2NCw5NDI4Njg2OUICSVE=&skid=e271bc59-8991-4f0e-9f12-e3e5e7413f6f&g_st=ic",
+     "lat": null,
+     "lon": null,
+     "label": "6V5P X3H مقر ادارة شركة ادوية سامراء, SDI, Samarra, Saladin Governorate",
+     "ftid": "0x1556d1ad91c29a0d:0x66ef9757fdfb83d0"
+    }
+   },
+   {
+    "name": "شعبة تسويق بغداد - الموقع البديل في هيئة البحث والتطوير الصناعي- الجادرية",
+    "map": "https://maps.app.goo.gl/yK2Rh78DDTVMkuU17?g_st=ic",
+    "via": "map-link",
+    "source": "https://sdi.industry.gov.iq/marketing/center?lang=ar",
+    "resolved": {
+     "final": "https://maps.google.com/maps?q=79GP+7JR+هيأة+البحث+والتطوير+الصناعي,+Unnamed+Road،+Baghdad,+Baghdad+Governorate&ftid=0x15577f828281bd31:0x249dc6d4c3a3cd5e&entry=gps&shh=CAE&lucs=,94297699,100820695,94231188,94280568,47071704,94218641,94282134,100813464,94286869&g_ep=CAISEjI2LjI1LjMuOTMyMTI1MTg3MBgAINeCAypTLDk0Mjk3Njk5LDEwMDgyMDY5NSw5NDIzMTE4OCw5NDI4MDU2OCw0NzA3MTcwNCw5NDIxODY0MSw5NDI4MjEzNCwxMDA4MTM0NjQsOTQyODY4NjlCAklR&skid=62ecd61b-83fa-458a-9114-f435125207b8&g_st=ic",
+     "lat": null,
+     "lon": null,
+     "label": "79GP 7JR هيأة البحث والتطوير الصناعي, Unnamed Road، Baghdad, Baghdad Governorate",
+     "ftid": "0x15577f828281bd31:0x249dc6d4c3a3cd5e"
+    }
+   },
+   {
+    "name": "مركز تسويق كركوك في كركوك /المنطقة الشمالية مقابل مستشفى كركوك العام",
+    "map": "https://maps.app.goo.gl/LwnpU5haQwQ8vxVK8?g_st=ic",
+    "via": "map-link",
+    "source": "https://sdi.industry.gov.iq/marketing/center?lang=ar",
+    "resolved": {
+     "final": "https://maps.google.com/maps?q=F93M+484+مركز+تسويق+كركوك+شركة+ادوية+سامراء,+Kirkuk,+Kirkuk+Governorate&ftid=0x1554d7003c9b524f:0xc94905139a8a9365&entry=gps&shh=CAE&lucs=,94297699,100820695,94231188,94280568,47071704,94218641,94282134,100813464,94286869&g_ep=CAISEjI2LjI1LjMuOTMyMTI1MTg3MBgAINeCAypTLDk0Mjk3Njk5LDEwMDgyMDY5NSw5NDIzMTE4OCw5NDI4MDU2OCw0NzA3MTcwNCw5NDIxODY0MSw5NDI4MjEzNCwxMDA4MTM0NjQsOTQyODY4NjlCAklR&skid=74cc5f7b-3afe-4885-8886-42f2e1635686&g_st=ic",
+     "lat": null,
+     "lon": null,
+     "label": "F93M 484 مركز تسويق كركوك شركة ادوية سامراء, Kirkuk, Kirkuk Governorate",
+     "ftid": "0x1554d7003c9b524f:0xc94905139a8a9365"
+    }
+   },
+   {
+    "name": "مركز تسويق سامراء في مقر الشركة في سامراء الموقع الجغرافي",
+    "via": "text",
+    "source": "https://sdi.industry.gov.iq/marketing/center?lang=ar"
+   },
+   {
+    "name": "شعبة تسويق بغداد - الموقع البديل في هيئة البحث والتطوير الصناعي- الجادرية الموقع الجغرافي",
+    "via": "text",
+    "source": "https://sdi.industry.gov.iq/marketing/center?lang=ar"
+   },
+   {
+    "name": "مركز تسويق كركوك في كركوك /المنطقة الشمالية مقابل مستشفى كركوك العام الموقع الجغرافي",
+    "via": "text",
+    "source": "https://sdi.industry.gov.iq/marketing/center?lang=ar"
+   },
+   {
+    "name": "مركز اعلام تسويق السليمانية ويقع في محافظة السليمانية.",
+    "via": "text",
+    "source": "https://sdi.industry.gov.iq/marketing/center?lang=ar"
+   }
+  ]
+ },
+ {
+  "ministry": "ministry-of-industry-and-minerals",
+  "directorate": "alshrka-alaama-llsnaaat-alkhrbayya-walalktrwnya",
+  "title": "الشركة العامة للصناعات الكهربائية والالكترونية",
+  "site": "http://www.sceei.gov.iq/",
+  "pages": 0,
+  "phones": [],
+  "emails": [],
+  "candidates": []
+ },
+ {
+  "ministry": "ministry-of-industry-and-minerals",
+  "directorate": "alshrka-alaama-lkbryt-almshraq",
+  "title": "الشركة العامة لكبريت المشراق",
+  "site": "https://mishraq.industry.gov.iq/",
+  "pages": 5,
+  "phones": [],
+  "emails": [
+   "waelserag1@gmail.com",
+   "copm.mishraq@industry.gov.iq"
+  ],
+  "candidates": []
+ },
+ {
+  "ministry": "ministry-of-industry-and-minerals",
+  "directorate": "alshrka-alaama-llzjaj-walhraryat",
+  "title": "الشركة العامة للزجاج والحراريات",
+  "site": "https://glassref.industry.gov.iq/",
+  "pages": 0,
+  "phones": [],
+  "emails": [],
+  "candidates": []
+ },
+ {
+  "ministry": "ministry-of-industry-and-minerals",
+  "directorate": "alshrka-alaama-llsnaaat-alghdhayya",
+  "title": "الشركة العامة للصناعات الغذائية",
+  "site": "http://www.fisc.industry.gov.iq/",
+  "pages": 0,
+  "phones": [],
+  "emails": [],
+  "candidates": []
+ },
+ {
+  "ministry": "ministry-of-industry-and-minerals",
+  "directorate": "alshrka-alaama-llfhs-waltahyl-alhndsy",
+  "title": "الشركة العامة للفحص والتأهيل الهندسي",
+  "site": "https://siei.industry.gov.iq/",
+  "pages": 6,
+  "phones": [
+   "07760826710"
+  ],
+  "emails": [
+   "waelserag1@gmail.com",
+   "siei.comp@industry.gov.iq"
+  ],
+  "candidates": []
+ },
+ {
+  "ministry": "ministry-of-industry-and-minerals",
+  "directorate": "alshrka-alaama-llhdyd-walslb",
+  "title": "الشركة العامة للحديد والصلب",
+  "site": "https://steeliraq.industry.gov.iq/",
+  "pages": 3,
+  "phones": [],
+  "emails": [],
+  "candidates": [
+   {
+    "name": "مصنع الصلب",
+    "page": "https://steeliraq.industry.gov.iq/?article=5",
+    "via": "link",
+    "source": "https://steeliraq.industry.gov.iq/"
+   },
+   {
+    "name": "معمل الانابيب الحديدية ( الجديد )",
+    "page": "https://steeliraq.industry.gov.iq/?article=2",
+    "via": "link",
+    "source": "https://steeliraq.industry.gov.iq/"
+   },
+   {
+    "name": "معمل الدرفلة",
+    "page": "https://steeliraq.industry.gov.iq/?article=6",
+    "via": "link",
+    "source": "https://steeliraq.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع الحديد الاسفنجي",
+    "via": "text",
+    "source": "https://steeliraq.industry.gov.iq/"
+   }
+  ]
+ },
+ {
+  "ministry": "ministry-of-industry-and-minerals",
+  "directorate": "alshrka-alaama-llsnaaat-almtatya-walatarat",
+  "title": "الشركة العامة للصناعات المطاطية والاطارات",
+  "site": "https://scrti.industry.gov.iq/",
+  "pages": 3,
+  "phones": [],
+  "emails": [],
+  "candidates": []
+ },
+ {
+  "ministry": "ministry-of-industry-and-minerals",
+  "directorate": "alshrka-alaama-llsnaaa-alasmda-aljnwbya",
+  "title": "الشركة العامة للصناعة الاسمدة الجنوبية",
+  "site": "http://sfert.industry.gov.iq/",
+  "pages": 2,
+  "phones": [],
+  "emails": [],
+  "candidates": []
+ },
+ {
+  "ministry": "ministry-of-industry-and-minerals",
+  "directorate": "alshrka-alaama-lsnaaa-alsyarat-walmadat",
+  "title": "الشركة العامة لصناعة السيارات والمعدات",
+  "site": "https://scai.industry.gov.iq/",
+  "pages": 0,
+  "phones": [],
+  "emails": [],
+  "candidates": []
+ },
+ {
+  "ministry": "ministry-of-industry-and-minerals",
+  "directorate": "alshrka-alaama-llfwsfat",
+  "title": "الشركة العامة للفوسفات",
+  "site": "https://www.phoco.industry.gov.iq/",
+  "pages": 0,
+  "phones": [],
+  "emails": [],
+  "candidates": []
+ },
+ {
+  "ministry": "ministry-of-industry-and-minerals",
+  "directorate": "alshrka-alaama-llsnaaat-albtrwkymyawya",
+  "title": "الشركة العامة للصناعات البتروكيمياوية",
+  "site": "https://pchem.industry.gov.iq/",
+  "pages": 0,
+  "phones": [],
+  "emails": [],
+  "candidates": []
+ },
+ {
+  "ministry": "ministry-of-industry-and-minerals",
+  "directorate": "alshrka-alaama-llanzma-alalktrwnya",
+  "title": "الشركة العامة للانظمة الالكترونية",
+  "site": "https://www.gces.industry.gov.iq/",
+  "pages": 0,
+  "phones": [],
+  "emails": [],
+  "candidates": []
+ },
+ {
+  "ministry": "ministry-of-industry-and-minerals",
+  "directorate": "alshrka-alaama-lltsmym-wtnfydh-almsharya",
+  "title": "الشركة العامة للتصميم وتنفيذ المشاريع",
+  "site": "https://scdpi.industry.gov.iq/",
+  "pages": 6,
+  "phones": [
+   "07742748777"
+  ],
+  "emails": [
+   "scdpi.comp@industry.gov.iq"
+  ],
+  "candidates": [
+   {
+    "name": "دائرة التخطيط",
+    "via": "text",
+    "source": "https://scdpi.industry.gov.iq/"
+   }
+  ]
+ },
+ {
+  "ministry": "ministry-of-industry-and-minerals",
+  "directorate": "alshrka-alaama-llsnaaat-alanshayya",
+  "title": "الشركة العامة للصناعات الانشائية",
+  "site": "https://seci.industry.gov.iq/",
+  "pages": 0,
+  "phones": [],
+  "emails": [],
+  "candidates": []
+ },
+ {
+  "ministry": "ministry-of-industry-and-minerals",
+  "directorate": "alshrka-alaama-llasmda-alshmalya",
+  "title": "الشركة العامة للاسمدة الشمالية",
+  "site": "https://northasm.industry.gov.iq/",
+  "pages": 0,
+  "phones": [],
+  "emails": [],
+  "candidates": []
+ },
+ {
+  "ministry": "ministry-of-industry-and-minerals",
+  "directorate": "alshrka-alaama-llsnaaat-alfwladhya",
+  "title": "الشركة العامة للصناعات الفولاذية",
+  "site": "https://scosi.industry.gov.iq/",
+  "pages": 10,
+  "phones": [
+   "07703989883"
+  ],
+  "emails": [
+   "scosi.comp@industry.gov.iq"
+  ],
+  "candidates": [
+   {
+    "name": "مصانع الشركة",
+    "page": "https://scosi.industry.gov.iq/page/73/%D9%85%D8%B5%D8%A7%D9%86%D8%B9-%D8%A7%D9%84%D8%B4%D8%B1%D9%83%D8%A9",
+    "via": "link",
+    "source": "https://scosi.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع الهياكل الحديدية",
+    "page": "https://scosi.industry.gov.iq/page/72/%D9%85%D8%B5%D9%86%D8%B9-%D8%A7%D9%84%D9%87%D9%8A%D8%A7%D9%83%D9%84-%D8%A7%D9%84%D8%AD%D8%AF%D9%8A%D8%AF%D9%8A%D8%A9",
+    "via": "link",
+    "source": "https://scosi.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع الكرينات الجسرية والابراج والغلونة",
+    "page": "https://scosi.industry.gov.iq/page/75/%D9%85%D8%B5%D9%86%D8%B9-%D8%A7%D9%84%D9%83%D8%B1%D9%8A%D9%86%D8%A7%D8%AA-%D8%A7%D9%84%D8%AC%D8%B3%D8%B1%D9%8A%D8%A9-%D9%88%D8%A7%D9%84%D8%A7%D8%A8%D8%B1%D8%A7%D8%AC-%D9%88%D8%A7%D9%84%D8%BA%D9%84%D9%88%D9%86%D8%A9",
+    "via": "link",
+    "source": "https://scosi.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع السباكة والطرق",
+    "page": "https://scosi.industry.gov.iq/page/76/%D9%85%D8%B5%D9%86%D8%B9-%D8%A7%D9%84%D8%B3%D8%A8%D8%A7%D9%83%D8%A9-%D9%88%D8%A7%D9%84%D8%B7%D8%B1%D9%82",
+    "via": "link",
+    "source": "https://scosi.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع الخدمات المركزية",
+    "page": "https://scosi.industry.gov.iq/page/77/%D9%85%D8%B5%D9%86%D8%B9-%D8%A7%D9%84%D8%AE%D8%AF%D9%85%D8%A7%D8%AA-%D8%A7%D9%84%D9%85%D8%B1%D9%83%D8%B2%D9%8A%D8%A9",
+    "via": "link",
+    "source": "https://scosi.industry.gov.iq/"
+   },
+   {
+    "name": "دائرة السيطرة النوعية المركزية",
+    "page": "https://scosi.industry.gov.iq/page/79/%D8%AF%D8%A7%D8%A6%D8%B1%D8%A9-%D8%A7%D9%84%D8%B3%D9%8A%D8%B7%D8%B1%D8%A9-%D8%A7%D9%84%D9%86%D9%88%D8%B9%D9%8A%D8%A9-%D8%A7%D9%84%D9%85%D8%B1%D9%83%D8%B2%D9%8A%D8%A9",
+    "via": "link",
+    "source": "https://scosi.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع ذو الفقار للتشغيل الميكانيكي",
+    "page": "https://scosi.industry.gov.iq/page/80/%D9%85%D8%B5%D9%86%D8%B9-%D8%B0%D9%88-%D8%A7%D9%84%D9%81%D9%82%D8%A7%D8%B1-%D9%84%D9%84%D8%AA%D8%B4%D8%BA%D9%8A%D9%84-%D8%A7%D9%84%D9%85%D9%8A%D9%83%D8%A7%D9%86%D9%8A%D9%83%D9%8A",
+    "via": "link",
+    "source": "https://scosi.industry.gov.iq/"
+   }
+  ]
+ },
+ {
+  "ministry": "ministry-of-industry-and-minerals",
+  "directorate": "alshrka-alaama-llsnaaat-altadynya",
+  "title": "الشركة العامة للصناعات التعدينية",
+  "site": "https://altadinea.industry.gov.iq/",
+  "pages": 2,
+  "phones": [],
+  "emails": [],
+  "candidates": [
+   {
+    "name": "معمل المنتجات الاسفلتية",
+    "page": "https://altadinea.industry.gov.iq/?page=4",
+    "via": "link",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع المنتجات الانشائية",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "معمل اللباد",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "معمل المضافات الخرسانية",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "معمل قير الاكساء المطور",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع الرتنجات الصناعية",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "معمل هيدروليك تن",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "معمل اسمدة العناصر الصغرى",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "معمل معالجات المياه",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "معمل انتاج النتروجين المسال",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع التعدين",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "معمل الطحن فائق النعومة",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "معمل انتاج الالمنيوم",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع الثغر / محافظة البصرة",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "معمل المحاليل الملحية",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "معمل اللباد البوليمري ( آيزو كام )",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع الرماح / محافظة نينوى",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع الاصباغ والمطبعة",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع الصوف الصخري",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "معمل اسفلتيات حياة الشمال",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع الراتنجات الصناعية",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "مقر الشركة العامة للصناعات التعدينية",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع الثغر / البصرة",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "مصنع الرماح / نينوى",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "معمل انتاج الاسفلتيات",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "معمل الاسمدة / معاونية مصانع ابن سينا",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   },
+   {
+    "name": "معمل انتاج زيوت الازل",
+    "via": "text",
+    "source": "https://altadinea.industry.gov.iq/"
+   }
+  ]
+ },
+ {
+  "ministry": "ministry-of-industry-and-minerals",
+  "directorate": "alshrka-alaama-llsnaaat-alhydrwlykya",
+  "title": "الشركة العامة للصناعات الهيدروليكية",
+  "site": "https://hisc.industry.gov.iq/",
+  "pages": 10,
+  "phones": [
+   "+9647729963111"
+  ],
+  "emails": [
+   "hisc.comp@industry.gov.iq"
+  ],
+  "candidates": [
+   {
+    "name": "هيئة النزاهة تعقد ندوة لتعزيز الشفافية ومكافحة الفساد في الصناعات الهيدروليكية",
+    "via": "text",
+    "source": "https://hisc.industry.gov.iq/"
+   }
+  ]
+ },
+ {
+  "ministry": "ministry-of-industry-and-minerals",
+  "directorate": "alshrka-alaama-lmadat-alatsalat-walqdra",
+  "title": "الشركة العامة لمعدات الاتصالات والقدرة",
+  "site": "https://gccep.industry.gov.iq/",
+  "pages": 0,
+  "phones": [],
+  "emails": [],
+  "candidates": []
+ },
+ {
+  "ministry": "ministry-of-industry-and-minerals",
+  "directorate": "general-directorate-of-industrial-development",
+  "title": "المديرية العامة للتنمية الصناعية",
+  "site": "https://gdid.industry.gov.iq/",
+  "pages": 0,
+  "phones": [],
+  "emails": [],
+  "candidates": []
+ },
+ {
+  "ministry": "ministry-of-industry-and-minerals",
+  "directorate": null,
+  "title": "وزارة الصناعة والمعادن",
+  "site": "https://industry.gov.iq/",
+  "pages": 4,
+  "phones": [],
+  "emails": [],
+  "candidates": [
+   {
+    "name": "مركز الوزارة",
+    "page": "https://industry.gov.iq/?page=101",
+    "via": "link",
+    "source": "https://industry.gov.iq/"
+   },
+   {
+    "name": "مستودع المعلومات الصناعية العراقي",
+    "page": "http://87.98.241.163/",
+    "via": "link",
+    "source": "https://industry.gov.iq/"
+   }
+  ]
+ },
+ {
+  "ministry": "ministry-of-defence",
+  "directorate": null,
+  "title": "وزارة الدفاع",
+  "site": "https://mod.mil.iq/",
+  "pages": 4,
+  "phones": [
+   "07901117311",
+   "07901115965",
+   "07901945476",
+   "07743511690"
+  ],
+  "emails": [
+   "sgoffice@mod.mil.iq",
+   "hmr-dir@mod.mil.iq",
+   "mod_webmaster@mod.mil.iq",
+   "oa-dir-alshakawi@mod.mil.iq"
+  ],
+  "candidates": [
+   {
+    "name": "مديرية الاستخبارات العسكرية",
+    "page": "https://mod.mil.iq/?topic=73",
+    "via": "link",
+    "source": "https://mod.mil.iq/"
+   },
+   {
+    "name": "مديرية الحوانيت العسكرية",
+    "page": "https://mod.mil.iq/?topic=66",
+    "via": "link",
+    "source": "https://mod.mil.iq/"
+   },
+   {
+    "name": "مدرسة صنف الحاسبات",
+    "page": "https://mod.mil.iq/?topic=49",
+    "via": "link",
+    "source": "https://mod.mil.iq/"
+   },
+   {
+    "name": "جامعة الدفاع للدراسات العسكرية",
+    "page": "https://mod.mil.iq/?topic=59",
+    "via": "link",
+    "source": "https://mod.mil.iq/"
+   },
+   {
+    "name": "مركز التدريب والتطوير الوزاري",
+    "page": "https://mod.mil.iq/?topic=51",
+    "via": "link",
+    "source": "https://mod.mil.iq/"
+   },
+   {
+    "name": "مديرية حقوق الانسان",
+    "page": "https://mod.mil.iq/?topic=48",
+    "via": "link",
+    "source": "https://mod.mil.iq/"
+   },
+   {
+    "name": "دائرة التقاعد العسكري",
+    "page": "https://mod.mil.iq/?topic=60",
+    "via": "link",
+    "source": "https://mod.mil.iq/"
+   },
+   {
+    "name": "مديرية الامور الطبية",
+    "page": "https://mod.mil.iq/?topic=55",
+    "via": "link",
+    "source": "https://mod.mil.iq/"
+   },
+   {
+    "name": "مركز القيم والمبادئ العسكرية",
+    "page": "https://mod.mil.iq/?topic=53",
+    "via": "link",
+    "source": "https://mod.mil.iq/"
+   },
+   {
+    "name": "مدرسة القوات الخاصة",
+    "page": "https://mod.mil.iq/?topic=50",
+    "via": "link",
+    "source": "https://mod.mil.iq/"
+   },
+   {
+    "name": "مركز الدراسات والبحوث الاستراتيجية",
+    "page": "https://mod.mil.iq/?topic=52",
+    "via": "link",
+    "source": "https://mod.mil.iq/"
+   },
+   {
+    "name": "مديرية الإعلام والتوجيه المعنوي تستقبل المفتش العسكري ولجان التفتيش",
+    "page": "https://mod.mil.iq/?article=10148",
+    "via": "link",
+    "source": "https://mod.mil.iq/"
+   },
+   {
+    "name": "دائرة الادعاء العام العسكري تنظم ورشة تعريفية في الدائرة القانونية",
+    "page": "https://mod.mil.iq/?article=10285",
+    "via": "link",
+    "source": "https://mod.mil.iq/"
+   },
+   {
+    "name": "مدرسة الإعلام والتوجيه المعنوي تقيم محاضرة عن إعداد وتنفيذ الأخبار",
+    "page": "https://mod.mil.iq/?article=10265",
+    "via": "link",
+    "source": "https://mod.mil.iq/"
+   },
+   {
+    "name": "مديرية المساحة العسكرية",
+    "via": "text",
+    "source": "https://mod.mil.iq/"
+   },
+   {
+    "name": "دائرة الإدعاء العام العسكري",
+    "via": "text",
+    "source": "https://mod.mil.iq/"
+   },
+   {
+    "name": "أكاديمية الخليج العربي للدراسات البحرية",
+    "via": "text",
+    "source": "https://mod.mil.iq/"
+   },
+   {
+    "name": "هيئة النزاهة الاتحادية تعقد ورشة تثقيفية بالتعاون مع دائرة الادعاء العام العسكري في وزارة الدفاع",
+    "via": "text",
+    "source": "https://mod.mil.iq/"
+   },
+   {
+    "name": "هيئة النزاهة الاتحادية تعقد ورشة تثقيفية بالتعاون مع دائرة الادعاء العام العس...",
+    "via": "text",
+    "source": "https://mod.mil.iq/"
+   },
+   {
+    "name": "أكاديمية الخليج العربي للدراسات البحرية تنظم ورشة عمل بعنوان (تعزيز الوعي لحم...",
+    "via": "text",
+    "source": "https://mod.mil.iq/"
+   },
+   {
+    "name": "مديرية الاستخبارات العسكرية تطيح بأربعة من تجار ومروجي المخدرات في ميسان",
+    "via": "text",
+    "source": "https://mod.mil.iq/"
+   },
+   {
+    "name": "دائرة الإدعاء العام العسكري &bull; انجازات دائرة الادعاء العام العسكري لعام 2025",
+    "via": "text",
+    "source": "https://mod.mil.iq/?topic"
+   },
+   {
+    "name": "مديرية الحوانيت العسكرية &bull; مدير الحوانيت العسكرية يزور معرض حوانيت البصرة",
+    "via": "text",
+    "source": "https://mod.mil.iq/?topic"
+   },
+   {
+    "name": "دائرة التقاعد العسكري &bull; رئيس دائرة التقاعد العسكري يتفقد مديرية تقاعد المراتب",
+    "via": "text",
+    "source": "https://mod.mil.iq/?topic"
+   },
+   {
+    "name": "جامعة الدفاع للدراسات العسكرية &bull; رئيس جامعة الدفاع للدراسات العسكرية يستقبل أمين السر العام لوزارة الدفاع",
+    "via": "text",
+    "source": "https://mod.mil.iq/?topic"
+   },
+   {
+    "name": "مديرية حقوق الانسان &bull; اختتام دورة القانون الدولي الإنساني رقم (8)",
+    "via": "text",
+    "source": "https://mod.mil.iq/?topic"
+   }
+  ]
+ }
+]

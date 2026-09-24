@@ -131,17 +131,16 @@ export default function ContactForm({ labels }: { labels: Labels }) {
         />
       </Field>
 
-      {/* Honeypot: clipped rather than `display:none`, so a bot reading the DOM
-          still finds it, and explicitly hidden from assistive technology, so a
-          screen-reader user never meets it.
+      {/* Honeypot: off-screen rather than display:none, and explicitly hidden
+          from assistive technology, so a screen-reader user never meets it.
 
-          Not the usual `-left-[9999px]`: pushing an element outside the page
-          only fails to create scrollable space on the *start* side, which is
-          the left in English and the right in Arabic and Kurdish. In RTL it
-          left the contact page 10,000 px wide, so a visitor could swipe
-          sideways into nothing. `sr-only` clips instead of moving, which is
-          the same in both directions. */}
-      <div aria-hidden="true" className="sr-only">
+          The offset must be logical, not `-left-`. Scrollable overflow only
+          ever extends towards the end edge, so a physical `left: -9999px` is
+          harmless in English and catastrophic in Arabic and Kurdish, where
+          left *is* the end: the contact page grew a 10,000px horizontal
+          scroll. `-start-` always points at the start edge, which is never
+          scrollable, so it is inert in all three languages. */}
+      <div aria-hidden="true" className="absolute -start-[9999px]">
         <label htmlFor="website">Website</label>
         <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
       </div>

@@ -85,6 +85,17 @@ function ScalarInput({
           className={cn(shared.className, 'font-mono text-xs')}
         />
       );
+    case 'json':
+      return (
+        <textarea
+          {...shared}
+          dir="ltr"
+          rows={9}
+          value={text}
+          onChange={(e) => onChange(e.target.value)}
+          className={cn(shared.className, 'font-mono text-xs')}
+        />
+      );
     case 'bool':
       return (
         <label className="inline-flex items-center gap-2">
@@ -173,7 +184,16 @@ function ScalarInput({
     }
     case 'file':
       // File inputs cannot be controlled; they are read straight off the FormData.
-      return <input id={name} name={name} type="file" accept={field.accept} className="text-sm" />;
+      return (
+        <input
+          id={name}
+          name={name}
+          type="file"
+          accept={field.accept}
+          multiple={field.multiple}
+          className="text-sm"
+        />
+      );
     default:
       return (
         <input {...shared} type="text" value={text} onChange={(e) => onChange(e.target.value)} />
