@@ -239,7 +239,8 @@
     "openInMaps": "فتح في Waze",
     "contact": "الاتصال",
     "buildingPhoto": "صورة مبنى {name}",
-    "closePhoto": "اغلاق الصورة"
+    "closePhoto": "اغلاق الصورة",
+    "mapTitle": "خريطة تبين موقع هذه الدائرة"
   },
   "faq": {
     "title": "الأسئلة الشائعة",

@@ -239,7 +239,8 @@
     "openInMaps": "Open in Waze",
     "contact": "Contact",
     "buildingPhoto": "Photo of the {name} building",
-    "closePhoto": "Close the photo"
+    "closePhoto": "Close the photo",
+    "mapTitle": "Map showing where this office is"
   },
   "faq": {
     "title": "Frequently asked questions",

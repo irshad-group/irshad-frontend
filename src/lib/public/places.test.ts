@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { DirectorateBranchesRecord, ProvincesRecord } from '@/types/pb';
-import { groupBranchesByProvince, mapsLink, type BranchWithProvince } from './places';
+import { groupBranchesByProvince, mapsLink, wazeEmbedUrl, type BranchWithProvince } from './places';
 
 describe('mapsLink', () => {
   it('builds a Waze navigation link for valid coordinates', () => {
@@ -73,6 +73,38 @@ function branch(id: string, prov?: ProvincesRecord): BranchWithProvince {
     ...(prov ? { province: prov.id, expand: { province: prov } } : {}),
   } as unknown as DirectorateBranchesRecord as BranchWithProvince;
 }
+
+describe('wazeEmbedUrl', () => {
+  it('frames the Waze live map with a pin on the office', () => {
+    expect(wazeEmbedUrl(33.3613665, 44.3374333, 'en')).toBe(
+      'https://embed.waze.com/iframe?zoom=16&lat=33.3613665&lon=44.3374333&ct=livemap&pin=1&lang=en',
+    );
+  });
+
+  it("speaks the page's language in Waze's own controls", () => {
+    expect(wazeEmbedUrl(33.3, 44.3, 'ar')).toContain('&lang=ar');
+  });
+
+  it('gives Kurdish readers Arabic, because Waze answers Kurdish in English', () => {
+    expect(wazeEmbedUrl(33.3, 44.3, 'ku')).toContain('&lang=ar');
+  });
+
+  it("shares the link's coordinate rules, so the two never disagree", () => {
+    const cases: Array<[number | undefined | null, number | undefined | null]> = [
+      [undefined, 44.3],
+      [33.3, null],
+      [0, 0],
+      [-91, 0],
+      [0, 181],
+      [Number.NaN, 44],
+    ];
+    for (const [lat, lon] of cases) {
+      expect(wazeEmbedUrl(lat, lon, 'en')).toBeNull();
+      expect(mapsLink(lat, lon)).toBeNull();
+    }
+    expect(wazeEmbedUrl(0, 44.3661, 'en')).not.toBeNull();
+  });
+});
 
 describe('groupBranchesByProvince', () => {
   const baghdad = province('baghdad', 1);

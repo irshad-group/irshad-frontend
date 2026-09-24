@@ -167,6 +167,13 @@ try {
     );
     await page.goto(`${BASE}/${locale}`, { waitUntil: 'domcontentloaded' });
 
+    // The home page keeps its own map of the provinces; only office pages
+    // frame Waze.
+    check(
+      `${locale}: the home page does not frame Waze`,
+      (await page.locator('iframe[src*="embed.waze.com"]').count()) === 0,
+    );
+
     // The leading edge must follow the writing direction.
     const box = await skipLink.evaluate((el) => {
       const cs = getComputedStyle(el);
@@ -589,8 +596,54 @@ try {
       (await page.locator('main a[href*="/procedures/"]').count()) > 0,
     );
 
-    // Locations hand off to the visitor's own maps app, never an embed.
-    check(`${locale}: no third-party map iframe`, (await page.locator('iframe').count()) === 0);
+    // The office's own location is the Waze live map. Asserted on a directorate
+    // known to have coordinates, so the checks cannot pass by finding no map.
+    const retiredTiles = [];
+    const watchTiles = (request) => {
+      if (request.url().includes('openfreemap.org')) retiredTiles.push(request.url());
+    };
+    page.on('request', watchTiles);
+    await page.goto(`${BASE}/${locale}/directorates/general-directorate-of-passports`, {
+      waitUntil: 'load',
+    });
+    const officeMap = page.locator('main iframe[src^="https://embed.waze.com/"]');
+    check(`${locale}: the office is shown on one Waze map`, (await officeMap.count()) === 1);
+    const frame = await officeMap.first().evaluate((f) => ({
+      src: f.getAttribute('src') ?? '',
+      loading: f.getAttribute('loading'),
+      referrer: f.getAttribute('referrerpolicy'),
+      sandbox: f.getAttribute('sandbox') ?? '',
+      title: (f.getAttribute('title') ?? '').trim(),
+    }));
+    const mapLang = new URL(frame.src).searchParams.get('lang');
+    // Waze has no Kurdish and answers `ckb` in English, so Kurdish gets Arabic.
+    check(
+      `${locale}: the map's own controls follow the page language`,
+      mapLang === (locale === 'en' ? 'en' : 'ar'),
+      `lang=${mapLang}`,
+    );
+    check(`${locale}: the map loads only once it is near the viewport`, frame.loading === 'lazy');
+    check(`${locale}: the map is not told which page it sits on`, frame.referrer === 'no-referrer');
+    check(
+      `${locale}: the map can open Waze but cannot navigate this page`,
+      frame.sandbox.includes('allow-scripts') &&
+        frame.sandbox.includes('allow-popups') &&
+        !frame.sandbox.includes('allow-top-navigation'),
+      frame.sandbox,
+    );
+    check(`${locale}: the map has an accessible name`, frame.title.length > 0);
+    // Only the office itself gets a map; its provincial branches keep a plain
+    // link, so a directorate with sixty offices does not frame sixty maps.
+    check(`${locale}: branch cards do not each frame a map`, (await page.locator('main iframe').count()) === 1);
+    check(
+      `${locale}: office pages no longer fetch the retired map tiles`,
+      retiredTiles.length === 0,
+      `${retiredTiles.length} OpenFreeMap requests`,
+    );
+    page.off('request', watchTiles);
+
+    // Directions to the office — the part that still works when the frame does
+    // not — and the plain links on each branch.
     const mapLinks = page.locator('main a[href*="waze.com/ul"]');
     check(`${locale}: locations offer a navigate-in-Waze link`, (await mapLinks.count()) > 0);
     check(
@@ -802,6 +855,17 @@ try {
   const page = await noJs.newPage();
   await page.goto(`${BASE}/ar`, { waitUntil: 'domcontentloaded' });
   check('no-js: menu still renders', (await page.locator('header nav ul > li').count()) > 0);
+
+  // With scripts off the Waze frame is an empty box, so the directions beneath
+  // it are what a reader actually has. They are a plain link and must be there.
+  await page.goto(`${BASE}/ar/directorates/general-directorate-of-passports`, {
+    waitUntil: 'domcontentloaded',
+  });
+  check(
+    'no-js: an office still offers directions to it',
+    (await page.locator('main a[href^="https://www.waze.com/ul"]').count()) > 0,
+  );
+  await page.goto(`${BASE}/ar`, { waitUntil: 'domcontentloaded' });
   check('no-js: skip link present', (await page.locator('a.skip-link').count()) === 1);
   // Was keyed on the contact email, which is optional — this check is about the
   // footer surviving without JavaScript, not about a particular setting being set.

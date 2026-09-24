@@ -239,7 +239,8 @@
     "openInMaps": "کردنەوە لە Waze",
     "contact": "پەیوەندی",
     "buildingPhoto": "وێنەی باڵەخانەی {name}",
-    "closePhoto": "داخستنی وێنە"
+    "closePhoto": "داخستنی وێنە",
+    "mapTitle": "نەخشەی شوێنی ئەم نووسینگەیە"
   },
   "faq": {
     "title": "پرسیارە باوەکان",
