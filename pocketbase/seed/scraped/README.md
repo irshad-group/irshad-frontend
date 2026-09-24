@@ -165,7 +165,19 @@ node merge-ministry-sites.mjs            # folds both into the dataset (adds onl
 # and two repairs the pass above exposed
 node drop-shared-phones.mjs              # withdraw a number claimed by two ministries
 node fix-prose-titles.mjs                # three titles that were sentences, not names
+
+# last: reviewed English titles, and the rows that are not institutions
+node apply-title-overrides.mjs           # must run after enrich-names, which it corrects
 ```
+
+`apply-title-overrides.mjs` has to stay last. `enrich-names.mjs` takes `title_en`
+from a Google Maps place match, which returns the label of whichever place matched
+rather than a translation — eighty directorates came out named after a different
+body — and the importer upserts `title_en` on every run, so a correction made only
+in PocketBase lasts until the next import. The reviewed names and the list of
+non-institution rows live in `../directorate-titles-en.json` and
+`../directorate-titles-audit.json`, shared with the one-off PocketBase repair so the
+two cannot disagree.
 
 The chain is deterministic and every network response is cached, so re-running it
 reproduces the same file.

@@ -221,7 +221,8 @@
     "emptyTitle": "No directorates found",
     "emptyBody": "Nothing has been published in this section.",
     "emptyInProvince": "No directorate has an office in {province} yet.",
-    "clearFilter": "Show all directorates"
+    "clearFilter": "Show all directorates",
+    "pagination": "Pagination"
   },
   "directorate": {
     "procedures": "Procedures handled here",
@@ -238,7 +239,8 @@
     "openInMaps": "Open in Waze",
     "contact": "Contact",
     "buildingPhoto": "Photo of the {name} building",
-    "closePhoto": "Close the photo"
+    "closePhoto": "Close the photo",
+    "mapTitle": "Map showing where this office is"
   },
   "faq": {
     "title": "Frequently asked questions",

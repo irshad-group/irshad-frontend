@@ -221,7 +221,8 @@
     "emptyTitle": "لا توجد مديريات",
     "emptyBody": "لم ينشر أي شيء في هذا القسم.",
     "emptyInProvince": "لا توجد مديرية لديها مكتب في {province} بعد.",
-    "clearFilter": "عرض كل المديريات"
+    "clearFilter": "عرض كل المديريات",
+    "pagination": "ترقيم الصفحات"
   },
   "directorate": {
     "procedures": "الإجراءات هنا",
@@ -238,7 +239,8 @@
     "openInMaps": "فتح في Waze",
     "contact": "الاتصال",
     "buildingPhoto": "صورة مبنى {name}",
-    "closePhoto": "اغلاق الصورة"
+    "closePhoto": "اغلاق الصورة",
+    "mapTitle": "خريطة تبين موقع هذه الدائرة"
   },
   "faq": {
     "title": "الأسئلة الشائعة",

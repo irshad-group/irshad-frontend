@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 import type { NavigationRecord } from '@/types/pb';
-import { buildNavTree } from './navigation';
+import { buildNavTree, containsCurrent, isCurrentEntry, type NavNode } from './navigation';
 
 function nav(overrides: Partial<NavigationRecord> & { id: string }): NavigationRecord {
   return {
@@ -128,5 +128,73 @@ describe('buildNavTree', () => {
     const drawer = buildNavTree(items, 'drawer');
     expect(drawer.map((n) => n.id)).toEqual(['d1']);
     expect(drawer[0]!.children.map((n) => n.id)).toEqual(['d2']);
+  });
+});
+
+describe('isCurrentEntry', () => {
+  it('matches the exact path', () => {
+    expect(isCurrentEntry('/procedures', '/procedures', '')).toBe(true);
+    expect(isCurrentEntry('/procedures', '/ministries', '')).toBe(false);
+  });
+
+  it('treats an empty endpoint as home, which matches only itself', () => {
+    expect(isCurrentEntry(undefined, '/', '')).toBe(true);
+    expect(isCurrentEntry('', '/', '')).toBe(true);
+    expect(isCurrentEntry('/', '/procedures', '')).toBe(false);
+  });
+
+  it('matches a descendant path, but not a sibling that merely shares a prefix', () => {
+    expect(isCurrentEntry('/procedures', '/procedures/renew-passport', '')).toBe(true);
+    expect(isCurrentEntry('/procedures', '/procedures-archive', '')).toBe(false);
+  });
+
+  it('ignores trailing slashes on either side', () => {
+    expect(isCurrentEntry('/procedures/', '/procedures', '')).toBe(true);
+    expect(isCurrentEntry('/procedures', '/procedures/', '')).toBe(true);
+    expect(isCurrentEntry('/', '/', '')).toBe(true);
+  });
+
+  it('requires every query parameter of the entry to be present', () => {
+    expect(isCurrentEntry('/ministries?krg=true', '/ministries', 'krg=true')).toBe(true);
+    expect(isCurrentEntry('/ministries?krg=true', '/ministries', new URLSearchParams('krg=true&page=2'))).toBe(true);
+    expect(isCurrentEntry('/ministries?krg=true', '/ministries', 'krg=false')).toBe(false);
+    expect(isCurrentEntry('/ministries?krg=true', '/ministries', '')).toBe(false);
+  });
+
+  it('does not let an entry with a query claim descendant paths', () => {
+    expect(isCurrentEntry('/procedures?featured=true', '/procedures/tags', 'featured=true')).toBe(false);
+  });
+
+  it('lets a section entry match a filtered view of itself', () => {
+    expect(isCurrentEntry('/ministries', '/ministries', 'krg=true')).toBe(true);
+  });
+});
+
+describe('containsCurrent', () => {
+  const tree = buildNavTree(
+    [
+      nav({ id: 'min', endpoint: '/ministries' }),
+      nav({ id: 'fed', endpoint: '/ministries?krg=false', parent: 'min' }),
+      nav({ id: 'krg', endpoint: '/ministries?krg=true', parent: 'min' }),
+      nav({ id: 'faq', endpoint: '/faq' }),
+    ],
+    'menu',
+  );
+
+  const [ministries, faq] = tree as [NavNode, NavNode];
+  const [federal, krg] = ministries.children as [NavNode, NavNode];
+
+  it('is true for the entry itself', () => {
+    expect(containsCurrent(faq, '/faq', '')).toBe(true);
+  });
+
+  it('is true when a child is current', () => {
+    expect(containsCurrent(ministries, '/ministries', 'krg=true')).toBe(true);
+    expect(containsCurrent(krg, '/ministries', 'krg=true')).toBe(true);
+    expect(containsCurrent(federal, '/ministries', 'krg=true')).toBe(false);
+  });
+
+  it('is false when nothing in the branch matches', () => {
+    expect(containsCurrent(ministries, '/faq', '')).toBe(false);
   });
 });

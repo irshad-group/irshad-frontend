@@ -1613,7 +1613,7 @@
       "slug": "dayra-alalaqat-walaalam",
       "ministry_slug": "ministry-of-interior",
       "title_ar": "دائرة العلاقات والاعلام",
-      "title_en": "Ministry of Interior Oprations",
+      "title_en": "Department of Relations and Media",
       "title_ku": null,
       "website": "https://moi.gov.iq/?page=37",
       "_website_source": "ministry-site",
@@ -1636,13 +1636,13 @@
         "distance_m": 81,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "alwkala-aladarya-walmalya",
       "ministry_slug": "ministry-of-interior",
       "title_ar": "الوكالة الادارية والمالية",
-      "title_en": null,
+      "title_en": "Administrative and Financial Undersecretariat",
       "title_ku": null,
       "website": "https://moi.gov.iq/?page=38",
       "_website_source": "ministry-site",
@@ -1659,13 +1659,14 @@
       "_verified": false,
       "_confidence": 0.33,
       "_source": "ministry-site",
-      "_maps_name": "وكالة الوزارة للشؤون الادارية و المالية"
+      "_maps_name": "وكالة الوزارة للشؤون الادارية و المالية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "mdyrya-altdryb-waltahyl",
       "ministry_slug": "ministry-of-interior",
       "title_ar": "مديرية التدريب والتأهيل",
-      "title_en": null,
+      "title_en": "Directorate of Training and Qualification",
       "title_ku": null,
       "website": "http://dotrq.iq/",
       "_website_source": "ministry-site",
@@ -1682,13 +1683,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "مديرية التدريب والتأهيل"
+      "_maps_name": "مديرية التدريب والتأهيل",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "mdyrya-albna-althtya",
       "ministry_slug": "ministry-of-interior",
       "title_ar": "مديرية البنى التحتية",
-      "title_en": null,
+      "title_en": "Directorate of Infrastructure",
       "title_ku": null,
       "website": "https://moi.gov.iq/?page=50",
       "_website_source": "ministry-site",
@@ -1705,13 +1707,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "مديرية البنى التحتية / المقر العام"
+      "_maps_name": "مديرية البنى التحتية / المقر العام",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "wkala-alwzara-lshwwn-alshrta",
       "ministry_slug": "ministry-of-interior",
       "title_ar": "وكالة الوزارة لشؤون الشرطة",
-      "title_en": null,
+      "title_en": "Ministry Undersecretariat for Police Affairs",
       "title_ku": null,
       "website": "https://moi.gov.iq/?page=39",
       "_website_source": "ministry-site",
@@ -1733,13 +1736,14 @@
         "id": "node/12293243621",
         "distance_m": 16,
         "name_similarity": 1
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "mdyrya-shrta-hmaya-alathar-waltrath",
       "ministry_slug": "ministry-of-interior",
       "title_ar": "مديرية شرطة حماية الاثار والتراث",
-      "title_en": "Baghdad Rusafa Police Directorate",
+      "title_en": "Directorate of Antiquities and Heritage Protection Police",
       "title_ku": null,
       "website": "https://moi.gov.iq/?page=51",
       "_website_source": "ministry-site",
@@ -1762,13 +1766,13 @@
         "distance_m": 71,
         "name_similarity": 0.4
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "mdyrya-aladaa-alaam",
       "ministry_slug": "ministry-of-interior",
       "title_ar": "مديرية الادعاء العام",
-      "title_en": "Supreme Judicial Council of Iraq",
+      "title_en": "Directorate of Public Prosecution",
       "title_ku": null,
       "website": "https://moi.gov.iq/?page=6275",
       "_website_source": "ministry-site",
@@ -1791,13 +1795,13 @@
         "distance_m": 33,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "mdyrya-alamn-alsybrany",
       "ministry_slug": "ministry-of-interior",
       "title_ar": "مديرية الامن السيبراني",
-      "title_en": null,
+      "title_en": "Directorate of Cyber Security",
       "title_ku": null,
       "website": "https://moi.gov.iq/?page=6295",
       "_website_source": "ministry-site",
@@ -1814,13 +1818,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "مديرية الأمن السيبراني - وزارة الداخلية"
+      "_maps_name": "مديرية الأمن السيبراني - وزارة الداخلية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "mdyrya-alaqwd",
       "ministry_slug": "ministry-of-interior",
       "title_ar": "مديرية العقود",
-      "title_en": null,
+      "title_en": "Directorate of Contracts",
       "title_ku": null,
       "website": "https://moi.gov.iq/?page=42",
       "_website_source": "ministry-site",
@@ -1842,13 +1847,14 @@
         "id": "node/6235729489",
         "distance_m": 211,
         "name_similarity": 0.5
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "mdyrya-shwwn-alshhda-waljrha",
       "ministry_slug": "ministry-of-interior",
       "title_ar": "مديرية شؤون الشهداء والجرحى",
-      "title_en": null,
+      "title_en": "Directorate of Martyrs and Wounded Affairs",
       "title_ku": null,
       "website": "https://moi.gov.iq/?page=43",
       "_website_source": "ministry-site",
@@ -1866,7 +1872,8 @@
       "_confidence": 1,
       "_source": "ministry-site",
       "_maps_name": "مديرية الشهداء والجرحى",
-      "_phone_withdrawn": "shared with 2 ministries; no evidence which owns it"
+      "_phone_withdrawn": "shared with 2 ministries; no evidence which owns it",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "mdyrya-amn-alafrad",
@@ -1896,7 +1903,7 @@
       "slug": "mdyrya-almkhdrat-walmwthrat-alaqlya",
       "ministry_slug": "ministry-of-interior",
       "title_ar": "مديرية المخدرات والمؤثرات العقلية",
-      "title_en": null,
+      "title_en": "Directorate of Narcotics and Psychotropic Substances",
       "title_ku": null,
       "website": "https://moi.gov.iq/?page=46",
       "_website_source": "ministry-site",
@@ -1913,13 +1920,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "مديرية شوؤن المخدرات والمؤثرات العقلية في الديوانية"
+      "_maps_name": "مديرية شوؤن المخدرات والمؤثرات العقلية في الديوانية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "mdyrya-hqwq-alinsan",
       "ministry_slug": "ministry-of-interior",
       "title_ar": "مديرية حقوق الإنسان",
-      "title_en": "Iraq High Commission for Human Rights",
+      "title_en": "Human Rights Directorate",
       "title_ku": null,
       "website": "https://moi.gov.iq/?page=45",
       "_website_source": "ministry-site",
@@ -1942,14 +1950,14 @@
         "distance_m": 15,
         "name_similarity": 0.67
       },
-      "_title_en_source": "place-match",
+      "_title_en_source": "reviewed translation (place match named another body)",
       "_phone_withdrawn": "shared with 2 ministries; no evidence which owns it"
     },
     {
       "slug": "mdyrya-shwwn-albtaqa-alwtnya",
       "ministry_slug": "ministry-of-interior",
       "title_ar": "مديرية شؤون البطاقة الوطنية",
-      "title_en": "Unified Card Center",
+      "title_en": "Directorate of National Card Affairs",
       "title_ku": null,
       "website": "http://www.nid-moi.gov.iq/",
       "_website_source": "ministry-site",
@@ -1967,13 +1975,13 @@
       "_confidence": 0.5,
       "_source": "ministry-site",
       "_maps_name": "مديرية البطاقة الموحدة / الكرخ و المنصور",
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "mdyrya-alashraf-waltqyym-lmhakm-qwa-alamn-aldakhly",
       "ministry_slug": "ministry-of-interior",
       "title_ar": "مديرية الاشراف والتقييم لمحاكم قوى الامن الداخلي",
-      "title_en": null,
+      "title_en": "Directorate of Supervision and Evaluation for Internal Security Forces Courts",
       "title_ku": null,
       "website": "https://moi.gov.iq/?page=6293",
       "_website_source": "ministry-site",
@@ -1990,13 +1998,14 @@
       "_verified": false,
       "_confidence": 0,
       "_source": "ministry-site",
-      "_maps_name": null
+      "_maps_name": null,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-alalaqat-walaalam-qsm-asdqa-aldakhlya",
       "ministry_slug": "ministry-of-interior",
       "title_ar": "دائرة العلاقات والاعلام قسم أصدقاء الداخلية",
-      "title_en": null,
+      "title_en": "Department of Relations and Media",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -2013,13 +2022,14 @@
       "_verified": true,
       "_confidence": 0.6,
       "_source": "ministry-site",
-      "_maps_name": "قسم العلاقات والاعلام"
+      "_maps_name": "قسم العلاقات والاعلام",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "mktb-alwzyr-mdyrya-aladaa-alaam",
       "ministry_slug": "ministry-of-interior",
       "title_ar": "مكتب الوزير مديرية الادعاء العام",
-      "title_en": null,
+      "title_en": "Directorate of Public Prosecution",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -2041,13 +2051,14 @@
         "id": "node/11147698205",
         "distance_m": 35,
         "name_similarity": 0
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "mdyrya-almrwr-alaama-khdma-altkyyl",
       "ministry_slug": "ministry-of-interior",
       "title_ar": "مديرية المرور العامة خدمة التكييل",
-      "title_en": null,
+      "title_en": "General Traffic Directorate",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -2064,13 +2075,14 @@
       "_verified": false,
       "_confidence": 0.33,
       "_source": "ministry-site",
-      "_maps_name": "مديرية المرور العامة"
+      "_maps_name": "مديرية المرور العامة",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alwkala-aladarya-walmalya-qsm-tqwym-alada-almwssy",
       "ministry_slug": "ministry-of-interior",
       "title_ar": "الوكالة الادارية والمالية قسم تقويم الأداء المؤسسي",
-      "title_en": null,
+      "title_en": "Administrative and Financial Undersecretariat",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -2087,13 +2099,14 @@
       "_verified": false,
       "_confidence": 0.43,
       "_source": "ministry-site",
-      "_maps_name": "الدائرة الادارية والمالية - الحشد الشعبي"
+      "_maps_name": "الدائرة الادارية والمالية - الحشد الشعبي",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "wkala-alwzara-lshwwn-alshrta-mdyrya-almrwr-alaama",
       "ministry_slug": "ministry-of-interior",
       "title_ar": "وكالة الوزارة لشؤون الشرطة مديرية المرور العامة",
-      "title_en": null,
+      "title_en": "General Traffic Directorate",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -2115,13 +2128,14 @@
         "id": "node/12293243621",
         "distance_m": 16,
         "name_similarity": 0.57
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "mdyrya-alastkhbarat-alaskrya",
       "ministry_slug": "ministry-of-defence",
       "title_ar": "مديرية الاستخبارات العسكرية",
-      "title_en": null,
+      "title_en": "Directorate of Military Intelligence",
       "title_ku": null,
       "website": "https://mod.mil.iq/?topic=73",
       "_website_source": "ministry-site",
@@ -2138,13 +2152,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "مديرية الاستخبارات العسكرية"
+      "_maps_name": "مديرية الاستخبارات العسكرية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "mdyrya-alhwanyt-alaskrya",
       "ministry_slug": "ministry-of-defence",
       "title_ar": "مديرية الحوانيت العسكرية",
-      "title_en": null,
+      "title_en": "Directorate of Military Stores",
       "title_ku": null,
       "website": "https://mod.mil.iq/?topic=66",
       "_website_source": "ministry-site",
@@ -2161,13 +2176,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "مديريه الحوانيت العسكرية"
+      "_maps_name": "مديريه الحوانيت العسكرية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "almdyrya-alaama-lshwwn-almharbyn",
       "ministry_slug": "ministry-of-defence",
       "title_ar": "المديرية العامة لشؤون المحاربين",
-      "title_en": null,
+      "title_en": "General Directorate of Veterans Affairs",
       "title_ku": null,
       "website": "https://mod.mil.iq/?topic=65",
       "_website_source": "ministry-site",
@@ -2184,13 +2200,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "المديرية العامة لشؤون المحاربين"
+      "_maps_name": "المديرية العامة لشؤون المحاربين",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "mdyrya-hqwq-alansan",
       "ministry_slug": "ministry-of-defence",
       "title_ar": "مديرية حقوق الانسان",
-      "title_en": "Iraq High Commission for Human Rights",
+      "title_en": "Human Rights Directorate",
       "title_ku": null,
       "website": "https://mod.mil.iq/?topic=48",
       "_website_source": "ministry-site",
@@ -2213,7 +2230,7 @@
         "distance_m": 15,
         "name_similarity": 0.67
       },
-      "_title_en_source": "place-match",
+      "_title_en_source": "reviewed translation (place match named another body)",
       "email": "hmr-dir@mod.mil.iq",
       "_contact_source": "https://mod.mil.iq/?page=2461"
     },
@@ -2287,7 +2304,7 @@
       "slug": "mdyrya-almsaha-alaskrya",
       "ministry_slug": "ministry-of-defence",
       "title_ar": "مديرية المساحة العسكرية",
-      "title_en": null,
+      "title_en": "Directorate of Military Survey",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -2309,13 +2326,14 @@
         "id": "node/9209064918",
         "distance_m": 141,
         "name_similarity": 1
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-alidaa-alaam-alaskry",
       "ministry_slug": "ministry-of-defence",
       "title_ar": "دائرة الإدعاء العام العسكري",
-      "title_en": "Supreme Judicial Council of Iraq",
+      "title_en": "Department of Military Public Prosecution",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -2338,13 +2356,13 @@
         "distance_m": 33,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "tasst-dayra-hqwq-alinsan-aam-1992",
       "ministry_slug": "ministry-of-foreign-affairs",
       "title_ar": "دائرة حقوق الإنسان",
-      "title_en": null,
+      "title_en": "Human Rights Department",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -2362,13 +2380,14 @@
       "_confidence": 0.4,
       "_source": "ministry-site",
       "_maps_name": "المفوضية العليا لحقوق الانسان في العراق",
-      "_title_repaired": "scraped text was a sentence or a doubled heading, not a name"
+      "_title_repaired": "scraped text was a sentence or a doubled heading, not a name",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alsndwq-altway-llamm-almthda-llshawb-alaslya",
       "ministry_slug": "ministry-of-foreign-affairs",
       "title_ar": "الصندوق الطوعي للأمم المتحدة للشعوب الاصلية.",
-      "title_en": null,
+      "title_en": "United Nations Voluntary Fund for Indigenous Peoples",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -2385,13 +2404,14 @@
       "_verified": false,
       "_confidence": 0,
       "_source": "ministry-site",
-      "_maps_name": null
+      "_maps_name": null,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "aldayra-alidarya-walmalya",
       "ministry_slug": "ministry-of-justice",
       "title_ar": "الدائرة الإدارية والمالية",
-      "title_en": null,
+      "title_en": "Administrative and Financial Department",
       "title_ku": null,
       "website": "https://hfd.gov.iq/",
       "_website_source": "place-match",
@@ -2408,13 +2428,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "الدائرة الادارية والمالية - الحشد الشعبي"
+      "_maps_name": "الدائرة الادارية والمالية - الحشد الشعبي",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-tsjyl-alaqary",
       "ministry_slug": "ministry-of-justice",
       "title_ar": "دائرة تسجيل العقاري",
-      "title_en": null,
+      "title_en": "Real Estate Registration Department",
       "title_ku": null,
       "website": "https://moj.gov.iq/tashkelat.7/",
       "_website_source": "place-match",
@@ -2431,7 +2452,8 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "وزارة العدل - مديرية التسجيل العقاري العامة - ملاحظية التسجيل العقاري في الكفل"
+      "_maps_name": "وزارة العدل - مديرية التسجيل العقاري العامة - ملاحظية التسجيل العقاري في الكفل",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-alislah-alaraqya",
@@ -2466,7 +2488,7 @@
       "slug": "dayra-islah-alahdath",
       "ministry_slug": "ministry-of-justice",
       "title_ar": "دائرة إصلاح الأحداث",
-      "title_en": null,
+      "title_en": "Juvenile Reform Department",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -2488,13 +2510,14 @@
         "id": "node/4170417792",
         "distance_m": 66,
         "name_similarity": 0.33
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-raaya-alqasryn",
       "ministry_slug": "ministry-of-justice",
       "title_ar": "دائرة رعاية القاصرين",
-      "title_en": "Care of minors circle ..alrsafh",
+      "title_en": "Department for the Care of Minors",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -2554,13 +2577,13 @@
         "name_similarity": 0.67,
         "opening_hours_raw": "Sa-We 08:00-14:00"
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "dayra-alalaqat-aladlya",
       "ministry_slug": "ministry-of-justice",
       "title_ar": "دائرة العلاقات العدلية",
-      "title_en": null,
+      "title_en": "Department of Judicial Relations",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -2577,13 +2600,14 @@
       "_verified": true,
       "_confidence": 0.5,
       "_source": "ministry-site",
-      "_maps_name": "دائرة العلاقات الثقافية العامة"
+      "_maps_name": "دائرة العلاقات الثقافية العامة",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-alktab-aladwl",
       "ministry_slug": "ministry-of-justice",
       "title_ar": "دائرة الكتاب العدول",
-      "title_en": null,
+      "title_en": "Notaries Public Department",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -2600,13 +2624,14 @@
       "_verified": false,
       "_confidence": 0,
       "_source": "ministry-site",
-      "_maps_name": null
+      "_maps_name": null,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-altnfydh",
       "ministry_slug": "ministry-of-justice",
       "title_ar": "دائرة التنفيذ",
-      "title_en": null,
+      "title_en": "Enforcement Department",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -2623,13 +2648,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "وزارة العدل - دائرة التنفيذ"
+      "_maps_name": "وزارة العدل - دائرة التنفيذ",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "aldayra-alqanwnya",
       "ministry_slug": "ministry-of-justice",
       "title_ar": "الدائرة القانونية",
-      "title_en": null,
+      "title_en": "Legal Department",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -2648,13 +2674,14 @@
       "_source": "ministry-site",
       "_maps_name": "المكتب القانوني للمحاماة والاستشارات القانونية",
       "email": null,
-      "_ambiguous_name": "name states an internal function only; no place lookup can identify it"
+      "_ambiguous_name": "name states an internal function only; no place lookup can identify it",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-altkhtyt-aladly",
       "ministry_slug": "ministry-of-justice",
       "title_ar": "دائرة التخطيط العدلي",
-      "title_en": "Urban and Regional Planning Institute",
+      "title_en": "Department of Judicial Planning",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -2677,13 +2704,13 @@
         "distance_m": 87,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "dayra-alwqaya-alaraqya",
       "ministry_slug": "ministry-of-justice",
       "title_ar": "دائرة الوقائع العراقية",
-      "title_en": null,
+      "title_en": "Iraqi Official Gazette Department",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -2700,13 +2727,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "دائرة الوقائع العراقية"
+      "_maps_name": "دائرة الوقائع العراقية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-hqwq-alinsan",
       "ministry_slug": "ministry-of-justice",
       "title_ar": "دائرة حقوق الإنسان",
-      "title_en": "Iraq High Commission for Human Rights",
+      "title_en": "Human Rights Department",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -2729,37 +2757,14 @@
         "distance_m": 15,
         "name_similarity": 0.67
       },
-      "_title_en_source": "place-match",
+      "_title_en_source": "reviewed translation (place match named another body)",
       "_phone_withdrawn": "shared with 2 ministries; no evidence which owns it"
-    },
-    {
-      "slug": "dayra-raaya-alqasryn-tkrm-adda-mn-almtfwqyn-alqasryn-fy-mhaf",
-      "ministry_slug": "ministry-of-justice",
-      "title_ar": "دائرة رعاية القاصرين تكرم عددا من المتفوقين القاصرين في محافظة المثنى",
-      "title_en": null,
-      "title_ku": null,
-      "website": "https://moj.gov.iq/view.10478/",
-      "_website_source": "ministry-site",
-      "phone": null,
-      "address_ar": null,
-      "gps_lat": null,
-      "gps_lon": null,
-      "photo_url": null,
-      "working_hours": null,
-      "place_id": null,
-      "maps_url": null,
-      "sort_order": 450,
-      "archived": false,
-      "_verified": false,
-      "_confidence": 0.29,
-      "_source": "ministry-site",
-      "_maps_name": "دائرة رعاية القاصرين/الرصافة"
     },
     {
       "slug": "alhyya-alaama-llmnatq-alhra",
       "ministry_slug": "ministry-of-finance",
       "title_ar": "الهيئة العامة للمناطق الحرة",
-      "title_en": null,
+      "title_en": "General Commission for Free Zones",
       "title_ku": null,
       "website": "https://mof.gov.iq/General-Authority-for-Free-Zones.aspx",
       "_website_source": "ministry-site",
@@ -2776,13 +2781,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "الهيئة العامة للمناطق الحره"
+      "_maps_name": "الهيئة العامة للمناطق الحره",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "aldayra-aladarya-walmalya",
       "ministry_slug": "ministry-of-finance",
       "title_ar": "الدائرة الادارية والمالية",
-      "title_en": null,
+      "title_en": "Administrative and Financial Department",
       "title_ku": null,
       "website": "https://mof.gov.iq/Administrative-and-Financial-Department.aspx",
       "_website_source": "ministry-site",
@@ -2799,13 +2805,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "الدائرة الادارية والمالية - الحشد الشعبي"
+      "_maps_name": "الدائرة الادارية والمالية - الحشد الشعبي",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "aldayra-alqanwnya-2",
       "ministry_slug": "ministry-of-finance",
       "title_ar": "الدائرة القانونية",
-      "title_en": null,
+      "title_en": "Legal Department",
       "title_ku": null,
       "website": "https://mof.gov.iq/LegalDepartment.aspx",
       "_website_source": "ministry-site",
@@ -2824,13 +2831,14 @@
       "_source": "ministry-site",
       "_maps_name": "المكتب القانوني للمحاماة والاستشارات القانونية",
       "email": null,
-      "_ambiguous_name": "name states an internal function only; no place lookup can identify it"
+      "_ambiguous_name": "name states an internal function only; no place lookup can identify it",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-almhasba",
       "ministry_slug": "ministry-of-finance",
       "title_ar": "دائرة المحاسبة",
-      "title_en": null,
+      "title_en": "Accounting Department",
       "title_ku": null,
       "website": "https://mof.gov.iq/Accounting-Service.aspx",
       "_website_source": "ministry-site",
@@ -2848,7 +2856,7 @@
       "_confidence": 1,
       "_source": "ministry-site",
       "_maps_name": "قسم المحاسبة",
-      "_title_en_source": null,
+      "_title_en_source": "reviewed translation",
       "email": null,
       "_ambiguous_name": "name states an internal function only; no place lookup can identify it"
     },
@@ -2856,7 +2864,7 @@
       "slug": "dayra-almwazna",
       "ministry_slug": "ministry-of-finance",
       "title_ar": "دائرة الموازنة",
-      "title_en": null,
+      "title_en": "Budget Department",
       "title_ku": null,
       "website": "https://mof.gov.iq/Budget-Department.aspx",
       "_website_source": "ministry-site",
@@ -2878,13 +2886,14 @@
         "id": "node/6566435988",
         "distance_m": 151,
         "name_similarity": 0.5
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "aldayra-alaqtsadya",
       "ministry_slug": "ministry-of-finance",
       "title_ar": "الدائرة الاقتصادية",
-      "title_en": "Baghdad Economic City",
+      "title_en": "Economic Department",
       "title_ku": null,
       "website": "https://mof.gov.iq/Economic-Department.aspx",
       "_website_source": "ministry-site",
@@ -2902,13 +2911,13 @@
       "_confidence": 1,
       "_source": "ministry-site",
       "_maps_name": "مدينة بغداد الاقتصادية",
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "dayra-aldyn-alaam",
       "ministry_slug": "ministry-of-finance",
       "title_ar": "دائرة الدين العام",
-      "title_en": null,
+      "title_en": "Public Debt Department",
       "title_ku": null,
       "website": "https://mof.gov.iq/Public-Debt-Department.aspx",
       "_website_source": "ministry-site",
@@ -2930,7 +2939,8 @@
         "source": "google-maps (retry)",
         "matched_name": "كلية أصول الدين الجامعة",
         "confidence": 1
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-tknwlwjya-almalwmat",
@@ -3002,7 +3012,7 @@
       "slug": "alsndwq-alaraqy-lltnmya-alkharjya",
       "ministry_slug": "ministry-of-finance",
       "title_ar": "الصندوق العراقي للتنمية الخارجية",
-      "title_en": null,
+      "title_en": "Iraqi Fund for External Development",
       "title_ku": null,
       "website": "https://mof.gov.iq/Iraqi-Fund-for-External-Development.aspx",
       "_website_source": "ministry-site",
@@ -3019,13 +3029,14 @@
       "_verified": false,
       "_confidence": 0.33,
       "_source": "ministry-site",
-      "_maps_name": "صندوق العراق للتنمية"
+      "_maps_name": "صندوق العراق للتنمية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-ltabya-wkhdmat-alghaz",
       "ministry_slug": "ministry-of-oil",
       "title_ar": "الشركة العامة لتعبئة وخدمات الغاز",
-      "title_en": "Gas Filling Company Babel Branch",
+      "title_en": "State Company for Gas Filling and Services",
       "title_ku": null,
       "website": "https://gfc.oil.gov.iq/",
       "_website_source": "ministry-site",
@@ -3048,14 +3059,14 @@
         "distance_m": 11,
         "name_similarity": 0.2
       },
-      "_title_en_source": "place-match",
+      "_title_en_source": "reviewed translation (place match named another body)",
       "email": "gfc_mde535@yahoo.com"
     },
     {
       "slug": "alshrka-alaama-llmadat-alhndsya-althqyla",
       "ministry_slug": "ministry-of-oil",
       "title_ar": "الشركة العامة للمعدات الهندسية الثقيلة",
-      "title_en": null,
+      "title_en": "State Company for Heavy Engineering Equipment",
       "title_ku": null,
       "website": "https://heesco.oil.gov.iq/",
       "_website_source": "ministry-site",
@@ -3072,93 +3083,14 @@
       "_verified": false,
       "_confidence": 0,
       "_source": "ministry-site",
-      "_maps_name": null
-    },
-    {
-      "slug": "dwayr-mrkz-alwzara",
-      "ministry_slug": "ministry-of-oil",
-      "title_ar": "دوائر مركز الوزارة",
-      "title_en": null,
-      "title_ku": null,
-      "website": null,
-      "_website_source": null,
-      "phone": null,
-      "address_ar": null,
-      "gps_lat": null,
-      "gps_lon": null,
-      "photo_url": null,
-      "working_hours": null,
-      "place_id": null,
-      "maps_url": null,
-      "sort_order": 620,
-      "archived": false,
-      "_verified": false,
-      "_confidence": 0.33,
-      "_source": "ministry-site",
-      "_maps_name": "مركز البحث والتطوير النفطي"
-    },
-    {
-      "slug": "dwayr-mqr-alwzara",
-      "ministry_slug": "ministry-of-electricity",
-      "title_ar": "دوائر مقر الوزارة",
-      "title_en": null,
-      "title_ku": null,
-      "website": "https://moelc.gov.iq/?page=41",
-      "_website_source": "ministry-site",
-      "phone": null,
-      "address_ar": "محطة وقود مقر الوزارة، بغداد، بغداد محافظة",
-      "gps_lat": 33.3331393,
-      "gps_lon": 44.4252737,
-      "photo_url": null,
-      "working_hours": null,
-      "place_id": "0x155783004249972f:0xc5ee34cf4137dd0b",
-      "maps_url": "https://www.google.com/maps/place/?q=place_id:0x155783004249972f:0xc5ee34cf4137dd0b",
-      "sort_order": 630,
-      "archived": false,
-      "_verified": true,
-      "_confidence": 0.5,
-      "_source": "ministry-site",
-      "_maps_name": "محطة وقود مقر الوزارة",
-      "_osm": {
-        "id": "node/12293243656",
-        "distance_m": 113,
-        "name_similarity": 0
-      }
-    },
-    {
-      "slug": "mdyr-mdyrya-alwqwd",
-      "ministry_slug": "ministry-of-electricity",
-      "title_ar": "مدير مديرية الوقود",
-      "title_en": null,
-      "title_ku": null,
-      "website": "https://moelc.gov.iq/?page=3275",
-      "_website_source": "ministry-site",
-      "phone": null,
-      "address_ar": "مديرية الشهداء والجرحى، بغداد، بغداد محافظة",
-      "gps_lat": 33.339779,
-      "gps_lon": 44.4290945,
-      "photo_url": null,
-      "working_hours": null,
-      "place_id": "0x155783751080e05f:0x49c0e1a7e321956",
-      "maps_url": "https://www.google.com/maps/place/?q=place_id:0x155783751080e05f:0x49c0e1a7e321956",
-      "sort_order": 640,
-      "archived": false,
-      "_verified": true,
-      "_confidence": 0.5,
-      "_source": "ministry-site",
-      "_maps_name": "مديرية الشهداء والجرحى",
-      "_osm": {
-        "id": "node/12293243620",
-        "distance_m": 244,
-        "name_similarity": 0.67
-      },
-      "_phone_withdrawn": "shared with 2 ministries; no evidence which owns it"
+      "_maps_name": null,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "mdyrya-alwqwd-qsm-alwqwd-alsayl",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "مديرية الوقود/قسم الوقود السائل",
-      "title_en": null,
+      "title_en": "Fuel Directorate — Liquid Fuel Section",
       "title_ku": null,
       "website": "https://moelc.gov.iq/?page=3281",
       "_website_source": "ministry-site",
@@ -3175,13 +3107,14 @@
       "_verified": false,
       "_confidence": 0,
       "_source": "ministry-site",
-      "_maps_name": null
+      "_maps_name": null,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "mdyrya-alwqwd-qsm-almkhtbrat",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "مديرية الوقود/قسم المختبرات",
-      "title_en": null,
+      "title_en": "Fuel Directorate — Laboratories Section",
       "title_ku": null,
       "website": "https://moelc.gov.iq/?page=3280",
       "_website_source": "ministry-site",
@@ -3198,13 +3131,14 @@
       "_verified": false,
       "_confidence": 0.33,
       "_source": "ministry-site",
-      "_maps_name": "الشركة العامة لنقل الطاقة الكهربائية المنطقة الوسطى قسم تنفيذ المشاريع"
+      "_maps_name": "الشركة العامة لنقل الطاقة الكهربائية المنطقة الوسطى قسم تنفيذ المشاريع",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "mdyrya-alwqwd-qsm-alzywt-wwqwd-alalyat",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "مديرية الوقود/ قسم الزيوت ووقود الاليات",
-      "title_en": null,
+      "title_en": "Fuel Directorate — Oils and Vehicle Fuel Section",
       "title_ku": null,
       "website": "https://moelc.gov.iq/?page=3279",
       "_website_source": "ministry-site",
@@ -3221,13 +3155,14 @@
       "_verified": false,
       "_confidence": 0,
       "_source": "ministry-site",
-      "_maps_name": null
+      "_maps_name": null,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "mdyrya-alwqwd-qsm-altjarya",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "مديرية الوقود/قسم التجارية",
-      "title_en": null,
+      "title_en": "Fuel Directorate — Commercial Section",
       "title_ku": null,
       "website": "https://moelc.gov.iq/?page=3278",
       "_website_source": "ministry-site",
@@ -3244,13 +3179,14 @@
       "_verified": false,
       "_confidence": 0,
       "_source": "ministry-site",
-      "_maps_name": null
+      "_maps_name": null,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "mdyrya-alwqwd-qsm-altkhtyt-walmtabaa",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "مديرية الوقود /قسم التخطيط والمتابعة",
-      "title_en": null,
+      "title_en": "Fuel Directorate — Planning and Follow-up Section",
       "title_ku": null,
       "website": "https://moelc.gov.iq/?page=3276",
       "_website_source": "ministry-site",
@@ -3309,13 +3245,14 @@
         "distance_m": 6,
         "name_similarity": 0.2,
         "opening_hours_raw": "Su-Th 14:00-08:00"
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "mdyrya-alwqwd-qsm-almnzwmat-waladadat",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "مديرية الوقود/ قسم المنظومات والعدادات",
-      "title_en": null,
+      "title_en": "Fuel Directorate — Systems and Meters Section",
       "title_ku": null,
       "website": "https://moelc.gov.iq/?page=3277",
       "_website_source": "ministry-site",
@@ -3332,62 +3269,14 @@
       "_verified": false,
       "_confidence": 0,
       "_source": "ministry-site",
-      "_maps_name": null
-    },
-    {
-      "slug": "mdyr-almdyrya",
-      "ministry_slug": "ministry-of-electricity",
-      "title_ar": "مدير المديرية",
-      "title_en": null,
-      "title_ku": null,
-      "website": "https://moelc.gov.iq/?page=3233",
-      "_website_source": "ministry-site",
-      "phone": null,
-      "address_ar": null,
-      "gps_lat": null,
-      "gps_lon": null,
-      "photo_url": null,
-      "working_hours": null,
-      "place_id": null,
-      "maps_url": null,
-      "sort_order": 710,
-      "archived": false,
-      "_verified": false,
-      "_confidence": 1,
-      "_source": "ministry-site",
-      "_maps_name": "مديرية المرور العامة",
-      "_title_en_source": null,
-      "email": null,
-      "_ambiguous_name": "name states an internal function only; no place lookup can identify it"
-    },
-    {
-      "slug": "tshkylat-alwzara-dwayr-mqr-alwzara",
-      "ministry_slug": "ministry-of-electricity",
-      "title_ar": "تشكيلات الوزارة دوائر مقر الوزارة",
-      "title_en": null,
-      "title_ku": null,
-      "website": null,
-      "_website_source": null,
-      "phone": null,
-      "address_ar": null,
-      "gps_lat": null,
-      "gps_lon": null,
-      "photo_url": null,
-      "working_hours": null,
-      "place_id": null,
-      "maps_url": null,
-      "sort_order": 720,
-      "archived": false,
-      "_verified": false,
-      "_confidence": 0.33,
-      "_source": "ministry-site",
-      "_maps_name": "محطة وقود مقر الوزارة"
+      "_maps_name": null,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "aldayra-alfnya-mdyra-mktb-almdyr-alaam",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "الدائرة الفنية مديرة مكتب المدير العام",
-      "title_en": null,
+      "title_en": "Technical Department",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -3405,7 +3294,7 @@
       "_confidence": 0.5,
       "_source": "ministry-site",
       "_maps_name": "المديرية الفنية - المديرية العامة للاستخبارات والامن",
-      "_title_en_source": null,
+      "_title_en_source": "reviewed translation",
       "email": null,
       "_ambiguous_name": "name states an internal function only; no place lookup can identify it"
     },
@@ -3413,7 +3302,7 @@
       "slug": "aldayra-alidarya-qsm-alshwwn-almalya",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "الدائرة الإدارية قسم الشؤون المالية",
-      "title_en": null,
+      "title_en": "Administrative Department — Financial Affairs Section",
       "title_ku": null,
       "website": "https://hfd.gov.iq/",
       "_website_source": "place-match",
@@ -3430,13 +3319,14 @@
       "_verified": true,
       "_confidence": 0.5,
       "_source": "ministry-site",
-      "_maps_name": "الدائرة الادارية والمالية - الحشد الشعبي"
+      "_maps_name": "الدائرة الادارية والمالية - الحشد الشعبي",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-altkhtyt-waldrasat-qsm-alidara",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "دائرة التخطيط والدراسات قسم الإدارة",
-      "title_en": null,
+      "title_en": "Department of Planning and Studies",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -3453,13 +3343,14 @@
       "_verified": false,
       "_confidence": 0.25,
       "_source": "ministry-site",
-      "_maps_name": "وزارة التجارة / دائرة التخطيط والمتابعة"
+      "_maps_name": "وزارة التجارة / دائرة التخطيط والمتابعة",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "aldayra-alqanwnya-mktb-almdyr-alaam",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "الدائرة القانونية مكتب المدير العام",
-      "title_en": null,
+      "title_en": "Legal Department",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -3478,13 +3369,14 @@
       "_source": "ministry-site",
       "_maps_name": "المكتب القانوني للمحاماة والاستشارات القانونية",
       "email": null,
-      "_ambiguous_name": "name states an internal function only; no place lookup can identify it"
+      "_ambiguous_name": "name states an internal function only; no place lookup can identify it",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "aldayra-alaqtsadya-qsm-alsyana-walshbkat",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "الدائرة الاقتصادية قسم الصيانة والشبكات",
-      "title_en": null,
+      "title_en": "Economic Department — Maintenance and Networks Section",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -3506,13 +3398,14 @@
         "source": "google-maps (retry)",
         "matched_name": "قسم الصيانة",
         "confidence": 0.5
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-alastthmarat-walaqwd-mdyr-mktb-almdyr-alaam",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "دائرة الاستثمارات والعقود مدير مكتب المدير العام",
-      "title_en": null,
+      "title_en": "Department of Investments and Contracts",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -3529,13 +3422,14 @@
       "_verified": false,
       "_confidence": 0,
       "_source": "ministry-site",
-      "_maps_name": null
+      "_maps_name": null,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "mdyrya-alrqaba-aldakhlya-waltdqyq-mdyr-almdyrya",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "مديرية الرقابة الداخلية والتدقيق مدير المديرية",
-      "title_en": "General Directorate of Internal Affairs and Security",
+      "title_en": "Directorate of Internal Oversight and Audit",
       "title_ku": null,
       "website": "https://www.facebook.com/Internal.affairs.officiall",
       "_website_source": "place-match",
@@ -3558,13 +3452,13 @@
         "distance_m": 82,
         "name_similarity": 0.33
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "dayra-altkhtyt-waldrasat",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "دائرة التخطيط والدراسات",
-      "title_en": "Ministry of Commerce / Ration card",
+      "title_en": "Department of Planning and Studies",
       "title_ku": null,
       "website": "https://moelc.gov.iq/?page=44",
       "_website_source": "ministry-site",
@@ -3587,13 +3481,13 @@
         "distance_m": 18,
         "name_similarity": 0.33
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "dayra-alastthmarat-walaqwd",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "دائرة الاستثمارات والعقود",
-      "title_en": null,
+      "title_en": "Department of Investments and Contracts",
       "title_ku": null,
       "website": "https://moelc.gov.iq/?page=47",
       "_website_source": "ministry-site",
@@ -3610,13 +3504,14 @@
       "_verified": false,
       "_confidence": 0,
       "_source": "ministry-site",
-      "_maps_name": null
+      "_maps_name": null,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "aldayra-alfnya",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "الدائرة الفنية",
-      "title_en": null,
+      "title_en": "Technical Department",
       "title_ku": null,
       "website": "https://moelc.gov.iq/?page=43",
       "_website_source": "ministry-site",
@@ -3635,13 +3530,14 @@
       "_source": "ministry-site",
       "_maps_name": "الدائرة الفنية",
       "email": null,
-      "_ambiguous_name": "name states an internal function only; no place lookup can identify it"
+      "_ambiguous_name": "name states an internal function only; no place lookup can identify it",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "aldayra-alqanwnya-3",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "الدائرة القانونية",
-      "title_en": null,
+      "title_en": "Legal Department",
       "title_ku": null,
       "website": "https://moelc.gov.iq/?page=42",
       "_website_source": "ministry-site",
@@ -3660,13 +3556,14 @@
       "_source": "ministry-site",
       "_maps_name": "المكتب القانوني للمحاماة والاستشارات القانونية",
       "email": null,
-      "_ambiguous_name": "name states an internal function only; no place lookup can identify it"
+      "_ambiguous_name": "name states an internal function only; no place lookup can identify it",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "aldayra-aladarya",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "الدائرة الادارية",
-      "title_en": null,
+      "title_en": "Administrative Department",
       "title_ku": null,
       "website": "https://moelc.gov.iq/?page=46",
       "_website_source": "ministry-site",
@@ -3685,13 +3582,14 @@
       "_source": "ministry-site",
       "_maps_name": "الدائرة الادارية والمالية - الحشد الشعبي",
       "email": null,
-      "_ambiguous_name": "name states an internal function only; no place lookup can identify it"
+      "_ambiguous_name": "name states an internal function only; no place lookup can identify it",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "aldayra-alaqtsadya-2",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "الدائرة الاقتصادية",
-      "title_en": "Baghdad Economic City",
+      "title_en": "Economic Department",
       "title_ku": null,
       "website": "https://moelc.gov.iq/?page=45",
       "_website_source": "ministry-site",
@@ -3709,13 +3607,13 @@
       "_confidence": 1,
       "_source": "ministry-site",
       "_maps_name": "مدينة بغداد الاقتصادية",
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "mdyrya-alwqwd",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "مديرية الوقود",
-      "title_en": null,
+      "title_en": "Fuel Directorate",
       "title_ku": null,
       "website": "https://moelc.gov.iq/?page=1480",
       "_website_source": "ministry-site",
@@ -3732,13 +3630,14 @@
       "_verified": false,
       "_confidence": 0,
       "_source": "ministry-site",
-      "_maps_name": null
+      "_maps_name": null,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "mdyrya-altdqyq-walrqaba-aldakhlya",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "مديرية التدقيق والرقابة الداخلية",
-      "title_en": null,
+      "title_en": "Directorate of Internal Audit and Oversight",
       "title_ku": null,
       "website": "https://moelc.gov.iq/?page=1704",
       "_website_source": "ministry-site",
@@ -3755,13 +3654,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "مديرية التدقيق والرقابة الداخلية"
+      "_maps_name": "مديرية التدقيق والرقابة الداخلية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-lantaj-altaqa-alkhrbayya-alshmal",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "الشركة العامة لانتاج الطاقة الكهربائية / الشمال",
-      "title_en": null,
+      "title_en": "State Company for Electricity Production — North",
       "title_ku": null,
       "website": "https://ngpe.moelc.gov.iq/",
       "_website_source": "ministry-site",
@@ -3783,13 +3683,14 @@
         "id": "node/6687709785",
         "distance_m": 7,
         "name_similarity": 0.67
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-lnql-altaqa-alkhrbayya-almntqa-alshmalya",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "الشركة العامة لنقل الطاقة الكهربائية - المنطقة الشمالية",
-      "title_en": "Directorate-General for the transfer of electric energy projects",
+      "title_en": "State Company for Electricity Transmission — North",
       "title_ku": null,
       "website": "https://ntr.moelc.gov.iq/index.php?lang=ar",
       "_website_source": "ministry-site",
@@ -3812,7 +3713,7 @@
         "distance_m": 142,
         "name_similarity": 0.86
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "dayra-altshghyl-walthkm",
@@ -3847,7 +3748,7 @@
       "slug": "alshrka-alaama-lantaj-altaqa-alkhrbayya-aljnwbya",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "الشركة العامة لأنتاج الطاقة الكهربائية/الجنوبية",
-      "title_en": null,
+      "title_en": "State Company for Electricity Production — South",
       "title_ku": null,
       "website": "https://sgpe.moelc.gov.iq/index.php?lang=ar",
       "_website_source": "ministry-site",
@@ -3869,13 +3770,14 @@
         "id": "node/6687709785",
         "distance_m": 7,
         "name_similarity": 0.67
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-lnql-altaqa-alkhrbayya-aljnwb",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "الشركة العامة لنقل الطاقة الكهربائية -الجنوب",
-      "title_en": "Directorate-General for the transfer of electric energy projects",
+      "title_en": "State Company for Electricity Transmission — South",
       "title_ku": null,
       "website": "https://str.moelc.gov.iq/index.php?lang=ar",
       "_website_source": "ministry-site",
@@ -3898,13 +3800,13 @@
         "distance_m": 142,
         "name_similarity": 0.83
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "alshrka-alaama-ltwzya-khrba-aljnwb",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "الشركة العامة لتوزيع كهرباء الجنوب",
-      "title_en": null,
+      "title_en": "State Company for Electricity Distribution — South",
       "title_ku": null,
       "website": "https://sed.moelc.gov.iq/",
       "_website_source": "ministry-site",
@@ -3926,13 +3828,14 @@
         "id": "way/982836325",
         "distance_m": 45,
         "name_similarity": 0
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-altdryb-wbhwth-altaqa",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "دائرة التدريب وبحوث الطاقة",
-      "title_en": null,
+      "title_en": "Department of Training and Energy Research",
       "title_ku": null,
       "website": "https://ter.moelc.gov.iq/index.php?lang=ar",
       "_website_source": "ministry-site",
@@ -3954,13 +3857,14 @@
         "id": "node/5149061324",
         "distance_m": 76,
         "name_similarity": 0.5
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-lantaj-altaqa-alkhrbayya-alwsta",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "الشركة العامة لانتاج الطاقة الكهربائية / الوسطى",
-      "title_en": null,
+      "title_en": "State Company for Electricity Production — Central",
       "title_ku": null,
       "website": "https://mgpe.moelc.gov.iq/index.php?lang=ar",
       "_website_source": "ministry-site",
@@ -3982,13 +3886,14 @@
         "id": "node/6687709785",
         "distance_m": 7,
         "name_similarity": 0.83
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-lnql-altaqa-alkhrbayya-alwsta",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "الشركة العامة لنقل الطاقة الكهربائية - الوسطى",
-      "title_en": "Directorate-General for the transfer of electric energy projects",
+      "title_en": "State Company for Electricity Transmission — Central",
       "title_ku": null,
       "website": "https://gcmr.moelc.gov.iq/index.php?lang=ar",
       "_website_source": "ministry-site",
@@ -4011,13 +3916,13 @@
         "distance_m": 142,
         "name_similarity": 1
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "alshrka-alaama-ltwzya-khrba-alwst",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "الشركة العامة لتوزيع كهرباء الوسط",
-      "title_en": null,
+      "title_en": "State Company for Electricity Distribution — Central",
       "title_ku": null,
       "website": "https://med.moelc.gov.iq/index.php?lang=ar",
       "_website_source": "ministry-site",
@@ -4039,13 +3944,14 @@
         "id": "way/982836325",
         "distance_m": 45,
         "name_similarity": 0
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-lfhs-wtahyl-almnzwmat-alkhrbayya",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "الشركة العامة لفحص وتأهيل المنظومات الكهربائية",
-      "title_en": "Ministry of Electricity(Power District)",
+      "title_en": "State Company for Testing and Rehabilitation of Electrical Systems",
       "title_ku": null,
       "website": "https://irc.moelc.gov.iq/index.php?lang=ar",
       "_website_source": "ministry-site",
@@ -4068,13 +3974,13 @@
         "distance_m": 41,
         "name_similarity": 0.67
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "alshrka-alaama-lantaj-altaqa-alkhrbayya-alfrat-alawst",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "الشركة العامة لانتاج الطاقة الكهربائية / الفرات الاوسط",
-      "title_en": null,
+      "title_en": "State Company for Electricity Production — Middle Euphrates",
       "title_ku": null,
       "website": "https://ufgpe.moelc.gov.iq/",
       "_website_source": "ministry-site",
@@ -4096,13 +4002,14 @@
         "id": "node/6687709785",
         "distance_m": 7,
         "name_similarity": 0.57
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-lnql-altaqa-alfrat-alawst",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "الشركة العامة لنقل الطاقة/الفرات الاوسط",
-      "title_en": "Directorate-General for the transfer of electric energy projects",
+      "title_en": "State Company for Electricity Transmission — Middle Euphrates",
       "title_ku": null,
       "website": "https://mftr.moelc.gov.iq/index.php?lang=ar",
       "_website_source": "ministry-site",
@@ -4125,13 +4032,13 @@
         "distance_m": 142,
         "name_similarity": 0.67
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "alshrka-alaama-ltwzya-khrba-alfrat-alawst",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "الشركة العامة لتوزيع كهرباء الفرات الاوسط",
-      "title_en": null,
+      "title_en": "State Company for Electricity Distribution — Middle Euphrates",
       "title_ku": null,
       "website": "https://mfd.moelc.gov.iq/",
       "_website_source": "ministry-site",
@@ -4153,7 +4060,8 @@
         "id": "way/982836325",
         "distance_m": 70,
         "name_similarity": 0
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-ltwzya-khrba-bghdad",
@@ -4185,33 +4093,10 @@
       "_title_en_source": "place-match"
     },
     {
-      "slug": "dwayr-wtshkylat-alwzara",
-      "ministry_slug": "ministry-of-construction-housing-municipalities-and-public-works",
-      "title_ar": "دوائر وتشكيلات الوزارة",
-      "title_en": null,
-      "title_ku": null,
-      "website": "https://moch.gov.iq/?page=7",
-      "_website_source": "ministry-site",
-      "phone": null,
-      "address_ar": null,
-      "gps_lat": null,
-      "gps_lon": null,
-      "photo_url": null,
-      "working_hours": null,
-      "place_id": null,
-      "maps_url": null,
-      "sort_order": 1040,
-      "archived": false,
-      "_verified": false,
-      "_confidence": 0,
-      "_source": "ministry-site",
-      "_maps_name": null
-    },
-    {
       "slug": "sndwq-alaskan-alaraqy",
       "ministry_slug": "ministry-of-construction-housing-municipalities-and-public-works",
       "title_ar": "صندوق الاسكان العراقي",
-      "title_en": "Ministry of Housing & Construction",
+      "title_en": "Iraqi Housing Fund",
       "title_ku": null,
       "website": "https://sandoq.moch.gov.iq/",
       "_website_source": "ministry-site",
@@ -4234,13 +4119,13 @@
         "distance_m": 2,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "dayra-alaskan",
       "ministry_slug": "ministry-of-construction-housing-municipalities-and-public-works",
       "title_ar": "دائرة الاسكان",
-      "title_en": "NCEC",
+      "title_en": "Housing Department",
       "title_ku": null,
       "website": "https://alaskan.moch.gov.iq/",
       "_website_source": "ministry-site",
@@ -4263,7 +4148,7 @@
         "distance_m": 117,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "dayra-almbany",
@@ -4293,7 +4178,7 @@
       "slug": "dayra-alaamar-alhndsy",
       "ministry_slug": "ministry-of-construction-housing-municipalities-and-public-works",
       "title_ar": "دائرة الاعمار الهندسي",
-      "title_en": "NCEC",
+      "title_en": "Department of Engineering Construction",
       "title_ku": null,
       "website": "https://alimar.moch.gov.iq/",
       "_website_source": "ministry-site",
@@ -4316,7 +4201,7 @@
         "distance_m": 117,
         "name_similarity": 0.33
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "dayra-alashghal-walsyana",
@@ -4388,7 +4273,7 @@
       "slug": "hyya-tnfydh-almdn-aljdyda",
       "ministry_slug": "ministry-of-construction-housing-municipalities-and-public-works",
       "title_ar": "هيئة تنفيذ المدن الجديدة",
-      "title_en": "Ministry of Municipalities and Public Works",
+      "title_en": "Authority for the Implementation of New Cities",
       "title_ku": null,
       "website": "https://ncia.moch.gov.iq/",
       "_website_source": "ministry-site",
@@ -4411,7 +4296,7 @@
         "distance_m": 45,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "dayra-bhwth-albna",
@@ -4470,7 +4355,7 @@
       "slug": "almdyrya-alaama-lltkhtyt-alamrany",
       "ministry_slug": "ministry-of-construction-housing-municipalities-and-public-works",
       "title_ar": "المديرية العامة للتخطيط العمراني",
-      "title_en": "Ministry of Municipalities and Public Works",
+      "title_en": "General Directorate of Urban Planning",
       "title_ku": null,
       "website": "https://gdup.moch.gov.iq/",
       "_website_source": "ministry-site",
@@ -4493,13 +4378,13 @@
         "distance_m": 34,
         "name_similarity": 0.25
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "almdyrya-alaama-llma",
       "ministry_slug": "ministry-of-construction-housing-municipalities-and-public-works",
       "title_ar": "المديرية العامة للماء",
-      "title_en": "Ministry of Municipalities and Public Works",
+      "title_en": "General Directorate of Water",
       "title_ku": null,
       "website": "https://gdw.moch.gov.iq/",
       "_website_source": "ministry-site",
@@ -4522,13 +4407,13 @@
         "distance_m": 50,
         "name_similarity": 0.33
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "almdyrya-alaama-llmjary",
       "ministry_slug": "ministry-of-construction-housing-municipalities-and-public-works",
       "title_ar": "المديرية العامة للمجاري",
-      "title_en": null,
+      "title_en": "General Directorate of Sewerage",
       "title_ku": null,
       "website": "http://gds.moch.gov.iq/",
       "_website_source": "ministry-site",
@@ -4550,13 +4435,14 @@
         "id": "node/6568534985",
         "distance_m": 82,
         "name_similarity": 0
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-llatsalat-walmalwmatya",
       "ministry_slug": "ministry-of-communications",
       "title_ar": "الشركة العامة للأتصالات والمعلوماتية",
-      "title_en": "Ministry of Communications",
+      "title_en": "State Company for Telecommunications and Informatics",
       "title_ku": null,
       "website": "https://itpc.gov.iq/",
       "_website_source": "ministry-site",
@@ -4579,13 +4465,13 @@
         "distance_m": 21,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "khdmatna-alshrka-alaama-llatsalat-walmalwmatya",
       "ministry_slug": "ministry-of-communications",
       "title_ar": "خدماتنا الشركة العامة للأتصالات والمعلوماتية",
-      "title_en": "Ministry of Communications",
+      "title_en": "State Company for Telecommunications and Informatics",
       "title_ku": null,
       "website": "http://moc.gov.iq/",
       "_website_source": "place-match",
@@ -4608,13 +4494,13 @@
         "distance_m": 21,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "shrkat-alwzara-alshrka-alaama-llatsalat-walmalwmatya",
       "ministry_slug": "ministry-of-communications",
       "title_ar": "شركات الوزارة الشركة العامة للأتصالات والمعلوماتية",
-      "title_en": null,
+      "title_en": "State Company for Telecommunications and Informatics",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -4631,13 +4517,14 @@
       "_verified": false,
       "_confidence": 0,
       "_source": "ministry-site",
-      "_maps_name": null
+      "_maps_name": null,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-altnsyq-alhkwmy-wshwwn-almwatnyn",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "دائرة التنسيق الحكومي وشؤون المواطنين",
-      "title_en": "Ministry of Housing & Construction",
+      "title_en": "Department of Government Coordination and Citizens Affairs",
       "title_ku": null,
       "website": "https://mot.gov.iq/?page=231",
       "_website_source": "ministry-site",
@@ -4660,13 +4547,13 @@
         "distance_m": 84,
         "name_similarity": 0.2
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "aldayra-aladarya-walmalya-2",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "الدائرة الادارية والمالية",
-      "title_en": null,
+      "title_en": "Administrative and Financial Department",
       "title_ku": null,
       "website": "https://mot.gov.iq/?page=173",
       "_website_source": "ministry-site",
@@ -4683,36 +4570,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "الدائرة الادارية والمالية - الحشد الشعبي"
-    },
-    {
-      "slug": "aqsam-aldayra",
-      "ministry_slug": "ministry-of-trade",
-      "title_ar": "اقسام الدائرة",
-      "title_en": null,
-      "title_ku": null,
-      "website": "https://mot.gov.iq/?page=272",
-      "_website_source": "ministry-site",
-      "phone": null,
-      "address_ar": null,
-      "gps_lat": null,
-      "gps_lon": null,
-      "photo_url": null,
-      "working_hours": null,
-      "place_id": null,
-      "maps_url": null,
-      "sort_order": 1230,
-      "archived": false,
-      "_verified": false,
-      "_confidence": 0,
-      "_source": "ministry-site",
-      "_maps_name": null
+      "_maps_name": "الدائرة الادارية والمالية - الحشد الشعبي",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-altkhtyt-walmtabaa",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "دائرة التخطيط والمتابعة",
-      "title_en": null,
+      "title_en": "Department of Planning and Follow-up",
       "title_ku": null,
       "website": "https://mot.gov.iq/?page=162",
       "_website_source": "ministry-site",
@@ -4730,7 +4595,7 @@
       "_confidence": 1,
       "_source": "ministry-site",
       "_maps_name": "وزارة التجارة / دائرة التخطيط والمتابعة",
-      "_title_en_source": null,
+      "_title_en_source": "reviewed translation",
       "email": null,
       "_ambiguous_name": "name states an internal function only; no place lookup can identify it"
     },
@@ -4738,7 +4603,7 @@
       "slug": "dayra-alalaqat-alaqtsadya-alkharjya",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "دائرة العلاقات الاقتصادية الخارجية",
-      "title_en": null,
+      "title_en": "Department of Foreign Economic Relations",
       "title_ku": null,
       "website": "https://mot.gov.iq/?page=158",
       "_website_source": "ministry-site",
@@ -4760,59 +4625,14 @@
         "source": "google-maps (retry)",
         "matched_name": "دائرة العلاقات الخارجية في اربيل",
         "confidence": 0.67
-      }
-    },
-    {
-      "slug": "dlyl-astrshady-lmwzfy-dayra-alalaqat-alaqtsadya-alkharjya",
-      "ministry_slug": "ministry-of-trade",
-      "title_ar": "دليل استرشادي لموظفي دائرة العلاقات الاقتصادية الخارجية",
-      "title_en": null,
-      "title_ku": null,
-      "website": "https://mot.gov.iq/?page=271",
-      "_website_source": "ministry-site",
-      "phone": null,
-      "address_ar": null,
-      "gps_lat": null,
-      "gps_lon": null,
-      "photo_url": null,
-      "working_hours": null,
-      "place_id": null,
-      "maps_url": null,
-      "sort_order": 1260,
-      "archived": false,
-      "_verified": false,
-      "_confidence": 0,
-      "_source": "ministry-site",
-      "_maps_name": null
-    },
-    {
-      "slug": "alqwanyn-waltshryaat-alty-tkhs-aml-aldayra",
-      "ministry_slug": "ministry-of-trade",
-      "title_ar": "القوانين والتشريعات التي تخص عمل الدائرة",
-      "title_en": null,
-      "title_ku": null,
-      "website": "https://mot.gov.iq/?page=267",
-      "_website_source": "ministry-site",
-      "phone": null,
-      "address_ar": null,
-      "gps_lat": null,
-      "gps_lon": null,
-      "photo_url": null,
-      "working_hours": null,
-      "place_id": null,
-      "maps_url": null,
-      "sort_order": 1270,
-      "archived": false,
-      "_verified": false,
-      "_confidence": 0,
-      "_source": "ministry-site",
-      "_maps_name": null
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-ttwyr-alqtaa-alkhas",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "دائرة تطوير القطاع الخاص",
-      "title_en": null,
+      "title_en": "Private Sector Development Department",
       "title_ku": null,
       "website": "https://mot.gov.iq/?page=107",
       "_website_source": "ministry-site",
@@ -4829,36 +4649,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "وزارة التجارة / دائرة تطوير القطاع الخاص"
-    },
-    {
-      "slug": "aqsam-dayra-ttwyr-alqtaa-alkhas",
-      "ministry_slug": "ministry-of-trade",
-      "title_ar": "اقسام دائرة تطوير القطاع الخاص",
-      "title_en": null,
-      "title_ku": null,
-      "website": "https://mot.gov.iq/?page=275",
-      "_website_source": "ministry-site",
-      "phone": null,
-      "address_ar": "وزارة التجارة / دائرة تطوير القطاع الخاص، 10، بغداد، بغداد محافظة",
-      "gps_lat": 33.3146676,
-      "gps_lon": 44.361367699999995,
-      "photo_url": null,
-      "working_hours": null,
-      "place_id": "0x15577f003cb87515:0x1cc8399b926852be",
-      "maps_url": "https://www.google.com/maps/place/?q=place_id:0x15577f003cb87515:0x1cc8399b926852be",
-      "sort_order": 1290,
-      "archived": false,
-      "_verified": true,
-      "_confidence": 0.75,
-      "_source": "ministry-site",
-      "_maps_name": "وزارة التجارة / دائرة تطوير القطاع الخاص"
+      "_maps_name": "وزارة التجارة / دائرة تطوير القطاع الخاص",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "aldayra-alqanwnya-4",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "الدائرة القانونية",
-      "title_en": null,
+      "title_en": "Legal Department",
       "title_ku": null,
       "website": "https://mot.gov.iq/?page=161",
       "_website_source": "ministry-site",
@@ -4877,38 +4675,14 @@
       "_source": "ministry-site",
       "_maps_name": "المكتب القانوني للمحاماة والاستشارات القانونية",
       "email": null,
-      "_ambiguous_name": "name states an internal function only; no place lookup can identify it"
-    },
-    {
-      "slug": "aqsam-aldayra-alqanwnya",
-      "ministry_slug": "ministry-of-trade",
-      "title_ar": "اقسام الدائرة القانونية",
-      "title_en": null,
-      "title_ku": null,
-      "website": "https://mot.gov.iq/?page=276",
-      "_website_source": "ministry-site",
-      "phone": null,
-      "address_ar": null,
-      "gps_lat": null,
-      "gps_lon": null,
-      "photo_url": null,
-      "working_hours": null,
-      "place_id": null,
-      "maps_url": null,
-      "sort_order": 1310,
-      "archived": false,
-      "_verified": false,
-      "_confidence": 0.5,
-      "_source": "ministry-site",
-      "_maps_name": "المكتب القانوني للمحاماة والاستشارات القانونية",
-      "email": null,
-      "_ambiguous_name": "name states an internal function only; no place lookup can identify it"
+      "_ambiguous_name": "name states an internal function only; no place lookup can identify it",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-alrqaba-altjarya-walmalya",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "دائرة الرقابة التجارية والمالية",
-      "title_en": null,
+      "title_en": "Department of Commercial and Financial Oversight",
       "title_ku": null,
       "website": "https://mot.gov.iq/?page=157",
       "_website_source": "ministry-site",
@@ -4925,36 +4699,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "دائرة الرقابة التجارية والمالية"
-    },
-    {
-      "slug": "anshta-wanjazat-dayra-tsjyl-alshrkat",
-      "ministry_slug": "ministry-of-trade",
-      "title_ar": "انشطة وانجازات دائرة تسجيل الشركات",
-      "title_en": null,
-      "title_ku": null,
-      "website": "https://mot.gov.iq/?page=7494",
-      "_website_source": "ministry-site",
-      "phone": null,
-      "address_ar": null,
-      "gps_lat": null,
-      "gps_lon": null,
-      "photo_url": null,
-      "working_hours": null,
-      "place_id": null,
-      "maps_url": null,
-      "sort_order": 1340,
-      "archived": false,
-      "_verified": false,
-      "_confidence": 0,
-      "_source": "ministry-site",
-      "_maps_name": null
+      "_maps_name": "دائرة الرقابة التجارية والمالية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-llmaard-walkhdmat-altjarya-alaraqya",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "الشركة العامة للمعارض والخدمات التجارية العراقية",
-      "title_en": null,
+      "title_en": "Iraqi State Company for Fairs and Commercial Services",
       "title_ku": null,
       "website": "http://fairs.gov.iq/",
       "_website_source": "ministry-site",
@@ -4976,13 +4728,14 @@
         "id": "node/6566435988",
         "distance_m": 46,
         "name_similarity": 0
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-llaswaq-almrkzya",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "الشركة العامة للاسواق المركزية",
-      "title_en": null,
+      "title_en": "State Company for Central Markets",
       "title_ku": null,
       "website": "http://scc-mot.iq/",
       "_website_source": "ministry-site",
@@ -5004,41 +4757,14 @@
         "id": "node/6281677785",
         "distance_m": 67,
         "name_similarity": 0.25
-      }
-    },
-    {
-      "slug": "nbdha-an-alshrka-alaama-llaswaq-almrkzya",
-      "ministry_slug": "ministry-of-trade",
-      "title_ar": "نبذة عن الشركة العامة للاسواق المركزية",
-      "title_en": null,
-      "title_ku": null,
-      "website": "https://mot.gov.iq/?page=322",
-      "_website_source": "ministry-site",
-      "phone": null,
-      "address_ar": "الشركة العامة للأسواق المركزية, Baghdad, Baghdad Governorate",
-      "gps_lat": 33.3036027,
-      "gps_lon": 44.447519299999996,
-      "photo_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWlp3HrOM-r2PekYVZ7hWRoU_ubaOKZdhp0_lJJzFgskrpQAfGzOqrxxVbNlZyM-fYbqr2R4PvijbnY1ufdXqWFBbGa_LhCMf-Dwo3vhg6fkpZyTs0qSzvEXW8U8iCZY9w=w1600-h1200-k-no",
-      "working_hours": null,
-      "place_id": "0x155781cd3cc7106b:0x93b9347eb748905",
-      "maps_url": "https://www.google.com/maps/place/?q=place_id:0x155781cd3cc7106b:0x93b9347eb748905",
-      "sort_order": 1370,
-      "archived": false,
-      "_verified": true,
-      "_confidence": 0.75,
-      "_source": "ministry-site",
-      "_maps_name": "الشركة العامة للأسواق المركزية",
-      "_osm": {
-        "id": "node/6281677785",
-        "distance_m": 67,
-        "name_similarity": 0.2
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-ltjara-alsyarat-walmkayn",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "الشركة العامة لتجارة السيارات والمكائن",
-      "title_en": null,
+      "title_en": "State Company for Automobile and Machinery Trading",
       "title_ku": null,
       "website": "http://gamcoiraq.gov.iq/",
       "_website_source": "ministry-site",
@@ -5097,13 +4823,14 @@
         "distance_m": 134,
         "name_similarity": 0.6,
         "opening_hours_raw": "Su-Th 08:00-15:00"
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "nbdha-an-alshrka-alaama-llsyarat",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "نبذة عن الشركة العامة للسيارات",
-      "title_en": "General Automotive Company Waziriya",
+      "title_en": "State Company for Automobiles",
       "title_ku": null,
       "website": "https://mot.gov.iq/?page=318",
       "_website_source": "ministry-site",
@@ -5121,7 +4848,7 @@
       "_confidence": 0.67,
       "_source": "ministry-site",
       "_maps_name": "الشركة العامة للسيارات الوزيرية",
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "alshrka-alaama-ltjara-almwad-alanshayya",
@@ -5156,7 +4883,7 @@
       "slug": "alshrka-alaama-ltsnya-alhbwb",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "الشركة العامة لتصنيع الحبوب",
-      "title_en": null,
+      "title_en": "State Company for Grain Processing",
       "title_ku": null,
       "website": "https://tasneehobob.mot.gov.iq/",
       "_website_source": "ministry-site",
@@ -5173,13 +4900,14 @@
       "_verified": true,
       "_confidence": 0.67,
       "_source": "ministry-site",
-      "_maps_name": "الشركة العامة لتجارة الحبوب العراقية"
+      "_maps_name": "الشركة العامة لتجارة الحبوب العراقية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-ltjara-alhbwb",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "الشركة العامة لتجارة الحبوب",
-      "title_en": null,
+      "title_en": "State Company for Grain Trading",
       "title_ku": null,
       "website": "https://grainb.iq/",
       "_website_source": "ministry-site",
@@ -5196,13 +4924,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "الشركة العامة لتجارة الحبوب العراقية"
+      "_maps_name": "الشركة العامة لتجارة الحبوب العراقية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "sndwq-dam-altsdyr",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "صندوق دعم التصدير",
-      "title_en": null,
+      "title_en": "Export Support Fund",
       "title_ku": null,
       "website": "https://epf.gov.iq/",
       "_website_source": "ministry-site",
@@ -5224,13 +4953,14 @@
         "id": "node/4336512189",
         "distance_m": 116,
         "name_similarity": 0
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "aldayra-aladarya-walmalya-aqsam-aldayra",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "الدائرة الادارية والمالية اقسام الدائرة",
-      "title_en": null,
+      "title_en": "Administrative and Financial Department",
       "title_ku": null,
       "website": "https://hfd.gov.iq/",
       "_website_source": "place-match",
@@ -5247,13 +4977,14 @@
       "_verified": true,
       "_confidence": 0.67,
       "_source": "ministry-site",
-      "_maps_name": "الدائرة الادارية والمالية - الحشد الشعبي"
+      "_maps_name": "الدائرة الادارية والمالية - الحشد الشعبي",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-altkhtyt-walmtabaa-aqsam-aldayra",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "دائرة التخطيط والمتابعة اقسام الدائرة",
-      "title_en": null,
+      "title_en": "Department of Planning and Follow-up",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -5271,7 +5002,7 @@
       "_confidence": 0.67,
       "_source": "ministry-site",
       "_maps_name": "وزارة التجارة / دائرة التخطيط والمتابعة",
-      "_title_en_source": null,
+      "_title_en_source": "reviewed translation",
       "email": null,
       "_ambiguous_name": "name states an internal function only; no place lookup can identify it"
     },
@@ -5279,7 +5010,7 @@
       "slug": "sndwq-dam-altsdyr-almktba-alrqmya",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "صندوق دعم التصدير المكتبة الرقمية",
-      "title_en": null,
+      "title_en": "Export Support Fund",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -5301,7 +5032,8 @@
         "id": "node/4336512189",
         "distance_m": 116,
         "name_similarity": 0
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "hyya-alnzaha",
@@ -5333,33 +5065,10 @@
       "_title_en_source": "place-match"
     },
     {
-      "slug": "dwayr-alwzara-aldayra-aladarya-walmalya-aqsam-aldayra",
-      "ministry_slug": "ministry-of-trade",
-      "title_ar": "دوائر الوزارة الدائرة الادارية والمالية اقسام الدائرة",
-      "title_en": null,
-      "title_ku": null,
-      "website": null,
-      "_website_source": null,
-      "phone": null,
-      "address_ar": null,
-      "gps_lat": null,
-      "gps_lon": null,
-      "photo_url": null,
-      "working_hours": null,
-      "place_id": null,
-      "maps_url": null,
-      "sort_order": 1490,
-      "archived": false,
-      "_verified": false,
-      "_confidence": 0,
-      "_source": "ministry-site",
-      "_maps_name": null
-    },
-    {
       "slug": "dayra-alalaqat-alaqtsadya-alkharjya-alhykl-altnzymy",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "دائرة العلاقات الاقتصادية الخارجية الهيكل التنظيمي",
-      "title_en": null,
+      "title_en": "Department of Foreign Economic Relations",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -5376,13 +5085,14 @@
       "_verified": false,
       "_confidence": 0,
       "_source": "ministry-site",
-      "_maps_name": null
+      "_maps_name": null,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-ttwyr-alqtaa-alkhas-mjla-altjara-alaraqya-alalktrwnya",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "دائرة تطوير القطاع الخاص مجلة التجارة العراقية الالكترونية",
-      "title_en": null,
+      "title_en": "Private Sector Development Department",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -5399,13 +5109,14 @@
       "_verified": true,
       "_confidence": 0.67,
       "_source": "ministry-site",
-      "_maps_name": "وزارة التجارة / دائرة تطوير القطاع الخاص"
+      "_maps_name": "وزارة التجارة / دائرة تطوير القطاع الخاص",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "aldayra-alqanwnya-alhykl-altnzymy",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "الدائرة القانونية الهيكل التنظيمي",
-      "title_en": null,
+      "title_en": "Legal Department",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -5422,13 +5133,14 @@
       "_verified": false,
       "_confidence": 0.33,
       "_source": "ministry-site",
-      "_maps_name": "مكتب العراق للمحاماة والأستشارات القانونية"
+      "_maps_name": "مكتب العراق للمحاماة والأستشارات القانونية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-alrqaba-altjarya-walmalya-alhykl-altnzymy",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "دائرة الرقابة التجارية والمالية الهيكل التنظيمي",
-      "title_en": null,
+      "title_en": "Department of Commercial and Financial Oversight",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -5445,7 +5157,8 @@
       "_verified": true,
       "_confidence": 0.6,
       "_source": "ministry-site",
-      "_maps_name": "دائرة الرقابة التجارية والمالية"
+      "_maps_name": "دائرة الرقابة التجارية والمالية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-tsjyl-alshrkat-alhykl-altnzymy",
@@ -5475,7 +5188,7 @@
       "slug": "alshrka-alaama-llaswaq-almrkzya-nbdha-an-alshrka-alaama-llas",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "الشركة العامة للاسواق المركزية نبذة عن الشركة العامة للاسواق المركزية",
-      "title_en": null,
+      "title_en": "State Company for Central Markets",
       "title_ku": null,
       "website": "https://scc-mot.iq/",
       "_website_source": "place-match",
@@ -5497,13 +5210,14 @@
         "id": "node/6281677785",
         "distance_m": 67,
         "name_similarity": 0.22
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-ltjara-alsyarat-walmkayn-nbdha-an-alshrka-ala",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "الشركة العامة لتجارة السيارات والمكائن نبذة عن الشركة العامة للسيارات",
-      "title_en": null,
+      "title_en": "State Company for Automobile and Machinery Trading",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -5520,7 +5234,8 @@
       "_verified": true,
       "_confidence": 0.67,
       "_source": "ministry-site",
-      "_maps_name": "الشركة العامة لتجارة السيارات والمكائن فرع بابل"
+      "_maps_name": "الشركة العامة لتجارة السيارات والمكائن فرع بابل",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-ltjara-almwad-alanshayya-nbdha-taryfya",
@@ -5621,7 +5336,7 @@
       "slug": "alshrka-alaama-ltsnya-alhbwb-alhykl-altnzymy",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "الشركة العامة لتصنيع الحبوب الهيكل التنظيمي",
-      "title_en": null,
+      "title_en": "State Company for Grain Processing",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -5638,13 +5353,14 @@
       "_verified": false,
       "_confidence": 0.4,
       "_source": "ministry-site",
-      "_maps_name": "الشركة العامة لتجارة الحبوب العراقية"
+      "_maps_name": "الشركة العامة لتجارة الحبوب العراقية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-ltjara-alhbwb-nbdha-an-tjara-alhbwb",
       "ministry_slug": "ministry-of-trade",
       "title_ar": "الشركة العامة لتجارة الحبوب نبذة عن تجارة الحبوب",
-      "title_en": null,
+      "title_en": "State Company for Grain Trading",
       "title_ku": null,
       "website": "https://grainb.iq/",
       "_website_source": "place-match",
@@ -5661,73 +5377,8 @@
       "_verified": true,
       "_confidence": 0.8,
       "_source": "ministry-site",
-      "_maps_name": "الشركة العامة لتجارة الحبوب العراقية"
-    },
-    {
-      "slug": "mdyryat-alsha",
-      "ministry_slug": "ministry-of-health",
-      "title_ar": "مديريات الصحة",
-      "title_en": "Iraqi Ministry of Health",
-      "title_ku": null,
-      "website": "https://moh.gov.iq/?map",
-      "_website_source": "ministry-site",
-      "phone": null,
-      "address_ar": "وزارة الصحة العراقية, Al Adham Street، بغداد، بغداد محافظة",
-      "gps_lat": 33.3476248,
-      "gps_lon": 44.381278099999996,
-      "photo_url": "https://lh3.googleusercontent.com/gps-cs-s/AHRPTWn13YWpF0sd9TdYtTTAkK3CEOJwdxjK-bqTFoBlNzX_iHhnivavDM37vFgIJomQnd8ekYYDSWJZ0vLnAtPccbjO5V3IhtS5UF9AFzXk-nIlNZDXFB1p1-gXA0XnKQTJudNFhOH8=w1600-h1200-k-no",
-      "working_hours": [
-        {
-          "day": "SUN",
-          "from": "08:00",
-          "to": "14:00"
-        },
-        {
-          "day": "MON",
-          "from": "08:00",
-          "to": "14:00"
-        },
-        {
-          "day": "TUE",
-          "from": "08:00",
-          "to": "14:00"
-        },
-        {
-          "day": "WED",
-          "from": "08:00",
-          "to": "14:00"
-        },
-        {
-          "day": "THU",
-          "from": "08:00",
-          "to": "14:00"
-        },
-        {
-          "day": "FRI",
-          "from": null,
-          "to": null
-        },
-        {
-          "day": "SAT",
-          "from": null,
-          "to": null
-        }
-      ],
-      "place_id": "0x155778b7ce0cbb41:0x1de41f9f11a5bada",
-      "maps_url": "https://www.google.com/maps/place/?q=place_id:0x155778b7ce0cbb41:0x1de41f9f11a5bada",
-      "sort_order": 1610,
-      "archived": false,
-      "_verified": true,
-      "_confidence": 0.5,
-      "_source": "ministry-site",
-      "_maps_name": "وزارة الصحة العراقية",
-      "_osm": {
-        "id": "way/926018430",
-        "distance_m": 51,
-        "name_similarity": 0.5,
-        "opening_hours_raw": "Su-Th 08:00-14:00"
-      },
-      "_title_en_source": "place-match"
+      "_maps_name": "الشركة العامة لتجارة الحبوب العراقية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-sha-dyala",
@@ -5762,7 +5413,7 @@
       "slug": "mrkz-alwzara-dayra-alsha-alaama",
       "ministry_slug": "ministry-of-health",
       "title_ar": "مركز الوزارة/ دائرة الصحة العامة",
-      "title_en": null,
+      "title_en": "Public Health Department",
       "title_ku": null,
       "website": "https://www.phd.iq/",
       "_website_source": "ministry-site",
@@ -5784,13 +5435,14 @@
         "id": "node/8009801186",
         "distance_m": 163,
         "name_similarity": 0.6
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "mrkz-alwzara-dayra-altkhtyt-wtnmya-almward",
       "ministry_slug": "ministry-of-health",
       "title_ar": "مركز الوزارة / دائرة التخطيط وتنمية الموارد",
-      "title_en": null,
+      "title_en": "Department of Planning and Resource Development",
       "title_ku": null,
       "website": "https://planning.moh.gov.iq/",
       "_website_source": "ministry-site",
@@ -5807,7 +5459,8 @@
       "_verified": false,
       "_confidence": 0,
       "_source": "ministry-site",
-      "_maps_name": null
+      "_maps_name": null,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-sha-dhy-qar",
@@ -5842,7 +5495,7 @@
       "slug": "dayra-altftysh",
       "ministry_slug": "ministry-of-health",
       "title_ar": "دائرة التفتيش",
-      "title_en": null,
+      "title_en": "Inspection Department",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -5861,13 +5514,14 @@
       "_source": "ministry-site",
       "_maps_name": null,
       "email": null,
-      "_ambiguous_name": "name states an internal function only; no place lookup can identify it"
+      "_ambiguous_name": "name states an internal function only; no place lookup can identify it",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-altkhtyt-w-tnmya-almward",
       "ministry_slug": "ministry-of-health",
       "title_ar": "دائرة التخطيط و تنمية الموارد",
-      "title_en": null,
+      "title_en": "Department of Planning and Resource Development",
       "title_ku": null,
       "website": "http://www.moh-planning.com/",
       "_website_source": "ministry-site",
@@ -5926,13 +5580,14 @@
         "distance_m": 26,
         "name_similarity": 0,
         "opening_hours_raw": "Su-Th 08:00-14:00"
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-alamwr-alfnya",
       "ministry_slug": "ministry-of-health",
       "title_ar": "دائرة الامور الفنية",
-      "title_en": null,
+      "title_en": "Technical Affairs Department",
       "title_ku": null,
       "website": "http://www.tec-moh.com/",
       "_website_source": "ministry-site",
@@ -5991,13 +5646,14 @@
         "distance_m": 17,
         "name_similarity": 0,
         "opening_hours_raw": "Su-Th 08:00-14:00"
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-ltswyq-aladwya-walmstlzmat-altbya",
       "ministry_slug": "ministry-of-health",
       "title_ar": "الشركة العامة لتسويق الادوية والمستلزمات الطبية",
-      "title_en": null,
+      "title_en": "State Company for Marketing Drugs and Medical Appliances",
       "title_ku": null,
       "website": "http://www.kimadia.iq/",
       "_website_source": "ministry-site",
@@ -6014,13 +5670,14 @@
       "_verified": false,
       "_confidence": 0.4,
       "_source": "ministry-site",
-      "_maps_name": "الشركة الحديثة لصناعة الادوية - MDI - Modern company for drugs industries"
+      "_maps_name": "الشركة الحديثة لصناعة الادوية - MDI - Modern company for drugs industries",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-llkhtwt-aljwya-alaraqya",
       "ministry_slug": "ministry-of-transport",
       "title_ar": "الشركة العامة للخطوط الجوية العراقية",
-      "title_en": "General Company for Air Navigation Services",
+      "title_en": "Iraqi Airways Company",
       "title_ku": null,
       "website": "https://iraqiairways.com.iq/",
       "_website_source": "ministry-site",
@@ -6038,13 +5695,13 @@
       "_confidence": 0.67,
       "_source": "ministry-site",
       "_maps_name": "الشركة العامة لادارة المطارات و الملاحة الجوية",
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "dayra-almtarat-alaraqya",
       "ministry_slug": "ministry-of-transport",
       "title_ar": "دائرة المطارات العراقية",
-      "title_en": null,
+      "title_en": "Iraqi Airports Department",
       "title_ku": null,
       "website": "https://dim.motrans.gov.iq/",
       "_website_source": "ministry-site",
@@ -6061,7 +5718,8 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "مديرية أمن وحماية المطارات"
+      "_maps_name": "مديرية أمن وحماية المطارات",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-lkhdmat-almlaha-aljwya",
@@ -6149,7 +5807,7 @@
       "slug": "alhyya-alaama-llanwa-aljwya-walrsd-alzlzaly",
       "ministry_slug": "ministry-of-transport",
       "title_ar": "الهيئة العامة للانواء الجوية والرصد الزلزالي",
-      "title_en": null,
+      "title_en": "Iraqi Meteorological Organisation and Seismology",
       "title_ku": null,
       "website": "http://www.meteoseism.gov.iq/",
       "_website_source": "ministry-site",
@@ -6166,13 +5824,14 @@
       "_verified": true,
       "_confidence": 0.5,
       "_source": "ministry-site",
-      "_maps_name": "الهيأة العامة للانواء الجوية العراقية"
+      "_maps_name": "الهيأة العامة للانواء الجوية العراقية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-ladara-alnql-alkhas",
       "ministry_slug": "ministry-of-transport",
       "title_ar": "الشركة العامة لادارة النقل الخاص",
-      "title_en": null,
+      "title_en": "State Company for Private Transport Management",
       "title_ku": null,
       "website": "http://scpta.gov.iq/",
       "_website_source": "ministry-site",
@@ -6231,13 +5890,14 @@
         "distance_m": 33,
         "name_similarity": 1,
         "opening_hours_raw": "Su 08:00-14:00; Mo 08:00-14:00; Tu 08:00-14:00; We 08:00-14:00; Th 08:00-14:00"
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-ltnfydh-msharya-alnql-walmwaslat",
       "ministry_slug": "ministry-of-transport",
       "title_ar": "الشركة العامة لتنفيذ مشاريع النقل والمواصلات",
-      "title_en": "General Company for the implementation of the Ministry of Transport Projects",
+      "title_en": "State Company for Implementation of Transport and Communications Projects",
       "title_ku": null,
       "website": "https://scitcp.gov.iq/",
       "_website_source": "ministry-site",
@@ -6255,13 +5915,13 @@
       "_confidence": 0.8,
       "_source": "ministry-site",
       "_maps_name": "الشركة العامة لتنفيذ مشاريع وزارة النقل",
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "alshrka-alaama-llnql-albhry",
       "ministry_slug": "ministry-of-transport",
       "title_ar": "الشركة العامة للنقل البحري",
-      "title_en": null,
+      "title_en": "Iraqi State Company for Maritime Transport",
       "title_ku": null,
       "website": "http://scmt.gov.iq/",
       "_website_source": "ministry-site",
@@ -6278,13 +5938,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "الشركة العامة للنقل البحري الشعبة النهرية"
+      "_maps_name": "الشركة العامة للنقل البحري الشعبة النهرية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "balanfw-hrka-qtarat-alshrka-alaama-lskk-hdyd-alaraq",
       "ministry_slug": "ministry-of-transport",
       "title_ar": "الشركة العامة لسكك حديد العراق",
-      "title_en": null,
+      "title_en": "Iraqi Republic Railways Company",
       "title_ku": null,
       "website": "https://www.motrans.gov.iq/?article=4177",
       "_website_source": "ministry-site",
@@ -6302,13 +5963,14 @@
       "_confidence": 0,
       "_source": "ministry-site",
       "_maps_name": null,
-      "_title_repaired": "scraped text was a sentence or a doubled heading, not a name"
+      "_title_repaired": "scraped text was a sentence or a doubled heading, not a name",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-lnql-almsafryn-walwfwd",
       "ministry_slug": "ministry-of-transport",
       "title_ar": "الشركة العامة لنقل المسافرين والوفود",
-      "title_en": "Iraq High Commission for Human Rights",
+      "title_en": "State Company for Passenger and Delegation Transport",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -6331,13 +5993,13 @@
         "distance_m": 112,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "tshkylat-alwzara-alshrka-alaama-llkhtwt-aljwya-alaraqya",
       "ministry_slug": "ministry-of-transport",
       "title_ar": "تشكيلات الوزارة الشركة العامة للخطوط الجوية العراقية",
-      "title_en": null,
+      "title_en": "Iraqi Airways Company",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -6354,7 +6016,8 @@
       "_verified": false,
       "_confidence": 0,
       "_source": "ministry-site",
-      "_maps_name": null
+      "_maps_name": null,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "aljhaz-almrkzy-lltqyys-walsytra-alnwaya",
@@ -6389,7 +6052,7 @@
       "slug": "aldayra-aladarya-walmalya-3",
       "ministry_slug": "ministry-of-planning",
       "title_ar": "الدائرة الادارية والمالية",
-      "title_en": null,
+      "title_en": "Administrative and Financial Department",
       "title_ku": null,
       "website": "https://mop.gov.iq/%d8%a7%d9%84%d8%af%d8%a7%d8%a6%d8%b1%d8%a9-%d8%a7%d9%84%d8%a7%d8%af%d8%a7%d8%b1%d9%8a%d8%a9-%d9%88%d8%a7%d9%84%d9%85%d8%a7%d9%84%d9%8a%d8%a9",
       "_website_source": "ministry-site",
@@ -6406,13 +6069,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "الدائرة الادارية والمالية - الحشد الشعبي"
+      "_maps_name": "الدائرة الادارية والمالية - الحشد الشعبي",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-tkhtyt-alqtaaat",
       "ministry_slug": "ministry-of-planning",
       "title_ar": "دائرة تخطيط القطاعات",
-      "title_en": "Ministry of Commerce / Ration card",
+      "title_en": "Department of Sectoral Planning",
       "title_ku": null,
       "website": "https://mop.gov.iq/%d8%af%d8%a7%d8%a6%d8%b1%d8%a9-%d8%aa%d8%ae%d8%b7%d9%8a%d8%b7-%d8%a7%d9%84%d9%82%d8%b7%d8%a7%d8%b9%d8%a7%d8%aa-2",
       "_website_source": "ministry-site",
@@ -6435,13 +6099,13 @@
         "distance_m": 18,
         "name_similarity": 0.33
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "dayra-alaqwd-alhkwmya",
       "ministry_slug": "ministry-of-planning",
       "title_ar": "دائرة العقود الحكومية",
-      "title_en": null,
+      "title_en": "Government Contracts Department",
       "title_ku": null,
       "website": "https://mop.gov.iq/gover_contract24",
       "_website_source": "ministry-site",
@@ -6463,13 +6127,14 @@
         "id": "way/848334433",
         "distance_m": 48,
         "name_similarity": 0
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "aldayra-alqanwnya-5",
       "ministry_slug": "ministry-of-planning",
       "title_ar": "الدائرة القانونية",
-      "title_en": null,
+      "title_en": "Legal Department",
       "title_ku": null,
       "website": "https://mop.gov.iq/%d8%a7%d9%84%d8%af%d8%a7%d8%a6%d8%b1%d8%a9-%d8%a7%d9%84%d9%82%d8%a7%d9%86%d9%88%d9%86%d9%8a%d8%a92",
       "_website_source": "ministry-site",
@@ -6488,13 +6153,14 @@
       "_source": "ministry-site",
       "_maps_name": "المكتب القانوني للمحاماة والاستشارات القانونية",
       "email": null,
-      "_ambiguous_name": "name states an internal function only; no place lookup can identify it"
+      "_ambiguous_name": "name states an internal function only; no place lookup can identify it",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-altnmya-albshrya",
       "ministry_slug": "ministry-of-planning",
       "title_ar": "دائرة التنمية البشرية",
-      "title_en": null,
+      "title_en": "Department of Human Development",
       "title_ku": null,
       "website": "https://mop.gov.iq/%d8%af%d8%a7%d8%a6%d8%b1%d8%a9-%d8%a7%d9%84%d8%aa%d9%86%d9%85%d9%8a%d8%a9-%d8%a7%d9%84%d8%a8%d8%b4%d8%b1%d9%8a%d8%a9-2",
       "_website_source": "ministry-site",
@@ -6511,13 +6177,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "النقابة العامة لمدربي التنمية البشرية"
+      "_maps_name": "النقابة العامة لمدربي التنمية البشرية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-altnmya-alaqlymya-walmhlya",
       "ministry_slug": "ministry-of-planning",
       "title_ar": "دائرة التنمية الاقليمية والمحلية",
-      "title_en": null,
+      "title_en": "Department of Regional and Local Development",
       "title_ku": null,
       "website": "https://mop.gov.iq/%d8%af%d8%a7%d8%a6%d8%b1%d8%a9-%d8%a7%d9%84%d8%aa%d9%86%d9%85%d9%8a%d8%a9-%d8%a7%d9%84%d8%a7%d9%82%d9%84%d9%8a%d9%85%d9%8a%d8%a9-%d9%88%d8%a7%d9%84%d9%85%d8%ad%d9%84%d9%8a%d8%a9",
       "_website_source": "ministry-site",
@@ -6539,13 +6206,14 @@
         "source": "google-maps (retry)",
         "matched_name": "دائرة التنمية الاقليميه والمحلية -مديرية تخطيط ذي قار",
         "confidence": 1
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-alsyasat-alaqtsadya-walmalya",
       "ministry_slug": "ministry-of-planning",
       "title_ar": "دائرة السياسات الاقتصادية والمالية",
-      "title_en": "Ministry of Planning",
+      "title_en": "Department of Economic and Financial Policies",
       "title_ku": "وەزارەتی پلاندانان",
       "website": "https://mop.gov.iq/%d8%af%d8%a7%d8%a6%d8%b1%d8%a9-%d8%a7%d9%84%d8%b3%d9%8a%d8%a7%d8%b3%d8%a7%d8%aa-%d8%a7%d9%84%d8%a7%d9%82%d8%aa%d8%b5%d8%a7%d8%af%d9%8a%d8%a9%d9%88%d8%a7%d9%84%d9%85%d8%a7%d9%84%d9%8a%d8%a9",
       "_website_source": "ministry-site",
@@ -6568,7 +6236,7 @@
         "distance_m": 17,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match",
+      "_title_en_source": "reviewed translation (place match named another body)",
       "_title_ku_source": "place-match"
     },
     {
@@ -6599,7 +6267,7 @@
       "slug": "alshrka-alaama-llsmnt-alaraqya",
       "ministry_slug": "ministry-of-industry-and-minerals",
       "title_ar": "الشركة العامة للسمنت العراقية",
-      "title_en": null,
+      "title_en": "Iraqi Cement State Company",
       "title_ku": null,
       "website": "https://www.icsc.industry.gov.iq/",
       "_website_source": "ministry-site",
@@ -6621,13 +6289,14 @@
         "id": "node/4317982091",
         "distance_m": 100,
         "name_similarity": 1
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-lsnaaa-aladwya-walmstlzmat-altbya",
       "ministry_slug": "ministry-of-industry-and-minerals",
       "title_ar": "الشركة العامة لصناعة الادوية والمستلزمات الطبية",
-      "title_en": "الشركة الحديثة لصناعة الادوية - MDI - Modern company for drugs industries",
+      "title_en": "State Company for Drug and Medical Appliances Industries",
       "title_ku": null,
       "website": "https://sdi.industry.gov.iq/",
       "_website_source": "ministry-site",
@@ -6645,7 +6314,7 @@
       "_confidence": 0.6,
       "_source": "ministry-site",
       "_maps_name": "الشركة الحديثة لصناعة الادوية - MDI - Modern company for drugs industries",
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-llsnaaat-alkhrbayya-walalktrwnya",
@@ -6675,7 +6344,7 @@
       "slug": "alshrka-alaama-lkbryt-almshraq",
       "ministry_slug": "ministry-of-industry-and-minerals",
       "title_ar": "الشركة العامة لكبريت المشراق",
-      "title_en": null,
+      "title_en": "Al-Mishraq State Sulphur Company",
       "title_ku": null,
       "website": "https://mishraq.industry.gov.iq/",
       "_website_source": "ministry-site",
@@ -6692,13 +6361,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "الشركة العامة لكبريت المشراق مكتب بغداد"
+      "_maps_name": "الشركة العامة لكبريت المشراق مكتب بغداد",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-llzjaj-walhraryat",
       "ministry_slug": "ministry-of-industry-and-minerals",
       "title_ar": "الشركة العامة للزجاج والحراريات",
-      "title_en": null,
+      "title_en": "State Company for Glass and Refractories",
       "title_ku": null,
       "website": "https://glassref.industry.gov.iq/",
       "_website_source": "ministry-site",
@@ -6720,13 +6390,14 @@
         "source": "google-maps (retry)",
         "matched_name": "الشركة العامة للزجاج والحراريات",
         "confidence": 1
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-llsnaaat-alghdhayya",
       "ministry_slug": "ministry-of-industry-and-minerals",
       "title_ar": "الشركة العامة للصناعات الغذائية",
-      "title_en": null,
+      "title_en": "State Company for Food Industries",
       "title_ku": null,
       "website": "http://www.fisc.industry.gov.iq/",
       "_website_source": "ministry-site",
@@ -6743,7 +6414,8 @@
       "_verified": true,
       "_confidence": 0.67,
       "_source": "ministry-site",
-      "_maps_name": "الشركة العامة للصناعات الكهربائية والالكترونية"
+      "_maps_name": "الشركة العامة للصناعات الكهربائية والالكترونية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-llfhs-waltahyl-alhndsy",
@@ -6773,7 +6445,7 @@
       "slug": "alshrka-alaama-llhdyd-walslb",
       "ministry_slug": "ministry-of-industry-and-minerals",
       "title_ar": "الشركة العامة للحديد والصلب",
-      "title_en": null,
+      "title_en": "State Company for Iron and Steel",
       "title_ku": null,
       "website": "https://steeliraq.industry.gov.iq/",
       "_website_source": "ministry-site",
@@ -6790,13 +6462,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "الشركة العامة للحديد والصلب الحكومية"
+      "_maps_name": "الشركة العامة للحديد والصلب الحكومية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-llsnaaat-almtatya-walatarat",
       "ministry_slug": "ministry-of-industry-and-minerals",
       "title_ar": "الشركة العامة للصناعات المطاطية والاطارات",
-      "title_en": "General Company for Industries, rubber tires",
+      "title_en": "State Company for Rubber and Tyre Industries",
       "title_ku": null,
       "website": "https://scrti.industry.gov.iq/",
       "_website_source": "ministry-site",
@@ -6814,13 +6487,13 @@
       "_confidence": 1,
       "_source": "ministry-site",
       "_maps_name": "الشركة العامة للصناعات المطاطية والاطارات",
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "alshrka-alaama-llsnaaa-alasmda-aljnwbya",
       "ministry_slug": "ministry-of-industry-and-minerals",
       "title_ar": "الشركة العامة للصناعة الاسمدة الجنوبية",
-      "title_en": null,
+      "title_en": "Southern Fertilizer State Company",
       "title_ku": null,
       "website": "http://sfert.industry.gov.iq/",
       "_website_source": "ministry-site",
@@ -6837,13 +6510,14 @@
       "_verified": true,
       "_confidence": 0.75,
       "_source": "ministry-site",
-      "_maps_name": "الشركة العامة لصناعة الاسمدة الجنوبيه"
+      "_maps_name": "الشركة العامة لصناعة الاسمدة الجنوبيه",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-lsnaaa-alsyarat-walmadat",
       "ministry_slug": "ministry-of-industry-and-minerals",
       "title_ar": "الشركة العامة لصناعة السيارات والمعدات",
-      "title_en": null,
+      "title_en": "State Company for Automotive and Equipment Industry",
       "title_ku": null,
       "website": "https://scai.industry.gov.iq/",
       "_website_source": "ministry-site",
@@ -6860,13 +6534,14 @@
       "_verified": true,
       "_confidence": 0.75,
       "_source": "ministry-site",
-      "_maps_name": "الشركة العامة لصناعة السيارات في الاسكندرية"
+      "_maps_name": "الشركة العامة لصناعة السيارات في الاسكندرية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-llfwsfat",
       "ministry_slug": "ministry-of-industry-and-minerals",
       "title_ar": "الشركة العامة للفوسفات",
-      "title_en": null,
+      "title_en": "State Company for Phosphates",
       "title_ku": null,
       "website": "https://www.phoco.industry.gov.iq/",
       "_website_source": "ministry-site",
@@ -6883,13 +6558,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "مكتب الشركة العامة للفوسفات"
+      "_maps_name": "مكتب الشركة العامة للفوسفات",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-llsnaaat-albtrwkymyawya",
       "ministry_slug": "ministry-of-industry-and-minerals",
       "title_ar": "الشركة العامة للصناعات البتروكيمياوية",
-      "title_en": "State Company for Electrical and Electronic Industries",
+      "title_en": "State Company for Petrochemical Industries",
       "title_ku": null,
       "website": "https://pchem.industry.gov.iq/",
       "_website_source": "ministry-site",
@@ -6907,13 +6583,13 @@
       "_confidence": 0.67,
       "_source": "ministry-site",
       "_maps_name": "الشركة العامة للصناعات الكهربائية والالكترونية",
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "alshrka-alaama-llanzma-alalktrwnya",
       "ministry_slug": "ministry-of-industry-and-minerals",
       "title_ar": "الشركة العامة للانظمة الالكترونية",
-      "title_en": null,
+      "title_en": "State Company for Electronic Systems",
       "title_ku": null,
       "website": "https://www.gces.industry.gov.iq/",
       "_website_source": "ministry-site",
@@ -6935,13 +6611,14 @@
         "source": "google-maps (retry)",
         "matched_name": "وزارة الصناعة والمعادن/الشركة العامة للأنظمة الإلكترونية",
         "confidence": 1
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-lltsmym-wtnfydh-almsharya",
       "ministry_slug": "ministry-of-industry-and-minerals",
       "title_ar": "الشركة العامة للتصميم وتنفيذ المشاريع",
-      "title_en": null,
+      "title_en": "State Company for Design and Execution of Projects",
       "title_ku": null,
       "website": "https://scdpi.industry.gov.iq/",
       "_website_source": "ministry-site",
@@ -6963,13 +6640,14 @@
         "id": "node/11808049570",
         "distance_m": 21,
         "name_similarity": 1
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-llsnaaat-alanshayya",
       "ministry_slug": "ministry-of-industry-and-minerals",
       "title_ar": "الشركة العامة للصناعات الانشائية",
-      "title_en": null,
+      "title_en": "State Company for Construction Industries",
       "title_ku": null,
       "website": "https://seci.industry.gov.iq/",
       "_website_source": "ministry-site",
@@ -6991,13 +6669,14 @@
         "id": "node/5247684121",
         "distance_m": 56,
         "name_similarity": 1
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-llasmda-alshmalya",
       "ministry_slug": "ministry-of-industry-and-minerals",
       "title_ar": "الشركة العامة للاسمدة الشمالية",
-      "title_en": null,
+      "title_en": "Northern Fertilizer State Company",
       "title_ku": null,
       "website": "https://northasm.industry.gov.iq/",
       "_website_source": "ministry-site",
@@ -7014,13 +6693,14 @@
       "_verified": true,
       "_confidence": 0.67,
       "_source": "ministry-site",
-      "_maps_name": "الشركة العامة لصناعة الاسمدة الشمالية"
+      "_maps_name": "الشركة العامة لصناعة الاسمدة الشمالية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-llsnaaat-alfwladhya",
       "ministry_slug": "ministry-of-industry-and-minerals",
       "title_ar": "الشركة العامة للصناعات الفولاذية",
-      "title_en": null,
+      "title_en": "State Company for Steel Industries",
       "title_ku": null,
       "website": "https://scosi.industry.gov.iq/",
       "_website_source": "ministry-site",
@@ -7037,13 +6717,14 @@
       "_verified": true,
       "_confidence": 0.67,
       "_source": "ministry-site",
-      "_maps_name": "الشركة العامة للصناعات الكهربائية والالكترونية"
+      "_maps_name": "الشركة العامة للصناعات الكهربائية والالكترونية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-llsnaaat-altadynya",
       "ministry_slug": "ministry-of-industry-and-minerals",
       "title_ar": "الشركة العامة للصناعات التعدينية",
-      "title_en": null,
+      "title_en": "State Company for Mining Industries",
       "title_ku": null,
       "website": "https://altadinea.industry.gov.iq/",
       "_website_source": "ministry-site",
@@ -7060,13 +6741,14 @@
       "_verified": true,
       "_confidence": 0.67,
       "_source": "ministry-site",
-      "_maps_name": "الشركة العامة للصناعات الكهربائية والالكترونية"
+      "_maps_name": "الشركة العامة للصناعات الكهربائية والالكترونية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-llsnaaat-alhydrwlykya",
       "ministry_slug": "ministry-of-industry-and-minerals",
       "title_ar": "الشركة العامة للصناعات الهيدروليكية",
-      "title_en": null,
+      "title_en": "State Company for Hydraulic Industries",
       "title_ku": null,
       "website": "https://hisc.industry.gov.iq/",
       "_website_source": "ministry-site",
@@ -7083,7 +6765,8 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "ministry-site",
-      "_maps_name": "الشركة العامة للصناعات الهيدروليكية"
+      "_maps_name": "الشركة العامة للصناعات الهيدروليكية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "alshrka-alaama-lmadat-alatsalat-walqdra",
@@ -7939,7 +7622,7 @@
       "slug": "almdyrya-alaama-ltrbya-bghdad-alrsafa-alawla",
       "ministry_slug": "ministry-of-education",
       "title_ar": "المديرية العامة لتربية بغداد الرصافة الاولى",
-      "title_en": "Rusafa Directorate of Education",
+      "title_en": "General Directorate of Education — Baghdad Rusafa 1",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -7962,13 +7645,13 @@
         "distance_m": 9,
         "name_similarity": 0.33
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "almdyrya-alaama-ltrbya-bghdad-alrsafa-althanya",
       "ministry_slug": "ministry-of-education",
       "title_ar": "المديرية العامة لتربية بغداد الرصافة الثانية",
-      "title_en": "Educational Rusafa Directorate II",
+      "title_en": "General Directorate of Education — Baghdad Rusafa 2",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -8028,13 +7711,13 @@
         "name_similarity": 0.33,
         "opening_hours_raw": "Su-Th 09:00-14:00"
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "almdyrya-alaama-ltrbya-bghdad-alrsafa-althaltha",
       "ministry_slug": "ministry-of-education",
       "title_ar": "المديرية العامة لتربية بغداد الرصافة الثالثة",
-      "title_en": null,
+      "title_en": "General Directorate of Education — Baghdad Rusafa 3",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -8051,13 +7734,14 @@
       "_verified": false,
       "_confidence": 0.33,
       "_source": "seed",
-      "_maps_name": "مديرية تربية الرصافة الثانية"
+      "_maps_name": "مديرية تربية الرصافة الثانية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "almdyrya-alaama-ltrbya-bghdad-alkrkh-alawla",
       "ministry_slug": "ministry-of-education",
       "title_ar": "المديرية العامة لتربية بغداد الكرخ الاولى",
-      "title_en": null,
+      "title_en": "General Directorate of Education — Baghdad Karkh 1",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -8074,13 +7758,14 @@
       "_verified": true,
       "_confidence": 0.67,
       "_source": "seed",
-      "_maps_name": "المديرية العامة لتربية بغداد الكرخ الثانية - قسم تربية الدورة والسيدية"
+      "_maps_name": "المديرية العامة لتربية بغداد الكرخ الثانية - قسم تربية الدورة والسيدية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "almdyrya-alaama-ltrbya-bghdad-alkrkh-althanya",
       "ministry_slug": "ministry-of-education",
       "title_ar": "المديرية العامة لتربية بغداد الكرخ الثانية",
-      "title_en": null,
+      "title_en": "General Directorate of Education — Baghdad Karkh 2",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -8097,13 +7782,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "seed",
-      "_maps_name": "المديرية العامة لتربية بغداد الكرخ الثانية - قسم تربية الدورة والسيدية"
+      "_maps_name": "المديرية العامة لتربية بغداد الكرخ الثانية - قسم تربية الدورة والسيدية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "almdyrya-alaama-ltrbya-bghdad-alkrkh-althaltha",
       "ministry_slug": "ministry-of-education",
       "title_ar": "المديرية العامة لتربية بغداد الكرخ الثالثة",
-      "title_en": null,
+      "title_en": "General Directorate of Education — Baghdad Karkh 3",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -8120,13 +7806,14 @@
       "_verified": true,
       "_confidence": 0.67,
       "_source": "seed",
-      "_maps_name": "المديرية العامة لتربية بغداد الكرخ الثانية - قسم تربية الدورة والسيدية"
+      "_maps_name": "المديرية العامة لتربية بغداد الكرخ الثانية - قسم تربية الدورة والسيدية",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-alamthanat-alaama",
       "ministry_slug": "ministry-of-education",
       "title_ar": "دائرة الامتحانات العامة",
-      "title_en": null,
+      "title_en": "General Examinations Department",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -8143,13 +7830,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "seed",
-      "_maps_name": "المديرية العامة للتقويم والامتحانات"
+      "_maps_name": "المديرية العامة للتقويم والامتحانات",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "almdyrya-alaama-lltalym-almhny",
       "ministry_slug": "ministry-of-education",
       "title_ar": "المديرية العامة للتعليم المهني",
-      "title_en": null,
+      "title_en": "General Directorate of Vocational Education",
       "title_ku": null,
       "website": "http://vocational.edu.iq/",
       "_website_source": "place-match",
@@ -8171,13 +7859,14 @@
         "id": "node/10656812305",
         "distance_m": 90,
         "name_similarity": 0
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "almdyrya-alaama-lltqwym-walamthanat",
       "ministry_slug": "ministry-of-education",
       "title_ar": "المديرية العامة للتقويم والامتحانات",
-      "title_en": null,
+      "title_en": "General Directorate of Evaluation and Examinations",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -8194,7 +7883,8 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "seed",
-      "_maps_name": "المديرية العامة للتقويم والامتحانات"
+      "_maps_name": "المديرية العامة للتقويم والامتحانات",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-altalym-alaam",
@@ -8230,7 +7920,7 @@
       "slug": "dayra-albathat-walalaqat-althqafya",
       "ministry_slug": "ministry-of-higher-education",
       "title_ar": "دائرة البعثات والعلاقات الثقافية",
-      "title_en": null,
+      "title_en": "Department of Scholarships and Cultural Relations",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -8247,13 +7937,14 @@
       "_verified": false,
       "_confidence": 0.33,
       "_source": "seed",
-      "_maps_name": "البعثات"
+      "_maps_name": "البعثات",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-albhth-walttwyr",
       "ministry_slug": "ministry-of-higher-education",
       "title_ar": "دائرة البحث والتطوير",
-      "title_en": "Ministry of Higher Education and Scientific Research",
+      "title_en": "Department of Research and Development",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -8276,13 +7967,13 @@
         "distance_m": 57,
         "name_similarity": 0.33
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "dayra-altalym-aljamay-alahly",
       "ministry_slug": "ministry-of-higher-education",
       "title_ar": "دائرة التعليم الجامعي الاهلي",
-      "title_en": null,
+      "title_en": "Department of Private University Education",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -8299,7 +7990,8 @@
       "_verified": false,
       "_confidence": 0.33,
       "_source": "seed",
-      "_maps_name": "وزارة التعليم العالي والبحث العلمي"
+      "_maps_name": "وزارة التعليم العالي والبحث العلمي",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-alaml-waltdryb-almhny",
@@ -8335,7 +8027,7 @@
       "slug": "dayra-raaya-dhwy-alaaaqa-walahtyajat-alkhasa",
       "ministry_slug": "ministry-of-labour-and-social-affairs",
       "title_ar": "دائرة رعاية ذوي الاعاقة والاحتياجات الخاصة",
-      "title_en": null,
+      "title_en": "Department for the Care of Persons with Disabilities and Special Needs",
       "title_ku": null,
       "website": "https://www.facebook.com/%D9%87%D9%8A%D8%A6%D8%A9-%D8%B1%D8%B9%D8%A7%D9%8A%D8%A9-%D8%B0%D9%88%D9%8A-%D8%A7%D9%84%D8%A7%D8%B9%D8%A7%D9%82%D8%A9-%D9%88%D8%A7%D9%84%D8%A7%D8%AD%D8%AA%D9%8A%D8%A7%D8%AC%D8%A7%D8%AA-%D8%A7%D9%84%D8%AE%D8%A7%D8%B5%D8%A9-%D9%82%D8%B3%D9%85-%D9%83%D8%B1%D8%A8%D9%84%D8%A7%D8%A1-163155997833627/",
       "_website_source": "place-match",
@@ -8357,13 +8049,14 @@
         "id": "node/11700102082",
         "distance_m": 48,
         "name_similarity": 0.83
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-alraaya-alajtmaaya",
       "ministry_slug": "ministry-of-labour-and-social-affairs",
       "title_ar": "دائرة الرعاية الاجتماعية",
-      "title_en": "Ministry of Labour and Social Affairs",
+      "title_en": "Department of Social Welfare",
       "title_ku": null,
       "website": "http://www.molsa.gov.iq/",
       "_website_source": "place-match",
@@ -8386,13 +8079,13 @@
         "distance_m": 134,
         "name_similarity": 1
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "dayra-altqaad-waldman-alajtmaay-llamal",
       "ministry_slug": "ministry-of-labour-and-social-affairs",
       "title_ar": "دائرة التقاعد والضمان الاجتماعي للعمال",
-      "title_en": null,
+      "title_en": "Department of Pensions and Social Security for Workers",
       "title_ku": null,
       "website": "http://molsa.gov.iq/index.php?name=Pages&op=page&pid=116",
       "_website_source": "place-match",
@@ -8409,13 +8102,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "seed",
-      "_maps_name": "دائرة التقاعد والضمان الاجتماعي للعمال"
+      "_maps_name": "دائرة التقاعد والضمان الاجتماعي للعمال",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "almdyrya-alaama-llsdwd-walkhzanat",
       "ministry_slug": "ministry-of-water-resources",
       "title_ar": "المديرية العامة للسدود والخزانات",
-      "title_en": null,
+      "title_en": "General Directorate of Dams and Reservoirs",
       "title_ku": null,
       "website": "http://dams.mowr.gov.iq/",
       "_website_source": "place-match",
@@ -8432,13 +8126,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "seed",
-      "_maps_name": "الهيئة العامة للسدود والخزانات"
+      "_maps_name": "الهيئة العامة للسدود والخزانات",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "almdyrya-alaama-ltshghyl-wsyana-msharya-alry",
       "ministry_slug": "ministry-of-water-resources",
       "title_ar": "المديرية العامة لتشغيل وصيانة مشاريع الري",
-      "title_en": "Ministry of Water - Directorate of Ops & Mgt for Irrig P",
+      "title_en": "General Directorate for Operation and Maintenance of Irrigation Projects",
       "title_ku": null,
       "website": "https://www.facebook.com/%D8%A5%D8%B9%EF%BB%BB%D9%85-%D8%A7%D9%84%D9%87%D9%8A%D8%A6%D8%A9-%D8%A7%D9%84%D8%B9%D8%A7%D9%85%D8%A9-%D9%84%D8%AA%D8%B4%D8%BA%D9%8A%D9%84-%D9%85%D8%B4%D8%A7%D8%B1%D9%8A%D8%B9-%D8%A7%D9%84%D8%B1%D9%8A-%D9%88%D8%A7%D9%84%D8%A8%D8%B2%D9%84-892574990774059/",
       "_website_source": "place-match",
@@ -8461,7 +8156,7 @@
         "distance_m": 55,
         "name_similarity": 0.67
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "almdyrya-alaama-llmyah-aljwfya",
@@ -8496,7 +8191,7 @@
       "slug": "alshrka-alaama-ltnfydh-msharya-alry",
       "ministry_slug": "ministry-of-water-resources",
       "title_ar": "الشركة العامة لتنفيذ مشاريع الري",
-      "title_en": "General Company for the implementation of the Ministry of Transport Projects",
+      "title_en": "State Company for Implementation of Irrigation Projects",
       "title_ku": null,
       "website": "https://www.facebook.com/scitcp?mibextid=ZbWKwL",
       "_website_source": "place-match",
@@ -8514,13 +8209,13 @@
       "_confidence": 0.75,
       "_source": "seed",
       "_maps_name": "الشركة العامة لتنفيذ مشاريع وزارة النقل",
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "almdyrya-alaama-lastslah-alarady",
       "ministry_slug": "ministry-of-water-resources",
       "title_ar": "المديرية العامة لاستصلاح الاراضي",
-      "title_en": null,
+      "title_en": "General Directorate of Land Reclamation",
       "title_ku": null,
       "website": "https://pwr.mowr.gov.iq/",
       "_website_source": "place-match",
@@ -8537,13 +8232,14 @@
       "_verified": true,
       "_confidence": 0.5,
       "_source": "seed",
-      "_maps_name": "الهيئة العامة لمشاريع الري والاستصلاح"
+      "_maps_name": "الهيئة العامة لمشاريع الري والاستصلاح",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-alshbab",
       "ministry_slug": "ministry-of-youth-and-sports",
       "title_ar": "دائرة الشباب",
-      "title_en": "Ministry of Youth and Sport",
+      "title_en": "Youth Department",
       "title_ku": null,
       "website": "http://www.moys.gov.iq/",
       "_website_source": "place-match",
@@ -8566,13 +8262,13 @@
         "distance_m": 79,
         "name_similarity": 0.5
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "dayra-alryada",
       "ministry_slug": "ministry-of-youth-and-sports",
       "title_ar": "دائرة الرياضة",
-      "title_en": "Ministry of Youth and Sport",
+      "title_en": "Sports Department",
       "title_ku": null,
       "website": "http://www.moys.gov.iq/",
       "_website_source": "place-match",
@@ -8595,13 +8291,13 @@
         "distance_m": 79,
         "name_similarity": 0.5
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "dayra-raaya-almwhba-alryadya",
       "ministry_slug": "ministry-of-youth-and-sports",
       "title_ar": "دائرة رعاية الموهبة الرياضية",
-      "title_en": null,
+      "title_en": "Department for the Care of Sporting Talent",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -8623,13 +8319,14 @@
         "source": "google-maps (retry)",
         "matched_name": "قسم رعاية الموهبة الرياضة في واسط",
         "confidence": 0.67
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-shwwn-alaqalym-walmhafzat",
       "ministry_slug": "ministry-of-youth-and-sports",
       "title_ar": "دائرة شؤون الاقاليم والمحافظات",
-      "title_en": null,
+      "title_en": "Department of Regions and Governorates Affairs",
       "title_ku": null,
       "website": "https://pad.moys.gov.iq/",
       "_website_source": "place-match",
@@ -8646,7 +8343,8 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "seed",
-      "_maps_name": "وزارة الشباب والرياضة /دائرة شؤون الاقاليم والمحافظات"
+      "_maps_name": "وزارة الشباب والرياضة /دائرة شؤون الاقاليم والمحافظات",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "hyya-alsyaha",
@@ -8682,7 +8380,7 @@
       "slug": "dayra-alalaqat-althqafya-alaama",
       "ministry_slug": "ministry-of-culture-tourism-and-antiquities",
       "title_ar": "دائرة العلاقات الثقافية العامة",
-      "title_en": null,
+      "title_en": "Department of General Cultural Relations",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -8699,7 +8397,8 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "seed",
-      "_maps_name": "دائرة العلاقات الثقافية العامة"
+      "_maps_name": "دائرة العلاقات الثقافية العامة",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dar-alktb-walwthayq-alwtnya",
@@ -8734,7 +8433,7 @@
       "slug": "dayra-alfnwn-alaama",
       "ministry_slug": "ministry-of-culture-tourism-and-antiquities",
       "title_ar": "دائرة الفنون العامة",
-      "title_en": null,
+      "title_en": "Department of Public Arts",
       "title_ku": null,
       "website": "https://cofarts.uobaghdad.edu.iq/",
       "_website_source": "place-match",
@@ -8751,13 +8450,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "seed",
-      "_maps_name": "كلية الفنون الجميلة"
+      "_maps_name": "كلية الفنون الجميلة",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dar-alshwwn-althqafya-alaama",
       "ministry_slug": "ministry-of-culture-tourism-and-antiquities",
       "title_ar": "دار الشؤون الثقافية العامة",
-      "title_en": null,
+      "title_en": "General House for Cultural Affairs",
       "title_ku": null,
       "website": "http://www.darculture.com/",
       "_website_source": "place-match",
@@ -8779,7 +8479,8 @@
         "id": "node/8392654723",
         "distance_m": 126,
         "name_similarity": 0.75
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-albytra",
@@ -8815,7 +8516,7 @@
       "slug": "dayra-althrwa-alhywanya",
       "ministry_slug": "ministry-of-agriculture",
       "title_ar": "دائرة الثروة الحيوانية",
-      "title_en": "court aby gerb",
+      "title_en": "Department of Animal Resources",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -8875,13 +8576,13 @@
         "name_similarity": 0,
         "opening_hours_raw": "Su-Th 08:00-14:00"
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "dayra-albstna-walghabat",
       "ministry_slug": "ministry-of-agriculture",
       "title_ar": "دائرة البستنة والغابات",
-      "title_en": null,
+      "title_en": "Department of Horticulture and Forestry",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -8940,13 +8641,14 @@
         "distance_m": 40,
         "name_similarity": 0,
         "opening_hours_raw": "Su-Th 08:00-15:00"
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "dayra-wqaya-almzrwaat",
       "ministry_slug": "ministry-of-agriculture",
       "title_ar": "دائرة وقاية المزروعات",
-      "title_en": "Planets Protection Office",
+      "title_en": "Plant Protection Department",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -8969,7 +8671,7 @@
         "distance_m": 52,
         "name_similarity": 1
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "alshrka-alaama-lltjhyzat-alzraaya",
@@ -9004,7 +8706,7 @@
       "slug": "dayra-altkhtyt-walmtabaa-2",
       "ministry_slug": "ministry-of-agriculture",
       "title_ar": "دائرة التخطيط والمتابعة",
-      "title_en": null,
+      "title_en": "Department of Planning and Follow-up",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -9022,7 +8724,7 @@
       "_confidence": 1,
       "_source": "seed",
       "_maps_name": "وزارة التجارة / دائرة التخطيط والمتابعة",
-      "_title_en_source": null,
+      "_title_en_source": "reviewed translation",
       "email": null,
       "_ambiguous_name": "name states an internal function only; no place lookup can identify it"
     },
@@ -9030,7 +8732,7 @@
       "slug": "alhyya-alaama-llmknna-alzraaya",
       "ministry_slug": "ministry-of-agriculture",
       "title_ar": "الهيئة العامة للمكننة الزراعية",
-      "title_en": "College of Agricultural Engineering Sciences, University of Baghdad",
+      "title_en": "General Authority for Agricultural Mechanisation",
       "title_ku": null,
       "website": "https://coagri.uobaghdad.edu.iq/",
       "_website_source": "place-match",
@@ -9048,13 +8750,13 @@
       "_confidence": 0.5,
       "_source": "seed",
       "_maps_name": "جامعة بغداد - كلية علوم الهندسة الزراعية",
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "dayra-alhjra",
       "ministry_slug": "ministry-of-migration-and-displaced",
       "title_ar": "دائرة الهجرة",
-      "title_en": "Ministry of Displacement & Migration",
+      "title_en": "Migration Department",
       "title_ku": null,
       "website": "https://momd.gov.iq/",
       "_website_source": "place-match",
@@ -9114,13 +8816,13 @@
         "name_similarity": 0.5,
         "opening_hours_raw": "Su-Th 08:00-15:00"
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "dayra-shwwn-almhjryn",
       "ministry_slug": "ministry-of-migration-and-displaced",
       "title_ar": "دائرة شؤون المهجرين",
-      "title_en": "Ministry of Migration and Displaced",
+      "title_en": "Department of Displaced Persons Affairs",
       "title_ku": null,
       "website": "https://momd.gov.iq/",
       "_website_source": "place-match",
@@ -9138,13 +8840,13 @@
       "_confidence": 1,
       "_source": "seed",
       "_maps_name": "وزارة الهجرة والمهجرين",
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "dayra-altkhtyt-walmtabaa-alfnya",
       "ministry_slug": "ministry-of-environment",
       "title_ar": "دائرة التخطيط والمتابعة الفنية",
-      "title_en": null,
+      "title_en": "Department of Technical Planning and Follow-up",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -9162,7 +8864,7 @@
       "_confidence": 0.67,
       "_source": "seed",
       "_maps_name": "وزارة التجارة / دائرة التخطيط والمتابعة",
-      "_title_en_source": null,
+      "_title_en_source": "reviewed translation",
       "email": null,
       "_ambiguous_name": "name states an internal function only; no place lookup can identify it"
     },
@@ -9170,7 +8872,7 @@
       "slug": "dayra-alwqaya-alashaaaya",
       "ministry_slug": "ministry-of-environment",
       "title_ar": "دائرة الوقاية الاشعاعية",
-      "title_en": "radiation Center protection",
+      "title_en": "Radiation Protection Department",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -9193,13 +8895,13 @@
         "distance_m": 76,
         "name_similarity": 0.33
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "dayra-alshwwn-alqnslya",
       "ministry_slug": "ministry-of-foreign-affairs",
       "title_ar": "دائرة الشؤون القنصلية",
-      "title_en": "Attestation Department/Ministry of Foreign Affairs",
+      "title_en": "Department of Consular Affairs",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -9222,13 +8924,13 @@
         "distance_m": 58,
         "name_similarity": 0.33
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "dayra-alalaqat-alaqtsadya",
       "ministry_slug": "ministry-of-foreign-affairs",
       "title_ar": "دائرة العلاقات الاقتصادية",
-      "title_en": null,
+      "title_en": "Department of Economic Relations",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -9245,13 +8947,14 @@
       "_verified": true,
       "_confidence": 0.5,
       "_source": "seed",
-      "_maps_name": "دائرة العلاقات الثقافية العامة"
+      "_maps_name": "دائرة العلاقات الثقافية العامة",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "mdyrya-jwazat-arbyl",
       "ministry_slug": "krg-ministry-of-interior",
       "title_ar": "مديرية جوازات اربيل",
-      "title_en": null,
+      "title_en": "Erbil Passports Directorate",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -9273,7 +8976,8 @@
         "id": "node/13947278201",
         "distance_m": 7,
         "name_similarity": 0.67
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "mdyrya-sha-arbyl",
@@ -9309,7 +9013,7 @@
       "slug": "mdyrya-sha-dhwk",
       "ministry_slug": "krg-ministry-of-health",
       "title_ar": "مديرية صحة دهوك",
-      "title_en": "General Directorate of Health",
+      "title_en": "Duhok General Directorate of Health",
       "title_ku": "بەڕێوەبەرایەتی گشتی تەندرووستی دھۆک",
       "website": "http://duhokhealth.org/",
       "_website_source": "place-match",
@@ -9332,14 +9036,14 @@
         "distance_m": 8,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match",
+      "_title_en_source": "reviewed translation (place match named another body)",
       "_title_ku_source": "place-match"
     },
     {
       "slug": "mdyrya-sha-hlbja",
       "ministry_slug": "krg-ministry-of-health",
       "title_ar": "مديرية صحة حلبجة",
-      "title_en": "General Directorate of Health",
+      "title_en": "Halabja General Directorate of Health",
       "title_ku": "بەڕێوەبەرایەتی گشتی تەندرووستی دھۆک",
       "website": "http://duhokhealth.org/",
       "_website_source": "place-match",
@@ -9362,7 +9066,7 @@
         "distance_m": 8,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match",
+      "_title_en_source": "reviewed translation (place match named another body)",
       "_title_ku_source": "place-match"
     },
     {
@@ -9435,7 +9139,7 @@
       "slug": "mdyrya-trbya-dhwk",
       "ministry_slug": "krg-ministry-of-education",
       "title_ar": "مديرية تربية دهوك",
-      "title_en": null,
+      "title_en": "Duhok Directorate of Education",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -9452,13 +9156,14 @@
       "_verified": true,
       "_confidence": 1,
       "_source": "seed",
-      "_maps_name": "ممثلية وزارة التربية في دهوك (الموقع الجديد)"
+      "_maps_name": "ممثلية وزارة التربية في دهوك (الموقع الجديد)",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "mdyrya-trbya-hlbja",
       "ministry_slug": "krg-ministry-of-education",
       "title_ar": "مديرية تربية حلبجة",
-      "title_en": "General Directorate of Arbil Education",
+      "title_en": "Halabja Directorate of Education",
       "title_ku": "بەڕێوەبەرایەتی گشتی پەروەردەی هەولێر",
       "website": "https://www.facebook.com/gdoehawler/",
       "_website_source": "place-match",
@@ -9518,14 +9223,14 @@
         "name_similarity": 0,
         "opening_hours_raw": "Su-Th 08:30-13:30"
       },
-      "_title_en_source": "place-match",
+      "_title_en_source": "reviewed translation (place match named another body)",
       "_title_ku_source": "place-match"
     },
     {
       "slug": "mdyrya-alaml-walshwwn-alajtmaaya-alslymanya",
       "ministry_slug": "krg-ministry-of-labour-and-social-affairs",
       "title_ar": "مديرية العمل والشؤون الاجتماعية السليمانية",
-      "title_en": "Ministry of Labor and Social Affairs",
+      "title_en": "Sulaymaniyah Directorate of Labour and Social Affairs",
       "title_ku": "وەزارەتی کار و کاروباری کۆمەڵایەتی",
       "website": "https://gov.krd/molsa",
       "_website_source": "place-match",
@@ -9548,14 +9253,14 @@
         "distance_m": 54,
         "name_similarity": 0.6
       },
-      "_title_en_source": "place-match",
+      "_title_en_source": "reviewed translation (place match named another body)",
       "_title_ku_source": "place-match"
     },
     {
       "slug": "mdyrya-alaml-walshwwn-alajtmaaya-dhwk",
       "ministry_slug": "krg-ministry-of-labour-and-social-affairs",
       "title_ar": "مديرية العمل والشؤون الاجتماعية دهوك",
-      "title_en": "Ministry of Labor and Social Affairs",
+      "title_en": "Duhok Directorate of Labour and Social Affairs",
       "title_ku": "وەزارەتی کار و کاروباری کۆمەڵایەتی",
       "website": "https://gov.krd/molsa",
       "_website_source": "place-match",
@@ -9578,14 +9283,14 @@
         "distance_m": 54,
         "name_similarity": 0.6
       },
-      "_title_en_source": "place-match",
+      "_title_en_source": "reviewed translation (place match named another body)",
       "_title_ku_source": "place-match"
     },
     {
       "slug": "mdyrya-bldya-arbyl",
       "ministry_slug": "krg-ministry-of-municipalities-and-tourism",
       "title_ar": "مديرية بلدية اربيل",
-      "title_en": "ministry of education store",
+      "title_en": "Erbil Municipality Directorate",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -9608,13 +9313,13 @@
         "distance_m": 93,
         "name_similarity": 0.33
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "mdyrya-bldya-alslymanya",
       "ministry_slug": "krg-ministry-of-municipalities-and-tourism",
       "title_ar": "مديرية بلدية السليمانية",
-      "title_en": "Directorate of Municipality - Municipal Branch 1",
+      "title_en": "Sulaymaniyah Municipality Directorate",
       "title_ku": "بەڕێوەبەرایەتی شارەوانی یەک",
       "website": null,
       "_website_source": null,
@@ -9639,13 +9344,13 @@
       },
       "_title_ku_source": "place-match",
       "email": "Rizgarnoori6@gmail.com",
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "mdyrya-bldya-dhwk",
       "ministry_slug": "krg-ministry-of-municipalities-and-tourism",
       "title_ar": "مديرية بلدية دهوك",
-      "title_en": "Directorate of Municipality - Municipal Branch 1",
+      "title_en": "Duhok Municipality Directorate",
       "title_ku": "بەڕێوەبەرایەتی شارەوانی یەک",
       "website": null,
       "_website_source": null,
@@ -9670,13 +9375,13 @@
       },
       "_title_ku_source": "place-match",
       "email": "Rizgarnoori6@gmail.com",
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "mdyrya-alaslah-alajtmaay-aqlym-krdstan",
       "ministry_slug": "krg-ministry-of-justice",
       "title_ar": "مديرية الاصلاح الاجتماعي اقليم كردستان",
-      "title_en": "Ministry of Labor and Social Affairs",
+      "title_en": "Directorate of Social Reform — Kurdistan Region",
       "title_ku": "وەزارەتی کار و کاروباری کۆمەڵایەتی",
       "website": "https://gov.krd/molsa",
       "_website_source": "place-match",
@@ -9699,7 +9404,7 @@
         "distance_m": 54,
         "name_similarity": 0.2
       },
-      "_title_en_source": "place-match",
+      "_title_en_source": "reviewed translation (place match named another body)",
       "_title_ku_source": "place-match",
       "_phone_withdrawn": "shared with 2 ministries; no evidence which owns it"
     },
@@ -9756,7 +9461,7 @@
       "slug": "mdyrya-zraaa-arbyl",
       "ministry_slug": "krg-ministry-of-agriculture-and-water-resources",
       "title_ar": "مديرية زراعة اربيل",
-      "title_en": "Ministry of Agriculture and Water Resources",
+      "title_en": "Erbil Directorate of Agriculture",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -9779,13 +9484,13 @@
         "distance_m": 17,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "mdyrya-zraaa-alslymanya",
       "ministry_slug": "krg-ministry-of-agriculture-and-water-resources",
       "title_ar": "مديرية زراعة السليمانية",
-      "title_en": "Ministry of Agriculture and Water Resources",
+      "title_en": "Sulaymaniyah Directorate of Agriculture",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -9808,13 +9513,13 @@
         "distance_m": 17,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "mdyrya-zraaa-dhwk",
       "ministry_slug": "krg-ministry-of-agriculture-and-water-resources",
       "title_ar": "مديرية زراعة دهوك",
-      "title_en": "Ministry of Agriculture and Water Resources",
+      "title_en": "Duhok Directorate of Agriculture",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -9837,7 +9542,7 @@
         "distance_m": 17,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "mdyrya-khrba-arbyl",
@@ -9867,7 +9572,7 @@
       "slug": "mdyrya-khrba-alslymanya",
       "ministry_slug": "krg-ministry-of-electricity",
       "title_ar": "مديرية كهرباء السليمانية",
-      "title_en": null,
+      "title_en": "Sulaymaniyah Electricity Directorate",
       "title_ku": "بەڕێوبەرایەتی دابەشکردنی کارەبای سلێمانی / ڕۆژئاوا",
       "website": null,
       "_website_source": null,
@@ -9890,7 +9595,8 @@
         "distance_m": 14,
         "name_similarity": 0
       },
-      "_title_ku_source": "place-match"
+      "_title_ku_source": "place-match",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "mdyrya-khrba-dhwk",
@@ -9964,7 +9670,7 @@
       "slug": "mdyrya-awqaf-arbyl",
       "ministry_slug": "krg-ministry-of-endowment-and-religious-affairs",
       "title_ar": "مديرية اوقاف اربيل",
-      "title_en": "The Ministry of Endowment & Religious affairs",
+      "title_en": "Erbil Directorate of Endowments",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -9987,13 +9693,13 @@
         "distance_m": 83,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "mdyrya-awqaf-alslymanya",
       "ministry_slug": "krg-ministry-of-endowment-and-religious-affairs",
       "title_ar": "مديرية اوقاف السليمانية",
-      "title_en": "The Ministry of Endowment & Religious affairs",
+      "title_en": "Sulaymaniyah Directorate of Endowments",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -10016,13 +9722,13 @@
         "distance_m": 83,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "mdyrya-awqaf-dhwk",
       "ministry_slug": "krg-ministry-of-endowment-and-religious-affairs",
       "title_ar": "مديرية اوقاف دهوك",
-      "title_en": "The Ministry of Endowment & Religious affairs",
+      "title_en": "Duhok Directorate of Endowments",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -10045,13 +9751,13 @@
         "distance_m": 83,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "mdyrya-shbab-wryada-arbyl",
       "ministry_slug": "krg-ministry-of-culture-and-youth",
       "title_ar": "مديرية شباب ورياضة اربيل",
-      "title_en": "Ministry of Culture and Youth - KRG وه‌زاره‌تی ڕۆشه‌نبیری و لاوان",
+      "title_en": "Erbil Directorate of Youth and Sport",
       "title_ku": "Ministry of Culture and Youth - KRG وه‌زاره‌تی ڕۆشه‌نبیری و لاوان",
       "website": "https://gov.krd/mocy",
       "_website_source": "place-match",
@@ -10074,14 +9780,14 @@
         "distance_m": 73,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match",
+      "_title_en_source": "reviewed translation",
       "_title_ku_source": "place-match"
     },
     {
       "slug": "mdyrya-thqafa-arbyl",
       "ministry_slug": "krg-ministry-of-culture-and-youth",
       "title_ar": "مديرية ثقافة اربيل",
-      "title_en": "Ministry of Culture and Youth - KRG وه‌زاره‌تی ڕۆشه‌نبیری و لاوان",
+      "title_en": "Erbil Directorate of Culture",
       "title_ku": "Ministry of Culture and Youth - KRG وه‌زاره‌تی ڕۆشه‌نبیری و لاوان",
       "website": "https://gov.krd/mocy",
       "_website_source": "place-match",
@@ -10104,14 +9810,14 @@
         "distance_m": 73,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match",
+      "_title_en_source": "reviewed translation",
       "_title_ku_source": "place-match"
     },
     {
       "slug": "mdyrya-ahsa-arbyl",
       "ministry_slug": "krg-ministry-of-planning",
       "title_ar": "مديرية احصاء اربيل",
-      "title_en": "Directorate of Roads and Bridges of ERBIL",
+      "title_en": "Erbil Directorate of Statistics",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -10171,13 +9877,13 @@
         "name_similarity": 0,
         "opening_hours_raw": "Su-Th 08:00-15:00"
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "mdyrya-aamar-arbyl",
       "ministry_slug": "krg-ministry-of-construction-and-housing",
       "title_ar": "مديرية اعمار اربيل",
-      "title_en": "general managers of legal affairs",
+      "title_en": "Erbil Directorate of Reconstruction",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -10200,13 +9906,13 @@
         "distance_m": 111,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "mdyrya-askan-arbyl",
       "ministry_slug": "krg-ministry-of-construction-and-housing",
       "title_ar": "مديرية اسكان اربيل",
-      "title_en": "Iskan",
+      "title_en": "Erbil Directorate of Housing",
       "title_ku": null,
       "website": null,
       "_website_source": null,
@@ -10224,13 +9930,13 @@
       "_confidence": 1,
       "_source": "seed",
       "_maps_name": "اسكان",
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "general-directorate-of-passports",
       "ministry_slug": "ministry-of-interior",
       "title_ar": "مديرية شؤون الجوازات العامة",
-      "title_en": null,
+      "title_en": "General Directorate of Passport Affairs",
       "title_ku": null,
       "website": "http://iraqinationality.gov.iq/",
       "phone": null,
@@ -10252,13 +9958,14 @@
         "id": "node/4352437292",
         "distance_m": 3,
         "name_similarity": 0.5
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "general-directorate-of-nationality",
       "ministry_slug": "ministry-of-interior",
       "title_ar": "المديرية العامة للجنسية",
-      "title_en": null,
+      "title_en": "General Directorate of Nationality",
       "title_ku": null,
       "website": null,
       "phone": null,
@@ -10275,7 +9982,8 @@
       "_confidence": 0,
       "_source": "canonical-parent",
       "_maps_name": null,
-      "_is_branch_parent": true
+      "_is_branch_parent": true,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "general-directorate-of-traffic",
@@ -10397,7 +10105,7 @@
       "slug": "general-commission-of-customs",
       "ministry_slug": "ministry-of-finance",
       "title_ar": "الهيئة العامة للكمارك",
-      "title_en": null,
+      "title_en": "General Commission of Customs",
       "title_ku": null,
       "website": "https://mof.gov.iq/General-Customs-Authority.aspx",
       "phone": "+964 770 048 7479",
@@ -10419,13 +10127,14 @@
         "source": "google-maps (retry)",
         "matched_name": "الهيئة العامة للكمارك",
         "confidence": 1
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "national-board-of-pensions",
       "ministry_slug": "ministry-of-finance",
       "title_ar": "هيئة التقاعد الوطنية",
-      "title_en": null,
+      "title_en": "National Board of Pensions",
       "title_ku": null,
       "website": "https://mof.gov.iq/Public-PensionBody.aspx",
       "phone": null,
@@ -10442,7 +10151,8 @@
       "_confidence": 1,
       "_source": "canonical-parent (details from hyya-altqaad-alaama)",
       "_maps_name": "دائرة التقاعد والضمان الاجتماعي للعمال",
-      "_is_branch_parent": true
+      "_is_branch_parent": true,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "state-property-department",
@@ -10477,7 +10187,7 @@
       "slug": "real-estate-registration-department",
       "ministry_slug": "ministry-of-justice",
       "title_ar": "دائرة التسجيل العقاري",
-      "title_en": null,
+      "title_en": "Real Estate Registration Department",
       "title_ku": null,
       "website": "https://moj.gov.iq/registration/",
       "phone": null,
@@ -10500,13 +10210,14 @@
         "matched_name": "دائرة التسجيل العقاري",
         "similarity": 1,
         "id": "node/4790324624"
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "notary-public-department",
       "ministry_slug": "ministry-of-justice",
       "title_ar": "دائرة الكاتب العدل",
-      "title_en": null,
+      "title_en": "Notary Public Department",
       "title_ku": null,
       "website": null,
       "phone": null,
@@ -10529,13 +10240,14 @@
         "matched_name": "دائرة ألكاتب ألعدل في ألنهروان",
         "similarity": 0.9,
         "id": "node/4915823121"
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "directorate-of-public-health",
       "ministry_slug": "ministry-of-health",
       "title_ar": "دائرة الصحة العامة",
-      "title_en": "Iraqi Ministry of Health",
+      "title_en": "Public Health Department",
       "title_ku": null,
       "website": "http://www.phd.iq/",
       "phone": null,
@@ -10595,13 +10307,13 @@
         "name_similarity": 0.33,
         "opening_hours_raw": "Su-Th 08:00-14:00"
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "general-directorate-of-education",
       "ministry_slug": "ministry-of-education",
       "title_ar": "المديرية العامة للتربية",
-      "title_en": null,
+      "title_en": "General Directorate of Education",
       "title_ku": null,
       "website": null,
       "phone": "+964 790 152 2175",
@@ -10623,13 +10335,14 @@
         "id": "node/4716948989",
         "distance_m": 87,
         "name_similarity": 0
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "directorate-of-labour-and-social-security",
       "ministry_slug": "ministry-of-labour-and-social-affairs",
       "title_ar": "المديرية العامة للعمل والضمان الاجتماعي",
-      "title_en": "Ministry of Labour and Social Affairs",
+      "title_en": "General Directorate of Labour and Social Security",
       "title_ku": null,
       "website": "http://www.molsa.gov.iq/",
       "phone": "+964 770 512 2236",
@@ -10652,13 +10365,13 @@
         "distance_m": 81,
         "name_similarity": 0.2
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "social-protection-authority",
       "ministry_slug": "ministry-of-labour-and-social-affairs",
       "title_ar": "هيئة الحماية الاجتماعية",
-      "title_en": "Ministry of Labour and Social Affairs",
+      "title_en": "Social Protection Authority",
       "title_ku": null,
       "website": "https://www.facebook.com/%D9%87%D9%8A%D8%A6%D8%A9-%D8%A7%D9%84%D8%AD%D9%85%D8%A7%D9%8A%D8%A9-%D8%A7%D9%84%D8%A7%D8%AC%D8%AA%D9%85%D8%A7%D8%B9%D9%8A%D8%A9-392983660873652/",
       "phone": null,
@@ -10681,7 +10394,7 @@
         "distance_m": 80,
         "name_similarity": 0.33
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "general-company-for-foodstuff-trading",
@@ -10777,7 +10490,7 @@
       "slug": "general-directorate-of-electricity-distribution",
       "ministry_slug": "ministry-of-electricity",
       "title_ar": "المديرية العامة لتوزيع الكهرباء",
-      "title_en": null,
+      "title_en": "General Directorate of Electricity Distribution",
       "title_ku": null,
       "website": "https://ned.moelc.gov.iq/",
       "phone": "+964 770 532 3704",
@@ -10799,13 +10512,14 @@
         "id": "way/982836325",
         "distance_m": 45,
         "name_similarity": 0
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "general-directorate-of-water-resources",
       "ministry_slug": "ministry-of-water-resources",
       "title_ar": "المديرية العامة للموارد المائية",
-      "title_en": "The National Center for Water Resources Management",
+      "title_en": "General Directorate of Water Resources",
       "title_ku": null,
       "website": null,
       "phone": "+964 1 442 2183",
@@ -10865,13 +10579,13 @@
         "name_similarity": 0.25,
         "opening_hours_raw": "Sa-Tu 08:00-02:00"
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "general-directorate-of-agriculture",
       "ministry_slug": "ministry-of-agriculture",
       "title_ar": "المديرية العامة للزراعة",
-      "title_en": null,
+      "title_en": "General Directorate of Agriculture",
       "title_ku": null,
       "website": null,
       "phone": null,
@@ -10888,13 +10602,14 @@
       "_confidence": 0,
       "_source": "canonical-parent",
       "_maps_name": null,
-      "_is_branch_parent": true
+      "_is_branch_parent": true,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "general-directorate-of-municipalities",
       "ministry_slug": "ministry-of-construction-housing-municipalities-and-public-works",
       "title_ar": "المديرية العامة للبلديات",
-      "title_en": "NCEC",
+      "title_en": "General Directorate of Municipalities",
       "title_ku": null,
       "website": "https://municipalities.moch.gov.iq/",
       "phone": "+964 1 537 3029",
@@ -10917,13 +10632,13 @@
         "distance_m": 117,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "directorate-of-youth-and-sports",
       "ministry_slug": "ministry-of-youth-and-sports",
       "title_ar": "دائرة الشباب والرياضة",
-      "title_en": "Ministry of Youth and Sports",
+      "title_en": "Department of Youth and Sport",
       "title_ku": null,
       "website": "http://www.moys.gov.iq/",
       "phone": null,
@@ -10946,13 +10661,13 @@
         "matched_name": "وزارة الشباب والرياضة",
         "confidence": 1
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "directorate-of-migration-branches",
       "ministry_slug": "ministry-of-migration-and-displaced",
       "title_ar": "دائرة شؤون الفروع",
-      "title_en": null,
+      "title_en": "Department of Branch Affairs",
       "title_ku": null,
       "website": null,
       "phone": null,
@@ -10969,13 +10684,14 @@
       "_confidence": 0,
       "_source": "canonical-parent",
       "_maps_name": null,
-      "_is_branch_parent": true
+      "_is_branch_parent": true,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "general-company-for-post-and-savings",
       "ministry_slug": "ministry-of-communications",
       "title_ar": "الشركة العامة للبريد والتوفير",
-      "title_en": null,
+      "title_en": "State Company for Post and Savings",
       "title_ku": null,
       "website": "https://post.iq/",
       "phone": null,
@@ -10997,13 +10713,14 @@
         "source": "google-maps (retry)",
         "matched_name": "الشركة العامة للبريد والتوفير",
         "confidence": 1
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "general-authority-for-antiquities-and-heritage",
       "ministry_slug": "ministry-of-culture-tourism-and-antiquities",
       "title_ar": "الهيئة العامة للاثار والتراث",
-      "title_en": null,
+      "title_en": "State Board of Antiquities and Heritage",
       "title_ku": null,
       "website": null,
       "phone": null,
@@ -11020,13 +10737,14 @@
       "_confidence": 1,
       "_source": "canonical-parent (details from alhyya-alaama-llathar-waltrath)",
       "_maps_name": "الهيئة العامة للأثار والتراث / دائرة الصيانة والحفاظ على الأثار",
-      "_is_branch_parent": true
+      "_is_branch_parent": true,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "general-company-for-land-transport",
       "ministry_slug": "ministry-of-transport",
       "title_ar": "الشركة العامة للنقل البري",
-      "title_en": null,
+      "title_en": "State Company for Land Transport",
       "title_ku": null,
       "website": "http://www.sclt.gov.iq/",
       "phone": "+964 770 013 1397",
@@ -11048,13 +10766,14 @@
         "id": "node/5836075485",
         "distance_m": 117,
         "name_similarity": 0
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "central-statistical-organisation",
       "ministry_slug": "ministry-of-planning",
       "title_ar": "الجهاز المركزي للاحصاء",
-      "title_en": null,
+      "title_en": "Central Statistical Organisation",
       "title_ku": null,
       "website": null,
       "phone": "+9647508693447",
@@ -11078,13 +10797,14 @@
         "similarity": 1,
         "id": "node/4768373922"
       },
-      "email": "m.aljboore1@gmail.com"
+      "email": "m.aljboore1@gmail.com",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "oil-products-distribution-company",
       "ministry_slug": "ministry-of-oil",
       "title_ar": "شركة توزيع المنتجات النفطية",
-      "title_en": null,
+      "title_en": "Oil Products Distribution Company",
       "title_ku": null,
       "website": null,
       "phone": null,
@@ -11143,13 +10863,14 @@
         "matched_name": "شركة توزيع المنتجات النفطيه",
         "similarity": 1,
         "id": "node/6976454985"
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "general-directorate-of-environment",
       "ministry_slug": "ministry-of-environment",
       "title_ar": "المديرية العامة للبيئة",
-      "title_en": null,
+      "title_en": "General Directorate of Environment",
       "title_ku": null,
       "website": null,
       "phone": null,
@@ -11166,13 +10887,14 @@
       "_confidence": 1,
       "_source": "canonical-parent (name only from dayra-hmaya-wthsyn-albyya)",
       "_maps_name": "دائرة حماية وتحسين البيئة في المنطقة الشمالية",
-      "_is_branch_parent": true
+      "_is_branch_parent": true,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "general-directorate-of-universities",
       "ministry_slug": "ministry-of-higher-education",
       "title_ar": "دائرة الدراسات والتخطيط والمتابعة",
-      "title_en": null,
+      "title_en": "Department of Studies, Planning and Follow-up",
       "title_ku": null,
       "website": null,
       "phone": null,
@@ -11189,13 +10911,14 @@
       "_confidence": 1,
       "_source": "canonical-parent (details from dayra-aldrasat-waltkhtyt-walmtabaa)",
       "_maps_name": "قسم الدراسات والتخطيط والمتابعه",
-      "_is_branch_parent": true
+      "_is_branch_parent": true,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "krg-general-directorate-of-traffic",
       "ministry_slug": "krg-ministry-of-interior",
       "title_ar": "المديرية العامة للمرور — اقليم كردستان",
-      "title_en": null,
+      "title_en": "General Directorate of Traffic — Kurdistan Region",
       "title_ku": null,
       "website": null,
       "phone": null,
@@ -11212,13 +10935,14 @@
       "_confidence": 0,
       "_source": "canonical-parent",
       "_maps_name": null,
-      "_is_branch_parent": true
+      "_is_branch_parent": true,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "krg-general-directorate-of-residency",
       "ministry_slug": "krg-ministry-of-interior",
       "title_ar": "المديرية العامة للاقامة — اقليم كردستان",
-      "title_en": null,
+      "title_en": "General Directorate of Residence — Kurdistan Region",
       "title_ku": null,
       "website": null,
       "phone": null,
@@ -11235,13 +10959,14 @@
       "_confidence": 0,
       "_source": "canonical-parent",
       "_maps_name": null,
-      "_is_branch_parent": true
+      "_is_branch_parent": true,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "krg-general-directorate-of-civil-status",
       "ministry_slug": "krg-ministry-of-interior",
       "title_ar": "المديرية العامة للاحوال المدنية — اقليم كردستان",
-      "title_en": null,
+      "title_en": "General Directorate of Civil Status — Kurdistan Region",
       "title_ku": null,
       "website": null,
       "phone": null,
@@ -11263,13 +10988,14 @@
         "id": "node/5328837822",
         "distance_m": 52,
         "name_similarity": 0
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "krg-general-directorate-of-health",
       "ministry_slug": "krg-ministry-of-health",
       "title_ar": "المديرية العامة للصحة — اقليم كردستان",
-      "title_en": "General Directorate of Health",
+      "title_en": "General Directorate of Health — Kurdistan Region",
       "title_ku": "بەڕێوەبەرایەتی گشتی تەندرووستی دھۆک",
       "website": "http://duhokhealth.org/",
       "phone": "+964 62 724 4601",
@@ -11292,14 +11018,14 @@
         "distance_m": 8,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match",
+      "_title_en_source": "reviewed translation (place match named another body)",
       "_title_ku_source": "place-match"
     },
     {
       "slug": "krg-general-directorate-of-education",
       "ministry_slug": "krg-ministry-of-education",
       "title_ar": "المديرية العامة للتربية — اقليم كردستان",
-      "title_en": null,
+      "title_en": "General Directorate of Education — Kurdistan Region",
       "title_ku": "پەروەردەی ناوەندی هەولێر",
       "website": "https://www.facebook.com/B.parwadi.N.hawler?mibextid=D4KYlr",
       "phone": "07503264699",
@@ -11360,13 +11086,14 @@
         "opening_hours_raw": "Su-Th 08:00-15:00"
       },
       "_title_ku_source": "place-match",
-      "email": "hemnm23@gmail.com"
+      "email": "hemnm23@gmail.com",
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "krg-general-directorate-of-labour",
       "ministry_slug": "krg-ministry-of-labour-and-social-affairs",
       "title_ar": "المديرية العامة للعمل والشؤون الاجتماعية — اقليم كردستان",
-      "title_en": "Ministry of Labor and Social Affairs",
+      "title_en": "General Directorate of Labour and Social Affairs — Kurdistan Region",
       "title_ku": "وەزارەتی کار و کاروباری کۆمەڵایەتی",
       "website": "https://gov.krd/molsa",
       "phone": "+964 750 717 9453",
@@ -11389,14 +11116,14 @@
         "distance_m": 54,
         "name_similarity": 0.29
       },
-      "_title_en_source": "place-match",
+      "_title_en_source": "reviewed translation (place match named another body)",
       "_title_ku_source": "place-match"
     },
     {
       "slug": "krg-general-directorate-of-taxes",
       "ministry_slug": "krg-ministry-of-finance-and-economy",
       "title_ar": "المديرية العامة للضرائب — اقليم كردستان",
-      "title_en": null,
+      "title_en": "General Directorate of Taxation — Kurdistan Region",
       "title_ku": null,
       "website": null,
       "phone": null,
@@ -11413,13 +11140,14 @@
       "_confidence": 0,
       "_source": "canonical-parent",
       "_maps_name": null,
-      "_is_branch_parent": true
+      "_is_branch_parent": true,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "krg-general-directorate-of-customs",
       "ministry_slug": "krg-ministry-of-finance-and-economy",
       "title_ar": "المديرية العامة للكمارك — اقليم كردستان",
-      "title_en": null,
+      "title_en": "General Directorate of Customs — Kurdistan Region",
       "title_ku": null,
       "website": null,
       "phone": null,
@@ -11436,13 +11164,14 @@
       "_confidence": 0,
       "_source": "canonical-parent",
       "_maps_name": null,
-      "_is_branch_parent": true
+      "_is_branch_parent": true,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "krg-general-directorate-of-municipalities",
       "ministry_slug": "krg-ministry-of-municipalities-and-tourism",
       "title_ar": "المديرية العامة للبلديات — اقليم كردستان",
-      "title_en": null,
+      "title_en": "General Directorate of Municipalities — Kurdistan Region",
       "title_ku": null,
       "website": null,
       "phone": null,
@@ -11459,13 +11188,14 @@
       "_confidence": 0,
       "_source": "canonical-parent",
       "_maps_name": null,
-      "_is_branch_parent": true
+      "_is_branch_parent": true,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "krg-general-directorate-of-agriculture",
       "ministry_slug": "krg-ministry-of-agriculture-and-water-resources",
       "title_ar": "المديرية العامة للزراعة — اقليم كردستان",
-      "title_en": null,
+      "title_en": "General Directorate of Agriculture — Kurdistan Region",
       "title_ku": null,
       "website": null,
       "phone": null,
@@ -11482,13 +11212,14 @@
       "_confidence": 0,
       "_source": "canonical-parent",
       "_maps_name": null,
-      "_is_branch_parent": true
+      "_is_branch_parent": true,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "krg-general-directorate-of-electricity",
       "ministry_slug": "krg-ministry-of-electricity",
       "title_ar": "المديرية العامة للكهرباء — اقليم كردستان",
-      "title_en": null,
+      "title_en": "General Directorate of Electricity — Kurdistan Region",
       "title_ku": null,
       "website": null,
       "phone": null,
@@ -11505,13 +11236,14 @@
       "_confidence": 0,
       "_source": "canonical-parent",
       "_maps_name": null,
-      "_is_branch_parent": true
+      "_is_branch_parent": true,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "krg-general-directorate-of-endowments",
       "ministry_slug": "krg-ministry-of-endowment-and-religious-affairs",
       "title_ar": "المديرية العامة للاوقاف — اقليم كردستان",
-      "title_en": null,
+      "title_en": "General Directorate of Endowments — Kurdistan Region",
       "title_ku": null,
       "website": null,
       "phone": null,
@@ -11533,13 +11265,14 @@
         "source": "google-maps (retry)",
         "matched_name": "المديرية العامة للاوقاف في دهوك",
         "confidence": 1
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "krg-general-directorate-of-youth-and-sports",
       "ministry_slug": "krg-ministry-of-culture-and-youth",
       "title_ar": "المديرية العامة للشباب والرياضة — اقليم كردستان",
-      "title_en": null,
+      "title_en": "General Directorate of Youth and Sport — Kurdistan Region",
       "title_ku": null,
       "website": null,
       "phone": null,
@@ -11556,13 +11289,14 @@
       "_confidence": 0,
       "_source": "canonical-parent",
       "_maps_name": null,
-      "_is_branch_parent": true
+      "_is_branch_parent": true,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "krg-general-directorate-of-transport",
       "ministry_slug": "krg-ministry-of-transport-and-communications",
       "title_ar": "المديرية العامة للنقل والاتصالات — اقليم كردستان",
-      "title_en": null,
+      "title_en": "General Directorate of Transport and Communications — Kurdistan Region",
       "title_ku": null,
       "website": null,
       "phone": null,
@@ -11579,13 +11313,14 @@
       "_confidence": 0,
       "_source": "canonical-parent",
       "_maps_name": null,
-      "_is_branch_parent": true
+      "_is_branch_parent": true,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "krg-general-directorate-of-quality-control",
       "ministry_slug": "krg-ministry-of-trade-and-industry",
       "title_ar": "المديرية العامة للسيطرة النوعية — اقليم كردستان",
-      "title_en": "Quality Control Center",
+      "title_en": "General Directorate of Quality Control — Kurdistan Region",
       "title_ku": null,
       "website": null,
       "phone": null,
@@ -11608,13 +11343,13 @@
         "distance_m": 46,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match"
+      "_title_en_source": "reviewed translation (place match named another body)"
     },
     {
       "slug": "krg-general-directorate-of-statistics",
       "ministry_slug": "krg-ministry-of-planning",
       "title_ar": "المديرية العامة للاحصاء — اقليم كردستان",
-      "title_en": null,
+      "title_en": "General Directorate of Statistics — Kurdistan Region",
       "title_ku": null,
       "website": null,
       "phone": null,
@@ -11631,13 +11366,14 @@
       "_confidence": 0,
       "_source": "canonical-parent",
       "_maps_name": null,
-      "_is_branch_parent": true
+      "_is_branch_parent": true,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "krg-general-directorate-of-land-registry",
       "ministry_slug": "krg-ministry-of-justice",
       "title_ar": "المديرية العامة للتسجيل العقاري — اقليم كردستان",
-      "title_en": "Erbil Directorate of House Registration",
+      "title_en": "General Directorate of Real Estate Registration — Kurdistan Region",
       "title_ku": "بەرێوەبەرایەتی تۆمارکدنی خانووبەری هەولێر",
       "website": null,
       "phone": null,
@@ -11660,14 +11396,14 @@
         "distance_m": 55,
         "name_similarity": 0
       },
-      "_title_en_source": "place-match",
+      "_title_en_source": "reviewed translation (place match named another body)",
       "_title_ku_source": "place-match"
     },
     {
       "slug": "krg-general-directorate-of-housing",
       "ministry_slug": "krg-ministry-of-construction-and-housing",
       "title_ar": "المديرية العامة للاعمار والاسكان — اقليم كردستان",
-      "title_en": null,
+      "title_en": "General Directorate of Construction and Housing — Kurdistan Region",
       "title_ku": null,
       "website": null,
       "phone": null,
@@ -11684,13 +11420,14 @@
       "_confidence": 0,
       "_source": "canonical-parent",
       "_maps_name": null,
-      "_is_branch_parent": true
+      "_is_branch_parent": true,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "general-directorate-of-conscription",
       "ministry_slug": "ministry-of-defence",
       "title_ar": "ادارة التجنيد العامة",
-      "title_en": null,
+      "title_en": "General Conscription Administration",
       "title_ku": null,
       "website": null,
       "phone": null,
@@ -11707,7 +11444,8 @@
       "_confidence": 0,
       "_source": "canonical-parent",
       "_maps_name": null,
-      "_is_branch_parent": true
+      "_is_branch_parent": true,
+      "_title_en_source": "reviewed translation"
     },
     {
       "slug": "directorate-of-military-pensions",
@@ -11779,7 +11517,7 @@
       "slug": "general-directorate-of-industrial-development",
       "ministry_slug": "ministry-of-industry-and-minerals",
       "title_ar": "المديرية العامة للتنمية الصناعية",
-      "title_en": null,
+      "title_en": "General Directorate of Industrial Development",
       "title_ku": null,
       "website": "https://gdid.industry.gov.iq/",
       "phone": "+964 8162006",
@@ -11801,13 +11539,14 @@
         "id": "node/4479131989",
         "distance_m": 40,
         "name_similarity": 1
-      }
+      },
+      "_title_en_source": "reviewed translation"
     },
     {
       "ministry_slug": "ministry-of-defence",
       "slug": "mdrsa-snf-alhasbat",
       "title_ar": "مدرسة صنف الحاسبات",
-      "title_en": null,
+      "title_en": "Computer Corps School",
       "title_ku": null,
       "address_ar": "مدرسة صنف الحاسبات، شارع القادسية السريع، بغداد،، بغداد،، 79V7+WC5، بغداد،",
       "gps_lat": 33.2947043,
@@ -11822,13 +11561,14 @@
       "_source": "ministry-site",
       "_source_url": "https://mod.mil.iq/",
       "_confidence": 15,
-      "sort_order": 0
+      "sort_order": 0,
+      "_title_en_source": "reviewed translation"
     },
     {
       "ministry_slug": "ministry-of-defence",
       "slug": "jamaa-aldfaa-lldrasat-alaskrya",
       "title_ar": "جامعة الدفاع للدراسات العسكرية",
-      "title_en": null,
+      "title_en": "Defence University for Military Studies",
       "title_ku": null,
       "address_ar": null,
       "gps_lat": null,
@@ -11843,13 +11583,14 @@
       "_source": "ministry-site",
       "_source_url": "https://mod.mil.iq/",
       "_confidence": null,
-      "sort_order": 0
+      "sort_order": 0,
+      "_title_en_source": "reviewed translation"
     },
     {
       "ministry_slug": "ministry-of-defence",
       "slug": "mrkz-altdryb-walttwyr-alwzary",
       "title_ar": "مركز التدريب والتطوير الوزاري",
-      "title_en": null,
+      "title_en": "Ministerial Training and Development Centre",
       "title_ku": null,
       "address_ar": "8C83+RXQ مركز التدريب والتطوير الوزاري، بغداد، بغداد محافظة، 10011",
       "gps_lat": 33.3177829,
@@ -11864,13 +11605,14 @@
       "_source": "ministry-site",
       "_source_url": "https://mod.mil.iq/",
       "_confidence": 12,
-      "sort_order": 0
+      "sort_order": 0,
+      "_title_en_source": "reviewed translation"
     },
     {
       "ministry_slug": "ministry-of-defence",
       "slug": "mrkz-alqym-walmbady-alaskrya",
       "title_ar": "مركز القيم والمبادئ العسكرية",
-      "title_en": null,
+      "title_en": "Centre for Military Values and Principles",
       "title_ku": null,
       "address_ar": null,
       "gps_lat": null,
@@ -11885,13 +11627,14 @@
       "_source": "ministry-site",
       "_source_url": "https://mod.mil.iq/",
       "_confidence": null,
-      "sort_order": 0
+      "sort_order": 0,
+      "_title_en_source": "reviewed translation"
     },
     {
       "ministry_slug": "ministry-of-defence",
       "slug": "mdrsa-alqwat-alkhasa",
       "title_ar": "مدرسة القوات الخاصة",
-      "title_en": null,
+      "title_en": "Special Forces School",
       "title_ku": null,
       "address_ar": "66MG+R55 ERD School مدرسة تدريب القوات الخاصة, Unnamed Road, Baghdad",
       "gps_lat": 33.234511,
@@ -11906,13 +11649,14 @@
       "_source": "ministry-site",
       "_source_url": "https://mod.mil.iq/",
       "_confidence": 15,
-      "sort_order": 0
+      "sort_order": 0,
+      "_title_en_source": "reviewed translation"
     },
     {
       "ministry_slug": "ministry-of-defence",
       "slug": "mrkz-aldrasat-walbhwth-alastratyjya",
       "title_ar": "مركز الدراسات والبحوث الاستراتيجية",
-      "title_en": null,
+      "title_en": "Centre for Strategic Studies and Research",
       "title_ku": null,
       "address_ar": null,
       "gps_lat": null,
@@ -11927,13 +11671,14 @@
       "_source": "ministry-site",
       "_source_url": "https://mod.mil.iq/",
       "_confidence": null,
-      "sort_order": 0
+      "sort_order": 0,
+      "_title_en_source": "reviewed translation"
     },
     {
       "ministry_slug": "ministry-of-defence",
       "slug": "akadymya-alkhlyj-alarby-lldrasat-albhrya",
       "title_ar": "أكاديمية الخليج العربي للدراسات البحرية",
-      "title_en": null,
+      "title_en": "Arabian Gulf Academy for Maritime Studies",
       "title_ku": null,
       "address_ar": "أكاديمية الخليج العربي للدراسات البحرية، HQ95+JQM البصرة خمسة ميل",
       "gps_lat": 30.569062499999998,
@@ -11948,7 +11693,8 @@
       "_source": "ministry-site",
       "_source_url": "https://mod.mil.iq/",
       "_confidence": 15,
-      "sort_order": 0
+      "sort_order": 0,
+      "_title_en_source": "reviewed translation"
     }
   ],
   "branches": [

@@ -26,10 +26,40 @@ export function mapsLink(
   lat: number | undefined | null,
   lon: number | undefined | null,
 ): string | null {
-  if (!isCoordinate(lat, -90, 90) || !isCoordinate(lon, -180, 180)) return null;
-  // 0,0 is Null Island — in this dataset it means "not filled in".
-  if (lat === 0 && lon === 0) return null;
+  if (!usable(lat, lon)) return null;
   return `https://www.waze.com/ul?ll=${lat}%2C${lon}&navigate=yes`;
+}
+
+/**
+ * The Waze live map, framed on an office's page with a pin on the office.
+ *
+ * Same coordinate rules as `mapsLink`, through the same guard, so the map and
+ * the link beneath it can never disagree about whether a location is usable:
+ * one coordinate, a swapped pair or the 0,0 placeholder gives no map at all,
+ * because a map of the wrong place is worse than none.
+ *
+ * `lang` sets the language of Waze's own controls — its search box and
+ * buttons — to match the page. Waze has no Kurdish, and asked for it (`ckb` or
+ * `ku`) it silently answers in English; Kurdish readers get Arabic instead,
+ * which is the portal's fallback for missing Kurdish everywhere else too.
+ */
+export function wazeEmbedUrl(
+  lat: number | undefined | null,
+  lon: number | undefined | null,
+  locale: string,
+): string | null {
+  if (!usable(lat, lon)) return null;
+  const lang = locale === 'en' ? 'en' : 'ar';
+  return `https://embed.waze.com/iframe?zoom=16&lat=${lat}&lon=${lon}&ct=livemap&pin=1&lang=${lang}`;
+}
+
+function usable(
+  lat: number | undefined | null,
+  lon: number | undefined | null,
+): lat is number {
+  if (!isCoordinate(lat, -90, 90) || !isCoordinate(lon, -180, 180)) return false;
+  // 0,0 is Null Island — in this dataset it means "not filled in".
+  return !(lat === 0 && lon === 0);
 }
 
 function isCoordinate(value: unknown, min: number, max: number): value is number {

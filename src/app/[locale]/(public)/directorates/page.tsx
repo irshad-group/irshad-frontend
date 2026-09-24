@@ -2,7 +2,8 @@ import { getTranslations, setRequestLocale } from 'next-intl/server';
 import { Link } from '@/i18n/navigation';
 import PrefetchLink from '@/components/public/PrefetchLink';
 import { localized } from '@/lib/i18n';
-import { listAllPublic } from '@/lib/pb/queries/public';
+import { parseListParams } from '@/lib/public/procedures';
+import { listAllPublic, listPublic } from '@/lib/pb/queries/public';
 import { Container, EmptyState, buttonClass, cn } from '@/components/ui/primitives';
 import type { DirectoratesRecord, MinistriesRecord } from '@/types/pb';
 
@@ -12,6 +13,12 @@ import type { DirectoratesRecord, MinistriesRecord } from '@/types/pb';
  *
  * Provinces have no slug in the schema, so the ISO code (`IQ-BG`) is the URL
  * key. It is stable, readable, and already unique.
+ *
+ * The list is paged. There are 358 directorates and the number only grows;
+ * rendering them all sent 1.4 MB and a 37,000 px page to exactly the cheap
+ * phone this portal is built for, and left the browser's Back button showing
+ * the previous filter's results for several seconds while the replacement
+ * rendered.
  */
 export default async function DirectoratesIndex({
   params,
@@ -26,29 +33,39 @@ export default async function DirectoratesIndex({
 
   const raw = await searchParams;
   const code = (Array.isArray(raw.province) ? raw.province[0] : raw.province)?.trim() ?? '';
+  const { page } = parseListParams(raw);
 
-  const [provinces, allDirectorates] = await Promise.all([
-    listAllPublic('provinces', { sort: 'sort_order' }),
-    listAllPublic('directorates', { expand: 'ministry', sort: 'sort_order' }),
-  ]);
-
+  const provinces = await listAllPublic('provinces', { sort: 'sort_order' });
   const selected = provinces.find((province) => province.code === code) ?? null;
 
-  // Narrow through the branches: a directorate is "in" a province when it has
-  // an office there. Done in two reads rather than one filter because the
-  // relation runs the other way.
-  let directorates = allDirectorates as (DirectoratesRecord & {
+  // A directorate is "in" a province when it has an office there, and the
+  // relation runs the other way — from `directorate_branches` to here. The
+  // back-relation filter asks PocketBase that question directly, so the
+  // narrowing happens in the database rather than over the whole table.
+  //
+  // `sort_order` is not unique — 51 directorates share the value 5 — and a
+  // page boundary falling inside a tie would drop some records and repeat
+  // others. `id` breaks the tie and gives the query one total order.
+  const { items, totalPages } = await listPublic('directorates', {
+    filter: selected
+      ? `directorate_branches_via_directorate.province ?= ${JSON.stringify(selected.id)}`
+      : '',
+    expand: 'ministry',
+    sort: 'sort_order,id',
+    page,
+    perPage: 24,
+  });
+
+  const directorates = items as (DirectoratesRecord & {
     expand?: { ministry?: MinistriesRecord };
   })[];
 
-  if (selected) {
-    const branches = await listAllPublic('directorate_branches', {
-      filter: `province = ${JSON.stringify(selected.id)}`,
-      fields: 'directorate',
-    });
-    const ids = new Set(branches.map((branch) => branch.directorate));
-    directorates = directorates.filter((directorate) => ids.has(directorate.id));
-  }
+  /** Keeps the province filter attached while paging through it. */
+  const pageHref = (target: number) =>
+    `/directorates?${new URLSearchParams({
+      ...(selected ? { province: selected.code } : {}),
+      page: String(target),
+    })}`;
 
   return (
     <Container className="py-10">
@@ -132,6 +149,24 @@ export default async function DirectoratesIndex({
           ))}
         </ul>
       )}
+
+      {totalPages > 1 ? (
+        <nav aria-label={t('directorates.pagination')} className="mt-8 flex items-center gap-3">
+          {page > 1 ? (
+            <Link href={pageHref(page - 1)} className={buttonClass('secondary')} rel="prev">
+              {t('common.previous')}
+            </Link>
+          ) : null}
+          <span className="text-sm text-ink-500">
+            {t('common.page', { page, total: totalPages })}
+          </span>
+          {page < totalPages ? (
+            <Link href={pageHref(page + 1)} className={buttonClass('secondary')} rel="next">
+              {t('common.next')}
+            </Link>
+          ) : null}
+        </nav>
+      ) : null}
     </Container>
   );
 }

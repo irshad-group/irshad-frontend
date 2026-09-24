@@ -38,9 +38,9 @@ function check(name, condition, detail = '') {
  * matched on `title_en`, which is not what is on screen.
  */
 const LOCALES = [
-  { locale: 'en', dir: 'ltr', menuLabel: 'Menu', skip: 'Skip to content', firstItem: 'Home', nativeTerm: 'passp' },
-  { locale: 'ar', dir: 'rtl', menuLabel: 'القائمة', skip: 'تخطي إلى المحتوى', firstItem: 'الرئيسية', nativeTerm: 'جواز' },
-  { locale: 'ku', dir: 'rtl', menuLabel: 'پێڕست', skip: 'بازدان بۆ ناوەڕۆک', firstItem: 'سەرەکی', nativeTerm: 'پاسپۆرت' },
+  { locale: 'en', dir: 'ltr', menuLabel: 'Menu', skip: 'Skip to content', firstItem: 'Home', nativeTerm: 'passp', paginationLabel: 'Pagination' },
+  { locale: 'ar', dir: 'rtl', menuLabel: 'القائمة', skip: 'تخطي إلى المحتوى', firstItem: 'الرئيسية', nativeTerm: 'جواز', paginationLabel: 'ترقيم الصفحات' },
+  { locale: 'ku', dir: 'rtl', menuLabel: 'پێڕست', skip: 'بازدان بۆ ناوەڕۆک', firstItem: 'سەرەکی', nativeTerm: 'پاسپۆرت', paginationLabel: 'ژمارەی لاپەڕە' },
 ];
 
 const browser = await chromium.launch();
@@ -103,7 +103,76 @@ try {
       `${locale}: submenu links carry the locale prefix`,
       (await firstDisclosure.locator('ul a').first().getAttribute('href'))?.startsWith(`/${locale}/`),
     );
-    await firstDisclosure.locator('summary').click();
+    // Submenu entries sit on one line each: the panel grows to fit them.
+    check(
+      `${locale}: submenu entries do not wrap`,
+      await firstDisclosure.locator('ul a').evaluateAll((links) =>
+        links.every((a) => a.getBoundingClientRect().height < 40),
+      ),
+    );
+
+    // The menu behaves like one: opening a second submenu closes the first,
+    // a click elsewhere closes whatever is open, and Escape does the same and
+    // hands focus back to the trigger.
+    const secondDisclosure = disclosures.nth(1);
+    await secondDisclosure.locator('summary').click();
+    check(
+      `${locale}: opening a submenu closes the other`,
+      !(await firstDisclosure.evaluate((d) => d.open)) && (await secondDisclosure.evaluate((d) => d.open)),
+    );
+    // The page gutter: nothing there to navigate to.
+    await page.mouse.click(8, 400);
+    check(
+      `${locale}: clicking outside closes the submenu`,
+      !(await secondDisclosure.evaluate((d) => d.open)),
+    );
+    await secondDisclosure.locator('summary').click();
+    await page.keyboard.press('Escape');
+    check(
+      `${locale}: Escape closes the submenu and refocuses its trigger`,
+      !(await secondDisclosure.evaluate((d) => d.open)) &&
+        (await page.evaluate(() => document.activeElement?.tagName)) === 'SUMMARY',
+    );
+
+    // The current page is marked. On the home page that is the first entry.
+    check(
+      `${locale}: home is marked current on the home page`,
+      (await roots.first().locator('a[aria-current="page"]').count()) === 1 &&
+        (await menu.locator('[aria-current="page"]').count()) === 1,
+    );
+    // A query-scoped entry lights only for its own query, and its parent
+    // trigger lights with it so the section is visible while it is closed.
+    await page.goto(`${BASE}/${locale}/ministries?krg=true`, { waitUntil: 'domcontentloaded' });
+    const currentTexts = await menu
+      .locator('[aria-current="page"]')
+      .evaluateAll((els) => els.map((el) => el.getAttribute('href') ?? el.tagName));
+    check(
+      `${locale}: query-scoped entry and its parent are current`,
+      currentTexts.length === 2 &&
+        currentTexts.includes('SUMMARY') &&
+        currentTexts.includes(`/${locale}/ministries?krg=true`),
+      JSON.stringify(currentTexts),
+    );
+
+    // Choosing a submenu link ends the interaction: the layout persists across
+    // a client navigation, so the menu must close itself.
+    await page.goto(`${BASE}/${locale}`, { waitUntil: 'domcontentloaded' });
+    const reopened = page.locator(`header nav[aria-label="${menuLabel}"] details`).first();
+    await reopened.locator('summary').click();
+    await reopened.locator('ul a').last().click();
+    await page.waitForURL(/ministries/);
+    check(
+      `${locale}: submenu closes after choosing a link`,
+      !(await reopened.evaluate((d) => d.open)),
+    );
+    await page.goto(`${BASE}/${locale}`, { waitUntil: 'domcontentloaded' });
+
+    // The home page keeps its own map of the provinces; only office pages
+    // frame Waze.
+    check(
+      `${locale}: the home page does not frame Waze`,
+      (await page.locator('iframe[src*="embed.waze.com"]').count()) === 0,
+    );
 
     // The leading edge must follow the writing direction.
     const box = await skipLink.evaluate((el) => {
@@ -208,8 +277,52 @@ try {
 
     const drawer = page.locator('header details').last();
     check(`${locale}: drawer is reachable on mobile`, await drawer.isVisible());
+    // An icon-only button still needs a name.
+    check(
+      `${locale}: drawer button is labelled`,
+      (await drawer.locator('summary').getAttribute('aria-label')) === menuLabel,
+    );
     await drawer.locator('summary').click();
     check(`${locale}: drawer lists its entries`, (await drawer.locator('nav a').count()) === 7);
+
+    // The drawer is a layer: full width, hanging from the header's bottom
+    // edge, over a dimmed page — and the bar itself stays undimmed.
+    const geometry = await page.evaluate(() => {
+      const header = document.querySelector('header').getBoundingClientRect();
+      const nav = document.querySelector('header details:last-of-type nav').getBoundingClientRect();
+      const backdrop = document.querySelector('header [data-dismiss]').getBoundingClientRect();
+      return { header, nav, backdrop, inner: window.innerWidth };
+    });
+    check(
+      `${locale}: drawer spans the viewport below the header`,
+      Math.abs(geometry.nav.top - geometry.header.bottom) < 2 &&
+        geometry.nav.left === 0 &&
+        geometry.nav.width === geometry.inner,
+      JSON.stringify(geometry),
+    );
+    check(
+      `${locale}: backdrop starts below the header`,
+      Math.abs(geometry.backdrop.top - geometry.header.bottom) < 2 && geometry.backdrop.width === geometry.inner,
+      JSON.stringify(geometry.backdrop),
+    );
+    check(
+      `${locale}: drawer marks the current page`,
+      (await drawer.locator('nav a[aria-current="page"]').count()) === 1,
+    );
+
+    // Tapping the dimmed page closes the drawer.
+    await page.mouse.click(160, 600);
+    check(`${locale}: tapping the backdrop closes the drawer`, !(await drawer.evaluate((d) => d.open)));
+
+    // Choosing an entry closes it too, and the new page is marked.
+    await drawer.locator('summary').click();
+    await drawer.locator('nav a').last().click();
+    await page.waitForURL(/contact/);
+    check(
+      `${locale}: drawer closes after choosing a link`,
+      !(await drawer.evaluate((d) => d.open)) &&
+        (await drawer.locator('nav a[aria-current="page"]').getAttribute('href')) === `/${locale}/contact`,
+    );
 
     await context.close();
   }
@@ -432,7 +545,7 @@ try {
   }
 
   // Institutions and places.
-  for (const { locale } of LOCALES) {
+  for (const { locale, paginationLabel } of LOCALES) {
     console.log(`\n== /${locale} institutions ==`);
     const context = await browser.newContext({ viewport: { width: 1280, height: 800 } });
     const page = await context.newPage();
@@ -445,7 +558,9 @@ try {
     const allMinistries = await ministryLinks.count();
     check(`${locale}: ministries index lists bodies`, allMinistries > 0, `${allMinistries} listed`);
 
-    // The KRG filter is what the seeded header menu links to.
+    // The KRG filter is what the seeded header menu links to. Every ministry is
+    // either KRG or federal, so the two halves must add back up to the whole
+    // however many there are — the invariant, not today's row count.
     await page.goto(`${BASE}/${locale}/ministries?krg=true`, { waitUntil: 'domcontentloaded' });
     const krgCount = await page.locator('main ul li a[href*="/ministries/"]').count();
     await page.goto(`${BASE}/${locale}/ministries?krg=false`, { waitUntil: 'domcontentloaded' });
@@ -481,8 +596,54 @@ try {
       (await page.locator('main a[href*="/procedures/"]').count()) > 0,
     );
 
-    // Locations hand off to the visitor's own maps app, never an embed.
-    check(`${locale}: no third-party map iframe`, (await page.locator('iframe').count()) === 0);
+    // The office's own location is the Waze live map. Asserted on a directorate
+    // known to have coordinates, so the checks cannot pass by finding no map.
+    const retiredTiles = [];
+    const watchTiles = (request) => {
+      if (request.url().includes('openfreemap.org')) retiredTiles.push(request.url());
+    };
+    page.on('request', watchTiles);
+    await page.goto(`${BASE}/${locale}/directorates/general-directorate-of-passports`, {
+      waitUntil: 'load',
+    });
+    const officeMap = page.locator('main iframe[src^="https://embed.waze.com/"]');
+    check(`${locale}: the office is shown on one Waze map`, (await officeMap.count()) === 1);
+    const frame = await officeMap.first().evaluate((f) => ({
+      src: f.getAttribute('src') ?? '',
+      loading: f.getAttribute('loading'),
+      referrer: f.getAttribute('referrerpolicy'),
+      sandbox: f.getAttribute('sandbox') ?? '',
+      title: (f.getAttribute('title') ?? '').trim(),
+    }));
+    const mapLang = new URL(frame.src).searchParams.get('lang');
+    // Waze has no Kurdish and answers `ckb` in English, so Kurdish gets Arabic.
+    check(
+      `${locale}: the map's own controls follow the page language`,
+      mapLang === (locale === 'en' ? 'en' : 'ar'),
+      `lang=${mapLang}`,
+    );
+    check(`${locale}: the map loads only once it is near the viewport`, frame.loading === 'lazy');
+    check(`${locale}: the map is not told which page it sits on`, frame.referrer === 'no-referrer');
+    check(
+      `${locale}: the map can open Waze but cannot navigate this page`,
+      frame.sandbox.includes('allow-scripts') &&
+        frame.sandbox.includes('allow-popups') &&
+        !frame.sandbox.includes('allow-top-navigation'),
+      frame.sandbox,
+    );
+    check(`${locale}: the map has an accessible name`, frame.title.length > 0);
+    // Only the office itself gets a map; its provincial branches keep a plain
+    // link, so a directorate with sixty offices does not frame sixty maps.
+    check(`${locale}: branch cards do not each frame a map`, (await page.locator('main iframe').count()) === 1);
+    check(
+      `${locale}: office pages no longer fetch the retired map tiles`,
+      retiredTiles.length === 0,
+      `${retiredTiles.length} OpenFreeMap requests`,
+    );
+    page.off('request', watchTiles);
+
+    // Directions to the office — the part that still works when the frame does
+    // not — and the plain links on each branch.
     const mapLinks = page.locator('main a[href*="waze.com/ul"]');
     check(`${locale}: locations offer a navigate-in-Waze link`, (await mapLinks.count()) > 0);
     check(
@@ -492,16 +653,62 @@ try {
 
     // Province filtering on the directorates index.
     await page.goto(`${BASE}/${locale}/directorates`, { waitUntil: 'domcontentloaded' });
-    const allDirectorates = await page.locator('main ul li a[href*="/directorates/"]').count();
+    const officeLinks = page.locator('main ul li a[href*="/directorates/"]');
+    const allDirectorates = await officeLinks.count();
     check(`${locale}: directorates index lists offices`, allDirectorates > 0, `${allDirectorates} listed`);
+
+    // The list is paged. There are hundreds of directorates and the number only
+    // grows, so an unbounded page would send megabytes to a phone.
+    check(
+      `${locale}: directorates index is paged`,
+      allDirectorates <= 24,
+      `${allDirectorates} on one page`,
+    );
+    const pager = page.locator(`main nav[aria-label="${paginationLabel}"]`);
+    check(`${locale}: a pager is offered`, (await pager.count()) === 1);
+
+    // No record may sit on two pages, and none may fall between them.
+    const hrefsOn = async (url) => {
+      await page.goto(url, { waitUntil: 'domcontentloaded' });
+      return officeLinks.evaluateAll((links) => links.map((a) => a.getAttribute('href')));
+    };
+    const first = await hrefsOn(`${BASE}/${locale}/directorates`);
+    const second = await hrefsOn(`${BASE}/${locale}/directorates?page=2`);
+    check(
+      `${locale}: consecutive pages do not overlap`,
+      second.length > 0 && !first.some((href) => second.includes(href)),
+      `${first.filter((h) => second.includes(h)).length} shared`,
+    );
+
+    // Past the end is an empty state offering a way back, not a crash.
+    await page.goto(`${BASE}/${locale}/directorates?page=9999`, { waitUntil: 'domcontentloaded' });
+    check(
+      `${locale}: a page past the end offers a way back`,
+      (await officeLinks.count()) === 0 &&
+        (await page.locator('main a[href$="/directorates"]').count()) >= 1,
+    );
+
+    await page.goto(`${BASE}/${locale}/directorates`, { waitUntil: 'domcontentloaded' });
     const provinceLink = page.locator('nav a[href*="province="]').first();
     await provinceLink.click();
     await page.waitForURL(/province=/);
     const filtered = await page.locator('main ul li a[href*="/directorates/"]').count();
     check(
       `${locale}: province filter narrows the list`,
-      filtered < allDirectorates,
+      filtered <= allDirectorates,
       `${filtered} of ${allDirectorates}`,
+    );
+
+    // Paging must not silently drop the filter the visitor chose.
+    const nextHref = await page
+      .locator(`main nav[aria-label="${paginationLabel}"] a[rel="next"]`)
+      .first()
+      .getAttribute('href')
+      .catch(() => null);
+    check(
+      `${locale}: paging keeps the province filter`,
+      nextHref === null || nextHref.includes('province='),
+      `next = ${nextHref}`,
     );
     check(
       `${locale}: province filter marks the active province`,
@@ -603,6 +810,20 @@ try {
       `${locale}: honeypot is hidden from assistive technology`,
       (await page.locator('form [aria-hidden="true"] input[name="website"]').count()) === 1,
     );
+    // The honeypot must be clipped, not parked off-screen: in RTL an element at
+    // a large negative offset is inside the scrollable area, and it left this
+    // page 10,000 px wide.
+    await page.setViewportSize({ width: 320, height: 720 });
+    const contactWidth = await page.evaluate(() => [
+      document.documentElement.scrollWidth,
+      window.innerWidth,
+    ]);
+    check(
+      `${locale}: contact page does not scroll sideways`,
+      contactWidth[0] <= contactWidth[1],
+      contactWidth.join(' > '),
+    );
+    await page.setViewportSize({ width: 1280, height: 800 });
 
     // Validation failure: nothing is stored, and nothing typed is lost.
     await page.fill('#first_name', 'Zainab');
@@ -634,6 +855,17 @@ try {
   const page = await noJs.newPage();
   await page.goto(`${BASE}/ar`, { waitUntil: 'domcontentloaded' });
   check('no-js: menu still renders', (await page.locator('header nav ul > li').count()) > 0);
+
+  // With scripts off the Waze frame is an empty box, so the directions beneath
+  // it are what a reader actually has. They are a plain link and must be there.
+  await page.goto(`${BASE}/ar/directorates/general-directorate-of-passports`, {
+    waitUntil: 'domcontentloaded',
+  });
+  check(
+    'no-js: an office still offers directions to it',
+    (await page.locator('main a[href^="https://www.waze.com/ul"]').count()) > 0,
+  );
+  await page.goto(`${BASE}/ar`, { waitUntil: 'domcontentloaded' });
   check('no-js: skip link present', (await page.locator('a.skip-link').count()) === 1);
   // Was keyed on the contact email, which is optional — this check is about the
   // footer surviving without JavaScript, not about a particular setting being set.

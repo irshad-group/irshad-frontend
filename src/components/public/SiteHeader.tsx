@@ -4,6 +4,8 @@ import type { NavNode } from '@/lib/public/navigation';
 import { Container, cn } from '@/components/ui/primitives';
 import { Icon } from '@/components/public/home/icons';
 import LocaleSwitcher from './LocaleSwitcher';
+import DisclosureGroup from './DisclosureGroup';
+import { NavLink, NavSummary } from './NavCurrent';
 
 /**
  * The public header: site name, the `navigation` menu, and the language switcher.
@@ -16,6 +18,14 @@ import LocaleSwitcher from './LocaleSwitcher';
  *
  * Hover-to-open was rejected outright: it is unusable on touch, which is how
  * most visitors will arrive.
+ *
+ * What a bare `<details>` lacks as a menu — closing on an outside click, on
+ * Escape, and after a link is chosen; one open at a time — `DisclosureGroup`
+ * adds once JavaScript is there. The desktop submenus also share a `name`, so
+ * browsers that know the exclusive-accordion attribute get one-at-a-time even
+ * before that. Which entry is the current page is marked by the `NavCurrent`
+ * leaves, since this header sits in a cached layout and cannot know the URL
+ * on the server.
  */
 export default function SiteHeader({
   menu,
@@ -39,7 +49,10 @@ export default function SiteHeader({
   };
 }) {
   return (
-    <header className="border-b border-ink-200 bg-white">
+    // `relative` anchors the drawer to the header's bottom edge; `z-30` keeps
+    // the header, and the open drawer inside it, above the page.
+    <header className="relative z-30 border-b border-ink-200 bg-white">
+      <DisclosureGroup>
       {/* Utility strip: the independence disclaimer belongs on every page,
           above everything, because looking official is this site's biggest
           honesty risk. */}
@@ -109,30 +122,30 @@ export default function SiteHeader({
             {menu.map((item) => (
               <li key={item.id} className="relative">
                 {item.children.length > 0 ? (
-                  <details className="group">
-                    <summary
-                      className={cn(
-                        // Tighter until xl: at exactly 1024 the English labels and the
-                        // actions beside them overshoot the row by a few pixels.
-                        'cursor-pointer list-none whitespace-nowrap rounded-md px-2 py-1.5 xl:px-2.5',
-                        'text-sm text-ink-600 hover:bg-ink-100 hover:text-ink-900 marker:content-none',
-                      )}
-                    >
+                  <details name="site-menu" className="group">
+                    <NavSummary node={item}>
                       {localized(item, 'title', locale)}
-                      <span aria-hidden="true" className="ms-1 text-ink-400">
-                        ▾
-                      </span>
-                    </summary>
-                    <ul className="absolute z-10 mt-1 min-w-48 rounded-md bg-white p-1 shadow-lg ring-1 ring-ink-200">
+                      <Icon
+                        name="chevron"
+                        className="size-3.5 text-ink-400 transition-transform group-open:rotate-180"
+                        strokeWidth={2}
+                      />
+                    </NavSummary>
+                    {/*
+                      `w-max` sizes the panel to its longest entry so labels
+                      stay on one line; `max-w-xs` is the ceiling for a
+                      staff-entered title long enough to need wrapping.
+                    */}
+                    <ul className="absolute start-0 top-full z-10 mt-1 w-max min-w-48 max-w-xs rounded-md bg-white p-1 shadow-lg ring-1 ring-ink-200">
                       {item.children.map((child) => (
                         <li key={child.id}>
-                          <NavItemLink node={child} locale={locale} />
+                          <NavLink node={child} locale={locale} block />
                         </li>
                       ))}
                     </ul>
                   </details>
                 ) : (
-                  <NavItemLink node={item} locale={locale} />
+                  <NavLink node={item} locale={locale} />
                 )}
               </li>
             ))}
@@ -173,24 +186,49 @@ export default function SiteHeader({
               Hidden from `lg`, matching where the inline nav takes over — at `md`
               the two would both be hidden and the header would have no navigation
               at all between 768 px and 1024 px. */}
-          <details className="lg:hidden">
-            <summary className="flex min-h-11 cursor-pointer list-none items-center rounded-md px-3 text-sm text-ink-700 ring-1 ring-ink-200 marker:content-none">
-              {labels.menu}
+          <details className="group lg:hidden">
+            {/* Styled as the account button beside it — 44px on touch, 36px
+                once a mouse pointer drives it — and turned into a close icon
+                while open, so the way out is where the way in was. */}
+            <summary
+              aria-label={labels.menu}
+              title={labels.menu}
+              className={cn(
+                'flex size-11 cursor-pointer list-none items-center justify-center border border-ink-200 md:size-9',
+                'text-ink-600 transition-colors marker:content-none hover:border-brand-500 hover:text-brand-500',
+                'group-open:border-brand-500 group-open:text-brand-500',
+              )}
+            >
+              <Icon name="menu" className="size-5 group-open:hidden" strokeWidth={2} />
+              <Icon name="close" className="hidden size-5 group-open:block" strokeWidth={2} />
             </summary>
+
+            {/*
+              The backdrop dims the page so the drawer reads as a layer, not a
+              block of text pasted onto the content, and gives a tap target for
+              closing it. `data-dismiss` is how `DisclosureGroup` treats that
+              tap as "outside". It starts at the header's bottom edge, so the
+              bar itself — name, languages, the close button — stays usable.
+            */}
+            <div
+              data-dismiss
+              aria-hidden="true"
+              className="absolute inset-x-0 top-full z-10 h-screen bg-ink-900/40"
+            />
             <nav
               aria-label={labels.menu}
               // `inset-x-0` is symmetric, so it needs no logical variant.
-              className="absolute inset-x-0 z-10 mt-2 border-y border-ink-200 bg-white p-2 shadow-lg"
+              className="absolute inset-x-0 top-full z-10 max-h-[70dvh] overflow-y-auto border-b border-ink-200 bg-white p-2 shadow-lg"
             >
               <ul className="space-y-0.5">
                 {drawer.map((item) => (
                   <li key={item.id}>
-                    <NavItemLink node={item} locale={locale} block />
+                    <NavLink node={item} locale={locale} block />
                     {item.children.length > 0 ? (
                       <ul className="ms-4 space-y-0.5 border-s border-ink-200 ps-2">
                         {item.children.map((child) => (
                           <li key={child.id}>
-                            <NavItemLink node={child} locale={locale} block />
+                            <NavLink node={child} locale={locale} block />
                           </li>
                         ))}
                       </ul>
@@ -202,31 +240,7 @@ export default function SiteHeader({
           </details>
         </div>
       </Container>
+      </DisclosureGroup>
     </header>
-  );
-}
-
-function NavItemLink({
-  node,
-  locale,
-  block = false,
-}: {
-  node: NavNode;
-  locale: string;
-  block?: boolean;
-}) {
-  return (
-    <Link
-      href={node.endpoint || '/'}
-      className={cn(
-        'rounded-md py-1.5 text-sm text-ink-600 hover:bg-ink-100 hover:text-ink-900',
-        // A nav label is a known string, not pasted content. The global
-        // `overflow-wrap: anywhere` would otherwise split it mid-word.
-        // The drawer keeps the roomier padding — it is a touch target.
-        block ? 'block px-2.5' : 'inline-block whitespace-nowrap px-2 xl:px-2.5',
-      )}
-    >
-      {localized(node, 'title', locale)}
-    </Link>
   );
 }

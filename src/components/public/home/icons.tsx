@@ -108,6 +108,11 @@ const PATHS = {
     </>
   ),
   plus: <path d="M12 5v14M5 12h14" />,
+  // Header controls. The menu button carries an `aria-label`, so these stay
+  // decorative like the rest.
+  menu: <path d="M4 6.5h16M4 12h16M4 17.5h16" />,
+  close: <path d="M6 6l12 12M18 6 6 18" />,
+  chevron: <path d="m7 9.5 5 5 5-5" />,
   court: <path d="M12 3v18M4 21h16M4 8h16M6 8v9M18 8v9M3 5.5 12 3l9 2.5" />,
 } as const;
 

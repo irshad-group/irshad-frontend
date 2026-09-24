@@ -69,3 +69,51 @@ export function buildNavTree(
 
   return sortDeep(roots);
 }
+
+/**
+ * Is a navigation entry the page the visitor is on?
+ *
+ * `pathname` is the locale-stripped path (`/procedures/renew-passport`) and
+ * `search` the current query string. An entry matches when:
+ *
+ * - its path is the current path, or an ancestor of it — `/procedures` stays
+ *   lit on `/procedures/renew-passport`, so the section is always visible;
+ * - every query parameter it carries is present with the same value, so the
+ *   seeded `/ministries?krg=true` and `/ministries?krg=false` never light
+ *   together. An entry *with* a query is exact-path only: it names one listing,
+ *   not a section.
+ *
+ * Home (`/`) is the ancestor of everything, so it matches only itself.
+ */
+export function isCurrentEntry(
+  endpoint: string | undefined,
+  pathname: string,
+  search: string | URLSearchParams,
+): boolean {
+  const [rawPath = '', query = ''] = (endpoint || '/').split('?');
+  const path = trimSlash(rawPath) || '/';
+  const current = trimSlash(pathname) || '/';
+
+  const samePath = current === path;
+  const withinPath = path !== '/' && !query && current.startsWith(`${path}/`);
+  if (!samePath && !withinPath) return false;
+
+  const params = new URLSearchParams(search);
+  return Array.from(new URLSearchParams(query)).every(([key, value]) => params.get(key) === value);
+}
+
+/** Is this entry, or any entry beneath it, the current page? */
+export function containsCurrent(
+  node: NavNode,
+  pathname: string,
+  search: string | URLSearchParams,
+): boolean {
+  return (
+    isCurrentEntry(node.endpoint, pathname, search) ||
+    node.children.some((child) => containsCurrent(child, pathname, search))
+  );
+}
+
+function trimSlash(path: string): string {
+  return path.replace(/\/+$/, '');
+}
